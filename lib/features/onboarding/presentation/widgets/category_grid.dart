@@ -14,6 +14,7 @@ class CategoryGrid extends StatelessWidget {
         MediaQuery.of(context).orientation == Orientation.landscape;
 
     return GridView.builder(
+      clipBehavior: Clip.none,
       padding: const EdgeInsets.symmetric(horizontal: 24),
       itemCount: categories.length,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(

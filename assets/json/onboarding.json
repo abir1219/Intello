@@ -4,7 +4,7 @@
       "id": "moore",
       "title": "Mooré",
       "subtitle": "Écouter",
-      "image": "assets/images/languages/moore.png",
+      "image": "assets/images/category/moore.png",
       "audio": "assets/audio/audio.mp3",
       "isEnabled": true
     },
@@ -12,7 +12,7 @@
       "id": "dioula",
       "title": "Dioula",
       "subtitle": "Écouter",
-      "image": "assets/images/languages/dioula.png",
+      "image": "assets/images/category/dioula.png",
       "audio": "assets/audio/audio.mp3",
       "isEnabled": true
     },
@@ -20,7 +20,7 @@
       "id": "fulfulde",
       "title": "Fulfulde",
       "subtitle": "Écouter",
-      "image": "assets/images/languages/fulfulde.png",
+      "image": "assets/images/category/fulfulde.png",
       "audio": "assets/audio/audio.mp3",
       "isEnabled": true
     },
@@ -28,7 +28,7 @@
       "id": "francais",
       "title": "Français",
       "subtitle": "Écouter",
-      "image": "assets/images/languages/francais.png",
+      "image": "assets/images/category/francais.png",
       "audio": "assets/audio/audio.mp3",
       "isEnabled": true
     }

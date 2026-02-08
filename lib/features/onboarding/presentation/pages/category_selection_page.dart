@@ -31,7 +31,7 @@ class _CategorySelectionPageState extends State<CategorySelectionPage> {
             return const Center(child: CircularProgressIndicator());
           }
 
-          return Expanded(child: CategoryGrid(categories: snapshot.data!));
+          return CategoryGrid(categories: snapshot.data!);
         },
       ),
     );

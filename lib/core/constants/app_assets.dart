@@ -3,4 +3,5 @@ class AppAssets {
   static const background = "assets/images/bg.svg";
   static const logo = "assets/images/logo.svg";
   static const onboarding1 = "assets/images/onboarding_01.svg";
+  static const playButton = 'assets/images/play.svg';
 }

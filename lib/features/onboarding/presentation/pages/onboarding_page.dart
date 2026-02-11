@@ -21,6 +21,14 @@ class _OnboardingPageState extends State<OnboardingPage> {
   final PageController _controller = PageController();
   int _currentIndex = 0;
 
+  final ValueNotifier<int> _pageIndex = ValueNotifier(0);
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    _pageIndex.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -37,48 +45,93 @@ class _OnboardingPageState extends State<OnboardingPage> {
             return Stack(
               fit: StackFit.expand,
               children: [
-                SvgPicture.asset(
-                  AppAssets.background,
-                  fit: BoxFit.cover,
-                ),
+                SvgPicture.asset(AppAssets.background, fit: BoxFit.cover),
                 Column(
                   children: [
                     SizedBox(height: height * 0.03),
                     SizedBox(
-                      height: isLandscape ? height * 0.15 : height * 0.18,
+                      height: isLandscape ? height * 0.12 : height * 0.15,
                       width: isLandscape ? width * 0.2 : width * 0.2,
-                      child: SvgPicture.asset(
-                        AppAssets.logo,
-                        fit: BoxFit.fill,
-                      ),
+                      child: SvgPicture.asset(AppAssets.logo, fit: BoxFit.fill),
                     ),
-                    SizedBox(height: height * 0.03),
+                    SizedBox(
+                      height: isLandscape ? height * 0.01 : height * 0.03,
+                    ),
                     Expanded(
                       child: PageView.builder(
                         controller: _controller,
                         itemCount: onboardingData.length,
                         onPageChanged: (index) {
-                          setState(() => _currentIndex = index);
+                          _pageIndex.value = index;
                         },
                         itemBuilder: (_, index) {
                           return OnboardingCard(
                             data: onboardingData[index],
-                            pageIndex:_currentIndex,
+                            isTablet: isTablet,
+                            isLandscape: orientation == Orientation.landscape,
+                            pageIndex: _currentIndex, currentPage: _pageIndex,
+                          );
+                        },
+                      ),
+                      /*PageView.builder(
+                        controller: _controller,
+                        itemCount: onboardingData.length,
+                        */
+                      /*onPageChanged: (index) {
+                          setState(() => _currentIndex = index);
+                        },*/
+                      /*
+                        onPageChanged: (index) {
+                          _pageIndex.value = index;
+                        },
+                        itemBuilder: (_, index) {
+                          return OnboardingCard(
+                            data: onboardingData[index],
+                            pageIndex: _currentIndex,
                             isTablet: isTablet,
                             isLandscape: orientation == Orientation.landscape,
                           );
                         },
-                      ),
+                      ),*/
                     ),
-                    PageIndicator(
+                    /*PageIndicator(
                       currentIndex: _currentIndex,
                       itemCount: onboardingData.length,
+                    ),*/
+                    ValueListenableBuilder<int>(
+                      valueListenable: _pageIndex,
+                      builder: (_, index, __) {
+                        return PageIndicator(
+                          currentIndex: index,
+                          itemCount: onboardingData.length,
+                        );
+                      },
                     ),
 
                     SizedBox(height: height * 0.04),
 
                     /// 🔹 CTA Button
-                    PrimaryButton(
+                    ValueListenableBuilder<int>(
+                      valueListenable: _pageIndex,
+                      builder: (_, index, __) {
+                        return PrimaryButton(
+                          title: index == onboardingData.length - 1
+                              ? "Commencer"
+                              : "Suivant",
+                          onPressed: () {
+                            if (index < onboardingData.length - 1) {
+                              _controller.nextPage(
+                                duration: const Duration(milliseconds: 300),
+                                curve: Curves.easeOutCubic,
+                              );
+                            } else {
+                              // Navigate
+                            }
+                          },
+                        );
+                      },
+                    ),
+                    /*PrimaryButton(
                       title: _currentIndex == onboardingData.length - 1
                           ? "Commencer"
                           : "Suivant",
@@ -92,10 +145,23 @@ class _OnboardingPageState extends State<OnboardingPage> {
                           // Navigate to Language Selection / Home
                         }
                       },
-                    ),
+                    ),*/
 
                     /// 🔹 Skip Button
-                    TextButton(
+                    ValueListenableBuilder<int>(
+                      valueListenable: _pageIndex,
+                      builder: (_, index, __) {
+                        if (index == onboardingData.length - 1) {
+                          return const SizedBox.shrink();
+                        }
+                        return TextButton(
+                          onPressed: () {},
+                          child: const Text("Ignorer"),
+                        );
+                      },
+                    ),
+
+                    /*TextButton(
                       onPressed: () {
                         // Skip onboarding
                       },
@@ -106,8 +172,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                           fontSize: 14,
                         ),
                       ),
-                    ),
-
+                    ),*/
                     SizedBox(height: height * 0.03),
                   ],
                 ),

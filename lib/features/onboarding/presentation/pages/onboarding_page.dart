@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
+import 'package:go_router/go_router.dart';
+import 'package:intello_new/routes/app_pages.dart';
 import '../../../../core/constants/app_assets.dart';
-import '../../../../core/constants/app_colors.dart';
 import '../../../../core/utils/app_dimenstion.dart';
 import '../../../../core/utils/responsive.dart';
 import '../data/models/onboarding_model.dart';
@@ -35,8 +35,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
     final isTablet = Responsive.isTablet(context);
     final height = AppDimensions.getResponsiveHeight(context);
     final width = AppDimensions.getResponsiveWidth(context);
-    final isLandscape =
-        MediaQuery.of(context).orientation == Orientation.landscape;
+    final isLandscape = Responsive.isLandscape(context);
 
     return Scaffold(
       body: SafeArea(
@@ -69,7 +68,8 @@ class _OnboardingPageState extends State<OnboardingPage> {
                             data: onboardingData[index],
                             isTablet: isTablet,
                             isLandscape: orientation == Orientation.landscape,
-                            pageIndex: _currentIndex, currentPage: _pageIndex,
+                            pageIndex: _currentIndex,
+                            currentPage: _pageIndex,
                           );
                         },
                       ),
@@ -125,7 +125,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                                 curve: Curves.easeOutCubic,
                               );
                             } else {
-                              // Navigate
+                              context.go(AppPages.SIGNUP_SCREEN);
                             }
                           },
                         );
@@ -155,7 +155,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                           return const SizedBox.shrink();
                         }
                         return TextButton(
-                          onPressed: () {},
+                          onPressed: () => context.go(AppPages.SIGNUP_SCREEN),
                           child: const Text("Ignorer"),
                         );
                       },

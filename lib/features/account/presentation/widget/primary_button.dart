@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:intello_new/core/constants/app_assets.dart';
+import 'package:flutter_svg/svg.dart';
 
+import '../../../../core/constants/app_assets.dart';
 import '../../../../core/constants/app_colors.dart';
 import '../../../../core/utils/app_dimenstion.dart';
+
 
 class PrimaryButton extends StatelessWidget {
   final String title;
@@ -36,7 +37,7 @@ class PrimaryButton extends StatelessWidget {
           children: [
             Text(
               title,
-              style: const TextStyle(
+              style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
                 color: AppColors.whiteColor,

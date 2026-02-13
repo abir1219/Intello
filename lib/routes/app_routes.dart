@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:intello_new/core/navigation/main_navigation_page.dart';
+import 'package:intello_new/features/account/presentation/pages/profile_page.dart';
 import 'package:intello_new/features/auth/presentation/pages/create_new_password_page.dart';
 import 'package:intello_new/features/auth/presentation/pages/login_page.dart';
+import 'package:intello_new/features/auth/presentation/pages/phone_validation.dart';
 import 'package:intello_new/features/auth/presentation/pages/signup_page.dart';
 import 'package:intello_new/features/onboarding/presentation/pages/onboarding_page.dart';
+import 'package:intello_new/features/settings/page/change_password_page.dart';
 import 'package:intello_new/routes/app_pages.dart';
 
 import '../features/splash/presentation/pages/splash_screen.dart';
@@ -39,9 +41,19 @@ class AppRouters {
             _defaultTransitionPage(child: CreateNewPasswordPage(), key: state.pageKey),
       ),
       GoRoute(
-        path: AppPages.NAVIGATION_SCREEN,
+        path: AppPages.CHANGE_PASSWORD_SCREEN,
         pageBuilder: (context, state) =>
-            _defaultTransitionPage(child: MainNavigationPage(), key: state.pageKey),
+            _defaultTransitionPage(child: ChangePasswordPage(), key: state.pageKey),
+      ),
+      GoRoute(
+        path: AppPages.PROFILE_SCREEN,
+        pageBuilder: (context, state) =>
+            _defaultTransitionPage(child: ProfilePage(), key: state.pageKey),
+      ),
+      GoRoute(
+        path: AppPages.PHONE_VALIDATE_SCREEN,
+        pageBuilder: (context, state) =>
+            _defaultTransitionPage(child: PhoneValidation(), key: state.pageKey),
       ),
     ],
   );

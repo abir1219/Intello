@@ -3,40 +3,25 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:intello_new/features/auth/presentation/bloc/forgot_password/forgot_password_bloc.dart';
-import 'package:intello_new/features/auth/widgets/create_password_success_dialog.dart';
+import 'package:intello_new/routes/app_pages.dart';
 
 import '../../../../core/constants/app_assets.dart';
 import '../../../../core/constants/app_colors.dart';
 import '../../../../core/utils/app_dimenstion.dart';
 import '../../../../core/utils/responsive.dart';
-import '../../../../routes/app_pages.dart';
-import '../../../onboarding/presentation/widgets/primary_button.dart';
+import '../../../account/presentation/widget/primary_button.dart';
 import '../../widgets/custom_textfield.dart';
 
-class CreateNewPasswordPage extends StatefulWidget {
-  const CreateNewPasswordPage({super.key});
-
-  @override
-  State<CreateNewPasswordPage> createState() => _CreateNewPasswordPageState();
-}
-
-class _CreateNewPasswordPageState extends State<CreateNewPasswordPage> {
-  final _password = TextEditingController();
-  final _cnfrm_password = TextEditingController();
-
-  @override
-  void dispose() {
-    _password.dispose();
-    _cnfrm_password.dispose();
-    super.dispose();
-  }
+class PhoneValidation extends StatelessWidget {
+  const PhoneValidation({super.key});
 
   @override
   Widget build(BuildContext context) {
-    Responsive.isTablet(context);
     final height = AppDimensions.getResponsiveHeight(context);
     final width = AppDimensions.getResponsiveWidth(context);
     final isLandscape = Responsive.isLandscape(context);
+
+    final _phone = TextEditingController();
 
     return Scaffold(
       body: SafeArea(
@@ -53,19 +38,9 @@ class _CreateNewPasswordPageState extends State<CreateNewPasswordPage> {
                   ),
                   child: BlocListener<ForgotPasswordBloc, ForgotPasswordState>(
                     listener: (context, state) {
-                      if (state is ForgotPasswordSuccess) {
-                        showDialog(
-                          context: context,
-                          barrierDismissible: false,
-                          builder: (_) => CreatePasswordSuccessDialog(
-                            onClose: () => Navigator.pop(context),
-                            onContinue: () {
-                              Navigator.pop(context); // close dialog first
-                              context.go(AppPages.LOGIN_SCREEN);
-                            },
-                          ),
-                        );
-                      } else if (state is ForgotPasswordFailure) {
+                      if (state is ValidatePhoneSuccess) {
+                        context.go(AppPages.CHANGE_PASSWORD_SCREEN);
+                      } else if (state is ValidatePhoneFailure) {
                         _showError(context, state.message);
                       }
                     },
@@ -87,23 +62,19 @@ class _CreateNewPasswordPageState extends State<CreateNewPasswordPage> {
                         SizedBox(
                           height: isLandscape ? height * 0.01 : height * 0.01,
                         ),
-                        SizedBox(
-                          width: isLandscape ? width * 0.5 : width * 0.3,
-                          child: Text(
-                            "Créez un nouveau mot de passe.",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontSize: 20,
-                              color: AppColors.TEXT_FIELD_COLOR,
-                              fontWeight: FontWeight.w400,
-                            ),
+                        Text(
+                          "Réinitialisez votre mot de passe.",
+                          style: TextStyle(
+                            fontSize: 20,
+                            color: AppColors.TEXT_FIELD_COLOR,
+                            fontWeight: FontWeight.w400,
                           ),
                         ),
                         SizedBox(
                           height: isLandscape ? height * 0.01 : height * 0.005,
                         ),
                         const Text(
-                          "Créez un mot de passe sécurisé pour protéger votre compte.",
+                          "Entrez le numéro WhatsApp associé à votre numéro de téléphone.",
                           style: TextStyle(
                             fontSize: 16,
                             color: AppColors.TEXT_FIELD_COLOR,
@@ -111,29 +82,31 @@ class _CreateNewPasswordPageState extends State<CreateNewPasswordPage> {
                           ),
                           textAlign: TextAlign.center,
                         ),
-                        const SizedBox(height: 32),
-                        CustomTextField.buildTextFieldWithLabel(
-                          label: "Mot de passe",
-                          hintText: "Choisis un mot de passe sécurisé ...",
-                          obscureText: true,
-                          context: context,
-                          controller: _password,
-                        ),
+                        const SizedBox(height: 50),
+
                         //const SizedBox(height: 16),
                         CustomTextField.buildTextFieldWithLabel(
-                          label: "Confirmer le mot de passe",
-                          hintText: "Entre à nouveau ton mot de passe ...",
+                          controller: _phone,
                           context: context,
-                          obscureText: true,
-                          controller: _cnfrm_password,
+                          label: "Numéro WhatsApp*",
+                          keyboardType: TextInputType.phone,
+                          hintText: "Entrez votre numéro WhatsApp ...",
                         ),
                         const SizedBox(height: 10),
 
                         PrimaryButton(
-                          title: "S’inscrire",
-                          onPressed: () => context
-                              .read<ForgotPasswordBloc>()
-                              .add(SubmitForgotPassword(_password.text.trim())),
+                          title: "Valider",
+                          onPressed: () =>
+                              context.read<ForgotPasswordBloc>().add(
+                                ValidatePhoneNumberEvent(_phone.text.trim()),
+                              ),
+                        ),
+                        const SizedBox(height: 10),
+                        PrimaryButton(
+                          title: "Retour à la connexion",
+                          color: AppColors.greenColor,
+                          logoVisible: false,
+                          onPressed: () => context.go(AppPages.LOGIN_SCREEN),
                         ),
 
                         const SizedBox(height: 16),

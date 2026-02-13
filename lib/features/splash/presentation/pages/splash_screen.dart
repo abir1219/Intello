@@ -6,6 +6,7 @@ import 'package:intello_new/core/constants/app_assets.dart';
 import '../../../../core/constants/app_colors.dart';
 import '../../../../core/utils/app_dimenstion.dart';
 import '../../../../routes/app_pages.dart';
+import '../../../auth/data/datasources/auth_local_datasource.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -15,6 +16,8 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  final isLoggedIn = AuthLocalDataSource().isLoggedIn();
+
   @override
   void initState() {
     super.initState();
@@ -24,7 +27,11 @@ class _SplashScreenState extends State<SplashScreen> {
   void _navigateToOnboarding() {
     Future.delayed(const Duration(seconds: 2), () {
       if (!mounted) return;
-      context.go(AppPages.ONBOARDING_SCREEN);
+      if (isLoggedIn) {
+        context.go(AppPages.PROFILE_SCREEN);
+      } else {
+        context.go(AppPages.ONBOARDING_SCREEN);
+      }
     });
   }
 
@@ -41,17 +48,12 @@ class _SplashScreenState extends State<SplashScreen> {
           fit: StackFit.expand,
           children: [
             /// 🔹 Background
-            SvgPicture.asset(
-              AppAssets.splash_background,
-              fit: BoxFit.cover,
-            ),
+            SvgPicture.asset(AppAssets.splash_background, fit: BoxFit.cover),
 
             /// 🔹 Content
             Center(
               child: Padding(
-                padding: EdgeInsets.symmetric(
-                  horizontal: width * 0.08,
-                ),
+                padding: EdgeInsets.symmetric(horizontal: width * 0.08),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [

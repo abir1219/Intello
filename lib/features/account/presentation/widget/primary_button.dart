@@ -5,15 +5,18 @@ import '../../../../core/constants/app_assets.dart';
 import '../../../../core/constants/app_colors.dart';
 import '../../../../core/utils/app_dimenstion.dart';
 
-
 class PrimaryButton extends StatelessWidget {
   final String title;
+  Color color;
+  bool logoVisible;
   final VoidCallback onPressed;
 
-  const PrimaryButton({
+  PrimaryButton({
     super.key,
     required this.title,
     required this.onPressed,
+    this.color = AppColors.blueColor,
+    this.logoVisible = true,
   });
 
   @override
@@ -26,7 +29,7 @@ class PrimaryButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
-          backgroundColor: AppColors.blueColor,
+          backgroundColor: color,
           elevation: 4,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(30),
@@ -44,7 +47,7 @@ class PrimaryButton extends StatelessWidget {
               ),
             ),
             const SizedBox(width: 8),
-            SvgPicture.asset(AppAssets.arrowSign)
+            logoVisible ? SvgPicture.asset(AppAssets.arrowSign) : SizedBox(),
             /*const Icon(
               Icons.arrow_forward_rounded,
               color: Colors.white,

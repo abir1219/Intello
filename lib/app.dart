@@ -46,8 +46,8 @@ class MyApp extends StatelessWidget {
         BlocProvider(
           create: (context) =>
               ProfileBloc(AccountRepositoryImpl(AccountLocalDataSource()))
-                ..add(LoadAccountEvent()),
-          child: const ProfilePage(),
+          //       ..add(LoadAccountEvent()),
+          // child: const ProfilePage(),
         ),
       ],
       child: MaterialApp.router(

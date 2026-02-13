@@ -74,18 +74,24 @@ class _CreateNewPasswordPageState extends State<CreateNewPasswordPage> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         SizedBox(
-                          height: isLandscape ? height * 0.01 : height * 0.01,
+                          height: isLandscape
+                              ? height * 0.03
+                              : height * 0.03,
                         ),
                         SizedBox(
-                          height: isLandscape ? height * 0.13 : height * 0.15,
+                          height: isLandscape
+                              ? height * 0.05
+                              : height * 0.05,
                           width: isLandscape ? width * 0.19 : width * 0.18,
                           child: SvgPicture.asset(
-                            AppAssets.logo,
+                            AppAssets.logo_text,
                             fit: BoxFit.fill,
                           ),
                         ),
                         SizedBox(
-                          height: isLandscape ? height * 0.01 : height * 0.01,
+                          height: isLandscape
+                              ? height * 0.06
+                              : height * 0.06,
                         ),
                         SizedBox(
                           width: isLandscape ? width * 0.5 : width * 0.3,

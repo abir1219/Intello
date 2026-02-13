@@ -21,7 +21,7 @@ class AccountLoaded extends ProfileState {
 
   @override
   // TODO: implement props
-  List<Object?> get props =>  [];
+  List<Object?> get props =>  [user];
 }
 
 class AccountFailure extends ProfileState {
@@ -30,5 +30,26 @@ class AccountFailure extends ProfileState {
 
   @override
   // TODO: implement props
-  List<Object?> get props =>  [];
+  List<Object?> get props =>  [message];
+}
+
+class UpdateProfileLoading extends ProfileState {
+  @override
+  // TODO: implement props
+  List<Object?> get props => [];
+}
+
+class UpdateProfileSuccess extends ProfileState {
+  @override
+  // TODO: implement props
+  List<Object?> get props => [];
+}
+
+class UpdateProfileFailure extends ProfileState {
+  final String message;
+  const UpdateProfileFailure(this.message);
+
+  @override
+  // TODO: implement props
+  List<Object?> get props =>  [message];
 }

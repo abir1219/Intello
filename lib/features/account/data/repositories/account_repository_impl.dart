@@ -12,4 +12,23 @@ class AccountRepositoryImpl implements AccountRepository {
   Future<AccountUserEntity?> getUser() async {
     return localDataSource.getUser();
   }
+  @override
+  Future<void> updateProfileImage(String path) async {
+    await localDataSource.updateProfileImage(path);
+  }
+
+  @override
+  Future<void> updateProfile({
+    required String fullName,
+    required String phone,
+    required String email,
+  }) async {
+    await localDataSource.updateProfile(
+      fullName: fullName,
+      phone: phone,
+      email: email,
+    );
+  }
+
+
 }

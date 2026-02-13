@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:intello_new/core/constants/app_assets.dart';
 import 'package:intello_new/core/constants/app_colors.dart';
+
+import '../../../../core/audio/audio_player_service.dart';
 
 class ListenButton extends StatelessWidget {
   final String listenString;
@@ -9,6 +12,7 @@ class ListenButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return ElevatedButton.icon(
       onPressed: onTap,
       style: ElevatedButton.styleFrom(

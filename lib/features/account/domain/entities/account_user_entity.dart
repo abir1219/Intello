@@ -3,11 +3,13 @@ class AccountUserEntity {
   final String lastName;
   final String whatsapp;
   final String email;
+  final String? imagePath;
 
   AccountUserEntity({
     required this.firstName,
     required this.lastName,
     required this.whatsapp,
     required this.email,
+    this.imagePath,
   });
 }

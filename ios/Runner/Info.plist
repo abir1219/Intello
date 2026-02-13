@@ -6,6 +6,14 @@
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
 	<string>Intello New</string>
+
+	<key>NSCameraUsageDescription</key>
+    <string>We need camera access to take profile photo.</string>
+
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>We need gallery access to select profile photo.</string>
+
+
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>

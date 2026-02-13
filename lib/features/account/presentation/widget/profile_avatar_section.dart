@@ -1,37 +1,57 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:intello_new/core/constants/app_colors.dart';
 
+
 class ProfileAvatarSection extends StatelessWidget {
-  const ProfileAvatarSection({super.key});
+  final VoidCallback onTap;
+  final String? imagePath;
+
+  const ProfileAvatarSection({
+    super.key,
+    required this.onTap,
+    required this.imagePath,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Stack(
-          children: [
-            CircleAvatar(
-              radius: 35,
-              backgroundColor: Color(0xFFEAEAEA),
-              child: Icon(Icons.person, size: 40, color: AppColors.greenColor),
-            ),
-            Positioned(
-              bottom: 0,
-              right: 0,
-              child: Container(
-                padding: const EdgeInsets.all(4),
-                decoration:  BoxDecoration(
-                  color: AppColors.CLOSE_COLOR,
-                  shape: BoxShape.circle,
-                ),
-                child: const Icon(
-                  Icons.edit,
-                  size: 14,
-                  color: Colors.white,
-                ),
+        GestureDetector(
+          onTap: onTap,
+          child: Stack(
+            children: [
+              CircleAvatar(
+                radius: 40,
+                backgroundColor: AppColors.whiteColor,
+                backgroundImage: imagePath != null &&
+                    imagePath!.isNotEmpty
+                    ? FileImage(File(imagePath!))
+                    : null,
+                child: imagePath == null ||
+                    imagePath!.isEmpty
+                    ? const Icon(Icons.person, size: 40)
+                    : null,
               ),
-            )
-          ],
+              Positioned(
+                bottom: 0,
+                right: 0,
+                child: Container(
+                  padding: const EdgeInsets.all(4),
+                  decoration: const BoxDecoration(
+                    color: AppColors.CLOSE_COLOR,
+                    shape: BoxShape.circle,
+                  ),
+                  child: const Icon(
+                    Icons.edit,
+                    size: 14,
+                    color: Colors.white,
+                  ),
+                ),
+              )
+            ],
+          ),
         ),
         const SizedBox(width: 16),
         const Column(

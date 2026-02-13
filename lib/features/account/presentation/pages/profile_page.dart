@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:intello_new/features/auth/widgets/custom_textfield.dart';
+import '../../../../core/audio/audio_player_service.dart';
 import '../../../../core/constants/app_assets.dart';
 import '../../../../core/constants/app_colors.dart';
 import '../../../../core/navigation/custom_bottom_nav_bar.dart';
@@ -43,8 +45,35 @@ class _ProfilePageState extends State<ProfilePage> {
     }
   }
 
+  late TextEditingController nameController;
+  late TextEditingController phoneController;
+  late TextEditingController emailController;
+  String? selectedImagePath;
+  late final audioService;
+
+  @override
+  void initState() {
+    super.initState();
+    audioService = AudioPlayerService();
+    nameController = TextEditingController();
+    phoneController = TextEditingController();
+    emailController = TextEditingController();
+
+    context.read<ProfileBloc>().add(LoadAccountEvent());
+  }
+
+  @override
+  void dispose() {
+    nameController.dispose();
+    phoneController.dispose();
+    emailController.dispose();
+    audioService.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
+
     final isTablet = Responsive.isTablet(context);
     final height = AppDimensions.getResponsiveHeight(context);
     final width = AppDimensions.getResponsiveWidth(context);
@@ -70,42 +99,69 @@ class _ProfilePageState extends State<ProfilePage> {
                     top: 10,
                     bottom: 100,
                   ),
-                  child: BlocBuilder<ProfileBloc, ProfileState>(
-                    builder: (context, state) {
-                      if (state is AccountLoading) {
-                        return const Center(child: CircularProgressIndicator());
+                  child: BlocListener<ProfileBloc, ProfileState>(
+                    listener: (context, state) {
+                      print("State is $state");
+                      if (state is UpdateProfileSuccess) {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text("Profil mis à jour avec succès."),
+                            backgroundColor: Colors.green,
+                          ),
+                        );
                       }
 
-                      if (state is AccountFailure) {
-                        return Center(child: Text(state.message));
+                      if (state is UpdateProfileFailure) {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            content: Text(state.message),
+                            backgroundColor: Colors.red,
+                          ),
+                        );
                       }
+
                       if (state is AccountLoaded) {
-                        final user = state.user;
+                        nameController.text =
+                            "${state.user.firstName} ${state.user.lastName}";
+                        phoneController.text = state.user.whatsapp;
+                        emailController.text = state.user.email;
+                      }
+                    },
+                    child: BlocBuilder<ProfileBloc, ProfileState>(
+                      builder: (context, state) {
+                        if (state is AccountLoading) {
+                          return const Center(
+                            child: CircularProgressIndicator(),
+                          );
+                        }
+
+                        if (state is AccountFailure) {
+                          return Center(child: Text(state.message));
+                        }
+
                         return Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
+                            //const SizedBox(height: 30),
                             SizedBox(
                               height: isLandscape
-                                  ? height * 0.01
-                                  : height * 0.01,
+                                  ? height * 0.03
+                                  : height * 0.03,
                             ),
                             SizedBox(
                               height: isLandscape
-                                  ? height * 0.13
-                                  : height * 0.15,
+                                  ? height * 0.05
+                                  : height * 0.05,
                               width: isLandscape ? width * 0.19 : width * 0.18,
                               child: SvgPicture.asset(
-                                AppAssets.logo,
+                                AppAssets.logo_text,
                                 fit: BoxFit.fill,
                               ),
                             ),
                             SizedBox(
                               height: isLandscape
-                                  ? height * 0.01
-                                  : height * 0.01,
+                                  ? height * 0.06
+                                  : height * 0.06,
                             ),
-
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
@@ -123,76 +179,87 @@ class _ProfilePageState extends State<ProfilePage> {
                                         ),
                                       ),
                                       //SizedBox(height: 4),
-                                      Text(
-                                        "Consultez et gérez vos informations personnelles.",
-                                        style: TextStyle(
-                                          color: AppColors.textColor,
-                                          fontWeight: FontWeight.w400,
+                                      Padding(
+                                        padding: EdgeInsets.only(right: 130.0),
+                                        child: Text(
+                                          "Consultez et gérez vos informations personnelles.",
+                                          style: TextStyle(
+                                            color: AppColors.textColor,
+                                            fontWeight: FontWeight.w400,
+                                          ),
                                         ),
                                       ),
                                     ],
                                   ),
                                 ),
                                 ListenButton(
-                                  onTap: () {},
+                                  onTap: () => audioService.playAsset(
+                                    AppAssets.audio,
+                                  ),
                                   listenString: 'Écouter les consignes',
                                 ),
                               ],
                             ),
+                            const SizedBox(height: 40),
+                            BlocBuilder<ProfileBloc, ProfileState>(
+                              builder: (context, state) {
+                                if (state is AccountLoaded) {
+                                  return ProfileAvatarSection(
+                                    imagePath: state.user.imagePath,
+                                    onTap: () {
+                                      _showImagePicker(context);
+                                    },
+                                  );
+                                }
+
+                                return const SizedBox();
+                              },
+                            ),
                             const SizedBox(height: 30),
 
-                            Padding(
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: 10.0,
-                              ),
-                              child: Column(
-                                children: [
-                                  const ProfileAvatarSection(),
-                                  const SizedBox(height: 30),
-                                  CustomTextField.buildTextFieldWithLabel(
-                                    context: context,
-                                    controller: TextEditingController(
-                                      text: "${user.firstName} ${user.lastName}",
-                                    ),
-                                    hintText: "Entrez votre nom complet …",
-                                    label: "Nom complet*",
-                                  ),
-                                  CustomTextField.buildTextFieldWithLabel(
-                                    context: context,
-                                    controller: TextEditingController(
-                                      text: user.whatsapp,
-                                    ),
-                                    hintText:
-                                        "Entrez votre numéro WhatsApp ...",
-                                    label: "Numéro WhatsApp*",
-                                  ),
-                                  CustomTextField.buildTextFieldWithLabel(
-                                    context: context,
-                                    controller: TextEditingController(
-                                      text: user.email,
-                                    ),
-                                    hintText:
-                                        "Entre une adresse e-mail valide ...",
-                                    label: "Adresse e-mail",
-                                  ),
-                                  const SizedBox(height: 10),
-
-                                  PrimaryButton(
-                                    title: "Mettre à jour le profil",
-                                    onPressed: () => Container(),
-                                    // context.go(AppPages.NAVIGATION_SCREEN),
-                                  ),
-
-                                  const SizedBox(height: 16),
-                                ],
-                              ),
+                            CustomTextField.buildTextFieldWithLabel(
+                              context: context,
+                              controller: nameController,
+                              hintText: "Entrez votre nom complet …",
+                              label: "Nom complet*",
                             ),
+
+                            CustomTextField.buildTextFieldWithLabel(
+                              context: context,
+                              controller: phoneController,
+                              hintText: "Entrez votre numéro WhatsApp ...",
+                              label: "Numéro WhatsApp*",
+                            ),
+
+                            CustomTextField.buildTextFieldWithLabel(
+                              context: context,
+                              controller: emailController,
+                              hintText: "Entre une adresse e-mail valide ...",
+                              label: "Adresse e-mail",
+                            ),
+
+                            const SizedBox(height: 20),
+
+                            PrimaryButton(
+                              title: state is UpdateProfileLoading
+                                  ? "Mise à jour..."
+                                  : "Mettre à jour le profil",
+                              onPressed: () => state is UpdateProfileLoading
+                                  ? null
+                                  : context.read<ProfileBloc>().add(
+                                      UpdateProfileEvent(
+                                        fullName: nameController.text,
+                                        phone: phoneController.text,
+                                        email: emailController.text,
+                                      ),
+                                    ),
+                            ),
+
                             const SizedBox(height: 80),
                           ],
                         );
-                      }
-                      return const SizedBox();
-                    },
+                      },
+                    ),
                   ),
                 ),
                 Positioned(
@@ -213,6 +280,40 @@ class _ProfilePageState extends State<ProfilePage> {
         selectedIndex: _currentIndex,
         onItemSelected: _handleNavigation,
       ),*/
+    );
+  }
+
+  void _showImagePicker(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      builder: (_) {
+        return SafeArea(
+          child: Wrap(
+            children: [
+              ListTile(
+                leading: const Icon(Icons.photo_library),
+                title: const Text("Choisir depuis la galerie"),
+                onTap: () {
+                  Navigator.pop(context);
+                  context.read<ProfileBloc>().add(
+                    UploadProfileImageEvent(ImageSource.gallery),
+                  );
+                },
+              ),
+              ListTile(
+                leading: const Icon(Icons.camera_alt),
+                title: const Text("Prendre une photo"),
+                onTap: () {
+                  Navigator.pop(context);
+                  context.read<ProfileBloc>().add(
+                    UploadProfileImageEvent(ImageSource.camera),
+                  );
+                },
+              ),
+            ],
+          ),
+        );
+      },
     );
   }
 }

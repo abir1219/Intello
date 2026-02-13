@@ -72,6 +72,7 @@ class _LoginPageState extends State<LoginPage> {
                   child: BlocListener<LoginBloc, LoginState>(
                     listener: (context, state) {
                       if (state is LoginSuccess) {
+                        _showSuccess(context,"Connexion réussie");
                         context.go(AppPages.PROFILE_SCREEN);
                       } else if (state is LoginFailure) {
                         _showError(context, state.message);
@@ -85,18 +86,24 @@ class _LoginPageState extends State<LoginPage> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         SizedBox(
-                          height: isLandscape ? height * 0.01 : height * 0.01,
+                          height: isLandscape
+                              ? height * 0.03
+                              : height * 0.03,
                         ),
                         SizedBox(
-                          height: isLandscape ? height * 0.13 : height * 0.15,
+                          height: isLandscape
+                              ? height * 0.05
+                              : height * 0.05,
                           width: isLandscape ? width * 0.19 : width * 0.18,
                           child: SvgPicture.asset(
-                            AppAssets.logo,
+                            AppAssets.logo_text,
                             fit: BoxFit.fill,
                           ),
                         ),
                         SizedBox(
-                          height: isLandscape ? height * 0.01 : height * 0.01,
+                          height: isLandscape
+                              ? height * 0.06
+                              : height * 0.06,
                         ),
                         Text(
                           "Bon retour !",
@@ -236,6 +243,16 @@ class _LoginPageState extends State<LoginPage> {
       SnackBar(
         content: Text(message),
         backgroundColor: Colors.red,
+        behavior: SnackBarBehavior.floating,
+      ),
+    );
+  }
+
+  void _showSuccess(BuildContext context, String message) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(message),
+        backgroundColor: AppColors.greenColor,
         behavior: SnackBarBehavior.floating,
       ),
     );

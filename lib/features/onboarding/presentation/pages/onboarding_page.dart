@@ -51,7 +51,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                     SizedBox(
                       height: isLandscape ? height * 0.12 : height * 0.15,
                       width: isLandscape ? width * 0.2 : width * 0.2,
-                      child: SvgPicture.asset(AppAssets.logo, fit: BoxFit.fill),
+                      child: SvgPicture.asset(AppAssets.logo_text, fit: BoxFit.fill),
                     ),
                     SizedBox(
                       height: isLandscape ? height * 0.01 : height * 0.03,

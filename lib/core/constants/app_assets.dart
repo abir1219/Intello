@@ -9,6 +9,7 @@ class AppAssets {
   static const lockSign = 'assets/images/lock.svg';
   static const homeMenu = 'assets/images/navigation_menu/home.svg';
   static const accountMenu = 'assets/images/navigation_menu/account.svg';
+  static const laughingMenu = 'assets/images/navigation_menu/laughing.svg';
 
   static const settings = 'assets/images/navigation_menu/settings.svg';
 }

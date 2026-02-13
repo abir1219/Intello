@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:intello_new/features/auth/widgets/custom_textfield.dart';
@@ -8,6 +9,7 @@ import '../../../../core/navigation/custom_bottom_nav_bar.dart';
 import '../../../../core/utils/app_dimenstion.dart';
 import '../../../../core/utils/responsive.dart';
 import '../../../../routes/app_pages.dart';
+import '../bloc/profile_bloc.dart';
 import '../widget/listen_button.dart';
 import '../widget/primary_button.dart';
 import '../widget/profile_avatar_section.dart';
@@ -68,97 +70,129 @@ class _ProfilePageState extends State<ProfilePage> {
                     top: 10,
                     bottom: 100,
                   ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      SizedBox(
-                        height: isLandscape ? height * 0.01 : height * 0.01,
-                      ),
-                      SizedBox(
-                        height: isLandscape ? height * 0.13 : height * 0.15,
-                        width: isLandscape ? width * 0.19 : width * 0.18,
-                        child: SvgPicture.asset(
-                          AppAssets.logo,
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                      SizedBox(
-                        height: isLandscape ? height * 0.01 : height * 0.01,
-                      ),
+                  child: BlocBuilder<ProfileBloc, ProfileState>(
+                    builder: (context, state) {
+                      if (state is AccountLoading) {
+                        return const Center(child: CircularProgressIndicator());
+                      }
 
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          const Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
+                      if (state is AccountFailure) {
+                        return Center(child: Text(state.message));
+                      }
+                      if (state is AccountLoaded) {
+                        final user = state.user;
+                        return Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            SizedBox(
+                              height: isLandscape
+                                  ? height * 0.01
+                                  : height * 0.01,
+                            ),
+                            SizedBox(
+                              height: isLandscape
+                                  ? height * 0.13
+                                  : height * 0.15,
+                              width: isLandscape ? width * 0.19 : width * 0.18,
+                              child: SvgPicture.asset(
+                                AppAssets.logo,
+                                fit: BoxFit.fill,
+                              ),
+                            ),
+                            SizedBox(
+                              height: isLandscape
+                                  ? height * 0.01
+                                  : height * 0.01,
+                            ),
+
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text(
-                                  "Aller à mon profil.",
-                                  style: TextStyle(
-                                    fontSize: 28,
-                                    color: AppColors.textColor,
-                                    fontWeight: FontWeight.w400,
+                                const Expanded(
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        "Aller à mon profil.",
+                                        style: TextStyle(
+                                          fontSize: 28,
+                                          color: AppColors.textColor,
+                                          fontWeight: FontWeight.w400,
+                                        ),
+                                      ),
+                                      //SizedBox(height: 4),
+                                      Text(
+                                        "Consultez et gérez vos informations personnelles.",
+                                        style: TextStyle(
+                                          color: AppColors.textColor,
+                                          fontWeight: FontWeight.w400,
+                                        ),
+                                      ),
+                                    ],
                                   ),
                                 ),
-                                //SizedBox(height: 4),
-                                Text(
-                                  "Consultez et gérez vos informations personnelles.",
-                                  style: TextStyle(
-                                    color: AppColors.textColor,
-                                    fontWeight: FontWeight.w400,
-                                  ),
+                                ListenButton(
+                                  onTap: () {},
+                                  listenString: 'Écouter les consignes',
                                 ),
                               ],
                             ),
-                          ),
-                          ListenButton(
-                            onTap: () {},
-                            listenString: 'Écouter les consignes',
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: 30),
-
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                        child: Column(
-                          children: [
-                            const ProfileAvatarSection(),
                             const SizedBox(height: 30),
-                            CustomTextField.buildTextFieldWithLabel(
-                              context: context,
-                              controller: null,
-                              hintText: "Entrez votre nom complet …",
-                              label: "Nom complet*",
-                            ),
-                            CustomTextField.buildTextFieldWithLabel(
-                              context: context,
-                              controller: null,
-                              hintText: "Entrez votre numéro WhatsApp ...",
-                              label: "Numéro WhatsApp*",
-                            ),
-                            CustomTextField.buildTextFieldWithLabel(
-                              context: context,
-                              controller: null,
-                              hintText: "Entre une adresse e-mail valide ...",
-                              label: "Adresse e-mail",
-                            ),
-                            const SizedBox(height: 10),
 
-                            PrimaryButton(
-                              title: "Mettre à jour le profil",
-                              onPressed: () => Container(),
-                              // context.go(AppPages.NAVIGATION_SCREEN),
-                            ),
+                            Padding(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 10.0,
+                              ),
+                              child: Column(
+                                children: [
+                                  const ProfileAvatarSection(),
+                                  const SizedBox(height: 30),
+                                  CustomTextField.buildTextFieldWithLabel(
+                                    context: context,
+                                    controller: TextEditingController(
+                                      text: "${user.firstName} ${user.lastName}",
+                                    ),
+                                    hintText: "Entrez votre nom complet …",
+                                    label: "Nom complet*",
+                                  ),
+                                  CustomTextField.buildTextFieldWithLabel(
+                                    context: context,
+                                    controller: TextEditingController(
+                                      text: user.whatsapp,
+                                    ),
+                                    hintText:
+                                        "Entrez votre numéro WhatsApp ...",
+                                    label: "Numéro WhatsApp*",
+                                  ),
+                                  CustomTextField.buildTextFieldWithLabel(
+                                    context: context,
+                                    controller: TextEditingController(
+                                      text: user.email,
+                                    ),
+                                    hintText:
+                                        "Entre une adresse e-mail valide ...",
+                                    label: "Adresse e-mail",
+                                  ),
+                                  const SizedBox(height: 10),
 
-                            const SizedBox(height: 16),
+                                  PrimaryButton(
+                                    title: "Mettre à jour le profil",
+                                    onPressed: () => Container(),
+                                    // context.go(AppPages.NAVIGATION_SCREEN),
+                                  ),
+
+                                  const SizedBox(height: 16),
+                                ],
+                              ),
+                            ),
+                            const SizedBox(height: 80),
                           ],
-                        ),
-                      ),
-                      const SizedBox(height: 80),
-                    ],
+                        );
+                      }
+                      return const SizedBox();
+                    },
                   ),
                 ),
                 Positioned(
@@ -166,9 +200,10 @@ class _ProfilePageState extends State<ProfilePage> {
                   left: 0,
                   right: 0,
                   child: CustomBottomNavBar(
-                  selectedIndex: _currentIndex,
-                  onItemSelected: _handleNavigation,
-                ),)
+                    selectedIndex: _currentIndex,
+                    onItemSelected: _handleNavigation,
+                  ),
+                ),
               ],
             );
           },

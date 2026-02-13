@@ -55,6 +55,7 @@ class _SignUpPageState extends State<SignUpPage> {
     context.go(AppPages.LOGIN_SCREEN);
   }
 
+  bool _check = false;
   @override
   Widget build(BuildContext context) {
     Responsive.isTablet(context);
@@ -184,11 +185,15 @@ class _SignUpPageState extends State<SignUpPage> {
                         Row(
                           children: [
                             Checkbox(
-                              value: true,
+                              value: _check,
                               materialTapTargetSize:
                               MaterialTapTargetSize.shrinkWrap,
                               activeColor: AppColors.greenColor,
-                              onChanged: (_) {},
+                              onChanged: (_) {
+                                setState(() {
+                                  _check = !_check;
+                                });
+                              },
                             ),
                             Expanded(
                               child: RichText(
@@ -295,7 +300,7 @@ class _SignUpPageState extends State<SignUpPage> {
         whatsapp.isEmpty ||
         email.isEmpty ||
         password.isEmpty ||
-        confirmPassword.isEmpty) {
+        confirmPassword.isEmpty || _check == false) {
       _showError(context, "Tous les champs sont obligatoires.");
       return;
     }

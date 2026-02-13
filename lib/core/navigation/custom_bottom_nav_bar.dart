@@ -19,7 +19,7 @@ class CustomBottomNavBar extends StatelessWidget {
     final List<String> icons = [
       AppAssets.homeMenu,
       AppAssets.accountMenu,
-      AppAssets.homeMenu,
+      AppAssets.laughingMenu,
       AppAssets.settings,
     ];
 
@@ -58,7 +58,7 @@ class CustomBottomNavBar extends StatelessWidget {
                     onItemSelected(index); // ✅ IMPORTANT
                   },
                   child: AnimatedContainer(
-                    duration: const Duration(milliseconds: 100),
+                    duration: const Duration(milliseconds: 850),
                     transform: Matrix4.translationValues(
                       0,
                       isActive ? -30 : 0,

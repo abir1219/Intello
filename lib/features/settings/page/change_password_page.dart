@@ -34,7 +34,7 @@ class _StateChangePasswordPage extends State<ChangePasswordPage> {
 
     switch (index) {
       case 0:
-        Container();
+        context.go(AppPages.LEVEL_SCREEN);
         break;
       case 1:
         context.go(AppPages.PROFILE_SCREEN);

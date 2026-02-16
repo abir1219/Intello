@@ -11,8 +11,9 @@ class AppAssets {
   static const homeMenu = 'assets/images/navigation_menu/home.svg';
   static const accountMenu = 'assets/images/navigation_menu/account.svg';
   static const laughingMenu = 'assets/images/navigation_menu/laughing.svg';
-
   static const settings = 'assets/images/navigation_menu/settings.svg';
+
+  static const level = 'assets/images/level/level.svg';
 
   static const  audio = "assets/audio/audio.mp3";
 }

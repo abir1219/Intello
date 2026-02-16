@@ -117,6 +117,7 @@ class _SignUpPageState extends State<SignUpPage> {
                           height: isLandscape
                               ? height * 0.06
                               : height * 0.06,
+
                         ),
                         Text(
                           "Créer un compte !",

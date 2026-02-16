@@ -73,7 +73,7 @@ class _LoginPageState extends State<LoginPage> {
                     listener: (context, state) {
                       if (state is LoginSuccess) {
                         _showSuccess(context,"Connexion réussie");
-                        context.go(AppPages.PROFILE_SCREEN);
+                        context.go(AppPages.LEVEL_SCREEN);
                       } else if (state is LoginFailure) {
                         _showError(context, state.message);
                         /*ScaffoldMessenger.of(context).showSnackBar(

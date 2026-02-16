@@ -31,7 +31,7 @@ class _ProfilePageState extends State<ProfilePage> {
 
     switch (index) {
       case 0:
-        Container();
+        context.go(AppPages.LEVEL_SCREEN);
         break;
       case 1:
         context.go(AppPages.PROFILE_SCREEN);

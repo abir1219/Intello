@@ -39,7 +39,7 @@ class PhoneValidation extends StatelessWidget {
                   child: BlocListener<ForgotPasswordBloc, ForgotPasswordState>(
                     listener: (context, state) {
                       if (state is ValidatePhoneSuccess) {
-                        context.go(AppPages.CHANGE_PASSWORD_SCREEN);
+                        context.go(AppPages.CREATE_NEW_PASSWORD_SCREEN);
                       } else if (state is ValidatePhoneFailure) {
                         _showError(context, state.message);
                       }

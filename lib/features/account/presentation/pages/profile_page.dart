@@ -81,199 +81,206 @@ class _ProfilePageState extends State<ProfilePage> {
 
     return Scaffold(
       //backgroundColor: const Color(0xFFF4EFE6),
-      body: SafeArea(
-        child: OrientationBuilder(
-          builder: (BuildContext context, Orientation orientation) {
-            return Stack(
-              fit: StackFit.expand,
-              children: [
-                SvgPicture.asset(AppAssets.background, fit: BoxFit.cover),
-                SingleChildScrollView(
-                  /*padding: EdgeInsets.symmetric(
-                    horizontal: isLandscape ? width * 0.25 : width * 0.05,
-                    vertical: 10,
-                  ),*/
-                  padding: EdgeInsets.only(
-                    left: isLandscape ? width * 0.25 : width * 0.08,
-                    right: isLandscape ? width * 0.25 : width * 0.08,
-                    top: 10,
-                    bottom: 100,
-                  ),
-                  child: BlocListener<ProfileBloc, ProfileState>(
-                    listener: (context, state) {
-                      print("State is $state");
-                      if (state is UpdateProfileSuccess) {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(
-                            content: Text("Profil mis à jour avec succès."),
-                            backgroundColor: Colors.green,
-                          ),
-                        );
-                      }
-
-                      if (state is UpdateProfileFailure) {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(
-                            content: Text(state.message),
-                            backgroundColor: Colors.red,
-                          ),
-                        );
-                      }
-
-                      if (state is AccountLoaded) {
-                        nameController.text =
-                            "${state.user.firstName} ${state.user.lastName}";
-                        phoneController.text = state.user.whatsapp;
-                        emailController.text = state.user.email;
-                      }
-                    },
-                    child: BlocBuilder<ProfileBloc, ProfileState>(
-                      builder: (context, state) {
-                        if (state is AccountLoading) {
-                          return const Center(
-                            child: CircularProgressIndicator(),
+      body: PopScope(
+        canPop: false,
+        onPopInvokedWithResult: (didPop, result) {
+          if(didPop) return;
+          context.push(AppPages.LEVEL_SCREEN);
+        },
+        child: SafeArea(
+          child: OrientationBuilder(
+            builder: (BuildContext context, Orientation orientation) {
+              return Stack(
+                fit: StackFit.expand,
+                children: [
+                  SvgPicture.asset(AppAssets.background, fit: BoxFit.cover),
+                  SingleChildScrollView(
+                    /*padding: EdgeInsets.symmetric(
+                      horizontal: isLandscape ? width * 0.25 : width * 0.05,
+                      vertical: 10,
+                    ),*/
+                    padding: EdgeInsets.only(
+                      left: isLandscape ? width * 0.25 : width * 0.08,
+                      right: isLandscape ? width * 0.25 : width * 0.08,
+                      top: 10,
+                      bottom: 100,
+                    ),
+                    child: BlocListener<ProfileBloc, ProfileState>(
+                      listener: (context, state) {
+                        print("State is $state");
+                        if (state is UpdateProfileSuccess) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                              content: Text("Profil mis à jour avec succès."),
+                              backgroundColor: Colors.green,
+                            ),
                           );
                         }
 
-                        if (state is AccountFailure) {
-                          return Center(child: Text(state.message));
+                        if (state is UpdateProfileFailure) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              content: Text(state.message),
+                              backgroundColor: Colors.red,
+                            ),
+                          );
                         }
 
-                        return Column(
-                          children: [
-                            //const SizedBox(height: 30),
-                            SizedBox(
-                              height: isLandscape
-                                  ? height * 0.03
-                                  : height * 0.03,
-                            ),
-                            SizedBox(
-                              height: isLandscape
-                                  ? height * 0.05
-                                  : height * 0.05,
-                              width: isLandscape ? width * 0.19 : width * 0.18,
-                              child: SvgPicture.asset(
-                                AppAssets.logo_text,
-                                fit: BoxFit.fill,
+                        if (state is AccountLoaded) {
+                          nameController.text =
+                              "${state.user.firstName} ${state.user.lastName}";
+                          phoneController.text = state.user.whatsapp;
+                          emailController.text = state.user.email;
+                        }
+                      },
+                      child: BlocBuilder<ProfileBloc, ProfileState>(
+                        builder: (context, state) {
+                          if (state is AccountLoading) {
+                            return const Center(
+                              child: CircularProgressIndicator(),
+                            );
+                          }
+
+                          if (state is AccountFailure) {
+                            return Center(child: Text(state.message));
+                          }
+
+                          return Column(
+                            children: [
+                              //const SizedBox(height: 30),
+                              SizedBox(
+                                height: isLandscape
+                                    ? height * 0.03
+                                    : height * 0.03,
                               ),
-                            ),
-                            SizedBox(
-                              height: isLandscape
-                                  ? height * 0.06
-                                  : height * 0.06,
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                const Expanded(
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        "Aller à mon profil.",
-                                        style: TextStyle(
-                                          fontSize: 28,
-                                          color: AppColors.textColor,
-                                          fontWeight: FontWeight.w400,
-                                        ),
-                                      ),
-                                      //SizedBox(height: 4),
-                                      Padding(
-                                        padding: EdgeInsets.only(right: 130.0),
-                                        child: Text(
-                                          "Consultez et gérez vos informations personnelles.",
+                              SizedBox(
+                                height: isLandscape
+                                    ? height * 0.05
+                                    : height * 0.05,
+                                width: isLandscape ? width * 0.19 : width * 0.18,
+                                child: SvgPicture.asset(
+                                  AppAssets.logo_text,
+                                  fit: BoxFit.fill,
+                                ),
+                              ),
+                              SizedBox(
+                                height: isLandscape
+                                    ? height * 0.06
+                                    : height * 0.06,
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  const Expanded(
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          "Aller à mon profil.",
                                           style: TextStyle(
+                                            fontSize: 28,
                                             color: AppColors.textColor,
                                             fontWeight: FontWeight.w400,
                                           ),
                                         ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                ListenButton(
-                                  onTap: () => audioService.playAsset(
-                                    AppAssets.audio,
-                                  ),
-                                  listenString: 'Écouter les consignes',
-                                ),
-                              ],
-                            ),
-                            const SizedBox(height: 40),
-                            BlocBuilder<ProfileBloc, ProfileState>(
-                              builder: (context, state) {
-                                if (state is AccountLoaded) {
-                                  return ProfileAvatarSection(
-                                    imagePath: state.user.imagePath,
-                                    onTap: () {
-                                      _showImagePicker(context);
-                                    },
-                                  );
-                                }
-
-                                return const SizedBox();
-                              },
-                            ),
-                            const SizedBox(height: 30),
-
-                            CustomTextField.buildTextFieldWithLabel(
-                              context: context,
-                              controller: nameController,
-                              hintText: "Entrez votre nom complet …",
-                              label: "Nom complet*",
-                            ),
-
-                            CustomTextField.buildTextFieldWithLabel(
-                              context: context,
-                              controller: phoneController,
-                              hintText: "Entrez votre numéro WhatsApp ...",
-                              label: "Numéro WhatsApp*",
-                            ),
-
-                            CustomTextField.buildTextFieldWithLabel(
-                              context: context,
-                              controller: emailController,
-                              hintText: "Entre une adresse e-mail valide ...",
-                              label: "Adresse e-mail",
-                            ),
-
-                            const SizedBox(height: 20),
-
-                            PrimaryButton(
-                              title: state is UpdateProfileLoading
-                                  ? "Mise à jour..."
-                                  : "Mettre à jour le profil",
-                              onPressed: () => state is UpdateProfileLoading
-                                  ? null
-                                  : context.read<ProfileBloc>().add(
-                                      UpdateProfileEvent(
-                                        fullName: nameController.text,
-                                        phone: phoneController.text,
-                                        email: emailController.text,
-                                      ),
+                                        //SizedBox(height: 4),
+                                        Padding(
+                                          padding: EdgeInsets.only(right: 130.0),
+                                          child: Text(
+                                            "Consultez et gérez vos informations personnelles.",
+                                            style: TextStyle(
+                                              color: AppColors.textColor,
+                                              fontWeight: FontWeight.w400,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
                                     ),
-                            ),
+                                  ),
+                                  ListenButton(
+                                    onTap: () => audioService.playAsset(
+                                      AppAssets.audio,
+                                    ),
+                                    listenString: 'Écouter les consignes',
+                                  ),
+                                ],
+                              ),
+                              const SizedBox(height: 40),
+                              BlocBuilder<ProfileBloc, ProfileState>(
+                                builder: (context, state) {
+                                  if (state is AccountLoaded) {
+                                    return ProfileAvatarSection(
+                                      imagePath: state.user.imagePath,
+                                      onTap: () {
+                                        _showImagePicker(context);
+                                      },
+                                    );
+                                  }
 
-                            const SizedBox(height: 80),
-                          ],
-                        );
-                      },
+                                  return const SizedBox();
+                                },
+                              ),
+                              const SizedBox(height: 30),
+
+                              CustomTextField.buildTextFieldWithLabel(
+                                context: context,
+                                controller: nameController,
+                                hintText: "Entrez votre nom complet …",
+                                label: "Nom complet*",
+                              ),
+
+                              CustomTextField.buildTextFieldWithLabel(
+                                context: context,
+                                controller: phoneController,
+                                hintText: "Entrez votre numéro WhatsApp ...",
+                                label: "Numéro WhatsApp*",
+                              ),
+
+                              CustomTextField.buildTextFieldWithLabel(
+                                context: context,
+                                controller: emailController,
+                                hintText: "Entre une adresse e-mail valide ...",
+                                label: "Adresse e-mail",
+                              ),
+
+                              const SizedBox(height: 20),
+
+                              PrimaryButton(
+                                title: state is UpdateProfileLoading
+                                    ? "Mise à jour..."
+                                    : "Mettre à jour le profil",
+                                onPressed: () => state is UpdateProfileLoading
+                                    ? null
+                                    : context.read<ProfileBloc>().add(
+                                        UpdateProfileEvent(
+                                          fullName: nameController.text,
+                                          phone: phoneController.text,
+                                          email: emailController.text,
+                                        ),
+                                      ),
+                              ),
+
+                              const SizedBox(height: 80),
+                            ],
+                          );
+                        },
+                      ),
                     ),
                   ),
-                ),
-                Positioned(
-                  bottom: 10,
-                  left: 0,
-                  right: 0,
-                  child: CustomBottomNavBar(
-                    selectedIndex: _currentIndex,
-                    onItemSelected: _handleNavigation,
+                  Positioned(
+                    bottom: 10,
+                    left: 0,
+                    right: 0,
+                    child: CustomBottomNavBar(
+                      selectedIndex: _currentIndex,
+                      onItemSelected: _handleNavigation,
+                    ),
                   ),
-                ),
-              ],
-            );
-          },
+                ],
+              );
+            },
+          ),
         ),
       ),
       /*bottomNavigationBar: CustomBottomNavBar(

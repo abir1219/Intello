@@ -1,0 +1,92 @@
+{
+  "levels": [
+    {
+      "level_code": "cp1",
+      "subjects": [
+        {
+          "id": 1,
+          "title": "EMC",
+          "subtitle": "Apprendre les valeurs, le respect, la citoyenneté et le vivre-ensemble."
+        },
+        {
+          "id": 2,
+          "title": "Mathématiques",
+          "subtitle": "Apprends à compter, calculer et résoudre des problèmes."
+        },
+        {
+          "id": 3,
+          "title": "Science",
+          "subtitle": "Expérimente et développe ton esprit scientifique."
+        },
+        {
+          "id": 4,
+          "title": "Lecture",
+          "subtitle": "Développe tes compétences en lecture et en compréhension."
+        }
+      ]
+    },
+
+    {
+      "level_code": "cp2",
+      "subjects": [
+        {
+          "id": 1,
+          "title": "EMC",
+          "subtitle": "Renforce les valeurs civiques et sociales."
+        },
+        {
+          "id": 2,
+          "title": "Mathématiques",
+          "subtitle": "Approfondis les opérations et les problèmes."
+        },
+        {
+          "id": 3,
+          "title": "Lecture",
+          "subtitle": "Améliore ta compréhension écrite."
+        }
+      ]
+    },
+
+    {
+      "level_code": "ce1",
+      "subjects": [
+        {
+          "id": 1,
+          "title": "Mathématiques",
+          "subtitle": "Travaille les multiplications et divisions."
+        },
+        {
+          "id": 2,
+          "title": "Science",
+          "subtitle": "Découvre le monde naturel."
+        },
+        {
+          "id": 3,
+          "title": "Lecture",
+          "subtitle": "Lis des textes plus complexes."
+        }
+      ]
+    },
+
+    {
+      "level_code": "ce2",
+      "subjects": [
+        {
+          "id": 1,
+          "title": "Mathématiques",
+          "subtitle": "Maîtrise les fractions et les calculs avancés."
+        },
+        {
+          "id": 2,
+          "title": "Science",
+          "subtitle": "Approfondis les notions scientifiques."
+        },
+        {
+          "id": 3,
+          "title": "Histoire",
+          "subtitle": "Découvre les événements historiques importants."
+        }
+      ]
+    }
+  ]
+}

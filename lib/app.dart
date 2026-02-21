@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:intello_new/features/account/data/repositories/account_repository_impl.dart';
 import 'package:intello_new/features/auth/presentation/bloc/login/login_bloc.dart';
 import 'package:intello_new/features/auth/presentation/bloc/registration/registration_bloc.dart';
+import 'package:intello_new/features/subject/presentation/pages/subject_screen.dart';
 import 'package:intello_new/routes/app_routes.dart';
 
 import 'features/account/data/datasources/account_local_datasource.dart';
@@ -14,6 +15,9 @@ import 'features/auth/data/datasources/auth_local_datasource.dart';
 import 'features/auth/data/repositories/auth_repository_impl.dart';
 import 'features/auth/presentation/bloc/forgot_password/forgot_password_bloc.dart';
 import 'features/settings/bloc/change_password/change_password_bloc.dart';
+import 'features/subject/data/datasources/subject_local_datasource.dart';
+import 'features/subject/data/repositories/subject_repository_impl.dart';
+import 'features/subject/presentation/bloc/subject_bloc.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -44,8 +48,13 @@ class MyApp extends StatelessWidget {
               ProfileBloc(AccountRepositoryImpl(AccountLocalDataSource())),
         ),*/
         BlocProvider(
+          create: (_) =>
+              SubjectBloc(SubjectRepositoryImpl(SubjectLocalDataSource())),
+          child: SubjectScreen(levelCode: "cp1"),
+        ),
+        BlocProvider(
           create: (context) =>
-              ProfileBloc(AccountRepositoryImpl(AccountLocalDataSource()))
+              ProfileBloc(AccountRepositoryImpl(AccountLocalDataSource())),
           //       ..add(LoadAccountEvent()),
           // child: const ProfilePage(),
         ),

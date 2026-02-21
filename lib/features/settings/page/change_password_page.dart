@@ -72,160 +72,167 @@ class _StateChangePasswordPage extends State<ChangePasswordPage> {
     final isLandscape = Responsive.isLandscape(context);
 
     return Scaffold(
-      body: SafeArea(
-        child: OrientationBuilder(
-          builder: (BuildContext context, Orientation orientation) {
-            return Stack(
-              fit: StackFit.expand,
-              children: [
-                SvgPicture.asset(AppAssets.background, fit: BoxFit.cover),
-                Positioned(
-                  bottom: 20,
-                  top: 0,
-                  left: 0,
-                  right: 0,
-                  child: SingleChildScrollView(
-                    padding: EdgeInsets.only(
-                      left: isLandscape ? width * 0.25 : width * 0.08,
-                      right: isLandscape ? width * 0.25 : width * 0.08,
-                      top: 10,
-                      bottom: 100,
-                    ),
-                    child: BlocConsumer<ChangePasswordBloc, ChangePasswordState>(
-                      listener: (context, state) {
-                        if (state is ChangePasswordSuccess) {
-                          _showSuccess(
-                            context,
-                            "Mot de passe modifié avec succès.",
-                          );
-                          _oldPassword.text = "";
-                          _newPassword.text = "";
-                          _cnfrm_password.text = "";
-                        } else if (state is ChangePasswordFailure) {
-                          _showError(context, state.message);
-                        }
-                      },
-                      builder: (context, state) {
-                        return Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            SizedBox(
-                              height: isLandscape
-                                  ? height * 0.03
-                                  : height * 0.03,
-                            ),
-                            SizedBox(
-                              height: isLandscape
-                                  ? height * 0.05
-                                  : height * 0.05,
-                              width: isLandscape ? width * 0.19 : width * 0.18,
-                              child: SvgPicture.asset(
-                                AppAssets.logo_text,
-                                fit: BoxFit.fill,
+      body: PopScope(
+        canPop: false,
+        onPopInvokedWithResult: (didPop, result) {
+          if(didPop) return;
+          context.push(AppPages.LEVEL_SCREEN);
+        },
+        child: SafeArea(
+          child: OrientationBuilder(
+            builder: (BuildContext context, Orientation orientation) {
+              return Stack(
+                fit: StackFit.expand,
+                children: [
+                  SvgPicture.asset(AppAssets.background, fit: BoxFit.cover),
+                  Positioned(
+                    bottom: 20,
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    child: SingleChildScrollView(
+                      padding: EdgeInsets.only(
+                        left: isLandscape ? width * 0.25 : width * 0.08,
+                        right: isLandscape ? width * 0.25 : width * 0.08,
+                        top: 10,
+                        bottom: 100,
+                      ),
+                      child: BlocConsumer<ChangePasswordBloc, ChangePasswordState>(
+                        listener: (context, state) {
+                          if (state is ChangePasswordSuccess) {
+                            _showSuccess(
+                              context,
+                              "Mot de passe modifié avec succès.",
+                            );
+                            _oldPassword.text = "";
+                            _newPassword.text = "";
+                            _cnfrm_password.text = "";
+                          } else if (state is ChangePasswordFailure) {
+                            _showError(context, state.message);
+                          }
+                        },
+                        builder: (context, state) {
+                          return Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              SizedBox(
+                                height: isLandscape
+                                    ? height * 0.03
+                                    : height * 0.03,
                               ),
-                            ),
-                            SizedBox(
-                              height: isLandscape
-                                  ? height * 0.06
-                                  : height * 0.06,
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                const Expanded(
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        "Changer le mot de passe.",
-                                        style: TextStyle(
-                                          fontSize: 28,
-                                          color: AppColors.textColor,
-                                          fontWeight: FontWeight.w400,
-                                        ),
-                                      ),
-                                      //SizedBox(height: 4),
-                                      Padding(
-                                        padding: EdgeInsets.only(right: 130.0),
-                                        child: Text(
-                                          "Mettez à jour votre mot de passe pour sécuriser votre compte.",
+                              SizedBox(
+                                height: isLandscape
+                                    ? height * 0.05
+                                    : height * 0.05,
+                                width: isLandscape ? width * 0.19 : width * 0.18,
+                                child: SvgPicture.asset(
+                                  AppAssets.logo_text,
+                                  fit: BoxFit.fill,
+                                ),
+                              ),
+                              SizedBox(
+                                height: isLandscape
+                                    ? height * 0.06
+                                    : height * 0.06,
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  const Expanded(
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          "Changer le mot de passe.",
                                           style: TextStyle(
+                                            fontSize: 28,
                                             color: AppColors.textColor,
                                             fontWeight: FontWeight.w400,
                                           ),
                                         ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                ListenButton(
-                                  onTap: () => audioService.playAsset(
-                                    AppAssets.audio,
-                                  ),
-                                  listenString: 'Écouter les consignes',
-                                ),
-                              ],
-                            ),
-                            const SizedBox(height: 40),
-                            CustomTextField.buildTextFieldWithLabel(
-                              label: "Mot de passe actuel",
-                              hintText: "Entrez votre mot de passe actuel …",
-                              obscureText: true,
-                              context: context,
-                              controller: _oldPassword,
-                            ),
-                            //const SizedBox(height: 16),
-                            CustomTextField.buildTextFieldWithLabel(
-                              label: "Nouveau mot de passe",
-                              hintText:
-                                  "Créez un nouveau mot de passe sécurisé …",
-                              context: context,
-                              obscureText: true,
-                              controller: _newPassword,
-                            ),
-                            CustomTextField.buildTextFieldWithLabel(
-                              label: "Confirmer le nouveau mot de passe",
-                              hintText:
-                                  "Entrez à nouveau le nouveau mot de passe …",
-                              context: context,
-                              obscureText: true,
-                              controller: _cnfrm_password,
-                            ),
-                            const SizedBox(height: 10),
-
-                            PrimaryButton(
-                              title: "Mettre à jour le mot de passe",
-                              onPressed: () =>
-                                  context.read<ChangePasswordBloc>().add(
-                                    SubmitChangePassword(
-                                      currentPassword: _oldPassword.text.trim(),
-                                      newPassword: _newPassword.text.trim(),
-                                      confirmPassword: _cnfrm_password.text.trim(),
+                                        //SizedBox(height: 4),
+                                        Padding(
+                                          padding: EdgeInsets.only(right: 130.0),
+                                          child: Text(
+                                            "Mettez à jour votre mot de passe pour sécuriser votre compte.",
+                                            style: TextStyle(
+                                              color: AppColors.textColor,
+                                              fontWeight: FontWeight.w400,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                   ),
-                            ),
+                                  ListenButton(
+                                    onTap: () => audioService.playAsset(
+                                      AppAssets.audio,
+                                    ),
+                                    listenString: 'Écouter les consignes',
+                                  ),
+                                ],
+                              ),
+                              const SizedBox(height: 40),
+                              CustomTextField.buildTextFieldWithLabel(
+                                label: "Mot de passe actuel",
+                                hintText: "Entrez votre mot de passe actuel …",
+                                obscureText: true,
+                                context: context,
+                                controller: _oldPassword,
+                              ),
+                              //const SizedBox(height: 16),
+                              CustomTextField.buildTextFieldWithLabel(
+                                label: "Nouveau mot de passe",
+                                hintText:
+                                    "Créez un nouveau mot de passe sécurisé …",
+                                context: context,
+                                obscureText: true,
+                                controller: _newPassword,
+                              ),
+                              CustomTextField.buildTextFieldWithLabel(
+                                label: "Confirmer le nouveau mot de passe",
+                                hintText:
+                                    "Entrez à nouveau le nouveau mot de passe …",
+                                context: context,
+                                obscureText: true,
+                                controller: _cnfrm_password,
+                              ),
+                              const SizedBox(height: 10),
 
-                            const SizedBox(height: 16),
-                          ],
-                        );
-                      },
+                              PrimaryButton(
+                                title: "Mettre à jour le mot de passe",
+                                onPressed: () =>
+                                    context.read<ChangePasswordBloc>().add(
+                                      SubmitChangePassword(
+                                        currentPassword: _oldPassword.text.trim(),
+                                        newPassword: _newPassword.text.trim(),
+                                        confirmPassword: _cnfrm_password.text.trim(),
+                                      ),
+                                    ),
+                              ),
+
+                              const SizedBox(height: 16),
+                            ],
+                          );
+                        },
+                      ),
                     ),
                   ),
-                ),
-                Positioned(
-                  bottom: 10,
-                  left: 0,
-                  right: 0,
-                  child: CustomBottomNavBar(
-                    selectedIndex: _currentIndex,
-                    onItemSelected: _handleNavigation,
+                  Positioned(
+                    bottom: 10,
+                    left: 0,
+                    right: 0,
+                    child: CustomBottomNavBar(
+                      selectedIndex: _currentIndex,
+                      onItemSelected: _handleNavigation,
+                    ),
                   ),
-                ),
-              ],
-            );
-          },
+                ],
+              );
+            },
+          ),
         ),
       ),
     );

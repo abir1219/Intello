@@ -3,7 +3,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:intello_new/core/constants/app_assets.dart';
 import 'package:intello_new/core/constants/app_colors.dart';
 
-import '../../../../core/utils/app_dimenstion.dart';
 import '../../domain/entity/level_entity.dart';
 
 class LevelCard extends StatelessWidget {

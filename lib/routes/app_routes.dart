@@ -8,6 +8,7 @@ import 'package:intello_new/features/auth/presentation/pages/signup_page.dart';
 import 'package:intello_new/features/level/presentation/pages/level_screen.dart';
 import 'package:intello_new/features/onboarding/presentation/pages/onboarding_page.dart';
 import 'package:intello_new/features/settings/page/change_password_page.dart';
+import 'package:intello_new/features/subject/presentation/pages/subject_screen.dart';
 import 'package:intello_new/routes/app_pages.dart';
 
 import '../features/splash/presentation/pages/splash_screen.dart';
@@ -38,13 +39,17 @@ class AppRouters {
       ),
       GoRoute(
         path: AppPages.CREATE_NEW_PASSWORD_SCREEN,
-        pageBuilder: (context, state) =>
-            _defaultTransitionPage(child: CreateNewPasswordPage(), key: state.pageKey),
+        pageBuilder: (context, state) => _defaultTransitionPage(
+          child: CreateNewPasswordPage(),
+          key: state.pageKey,
+        ),
       ),
       GoRoute(
         path: AppPages.CHANGE_PASSWORD_SCREEN,
-        pageBuilder: (context, state) =>
-            _defaultTransitionPage(child: ChangePasswordPage(), key: state.pageKey),
+        pageBuilder: (context, state) => _defaultTransitionPage(
+          child: ChangePasswordPage(),
+          key: state.pageKey,
+        ),
       ),
       GoRoute(
         path: AppPages.PROFILE_SCREEN,
@@ -52,9 +57,20 @@ class AppRouters {
             _defaultTransitionPage(child: ProfilePage(), key: state.pageKey),
       ),
       GoRoute(
+        path: AppPages.SUBJECT_SCREEN,
+        pageBuilder: (context, state) {
+          return _defaultTransitionPage(
+            child: SubjectScreen(levelCode: state.extra as String),
+            key: state.pageKey,
+          );
+        }
+      ),
+      GoRoute(
         path: AppPages.PHONE_VALIDATE_SCREEN,
-        pageBuilder: (context, state) =>
-            _defaultTransitionPage(child: PhoneValidation(), key: state.pageKey),
+        pageBuilder: (context, state) => _defaultTransitionPage(
+          child: PhoneValidation(),
+          key: state.pageKey,
+        ),
       ),
       GoRoute(
         path: AppPages.LEVEL_SCREEN,

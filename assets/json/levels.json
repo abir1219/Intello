@@ -12,25 +12,25 @@
     "level": 1
   },
   {
-    "id": "cp3",
+    "id": "ce1",
     "code": "CE1",
     "title": "Cours Élémentaire 1",
     "level": 2
   },
   {
-    "id": "cp4",
+    "id": "ce2",
     "code": "CE2",
     "title": "Cours Élémentaire 2",
     "level": 2
   },
   {
-    "id": "cp5",
+    "id": "cm1",
     "code": "CM1",
     "title": "Cours Moyen 1",
     "level": 3
   },
   {
-    "id": "cp6",
+    "id": "cm2",
     "code": "CM2",
     "title": "Cours Moyen 2",
     "level": 3

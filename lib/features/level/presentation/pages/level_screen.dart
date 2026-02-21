@@ -155,6 +155,11 @@ class _LevelScreenState extends State<LevelScreen> {
                                     setState(() {
                                       selectedIndex = index;
                                     });
+                                    print("label-->${levels[index].id}");
+                                    context.push(
+                                      AppPages.SUBJECT_SCREEN,
+                                      extra: levels[index].id,
+                                    );
                                   },
                                 );
                               },

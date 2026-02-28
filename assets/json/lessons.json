@@ -1,0 +1,100 @@
+[
+  {
+    "level_code": "cp1",
+    "subjects": [
+      {
+        "id": "emc",
+        "title": "EMC",
+        "subtitle": "Apprendre les valeurs, le respect, la citoyenneté et le vivre-ensemble.",
+        "lessons": [
+          {
+            "id": "emc_l1",
+            "title": "EMC_L1",
+            "instruction": "Lis la consigne et réponds."
+          },
+          {
+            "id": "emc_l2",
+            "title": "EMC_L2",
+            "instruction": "Lis la consigne et réponds."
+          },
+          {
+            "id": "emc_l3",
+            "title": "EMC_L3",
+            "instruction": "Lis la consigne et réponds."
+          }
+        ]
+      },
+      {
+        "id": "mathématiques",
+        "title": "Mathématiques",
+        "subtitle": "Apprendre les valeurs, le respect, la citoyenneté et le vivre-ensemble.",
+        "lessons": [
+          {
+            "id": "mathématiques_l1",
+            "title": "Mathématiques_L1",
+            "instruction": "Lis la consigne et réponds."
+          },
+          {
+            "id": "mathématiques_l2",
+            "title": "Mathématiques_L2",
+            "instruction": "Lis la consigne et réponds."
+          },
+          {
+            "id": "mathématiques_l3",
+            "title": "Mathématiques_L3",
+            "instruction": "Lis la consigne et réponds."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "level_code": "cp2",
+    "subjects": [
+      {
+        "id": "emc",
+        "title": "EMC",
+        "subtitle": "Apprendre les valeurs, le respect, la citoyenneté et le vivre-ensemble.",
+        "lessons": [
+          {
+            "id": "emc2_l1",
+            "title": "EMC2_L1",
+            "instruction": "Lis la consigne et réponds."
+          },
+          {
+            "id": "emc2_l2",
+            "title": "EMC2_L2",
+            "instruction": "Lis la consigne et réponds."
+          },
+          {
+            "id": "emc2_l3",
+            "title": "EMC2_L3",
+            "instruction": "Lis la consigne et réponds."
+          }
+        ]
+      },
+      {
+        "id": "mathématiques",
+        "title": "Mathématiques",
+        "subtitle": "Apprendre les valeurs, le respect, la citoyenneté et le vivre-ensemble.",
+        "lessons": [
+          {
+            "id": "mathématiques2_l1",
+            "title": "Mathématiques2_L1",
+            "instruction": "Lis la consigne et réponds."
+          },
+          {
+            "id": "mathématiques2_l2",
+            "title": "Mathématiques2_L2",
+            "instruction": "Lis la consigne et réponds."
+          },
+          {
+            "id": "mathématiques2_l3",
+            "title": "Mathématiques2_L3",
+            "instruction": "Lis la consigne et réponds."
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -31,6 +31,7 @@ class _SubjectScreenState extends State<SubjectScreen> {
   @override
   void initState() {
     super.initState();
+    debugPrint("code->${widget.levelCode}");
     audioService = AudioPlayerService();
     context.read<SubjectBloc>().add(LoadSubjectsEvent(widget.levelCode));
   }
@@ -42,8 +43,8 @@ class _SubjectScreenState extends State<SubjectScreen> {
   }*/
 
   void _handleNavigation(int index) {
-    if (index == _navIndex) return;
-
+    // if (index == _navIndex) return;
+    debugPrint("SUBJECT_INDEX-->$index");
     switch (index) {
       case 0:
         context.go(AppPages.LEVEL_SCREEN);
@@ -153,6 +154,10 @@ class _SubjectScreenState extends State<SubjectScreen> {
                                     onTap: () {
                                       setState(() {
                                         selectedIndex = index;
+                                      });
+                                      context.push(AppPages.LESSON_SCREEN,extra: {
+                                        "subjectId": state.subjects[index].id,
+                                        "levelCode": widget.levelCode
                                       });
                                     },
                                   ),

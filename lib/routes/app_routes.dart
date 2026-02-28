@@ -5,6 +5,7 @@ import 'package:intello_new/features/auth/presentation/pages/create_new_password
 import 'package:intello_new/features/auth/presentation/pages/login_page.dart';
 import 'package:intello_new/features/auth/presentation/pages/phone_validation.dart';
 import 'package:intello_new/features/auth/presentation/pages/signup_page.dart';
+import 'package:intello_new/features/lessons/presentation/pages/lesson_screen.dart';
 import 'package:intello_new/features/level/presentation/pages/level_screen.dart';
 import 'package:intello_new/features/onboarding/presentation/pages/onboarding_page.dart';
 import 'package:intello_new/features/settings/page/change_password_page.dart';
@@ -63,7 +64,7 @@ class AppRouters {
             child: SubjectScreen(levelCode: state.extra as String),
             key: state.pageKey,
           );
-        }
+        },
       ),
       GoRoute(
         path: AppPages.PHONE_VALIDATE_SCREEN,
@@ -76,6 +77,21 @@ class AppRouters {
         path: AppPages.LEVEL_SCREEN,
         pageBuilder: (context, state) =>
             _defaultTransitionPage(child: LevelScreen(), key: state.pageKey),
+      ),
+      GoRoute(
+        path: AppPages.LESSON_SCREEN,
+        pageBuilder: (context, state) {
+
+          final data = state.extra as Map<String, dynamic>;
+
+          return _defaultTransitionPage(
+            child: LessonScreen(
+              subject: data['subjectId'] as String,
+              level: data['levelCode'] as String,
+            ),
+            key: state.pageKey,
+          );
+        },
       ),
     ],
   );

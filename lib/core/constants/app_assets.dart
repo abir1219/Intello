@@ -15,6 +15,8 @@ class AppAssets {
 
   static const level = 'assets/images/level/level.svg';
   static const subject_image = 'assets/images/level/subject_image.svg';
+  static const selected_level_image = 'assets/images/level/selected_lesson.svg';
+  static const unselected_level_image = 'assets/images/level/unselected_lesson.svg';
 
   static const  audio = "assets/audio/audio.mp3";
 }

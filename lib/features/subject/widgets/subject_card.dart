@@ -37,7 +37,10 @@ class SubjectCard extends StatelessWidget {
             ),*/
             SvgPicture.asset(
               AppAssets.subject_image,
-              colorFilter: ColorFilter.mode(isSelected?AppColors.whiteColor:AppColors.CLOSE_COLOR, BlendMode.srcIn),
+              colorFilter: ColorFilter.mode(
+                isSelected ? AppColors.whiteColor : AppColors.CLOSE_COLOR,
+                BlendMode.srcIn,
+              ),
               height: 40,
               width: 40,
             ),

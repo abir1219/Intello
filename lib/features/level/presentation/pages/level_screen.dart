@@ -40,7 +40,7 @@ class _LevelScreenState extends State<LevelScreen> {
 
   void _handleNavigation(int index) {
     if (index == _currentIndex) return;
-
+    debugPrint("LEVEL_INDEX-->$index");
     switch (index) {
       case 0:
         context.go(AppPages.LEVEL_SCREEN);

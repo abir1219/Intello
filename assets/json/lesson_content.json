@@ -1,0 +1,114 @@
+[
+  {
+    "levelId": "cp1",
+    "subjectId": "emc",
+    "lessonId": "emc_l1",
+    "exercise": {
+      "questions": [
+        {
+          "questionId": "ex_q1",
+          "question": "Deux plus trois égale cinq ?",
+          "options": [
+            {
+              "id": "a",
+              "value": "5 → cinq"
+            },
+            {
+              "id": "b",
+              "value": "6 → six"
+            },
+            {
+              "id": "c",
+              "value": "4 → quatre"
+            }
+          ],
+          "correctAnswerId": "a",
+          "selectedAnswerId": null,
+          "isAttended": false
+        },
+        {
+          "questionId": "ex_q2",
+          "question": "Combien font 4 + 1 ?",
+          "options": [
+            {
+              "id": "a",
+              "value": "5"
+            },
+            {
+              "id": "b",
+              "value": "3"
+            },
+            {
+              "id": "c",
+              "value": "6"
+            }
+          ],
+          "correctAnswerId": "a",
+          "selectedAnswerId": null,
+          "isAttended": false
+        }
+      ]
+    },
+    "lecture": {
+      "pdfTitle": "Les Bases de l’Apprentissage",
+      "pdfUrl": "assets/pdfs/emc_l1.pdf",
+      "isRead": false
+    }
+  },
+  {
+    "levelId": "cp2",
+    "subjectId": "emc",
+    "lessonId": "emc_l1",
+    "exercise": {
+      "questions": [
+        {
+          "questionId": "ex_q1",
+          "question": "Deux plus trois égale cinq ?",
+          "options": [
+            {
+              "id": "a",
+              "value": "5 → cinq"
+            },
+            {
+              "id": "b",
+              "value": "6 → six"
+            },
+            {
+              "id": "c",
+              "value": "4 → quatre"
+            }
+          ],
+          "correctAnswerId": "a",
+          "selectedAnswerId": null,
+          "isAttended": false
+        },
+        {
+          "questionId": "ex_q2",
+          "question": "Combien font 4 + 1 ?",
+          "options": [
+            {
+              "id": "a",
+              "value": "5"
+            },
+            {
+              "id": "b",
+              "value": "3"
+            },
+            {
+              "id": "c",
+              "value": "6"
+            }
+          ],
+          "correctAnswerId": "a",
+          "selectedAnswerId": null,
+          "isAttended": false
+        }
+      ]
+    },
+    "lecture": {
+      "pdfTitle": "Les Bases de l’Apprentissage",
+      "pdfUrl": "assets/pdfs/emc_l1.pdf",
+      "isRead": false
+    }
+  }
+]

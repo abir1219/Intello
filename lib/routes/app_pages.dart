@@ -11,5 +11,6 @@ class AppPages{
   static final String LEVEL_SCREEN = "/Level";
   static final String CHANGE_PASSWORD_SCREEN = "/change-password";
   static final String PHONE_VALIDATE_SCREEN = "/phone_validate";
+  static final String LESSON_DETAILS_SCREEN = "/lesson_details";
 
 }

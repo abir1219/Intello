@@ -1,17 +1,12 @@
-import 'dart:convert';
-import 'package:flutter/services.dart';
-import 'package:intello_new/features/exercise/domain/repository/lesson_repository.dart';
-
 import '../../domain/entity/lesson_content.dart';
+import '../../domain/repository/lesson_content_repository.dart';
+import '../datasource/lesson_content_local_datasource.dart';
 import '../model/lesson_content_model.dart';
 
-class LessonRepositoryImpl implements LessonRepository {
+class LessonContentRepositoryImpl implements LessonContentRepository {
+  final LessonContentLocalDataSource dataSource;
 
-  Future<List<dynamic>> _loadJson() async {
-    final response =
-    await rootBundle.loadString('assets/json/lesson_content.json');
-    return json.decode(response);
-  }
+  LessonContentRepositoryImpl(this.dataSource);
 
   @override
   Future<LessonContent?> getLessonContent(
@@ -20,7 +15,7 @@ class LessonRepositoryImpl implements LessonRepository {
       String lessonId,
       ) async {
 
-    final data = await _loadJson();
+    final data = await dataSource.loadLessons();
 
     final lesson = data.firstWhere(
           (e) =>

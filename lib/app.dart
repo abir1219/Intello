@@ -4,6 +4,9 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:intello_new/features/account/data/repositories/account_repository_impl.dart';
 import 'package:intello_new/features/auth/presentation/bloc/login/login_bloc.dart';
 import 'package:intello_new/features/auth/presentation/bloc/registration/registration_bloc.dart';
+import 'package:intello_new/features/lesson_details/data/datasource/lesson_content_local_datasource.dart';
+import 'package:intello_new/features/lesson_details/data/repository/lesson_content_repository_impl.dart';
+import 'package:intello_new/features/lesson_details/domain/repository/lesson_content_repository.dart';
 import 'package:intello_new/features/lessons/data/datasource/lesson_local_datasource.dart';
 import 'package:intello_new/features/lessons/data/repositories/subject_repository_impl.dart';
 import 'package:intello_new/features/lessons/presentation/bloc/lesson_bloc.dart';
@@ -17,6 +20,8 @@ import 'features/account/presentation/pages/profile_page.dart';
 import 'features/auth/data/datasources/auth_local_datasource.dart';
 import 'features/auth/data/repositories/auth_repository_impl.dart';
 import 'features/auth/presentation/bloc/forgot_password/forgot_password_bloc.dart';
+import 'features/lesson_details/domain/usecases/get_lesson_content.dart';
+import 'features/lesson_details/presentation/bloc/lesson_content_bloc.dart';
 import 'features/lessons/domain/repositories/subject_repository.dart';
 import 'features/lessons/domain/usecases/get_lessons_usecase.dart';
 import 'features/settings/bloc/change_password/change_password_bloc.dart';
@@ -69,11 +74,19 @@ class MyApp extends StatelessWidget {
         ),*/
         BlocProvider(
           create: (context) => LessonBloc(
-            GetSubjectsUseCase(
+            GetLessonsUseCase(
               LessonRepositoryImpl(SubjectLocalDataSourceImpl()),
             ),
           ),
         ),
+        BlocProvider(
+          create: (_) => LessonContentBloc(
+            GetLessonContent(
+              LessonContentRepositoryImpl(LessonContentLocalDataSourceImpl()),
+            ),
+          ),
+        ),
+        //LessonContentBloc
       ],
       child: MaterialApp.router(
         debugShowCheckedModeBanner: false,

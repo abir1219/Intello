@@ -10,7 +10,7 @@ part 'lesson_state.dart';
 
 class LessonBloc extends Bloc<LessonEvent, LessonState> {
 
-  final GetSubjectsUseCase getSubjectsUseCase;
+  final GetLessonsUseCase getSubjectsUseCase;
 
   LessonBloc(this.getSubjectsUseCase) : super(LessonInitial()) {
     on<LoadLessonsEvent>((event, emit) async{

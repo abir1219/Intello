@@ -1,5 +1,5 @@
 
-import 'package:intello_new/features/exercise/data/model/question_model.dart';
+import 'package:intello_new/features/lesson_details/data/model/question_model.dart';
 
 import '../../domain/entity/exercise.dart';
 

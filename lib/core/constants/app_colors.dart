@@ -7,6 +7,7 @@ class AppColors {
   static const blueColor = Color(0xff0066CC);
   static const blueShadowColor = Color(0xff8FBFFA);
   static const whiteColor = Color(0xffF5F5F5);
+  static const greyColor = Color(0xff33333333);
   static const greenColor = Color(0xff009966);
   static const greenShadowColor = Color(0xffC5E0D7);
   static const TEXT_FIELD_COLOR = Color(0xff333333);

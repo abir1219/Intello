@@ -1,6 +1,6 @@
 import '../entity/lesson_content.dart';
 
-abstract class LessonRepository {
+abstract class LessonContentRepository {
   Future<LessonContent?> getLessonContent(
     String levelId,
     String subjectId,

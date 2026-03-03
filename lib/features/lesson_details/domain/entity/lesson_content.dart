@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:intello_new/features/exercise/domain/entity/question.dart';
+import 'package:intello_new/features/lesson_details/domain/entity/question.dart';
 
 import 'exercise.dart';
 import 'lecture.dart';

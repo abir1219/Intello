@@ -1,11 +1,9 @@
-
-
-import 'package:intello_new/features/exercise/domain/repository/lesson_repository.dart';
+import 'package:intello_new/features/lesson_details/domain/repository/lesson_content_repository.dart';
 
 import '../entity/lesson_content.dart';
 
 class GetLessonContent {
-  final LessonRepository repository;
+  final LessonContentRepository repository;
 
   GetLessonContent(this.repository);
 

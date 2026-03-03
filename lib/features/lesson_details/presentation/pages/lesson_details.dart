@@ -211,7 +211,7 @@ class _LessonDetailsState extends State<LessonDetails> {
             title: "Exercices/Devoirs",
             subtitle:
                 "Applique ce que tu as appris à travers des exercices et des devoirs.",
-            progress: 0.5,
+            progress: state.exercisePercentage,
             progressColor: AppColors.greenColor,
           ),
           const SizedBox(height: 20),
@@ -220,7 +220,7 @@ class _LessonDetailsState extends State<LessonDetails> {
             title: "Lecture",
             subtitle:
                 "Développe tes compétences en lecture et en compréhension écrite.",
-            progress: 0.8,
+            progress: state.exercisePercentage,
             progressColor: AppColors.blueColor,
           ),
           const SizedBox(height: 20),

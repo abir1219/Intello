@@ -1,5 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
+import 'package:flutter/foundation.dart';
 
 import '../../domain/entity/lesson_content.dart';
 import '../../domain/entity/question.dart';
@@ -25,15 +26,20 @@ class LessonContentBloc extends Bloc<LessonContentEvent, LessonContentState> {
     Emitter<LessonContentState> emit,
   ) async {
     emit(LessonLoading());
-
+debugPrint("start");
+debugPrint("LevelId-->${event.levelId}");
+debugPrint("SubjectId-->${event.subjectId}");
+debugPrint("LessonId-->${event.lessonId}");
     try {
       final lesson = await getLessonContent(
         event.levelId,
         event.subjectId,
-        event.lessonId,
+        event.lessonId.toLowerCase(),
       );
+      debugPrint("lesson--->${lesson.toString()}");
 
       if (lesson == null) {
+        debugPrint("lessonError--->Lesson not found");
         emit(const LessonError("Lesson not found"));
         return;
       }
@@ -49,6 +55,7 @@ class LessonContentBloc extends Bloc<LessonContentEvent, LessonContentState> {
         ),
       );
     } catch (e) {
+      debugPrint("Catch-->${e.toString()}");
       emit(LessonError(e.toString()));
     }
   }
@@ -91,9 +98,11 @@ class LessonContentBloc extends Bloc<LessonContentEvent, LessonContentState> {
 
   // 🔹 PERCENTAGE CALCULATION
   double _calculateExercisePercentage(List<Question> questions) {
+    debugPrint("questions-->$questions");
     if (questions.isEmpty) return 0;
 
-    final attended = questions.where((q) => q.isAttended).length;
+    final attended = questions.where((q) => q.isAttended == true).length;
+    debugPrint("attended-->$attended");
 
     return (attended / questions.length) * 100;
   }

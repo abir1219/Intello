@@ -80,6 +80,41 @@ class CustomCard extends StatelessWidget {
           Stack(
             alignment: Alignment.center,
             children: [
+              TweenAnimationBuilder<double>(
+                tween: Tween<double>(begin: 0, end: progress),
+                duration: const Duration(milliseconds: 800),
+                curve: Curves.easeInOut,
+                builder: (context, value, child) {
+                  return SizedBox(
+                    width: 60,
+                    height: 60,
+                    child: CircularProgressIndicator(
+                      value: value,
+                      strokeWidth: 6,
+                      backgroundColor: Colors.grey.shade300,
+                      valueColor: AlwaysStoppedAnimation<Color>(progressColor),
+                    ),
+                  );
+                },
+              ),
+              TweenAnimationBuilder<double>(
+                tween: Tween<double>(begin: 0, end: progress),
+                duration: const Duration(milliseconds: 800),
+                curve: Curves.easeInOut,
+                builder: (context, value, child) {
+                  return Text(
+                    "${(value * 100).toInt()}%",
+                    style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  );
+                },
+              ),
+            ],
+          ),
+          /*Stack(
+            alignment: Alignment.center,
+            children: [
               SizedBox(
                 width: 60,
                 height: 60,
@@ -95,7 +130,7 @@ class CustomCard extends StatelessWidget {
                 style: const TextStyle(fontWeight: FontWeight.bold),
               ),
             ],
-          ),
+          ),*/
         ],
       ),
     );

@@ -76,7 +76,7 @@ class _LessonDetailsState extends State<LessonDetails> {
 
   @override
   Widget build(BuildContext context) {
-    final isTablet = Responsive.isTablet(context);
+    Responsive.isTablet(context);
     final height = AppDimensions.getResponsiveHeight(context);
     final width = AppDimensions.getResponsiveWidth(context);
     final isLandscape = Responsive.isLandscape(context);

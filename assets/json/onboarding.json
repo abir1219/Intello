@@ -5,7 +5,7 @@
       "title": "Mooré",
       "subtitle": "Écouter",
       "image": "assets/images/category/moore.png",
-      "audio": "assets/audio/audio.mp3",
+      "audio": "audio/audio.mp3",
       "isEnabled": true
     },
     {
@@ -13,7 +13,7 @@
       "title": "Dioula",
       "subtitle": "Écouter",
       "image": "assets/images/category/dioula.png",
-      "audio": "assets/audio/audio.mp3",
+      "audio": "audio/audio.mp3",
       "isEnabled": true
     },
     {
@@ -21,7 +21,7 @@
       "title": "Fulfulde",
       "subtitle": "Écouter",
       "image": "assets/images/category/fulfulde.png",
-      "audio": "assets/audio/audio.mp3",
+      "audio": "audio/audio.mp3",
       "isEnabled": true
     },
     {
@@ -29,7 +29,7 @@
       "title": "Français",
       "subtitle": "Écouter",
       "image": "assets/images/category/francais.png",
-      "audio": "assets/audio/audio.mp3",
+      "audio": "audio/audio.mp3",
       "isEnabled": true
     }
   ]

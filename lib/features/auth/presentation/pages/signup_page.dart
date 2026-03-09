@@ -56,6 +56,7 @@ class _SignUpPageState extends State<SignUpPage> {
   }
 
   bool _check = false;
+
   @override
   Widget build(BuildContext context) {
     Responsive.isTablet(context);
@@ -77,48 +78,48 @@ class _SignUpPageState extends State<SignUpPage> {
                     vertical: 10,
                   ),
                   child: BlocListener<RegistrationBloc, RegistrationState>(
+                    listenWhen: (previous, current) =>
+                    previous.isSuccess != current.isSuccess ||
+                        previous.errorMessage != current.errorMessage,
                     listener: (context, state) {
-                      if (state is RegistrationSuccess) {
+                      if (state.isSuccess) {
                         showDialog(
                           context: context,
                           barrierDismissible: false,
                           builder: (_) => CreatePasswordSuccessDialog(
                             onClose: () => Navigator.pop(context),
                             onContinue: () {
-                              Navigator.pop(context); // close dialog first
+                              Navigator.pop(context);
                               context.go(AppPages.LOGIN_SCREEN);
                             },
                           ),
                         );
-                      }else if(state is RegistrationFailure){
-                        _showError(context, state.message);
+                      }
+
+                      if (state.errorMessage != null) {
+                        _showError(context, state.errorMessage!);
                       }
                     },
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
+
+                        SizedBox(height: height * 0.03),
+
+                        /// Logo
                         SizedBox(
-                          height: isLandscape
-                              ? height * 0.03
-                              : height * 0.03,
-                        ),
-                        SizedBox(
-                          height: isLandscape
-                              ? height * 0.05
-                              : height * 0.05,
+                          height: height * 0.05,
                           width: isLandscape ? width * 0.19 : width * 0.18,
                           child: SvgPicture.asset(
                             AppAssets.logo_text,
                             fit: BoxFit.fill,
                           ),
                         ),
-                        SizedBox(
-                          height: isLandscape
-                              ? height * 0.06
-                              : height * 0.06,
 
-                        ),
+                        SizedBox(height: height * 0.06),
+
+                        /// Title
                         Text(
                           "Créer un compte !",
                           style: TextStyle(
@@ -127,19 +128,21 @@ class _SignUpPageState extends State<SignUpPage> {
                             fontWeight: FontWeight.w400,
                           ),
                         ),
-                        SizedBox(
-                          height: isLandscape ? height * 0.01 : height * 0.005,
-                        ),
+
+                        const SizedBox(height: 6),
+
                         const Text(
                           "Crée ton compte pour commencer à apprendre avec Intello.",
                           style: TextStyle(
                             fontSize: 16,
                             color: AppColors.TEXT_FIELD_COLOR,
-                            fontWeight: FontWeight.w400,
                           ),
                           textAlign: TextAlign.center,
                         ),
+
                         const SizedBox(height: 32),
+
+                        /// First Name
                         CustomTextField.buildTextFieldWithLabel(
                           controller: _fistName,
                           context: context,
@@ -147,7 +150,7 @@ class _SignUpPageState extends State<SignUpPage> {
                           hintText: "Prénom ...",
                         ),
 
-                        //const SizedBox(height: 16),
+                        /// Last Name
                         CustomTextField.buildTextFieldWithLabel(
                           controller: _lastName,
                           context: context,
@@ -155,7 +158,7 @@ class _SignUpPageState extends State<SignUpPage> {
                           hintText: "Entre ton nom de famille ...",
                         ),
 
-                        //const SizedBox(height: 16),
+                        /// WhatsApp
                         CustomTextField.buildTextFieldWithLabel(
                           controller: _phone,
                           context: context,
@@ -164,7 +167,7 @@ class _SignUpPageState extends State<SignUpPage> {
                           hintText: "Entrez votre numéro WhatsApp ...",
                         ),
 
-                        // const SizedBox(height: 16),
+                        /// Email
                         CustomTextField.buildTextFieldWithLabel(
                           controller: _email,
                           context: context,
@@ -173,30 +176,52 @@ class _SignUpPageState extends State<SignUpPage> {
                           label: "Adresse e-mail",
                         ),
 
-                        // const SizedBox(height: 16),
-                        CustomTextField.buildTextFieldWithLabel(
-                          label: "Mot de passe",
-                          hintText: "Choisis un mot de passe sécurisé ...",
-                          obscureText: true,
-                          context: context,
-                          controller: _password,
-                        ),
-                        //const SizedBox(height: 16),
-                        CustomTextField.buildTextFieldWithLabel(
-                          label: "Confirmer le mot de passe",
-                          hintText: "Entre à nouveau ton mot de passe ...",
-                          context: context,
-                          obscureText: true,
-                          controller: _cnfrm_password,
+                        /// Password
+                        BlocSelector<RegistrationBloc, RegistrationState, bool>(
+                          selector: (state) => state.isPasswordVisible,
+                          builder: (context, isVisible) {
+                            return CustomTextField.buildTextFieldWithLabel(
+                              label: "Mot de passe",
+                              hintText: "Choisis un mot de passe sécurisé ...",
+                              obscureText: isVisible,
+                              context: context,
+                              isPassword: true,
+                              controller: _password,
+                              onTap: () {
+                                context.read<RegistrationBloc>().add(
+                                  const TogglePasswordEvent(),
+                                );
+                              },
+                            );
+                          },
                         ),
 
-                        /// Terms
+                        /// Confirm Password
+                        BlocSelector<RegistrationBloc, RegistrationState, bool>(
+                          selector: (state) => state.isConfirmPasswordVisible,
+                          builder: (context, isVisible) {
+                            return CustomTextField.buildTextFieldWithLabelConfirmPassword(
+                              label: "Confirmer le mot de passe",
+                              hintText: "Entre à nouveau ton mot de passe ...",
+                              obscureText: isVisible,
+                              context: context,
+                              isPassword: true,
+                              controller: _cnfrm_password,
+                              onTap: () {
+                                context.read<RegistrationBloc>().add(
+                                  const ToggleConfirmPasswordEvent(),
+                                );
+                              },
+                            );
+                          },
+                        ),
+
+                        /// Terms Checkbox
                         Row(
                           children: [
                             Checkbox(
                               value: _check,
-                              materialTapTargetSize:
-                              MaterialTapTargetSize.shrinkWrap,
+                              materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                               activeColor: AppColors.greenColor,
                               onChanged: (_) {
                                 setState(() {
@@ -209,10 +234,9 @@ class _SignUpPageState extends State<SignUpPage> {
                                 text: TextSpan(
                                   children: [
                                     TextSpan(
-                                      text: "J’accepte les",
+                                      text: "J’accepte les ",
                                       style: TextStyle(
                                         fontSize: 16,
-                                        fontWeight: FontWeight.w400,
                                         color: AppColors.TEXT_FIELD_COLOR,
                                       ),
                                     ),
@@ -221,7 +245,6 @@ class _SignUpPageState extends State<SignUpPage> {
                                       style: TextStyle(
                                         fontSize: 16,
                                         decoration: TextDecoration.underline,
-                                        fontWeight: FontWeight.w400,
                                         color: AppColors.TEXT_FIELD_COLOR,
                                       ),
                                     ),
@@ -229,7 +252,6 @@ class _SignUpPageState extends State<SignUpPage> {
                                       text: " et la ",
                                       style: TextStyle(
                                         fontSize: 16,
-                                        fontWeight: FontWeight.w400,
                                         color: AppColors.TEXT_FIELD_COLOR,
                                       ),
                                     ),
@@ -238,7 +260,6 @@ class _SignUpPageState extends State<SignUpPage> {
                                       style: TextStyle(
                                         fontSize: 16,
                                         decoration: TextDecoration.underline,
-                                        fontWeight: FontWeight.w400,
                                         color: AppColors.TEXT_FIELD_COLOR,
                                       ),
                                     ),
@@ -249,15 +270,24 @@ class _SignUpPageState extends State<SignUpPage> {
                           ],
                         ),
 
-                        const SizedBox(height: 10),
+                        const SizedBox(height: 12),
 
-                        PrimaryButton(
-                          title: "S’inscrire",
-                          onPressed: () => _validateAndRegister(context),
+                        /// Register Button
+                        BlocSelector<RegistrationBloc, RegistrationState, bool>(
+                          selector: (state) => state.isLoading,
+                          builder: (context, isLoading) {
+                            return PrimaryButton(
+                              title: isLoading ? "Chargement..." : "S’inscrire",
+                              onPressed: isLoading
+                                  ? null
+                                  : () => _validateAndRegister(context),
+                            );
+                          },
                         ),
 
                         const SizedBox(height: 16),
 
+                        /// Login Link
                         RichText(
                           text: TextSpan(
                             children: [
@@ -266,12 +296,10 @@ class _SignUpPageState extends State<SignUpPage> {
                                 style: TextStyle(
                                   fontSize: 16,
                                   color: AppColors.TEXT_FIELD_COLOR,
-                                  fontWeight: FontWeight.w400,
                                 ),
                               ),
                               TextSpan(
                                 text: "Se connecter",
-                                // 3. Assign the recognizer to the specific TextSpan
                                 recognizer: _tapGestureRecognizer,
                                 style: TextStyle(
                                   fontSize: 16,

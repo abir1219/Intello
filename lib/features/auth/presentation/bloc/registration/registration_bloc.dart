@@ -6,16 +6,14 @@ import '../../../domain/repositories/auth_repository.dart';
 part 'registration_state.dart';
 part 'registration_event.dart';
 
-class RegistrationBloc
-    extends Bloc<RegistrationEvent, RegistrationState> {
-
+class RegistrationBloc extends Bloc<RegistrationEvent, RegistrationState> {
   final AuthRepository repository;
 
-  RegistrationBloc(this.repository)
-      : super(RegistrationInitial()) {
+  RegistrationBloc(this.repository) : super(const RegistrationState()) {
 
+    /// Register User
     on<RegisterUserEvent>((event, emit) async {
-      emit(RegistrationLoading());
+      emit(state.copyWith(isLoading: true, errorMessage: null));
 
       try {
         final user = UserEntity(
@@ -28,10 +26,30 @@ class RegistrationBloc
 
         await repository.register(user);
 
-        emit(RegistrationSuccess());
+        emit(state.copyWith(
+          isLoading: false,
+          isSuccess: true,
+        ));
       } catch (e) {
-        emit(RegistrationFailure(e.toString()));
+        emit(state.copyWith(
+          isLoading: false,
+          errorMessage: e.toString(),
+        ));
       }
+    });
+
+    /// Toggle Password Visibility
+    on<TogglePasswordEvent>((event, emit) {
+      emit(state.copyWith(
+        isPasswordVisible: !state.isPasswordVisible,
+      ));
+    });
+
+    /// Toggle Confirm Password Visibility
+    on<ToggleConfirmPasswordEvent>((event, emit) {
+      emit(state.copyWith(
+        isConfirmPasswordVisible: !state.isConfirmPasswordVisible,
+      ));
     });
   }
 }

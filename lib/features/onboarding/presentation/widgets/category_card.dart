@@ -15,7 +15,98 @@ class CategoryCard extends StatefulWidget {
 }
 
 class _CategoryCardState extends State<CategoryCard> {
-   late final audioService;
+  final audioService = AudioPlayerService();
+
+  @override
+  void dispose() {
+    audioService.stop();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () async {
+        await audioService.toggle(widget.category.audio);
+        setState(() {});
+      },
+      child: Stack(
+        clipBehavior: Clip.none,
+        children: [
+          Container(
+            padding: const EdgeInsets.fromLTRB(16, 20, 16, 16),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(18),
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  height: 110,
+                  child: Image.asset(
+                    widget.category.image,
+                    fit: BoxFit.contain,
+                  ),
+                ),
+
+                const SizedBox(height: 16),
+
+                Text(
+                  widget.category.title,
+                  style: const TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+
+                const SizedBox(height: 6),
+
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "Écouter",
+                      /*audioService.currentAudio == widget.category.audio &&
+                              audioService.isPlaying
+                          ? "Stop" : "Écouter",*/
+                      style: const TextStyle(
+                        color: Colors.blue,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    const SizedBox(width: 6),
+                    const Icon(Icons.volume_up, size: 18, color: Colors.blue),
+                  ],
+                ),
+              ],
+            ),
+          ),
+          Positioned(
+            bottom: -18,
+            right: -18,
+            child: Container(
+              height: 50,
+              width: 50,
+              decoration: BoxDecoration(
+                color: Colors.transparent,
+                shape: BoxShape.circle,
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(8),
+                child: SvgPicture.asset(AppAssets.playButton),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+/*class _CategoryCardState extends State<CategoryCard> {
+  late final audioService;
 
   @override
   void initState() {
@@ -31,98 +122,106 @@ class _CategoryCardState extends State<CategoryCard> {
 
   @override
   Widget build(BuildContext context) {
-
-    return Stack(
-      clipBehavior: Clip.none,
-      children: [
-        /// 🔹 Main Card
-        Container(
-          padding: const EdgeInsets.fromLTRB(16, 20, 16, 16),
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(18),
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              /// 🔹 Category Illustration (PNG)
-              SizedBox(
-                height: 110,
-                child: Image.asset(
-                  widget.category.image,
-                  fit: BoxFit.contain,
+    return GestureDetector(
+      onTap: () async {
+        if (audioService.isPlaying) {
+          await audioService.stop();
+        }
+        audioService.playAsset(widget.category.audio);
+      },
+      child: Stack(
+        clipBehavior: Clip.none,
+        children: [
+          /// 🔹 Main Card
+          Container(
+            padding: const EdgeInsets.fromLTRB(16, 20, 16, 16),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(18),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                /// 🔹 Category Illustration (PNG)
+                SizedBox(
+                  height: 110,
+                  child: Image.asset(
+                    widget.category.image,
+                    fit: BoxFit.contain,
+                  ),
                 ),
-              ),
 
-              const SizedBox(height: 16),
+                const SizedBox(height: 16),
 
-              /// 🔹 Title
-              Text(
-                widget.category.title,
-                style: const TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w600,
+                /// 🔹 Title
+                Text(
+                  widget.category.title,
+                  style: const TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
-              ),
 
-              const SizedBox(height: 6),
+                const SizedBox(height: 6),
 
-              /// 🔹 Listen Action
-              GestureDetector(
-                onTap: () async{
-                  if (audioService.isPlaying) {
-                    await audioService.stop();
-                  }else {
-                    audioService.playAsset(widget.category.audio);
-                  }
-                },
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
-                    Text(
-                      "Écouter",
-                      style: TextStyle(
-                        color: Colors.blue,
-                        fontSize: 14,
-                        fontWeight: FontWeight.w500,
+                /// 🔹 Listen Action
+                GestureDetector(
+                  */ /*onTap: () async {
+                    if (audioService.isPlaying) {
+                      await audioService.stop();
+                    } else {
+                      audioService.playAsset(widget.category.audio);
+                    }
+                  },*/ /*
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const [
+                      Text(
+                        "Écouter",
+                        style: TextStyle(
+                          color: Colors.blue,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w500,
+                        ),
                       ),
-                    ),
-                    SizedBox(width: 6),
-                    Icon(Icons.volume_up, size: 18, color: Colors.blue),
-                  ],
+                      SizedBox(width: 6),
+                      Icon(Icons.volume_up, size: 18, color: Colors.blue),
+                    ],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
-        ),
 
-        /// 🔹 Play Button (INSIDE bottom-right corner)
-        Positioned(
-          bottom: -18,
-          right: -18,
-          child: GestureDetector(
-            onTap: () async{
-              if (audioService.isPlaying) {
-                await audioService.stop();
-              }
-              audioService.playAsset(widget.category.audio);
-            },
-            child: Container(
-              height: 50,
-              width: 50,
-              decoration: BoxDecoration(
-                color: Colors.transparent,
-                shape: BoxShape.circle,
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(8),
-                child: SvgPicture.asset(AppAssets.playButton),
+          /// 🔹 Play Button (INSIDE bottom-right corner)
+          Positioned(
+            bottom: -18,
+            right: -18,
+            child: GestureDetector(
+              */ /*onTap: () async{
+                if (audioService.isPlaying) {
+                  await audioService.stop();
+                }else{
+                  audioService.playAsset(widget.category.audio);
+                }
+              },*/ /*
+              child: Container(
+                height: 50,
+                width: 50,
+                decoration: BoxDecoration(
+                  color: Colors.transparent,
+                  shape: BoxShape.circle,
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(8),
+                  child: SvgPicture.asset(AppAssets.playButton),
+                ),
               ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
-}
+}*/

@@ -2,7 +2,11 @@ part of 'registration_bloc.dart';
 
 abstract class RegistrationEvent extends Equatable {
   const RegistrationEvent();
+
+  @override
+  List<Object?> get props => [];
 }
+
 class RegisterUserEvent extends RegistrationEvent {
   final String firstName;
   final String lastName;
@@ -19,5 +23,19 @@ class RegisterUserEvent extends RegistrationEvent {
   });
 
   @override
-  List<Object?> get props => [firstName,lastName,whatsapp,email,password];
+  List<Object?> get props => [
+    firstName,
+    lastName,
+    whatsapp,
+    email,
+    password,
+  ];
+}
+
+class TogglePasswordEvent extends RegistrationEvent {
+  const TogglePasswordEvent();
+}
+
+class ToggleConfirmPasswordEvent extends RegistrationEvent {
+  const ToggleConfirmPasswordEvent();
 }

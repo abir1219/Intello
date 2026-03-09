@@ -7,7 +7,7 @@ import '../../../core/utils/app_dimenstion.dart';
 
 class PrimaryButton extends StatelessWidget {
   final String title;
-  final VoidCallback onPressed;
+  final void Function()? onPressed;
 
   const PrimaryButton({
     super.key,

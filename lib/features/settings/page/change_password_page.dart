@@ -98,52 +98,59 @@ class _StateChangePasswordPage extends State<ChangePasswordPage> {
                         bottom: 100,
                       ),
                       child: BlocConsumer<ChangePasswordBloc, ChangePasswordState>(
+                        listenWhen: (previous, current) =>
+                        previous.isSuccess != current.isSuccess ||
+                            previous.errorMessage != current.errorMessage,
+
                         listener: (context, state) {
-                          if (state is ChangePasswordSuccess) {
+
+                          if (state.isSuccess) {
                             _showSuccess(
                               context,
                               "Mot de passe modifié avec succès.",
                             );
-                            _oldPassword.text = "";
-                            _newPassword.text = "";
-                            _cnfrm_password.text = "";
-                          } else if (state is ChangePasswordFailure) {
-                            _showError(context, state.message);
+
+                            _oldPassword.clear();
+                            _newPassword.clear();
+                            _cnfrm_password.clear();
+                          }
+
+                          if (state.errorMessage != null) {
+                            _showError(context, state.errorMessage!);
                           }
                         },
+
                         builder: (context, state) {
+
                           return Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
+
+                              SizedBox(height: height * 0.03),
+
+                              /// Logo
                               SizedBox(
-                                height: isLandscape
-                                    ? height * 0.03
-                                    : height * 0.03,
-                              ),
-                              SizedBox(
-                                height: isLandscape
-                                    ? height * 0.05
-                                    : height * 0.05,
+                                height: height * 0.05,
                                 width: isLandscape ? width * 0.19 : width * 0.18,
                                 child: SvgPicture.asset(
                                   AppAssets.logo_text,
                                   fit: BoxFit.fill,
                                 ),
                               ),
-                              SizedBox(
-                                height: isLandscape
-                                    ? height * 0.06
-                                    : height * 0.06,
-                              ),
+
+                              SizedBox(height: height * 0.06),
+
+                              /// Title + Listen button
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
+
                                   const Expanded(
                                     child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
+
                                         Text(
                                           "Changer le mot de passe.",
                                           style: TextStyle(
@@ -152,65 +159,109 @@ class _StateChangePasswordPage extends State<ChangePasswordPage> {
                                             fontWeight: FontWeight.w400,
                                           ),
                                         ),
-                                        //SizedBox(height: 4),
+
                                         Padding(
                                           padding: EdgeInsets.only(right: 130.0),
                                           child: Text(
                                             "Mettez à jour votre mot de passe pour sécuriser votre compte.",
                                             style: TextStyle(
                                               color: AppColors.textColor,
-                                              fontWeight: FontWeight.w400,
                                             ),
                                           ),
                                         ),
                                       ],
                                     ),
                                   ),
+
                                   ListenButton(
-                                    onTap: () => audioService.playAsset(
-                                      AppAssets.audio,
-                                    ),
+                                    onTap: () => audioService.playAsset(AppAssets.audio),
                                     listenString: 'Écouter les consignes',
                                   ),
                                 ],
                               ),
+
                               const SizedBox(height: 40),
-                              CustomTextField.buildTextFieldWithLabel(
-                                label: "Mot de passe actuel",
-                                hintText: "Entrez votre mot de passe actuel …",
-                                obscureText: true,
-                                context: context,
-                                controller: _oldPassword,
+
+                              /// Current Password
+                              BlocSelector<ChangePasswordBloc, ChangePasswordState, bool>(
+                                selector: (state) => state.isOldPasswordVisible,
+                                builder: (context, isVisible) {
+                                  return CustomTextField.buildTextFieldWithLabel(
+                                    label: "Mot de passe actuel",
+                                    hintText: "Entrez votre mot de passe actuel …",
+                                    obscureText: isVisible,
+                                    isPassword: true,
+                                    context: context,
+                                    controller: _oldPassword,
+                                    onTap: () {
+                                      context.read<ChangePasswordBloc>().add(
+                                        const ToggleCurrentPasswordVisibilityEvent(),
+                                      );
+                                    },
+                                  );
+                                },
                               ),
-                              //const SizedBox(height: 16),
-                              CustomTextField.buildTextFieldWithLabel(
-                                label: "Nouveau mot de passe",
-                                hintText:
+
+                              /// New Password
+                              BlocSelector<ChangePasswordBloc, ChangePasswordState, bool>(
+                                selector: (state) => state.isNewPasswordVisible,
+                                builder: (context, isVisible) {
+                                  return CustomTextField.buildTextFieldWithLabel(
+                                    label: "Nouveau mot de passe",
+                                    hintText:
                                     "Créez un nouveau mot de passe sécurisé …",
-                                context: context,
-                                obscureText: true,
-                                controller: _newPassword,
+                                    obscureText: isVisible,
+                                    isPassword: true,
+                                    context: context,
+                                    controller: _newPassword,
+                                    onTap: () {
+                                      context.read<ChangePasswordBloc>().add(
+                                        const ToggleNewPasswordVisibilityEvent(),
+                                      );
+                                    },
+                                  );
+                                },
                               ),
-                              CustomTextField.buildTextFieldWithLabel(
-                                label: "Confirmer le nouveau mot de passe",
-                                hintText:
+
+                              /// Confirm Password
+                              BlocSelector<ChangePasswordBloc, ChangePasswordState, bool>(
+                                selector: (state) => state.isConfirmPasswordVisible,
+                                builder: (context, isVisible) {
+                                  return CustomTextField.buildTextFieldWithLabel(
+                                    label: "Confirmer le nouveau mot de passe",
+                                    hintText:
                                     "Entrez à nouveau le nouveau mot de passe …",
-                                context: context,
-                                obscureText: true,
-                                controller: _cnfrm_password,
+                                    obscureText: isVisible,
+                                    isPassword: true,
+                                    context: context,
+                                    controller: _cnfrm_password,
+                                    onTap: () {
+                                      context.read<ChangePasswordBloc>().add(
+                                        const ToggleConfirmPasswordVisibilityEvent(),
+                                      );
+                                    },
+                                  );
+                                },
                               ),
+
                               const SizedBox(height: 10),
 
+                              /// Submit Button
                               PrimaryButton(
-                                title: "Mettre à jour le mot de passe",
-                                onPressed: () =>
-                                    context.read<ChangePasswordBloc>().add(
-                                      SubmitChangePassword(
-                                        currentPassword: _oldPassword.text.trim(),
-                                        newPassword: _newPassword.text.trim(),
-                                        confirmPassword: _cnfrm_password.text.trim(),
-                                      ),
+                                title: state.isLoading
+                                    ? "Chargement..."
+                                    : "Mettre à jour le mot de passe",
+                                onPressed: state.isLoading
+                                    ? null
+                                    : () {
+                                  context.read<ChangePasswordBloc>().add(
+                                    SubmitChangePassword(
+                                      currentPassword: _oldPassword.text.trim(),
+                                      newPassword: _newPassword.text.trim(),
+                                      confirmPassword: _cnfrm_password.text.trim(),
                                     ),
+                                  );
+                                },
                               ),
 
                               const SizedBox(height: 16),

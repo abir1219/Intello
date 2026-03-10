@@ -1,47 +1,50 @@
 part of 'forgot_password_bloc.dart';
 
-sealed class ForgotPasswordState extends Equatable {
-  const ForgotPasswordState();
-}
+class ForgotPasswordState extends Equatable {
+  final bool isLoading;
+  final bool isSuccess;
+  final bool isPhoneValidated;
 
-final class ForgotPasswordInitial extends ForgotPasswordState {
-  @override
-  List<Object> get props => [];
-}
+  final bool isPasswordVisible;
+  final bool isConfirmPasswordVisible;
 
-class ForgotPasswordLoading extends ForgotPasswordState {
-  @override
-  List<Object?> get props => [];
-}
+  final String? errorMessage;
 
-class ForgotPasswordSuccess extends ForgotPasswordState {
-  @override
-  // TODO: implement props
-  List<Object?> get props => [];
-}
+  const ForgotPasswordState({
+    this.isLoading = false,
+    this.isSuccess = false,
+    this.isPhoneValidated = false,
+    this.isPasswordVisible = true,
+    this.isConfirmPasswordVisible = true,
+    this.errorMessage,
+  });
 
-class ValidatePhoneSuccess extends ForgotPasswordState {
-  @override
-  // TODO: implement props
-  List<Object?> get props => [];
-}
-
-class ValidatePhoneFailure extends ForgotPasswordState {
-  final String message;
-
-  const ValidatePhoneFailure(this.message);
-
-  @override
-  // TODO: implement props
-  List<Object?> get props => [];
-}
-
-class ForgotPasswordFailure extends ForgotPasswordState {
-  final String message;
-
-  const ForgotPasswordFailure(this.message);
+  ForgotPasswordState copyWith({
+    bool? isLoading,
+    bool? isSuccess,
+    bool? isPhoneValidated,
+    bool? isPasswordVisible,
+    bool? isConfirmPasswordVisible,
+    String? errorMessage,
+  }) {
+    return ForgotPasswordState(
+      isLoading: isLoading ?? this.isLoading,
+      isSuccess: isSuccess ?? this.isSuccess,
+      isPhoneValidated: isPhoneValidated ?? this.isPhoneValidated,
+      isPasswordVisible: isPasswordVisible ?? this.isPasswordVisible,
+      isConfirmPasswordVisible:
+      isConfirmPasswordVisible ?? this.isConfirmPasswordVisible,
+      errorMessage: errorMessage,
+    );
+  }
 
   @override
-  // TODO: implement props
-  List<Object?> get props => [];
+  List<Object?> get props => [
+    isLoading,
+    isSuccess,
+    isPhoneValidated,
+    isPasswordVisible,
+    isConfirmPasswordVisible,
+    errorMessage,
+  ];
 }

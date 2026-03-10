@@ -52,47 +52,50 @@ class _CreateNewPasswordPageState extends State<CreateNewPasswordPage> {
                     vertical: 10,
                   ),
                   child: BlocListener<ForgotPasswordBloc, ForgotPasswordState>(
+                    listenWhen: (previous, current) =>
+                    previous.isSuccess != current.isSuccess ||
+                        previous.errorMessage != current.errorMessage,
                     listener: (context, state) {
-                      if (state is ForgotPasswordSuccess) {
+
+                      if (state.isSuccess) {
                         showDialog(
                           context: context,
                           barrierDismissible: false,
                           builder: (_) => CreatePasswordSuccessDialog(
                             onClose: () => Navigator.pop(context),
                             onContinue: () {
-                              Navigator.pop(context); // close dialog first
+                              Navigator.pop(context);
                               context.go(AppPages.LOGIN_SCREEN);
                             },
                           ),
                         );
-                      } else if (state is ForgotPasswordFailure) {
-                        _showError(context, state.message);
+                      }
+
+                      if (state.errorMessage != null) {
+                        _showError(context, state.errorMessage!);
                       }
                     },
+
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
+
+                        SizedBox(height: height * 0.03),
+
+                        /// Logo
                         SizedBox(
-                          height: isLandscape
-                              ? height * 0.03
-                              : height * 0.03,
-                        ),
-                        SizedBox(
-                          height: isLandscape
-                              ? height * 0.05
-                              : height * 0.05,
+                          height: height * 0.05,
                           width: isLandscape ? width * 0.19 : width * 0.18,
                           child: SvgPicture.asset(
                             AppAssets.logo_text,
                             fit: BoxFit.fill,
                           ),
                         ),
-                        SizedBox(
-                          height: isLandscape
-                              ? height * 0.06
-                              : height * 0.06,
-                        ),
+
+                        SizedBox(height: height * 0.06),
+
+                        /// Title
                         SizedBox(
                           width: isLandscape ? width * 0.5 : width * 0.3,
                           child: Text(
@@ -105,41 +108,79 @@ class _CreateNewPasswordPageState extends State<CreateNewPasswordPage> {
                             ),
                           ),
                         ),
-                        SizedBox(
-                          height: isLandscape ? height * 0.01 : height * 0.005,
-                        ),
+
+                        SizedBox(height: height * 0.01),
+
                         const Text(
                           "Créez un mot de passe sécurisé pour protéger votre compte.",
                           style: TextStyle(
                             fontSize: 16,
                             color: AppColors.TEXT_FIELD_COLOR,
-                            fontWeight: FontWeight.w400,
                           ),
                           textAlign: TextAlign.center,
                         ),
+
                         const SizedBox(height: 32),
-                        CustomTextField.buildTextFieldWithLabel(
-                          label: "Mot de passe",
-                          hintText: "Choisis un mot de passe sécurisé ...",
-                          obscureText: true,
-                          context: context,
-                          controller: _password,
+
+                        /// Password Field
+                        BlocSelector<ForgotPasswordBloc, ForgotPasswordState, bool>(
+                          selector: (state) => state.isPasswordVisible,
+                          builder: (context, isVisible) {
+                            return CustomTextField.buildTextFieldWithLabel(
+                              label: "Mot de passe",
+                              hintText: "Choisis un mot de passe sécurisé ...",
+                              obscureText: isVisible,
+                              context: context,
+                              isPassword: true,
+                              controller: _password,
+                              onTap: () {
+                                context.read<ForgotPasswordBloc>().add(
+                                  const TogglePasswordVisibilityEvent(),
+                                );
+                              },
+                            );
+                          },
                         ),
-                        //const SizedBox(height: 16),
-                        CustomTextField.buildTextFieldWithLabel(
-                          label: "Confirmer le mot de passe",
-                          hintText: "Entre à nouveau ton mot de passe ...",
-                          context: context,
-                          obscureText: true,
-                          controller: _cnfrm_password,
+
+                        /// Confirm Password Field
+                        BlocSelector<ForgotPasswordBloc, ForgotPasswordState, bool>(
+                          selector: (state) => state.isConfirmPasswordVisible,
+                          builder: (context, isVisible) {
+                            return CustomTextField.buildTextFieldWithLabel(
+                              label: "Confirmer le mot de passe",
+                              hintText: "Entre à nouveau ton mot de passe ...",
+                              obscureText: isVisible,
+                              context: context,
+                              isPassword: true,
+                              controller: _cnfrm_password,
+                              onTap: () {
+                                context.read<ForgotPasswordBloc>().add(
+                                  const ToggleConfirmPasswordVisibilityEvent(),
+                                );
+                              },
+                            );
+                          },
                         ),
+
                         const SizedBox(height: 10),
 
-                        PrimaryButton(
-                          title: "S’inscrire",
-                          onPressed: () => context
-                              .read<ForgotPasswordBloc>()
-                              .add(SubmitForgotPassword(_password.text.trim())),
+                        /// Submit Button
+                        BlocSelector<ForgotPasswordBloc, ForgotPasswordState, bool>(
+                          selector: (state) => state.isLoading,
+                          builder: (context, isLoading) {
+                            return PrimaryButton(
+                              title: isLoading ? "Chargement..." : "S’inscrire",
+                              onPressed: isLoading
+                                  ? null
+                                  : () {
+                                context.read<ForgotPasswordBloc>().add(
+                                  SubmitForgotPassword(
+                                    _password.text.trim(),
+                                  ),
+                                );
+                              },
+                            );
+                          },
                         ),
 
                         const SizedBox(height: 16),

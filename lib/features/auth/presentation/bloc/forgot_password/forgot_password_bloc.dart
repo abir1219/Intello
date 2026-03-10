@@ -4,61 +4,93 @@ import 'package:equatable/equatable.dart';
 import '../../../domain/repositories/auth_repository.dart';
 
 part 'forgot_password_event.dart';
-
 part 'forgot_password_state.dart';
 
 class ForgotPasswordBloc
     extends Bloc<ForgotPasswordEvent, ForgotPasswordState> {
+
   final AuthRepository repository;
 
-  ForgotPasswordBloc(this.repository) : super(ForgotPasswordInitial()) {
-    on<SubmitForgotPassword>((event, emit) async {
-      emit(ForgotPasswordLoading());
+  ForgotPasswordBloc(this.repository)
+      : super(const ForgotPasswordState()) {
 
-      await repository
-          .forgotPasswordSubmit(event.newPassword)
-          .then((value) => emit(ForgotPasswordSuccess()))
-          .onError(
-            (error, stackTrace) => emit(
-              ForgotPasswordFailure("Aucun compte associé à cet email."),
-            ),
-          );
+    /// Validate phone number
+    on<ValidatePhoneNumberEvent>((event, emit) async {
 
-      /*final exists =
-      await repository.forgotPassword(event.newPassword);
+      if (event.phone.isEmpty) {
+        emit(state.copyWith(
+          errorMessage: "Veuillez entrer votre email.",
+        ));
+        return;
+      }
 
-      if (exists) {
-        emit(ForgotPasswordSuccess());
-      } else {
-        emit(ForgotPasswordFailure(
-            "Aucun compte associé à cet email."));
-      }*/
+      emit(state.copyWith(
+        isLoading: true,
+        errorMessage: null,
+      ));
+
+      try {
+        final exists = await repository.forgotPassword(event.phone);
+
+        if (exists) {
+          emit(state.copyWith(
+            isLoading: false,
+            isPhoneValidated: true,
+          ));
+        } else {
+          emit(state.copyWith(
+            isLoading: false,
+            errorMessage: "Aucun compte associé à cet email.",
+          ));
+        }
+
+      } catch (e) {
+        emit(state.copyWith(
+          isLoading: false,
+          errorMessage: e.toString(),
+        ));
+      }
     });
 
-    on<ValidatePhoneNumberEvent>((event, emit) async {
-      if (event.phone.isEmpty) {
-        emit(ValidatePhoneFailure("Veuillez entrer votre email."));
-        return;
+    /// Submit new password
+    on<SubmitForgotPassword>((event, emit) async {
+
+      emit(state.copyWith(
+        isLoading: true,
+        errorMessage: null,
+      ));
+
+      try {
+
+        await repository.forgotPasswordSubmit(event.newPassword);
+
+        emit(state.copyWith(
+          isLoading: false,
+          isSuccess: true,
+        ));
+
+      } catch (e) {
+
+        emit(state.copyWith(
+          isLoading: false,
+          errorMessage: "Erreur lors de la réinitialisation du mot de passe.",
+        ));
       }
+    });
 
-      /*final emailRegex =
-      RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$');
+    /// Toggle password visibility
+    on<TogglePasswordVisibilityEvent>((event, emit) {
+      emit(state.copyWith(
+        isPasswordVisible: !state.isPasswordVisible,
+      ));
+    });
 
-      if (!emailRegex.hasMatch(event.email)) {
-        emit(ForgotPasswordFailure(
-            "Adresse e-mail invalide."));
-        return;
-      }*/
-
-      emit(ForgotPasswordLoading());
-
-      final exists = await repository.forgotPassword(event.phone);
-
-      if (exists) {
-        emit(ValidatePhoneSuccess());
-      } else {
-        emit(ForgotPasswordFailure("Aucun compte associé à cet email."));
-      }
+    /// Toggle confirm password visibility
+    on<ToggleConfirmPasswordVisibilityEvent>((event, emit) {
+      emit(state.copyWith(
+        isConfirmPasswordVisible:
+        !state.isConfirmPasswordVisible,
+      ));
     });
   }
 }

@@ -3,7 +3,6 @@ import 'package:equatable/equatable.dart';
 
 import '../../../auth/domain/repositories/auth_repository.dart';
 
-
 part 'change_password_event.dart';
 part 'change_password_state.dart';
 
@@ -13,43 +12,86 @@ class ChangePasswordBloc
   final AuthRepository repository;
 
   ChangePasswordBloc(this.repository)
-      : super(ChangePasswordInitial()) {
+      : super(const ChangePasswordState()) {
 
+    /// Submit change password
     on<SubmitChangePassword>((event, emit) async {
 
       if (event.currentPassword.isEmpty ||
           event.newPassword.isEmpty ||
           event.confirmPassword.isEmpty) {
-        emit(ChangePasswordFailure("Tous les champs sont obligatoires."));
+
+        emit(state.copyWith(
+          errorMessage: "Tous les champs sont obligatoires.",
+        ));
         return;
       }
-
-      /*if (event.newPassword.length < 6) {
-        emit(ChangePasswordFailure(
-            "Le mot de passe doit contenir au moins 6 caractères."));
-        return;
-      }*/
 
       if (event.newPassword != event.confirmPassword) {
-        emit(ChangePasswordFailure(
-            "Les mots de passe ne correspondent pas."));
+        emit(state.copyWith(
+          errorMessage: "Les mots de passe ne correspondent pas.",
+        ));
         return;
       }
 
-      emit(ChangePasswordLoading());
+      emit(state.copyWith(
+        isLoading: true,
+        errorMessage: null,
+      ));
 
-      final result = await repository.changePassword(
-        event.currentPassword,
-        event.newPassword,
-      );
+      try {
 
-      if (result) {
-        emit(ChangePasswordSuccess());
-      } else {
-        emit(ChangePasswordFailure(
-            "Mot de passe actuel incorrect."));
+        final result = await repository.changePassword(
+          event.currentPassword,
+          event.newPassword,
+        );
+
+        if (result) {
+
+          emit(state.copyWith(
+            isLoading: false,
+            isSuccess: true,
+          ));
+
+        } else {
+
+          emit(state.copyWith(
+            isLoading: false,
+            errorMessage: "Mot de passe actuel incorrect.",
+          ));
+
+        }
+
+      } catch (e) {
+
+        emit(state.copyWith(
+          isLoading: false,
+          errorMessage: e.toString(),
+        ));
+
       }
+    });
+
+    /// Toggle current password visibility
+    on<ToggleCurrentPasswordVisibilityEvent>((event, emit) {
+      emit(state.copyWith(
+        isOldPasswordVisible: !state.isOldPasswordVisible,
+      ));
+    });
+
+    /// Toggle new password visibility
+    on<ToggleNewPasswordVisibilityEvent>((event, emit) {
+      emit(state.copyWith(
+        isNewPasswordVisible: !state.isNewPasswordVisible,
+      ));
+    });
+
+    /// Toggle confirm password visibility
+    on<ToggleConfirmPasswordVisibilityEvent>((event, emit) {
+      emit(state.copyWith(
+        isConfirmPasswordVisible:
+        !state.isConfirmPasswordVisible,
+      ));
     });
   }
 }
-

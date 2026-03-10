@@ -14,6 +14,17 @@ class Subject extends Equatable {
     required this.lessons,
   });
 
+  factory Subject.fromJson(Map<String, dynamic> json) {
+    return Subject(
+      id: json['id'],
+      title: json['title'],
+      subtitle: json['subtitle'],
+      lessons: (json['lessons'] as List)
+          .map((e) => Lesson.fromJson(e))
+          .toList(),
+    );
+  }
+
   @override
   List<Object> get props => [id, title, subtitle, lessons];
 }

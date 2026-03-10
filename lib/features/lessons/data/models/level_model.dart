@@ -12,10 +12,9 @@ class LevelModel extends Level {
       levelCode: json['level_code'],
       subjects: (json['subjects'] as List)
           .map(
-            (e) =>
-            SubjectModel.fromJson(
-              e as Map<String, dynamic>,
-            ),
+            (e) => SubjectModel.fromJson(
+          e as Map<String, dynamic>,
+        ),
       )
           .toList(),
     );

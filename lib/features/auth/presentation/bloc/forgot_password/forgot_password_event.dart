@@ -2,18 +2,22 @@ part of 'forgot_password_bloc.dart';
 
 sealed class ForgotPasswordEvent extends Equatable {
   const ForgotPasswordEvent();
+
+  @override
+  List<Object?> get props => [];
 }
 
-class ValidatePhoneNumberEvent extends ForgotPasswordEvent{
+/// Validate phone number
+class ValidatePhoneNumberEvent extends ForgotPasswordEvent {
   final String phone;
 
   const ValidatePhoneNumberEvent(this.phone);
 
   @override
-  // TODO: implement props
   List<Object?> get props => [phone];
 }
 
+/// Submit new password
 class SubmitForgotPassword extends ForgotPasswordEvent {
   final String newPassword;
 
@@ -21,4 +25,14 @@ class SubmitForgotPassword extends ForgotPasswordEvent {
 
   @override
   List<Object?> get props => [newPassword];
+}
+
+/// Toggle password visibility
+class TogglePasswordVisibilityEvent extends ForgotPasswordEvent {
+  const TogglePasswordVisibilityEvent();
+}
+
+/// Toggle confirm password visibility
+class ToggleConfirmPasswordVisibilityEvent extends ForgotPasswordEvent {
+  const ToggleConfirmPasswordVisibilityEvent();
 }

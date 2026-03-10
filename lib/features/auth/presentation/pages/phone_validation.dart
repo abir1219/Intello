@@ -37,37 +37,40 @@ class PhoneValidation extends StatelessWidget {
                     vertical: 10,
                   ),
                   child: BlocListener<ForgotPasswordBloc, ForgotPasswordState>(
+                    listenWhen: (previous, current) =>
+                    previous.isPhoneValidated != current.isPhoneValidated ||
+                        previous.errorMessage != current.errorMessage,
                     listener: (context, state) {
-                      if (state is ValidatePhoneSuccess) {
+
+                      if (state.isPhoneValidated) {
                         context.go(AppPages.CREATE_NEW_PASSWORD_SCREEN);
-                      } else if (state is ValidatePhoneFailure) {
-                        _showError(context, state.message);
+                      }
+
+                      if (state.errorMessage != null) {
+                        _showError(context, state.errorMessage!);
                       }
                     },
+
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
+
+                        SizedBox(height: height * 0.03),
+
+                        /// Logo
                         SizedBox(
-                          height: isLandscape
-                              ? height * 0.03
-                              : height * 0.03,
-                        ),
-                        SizedBox(
-                          height: isLandscape
-                              ? height * 0.05
-                              : height * 0.05,
+                          height: height * 0.05,
                           width: isLandscape ? width * 0.19 : width * 0.18,
                           child: SvgPicture.asset(
                             AppAssets.logo_text,
                             fit: BoxFit.fill,
                           ),
                         ),
-                        SizedBox(
-                          height: isLandscape
-                              ? height * 0.06
-                              : height * 0.06,
-                        ),
+
+                        SizedBox(height: height * 0.06),
+
+                        /// Title
                         Text(
                           "Réinitialisez votre mot de passe.",
                           style: TextStyle(
@@ -76,21 +79,21 @@ class PhoneValidation extends StatelessWidget {
                             fontWeight: FontWeight.w400,
                           ),
                         ),
-                        SizedBox(
-                          height: isLandscape ? height * 0.01 : height * 0.005,
-                        ),
+
+                        SizedBox(height: height * 0.01),
+
                         const Text(
                           "Entrez le numéro WhatsApp associé à votre numéro de téléphone.",
                           style: TextStyle(
                             fontSize: 16,
                             color: AppColors.TEXT_FIELD_COLOR,
-                            fontWeight: FontWeight.w400,
                           ),
                           textAlign: TextAlign.center,
                         ),
+
                         const SizedBox(height: 50),
 
-                        //const SizedBox(height: 16),
+                        /// Phone Field
                         CustomTextField.buildTextFieldWithLabel(
                           controller: _phone,
                           context: context,
@@ -98,16 +101,31 @@ class PhoneValidation extends StatelessWidget {
                           keyboardType: TextInputType.phone,
                           hintText: "Entrez votre numéro WhatsApp ...",
                         ),
+
                         const SizedBox(height: 10),
 
-                        PrimaryButton(
-                          title: "Valider",
-                          onPressed: () =>
-                              context.read<ForgotPasswordBloc>().add(
-                                ValidatePhoneNumberEvent(_phone.text.trim()),
-                              ),
+                        /// Validate Button
+                        BlocSelector<ForgotPasswordBloc, ForgotPasswordState, bool>(
+                          selector: (state) => state.isLoading,
+                          builder: (context, isLoading) {
+                            return PrimaryButton(
+                              title: isLoading ? "Chargement..." : "Valider",
+                              onPressed: isLoading
+                                  ? null
+                                  : () {
+                                context.read<ForgotPasswordBloc>().add(
+                                  ValidatePhoneNumberEvent(
+                                    _phone.text.trim(),
+                                  ),
+                                );
+                              },
+                            );
+                          },
                         ),
+
                         const SizedBox(height: 10),
+
+                        /// Back to login
                         PrimaryButton(
                           title: "Retour à la connexion",
                           color: AppColors.greenColor,

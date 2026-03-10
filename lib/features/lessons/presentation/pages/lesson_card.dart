@@ -44,7 +44,7 @@ class LessonCard extends StatelessWidget {
             ),
             const SizedBox(height: 6),
             Text(
-              lesson.instruction,
+              lesson.instructions.fr,
               style: TextStyle(
                 color: isSelected ? Colors.white70 : Colors.black54,
               ),

@@ -31,6 +31,7 @@ class _SubjectScreenState extends State<SubjectScreen> {
   @override
   void initState() {
     super.initState();
+    selectedIndex = -1;
     debugPrint("code->${widget.levelCode}");
     audioService = AudioPlayerService();
     context.read<SubjectBloc>().add(LoadSubjectsEvent(widget.levelCode));

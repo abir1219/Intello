@@ -7,11 +7,11 @@ import '../../../../core/utils/app_dimenstion.dart';
 
 class PrimaryButton extends StatelessWidget {
   final String title;
-  Color color;
-  bool logoVisible;
-  final VoidCallback onPressed;
+  final Color color;
+  final bool logoVisible;
+  final void Function()? onPressed;
 
-  PrimaryButton({
+  const PrimaryButton({
     super.key,
     required this.title,
     required this.onPressed,

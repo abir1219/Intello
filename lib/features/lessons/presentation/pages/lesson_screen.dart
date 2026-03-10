@@ -32,6 +32,7 @@ class _LessonScreenState extends State<LessonScreen> {
 
   @override
   void initState() {
+    selectedIndex = -1;
     audioService = AudioPlayerService();
     context.read<LessonBloc>().add(
       LoadLessonsEvent(widget.subject, widget.level),
@@ -86,7 +87,7 @@ class _LessonScreenState extends State<LessonScreen> {
                 fit: StackFit.expand,
                 children: [
                   SvgPicture.asset(AppAssets.background, fit: BoxFit.cover),
-                  SingleChildScrollView(
+                  Padding(
                     padding: EdgeInsets.only(
                       left: isLandscape ? width * 0.25 : width * 0.08,
                       right: isLandscape ? width * 0.25 : width * 0.08,
@@ -152,35 +153,38 @@ class _LessonScreenState extends State<LessonScreen> {
                                   ),
                                 );
                               }
-                              return GridView.builder(
-                                shrinkWrap: true,
-                                padding: const EdgeInsets.all(16),
-                                itemCount: state.lessons.length,
-                                gridDelegate:
-                                    const SliverGridDelegateWithFixedCrossAxisCount(
-                                      crossAxisCount: 2,
-                                      mainAxisSpacing: 16,
-                                      crossAxisSpacing: 16,
-                                      childAspectRatio: 1.4,
-                                    ),
-                                itemBuilder: (context, index) {
-                                  final level = state.lessons[index];
+                              return Expanded(
+                                child: GridView.builder(
+                                  // shrinkWrap: true,
+                                  scrollDirection: Axis.vertical,
+                                  padding: const EdgeInsets.all(16),
+                                  itemCount: state.lessons.length,
+                                  gridDelegate:
+                                      const SliverGridDelegateWithFixedCrossAxisCount(
+                                        crossAxisCount: 2,
+                                        mainAxisSpacing: 16,
+                                        crossAxisSpacing: 16,
+                                        childAspectRatio: 1.4,
+                                      ),
+                                  itemBuilder: (context, index) {
+                                    final level = state.lessons[index];
 
-                                  return LessonCard(
-                                    lesson: level,
-                                    isSelected: selectedIndex == index,
-                                    onTap: () {
-                                      setState(() {
-                                        selectedIndex = index;
-                                      });
-                                      context.push(AppPages.LESSON_DETAILS_SCREEN,extra: {
-                                        "subjectId": widget.subject,
-                                        "levelCode": widget.level,
-                                        "levelName": state.lessons[index].title,
-                                      });
-                                    },
-                                  );
-                                },
+                                    return LessonCard(
+                                      lesson: level,
+                                      isSelected: selectedIndex == index,
+                                      onTap: () {
+                                        setState(() {
+                                          selectedIndex = index;
+                                        });
+                                        context.push(AppPages.LESSON_DETAILS_SCREEN,extra: {
+                                          "subjectId": widget.subject,
+                                          "levelCode": widget.level,
+                                          "levelName": state.lessons[index].title,
+                                        });
+                                      },
+                                    );
+                                  },
+                                ),
                               );
                             }
 

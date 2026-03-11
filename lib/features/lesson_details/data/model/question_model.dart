@@ -1,4 +1,3 @@
-
 import '../../domain/entity/question.dart';
 import 'option_model.dart';
 
@@ -6,7 +5,7 @@ class QuestionModel extends Question {
   const QuestionModel({
     required super.questionId,
     required super.question,
-    required List<OptionModel> super.options,
+    required super.options,
     required super.correctAnswerId,
     required super.selectedAnswerId,
     required super.isAttended,
@@ -23,5 +22,18 @@ class QuestionModel extends Question {
       selectedAnswerId: json['selectedAnswerId'],
       isAttended: json['isAttended'],
     );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      "questionId": questionId,
+      "question": question,
+      "options": options
+          .map((e) => (e as OptionModel).toJson())
+          .toList(),
+      "correctAnswerId": correctAnswerId,
+      "selectedAnswerId": selectedAnswerId,
+      "isAttended": isAttended,
+    };
   }
 }

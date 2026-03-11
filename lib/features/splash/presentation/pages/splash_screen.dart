@@ -28,9 +28,10 @@ class _SplashScreenState extends State<SplashScreen> {
     Future.delayed(const Duration(seconds: 2), () {
       if (!mounted) return;
       if (isLoggedIn) {
-        context.go(AppPages.LEVEL_SCREEN);
+      // if (false) {
+        context.pushReplacement(AppPages.LEVEL_SCREEN);
       } else {
-        context.go(AppPages.ONBOARDING_SCREEN);
+        context.pushReplacement(AppPages.ONBOARDING_SCREEN);
       }
     });
   }

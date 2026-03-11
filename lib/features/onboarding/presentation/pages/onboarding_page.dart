@@ -49,8 +49,8 @@ class _OnboardingPageState extends State<OnboardingPage> {
                   children: [
                     SizedBox(height: height * 0.03),
                     SizedBox(
-                      height: isLandscape ? height * 0.12 : height * 0.15,
-                      width: isLandscape ? width * 0.2 : width * 0.2,
+                      // height: isLandscape ? height * 0.12 : height * 0.15,
+                      // width: isLandscape ? width * 0.2 : width * 0.2,
                       child: SvgPicture.asset(AppAssets.logo_text, fit: BoxFit.fill),
                     ),
                     SizedBox(
@@ -125,7 +125,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                                 curve: Curves.easeOutCubic,
                               );
                             } else {
-                              context.go(AppPages.SIGNUP_SCREEN);
+                              context.pushReplacement(AppPages.SIGNUP_SCREEN);
                             }
                           },
                         );
@@ -155,7 +155,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                           return const SizedBox.shrink();
                         }
                         return TextButton(
-                          onPressed: () => context.go(AppPages.SIGNUP_SCREEN),
+                          onPressed: () => context.pushReplacement(AppPages.SIGNUP_SCREEN),
                           child: const Text("Ignorer"),
                         );
                       },

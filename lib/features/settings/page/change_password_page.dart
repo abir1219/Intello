@@ -34,16 +34,16 @@ class _StateChangePasswordPage extends State<ChangePasswordPage> {
 
     switch (index) {
       case 0:
-        context.go(AppPages.LEVEL_SCREEN);
+        context.pushReplacement(AppPages.LEVEL_SCREEN);
         break;
       case 1:
-        context.go(AppPages.PROFILE_SCREEN);
+        context.pushReplacement(AppPages.PROFILE_SCREEN);
         break;
       case 2:
         Center(child: Text("Home Page"));
         break;
       case 3:
-        context.go(AppPages.CREATE_NEW_PASSWORD_SCREEN);
+        context.pushReplacement(AppPages.CREATE_NEW_PASSWORD_SCREEN);
         break;
     }
   }
@@ -59,7 +59,7 @@ class _StateChangePasswordPage extends State<ChangePasswordPage> {
     _newPassword.dispose();
     _cnfrm_password.dispose();
     _oldPassword.dispose();
-    audioService.dispose();
+    audioService.stop();
     super.dispose();
   }
 
@@ -174,7 +174,9 @@ class _StateChangePasswordPage extends State<ChangePasswordPage> {
                                   ),
 
                                   ListenButton(
-                                    onTap: () => audioService.playAsset(AppAssets.audio),
+                                    onTap: () async {
+                                      await audioService.toggle(AppAssets.audio);
+                                    },
                                     listenString: 'Écouter les consignes',
                                   ),
                                 ],

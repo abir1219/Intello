@@ -18,12 +18,14 @@ class LessonDetails extends StatefulWidget {
   final String subject;
   final String level;
   final String levelName;
+  final String lessonId;
 
   const LessonDetails({
     super.key,
     required this.subject,
     required this.level,
     required this.levelName,
+    required this.lessonId,
   });
 
   @override
@@ -42,7 +44,8 @@ class _LessonDetailsState extends State<LessonDetails> {
       LoadLessonEvent(
         levelId: widget.level,
         subjectId: widget.subject,
-        lessonId: widget.levelName,
+        // lessonId: widget.levelName,
+        lessonId: widget.lessonId,
       ),
     );
     super.initState();
@@ -50,7 +53,7 @@ class _LessonDetailsState extends State<LessonDetails> {
 
   @override
   void dispose() {
-    audioService.dispose();
+    audioService.stop();
     super.dispose();
   }
 
@@ -60,16 +63,16 @@ class _LessonDetailsState extends State<LessonDetails> {
     debugPrint("LESSON_INDEX-->$index");
     switch (index) {
       case 0:
-        context.go(AppPages.LEVEL_SCREEN);
+        context.pushReplacement(AppPages.LEVEL_SCREEN);
         break;
       case 1:
-        context.go(AppPages.PROFILE_SCREEN);
+        context.pushReplacement(AppPages.PROFILE_SCREEN);
         break;
       case 2:
         Center(child: Text("Home Page"));
         break;
       case 3:
-        context.go(AppPages.CHANGE_PASSWORD_SCREEN);
+        context.pushReplacement(AppPages.CHANGE_PASSWORD_SCREEN);
         break;
     }
   }
@@ -86,7 +89,7 @@ class _LessonDetailsState extends State<LessonDetails> {
         canPop: false,
         onPopInvokedWithResult: (didPop, result) {
           if (didPop) return;
-          context.push(
+          context.pushReplacement(
             AppPages.LESSON_SCREEN,
             extra: {"subjectId": widget.subject, "levelCode": widget.level},
           );
@@ -136,8 +139,9 @@ class _LessonDetailsState extends State<LessonDetails> {
                               ),
                             ),
                             ListenButton(
-                              onTap: () =>
-                                  audioService.playAsset(AppAssets.audio),
+                              onTap: () async {
+                                await audioService.toggle(AppAssets.audio);
+                              },
                               listenString: 'Écouter les consignes',
                             ),
                           ],

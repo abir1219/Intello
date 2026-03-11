@@ -52,7 +52,7 @@ class _SignUpPageState extends State<SignUpPage> {
   }
 
   void _handleTap() {
-    context.go(AppPages.LOGIN_SCREEN);
+    context.pushReplacement(AppPages.LOGIN_SCREEN);
   }
 
   bool _check = false;
@@ -90,7 +90,7 @@ class _SignUpPageState extends State<SignUpPage> {
                             onClose: () => Navigator.pop(context),
                             onContinue: () {
                               Navigator.pop(context);
-                              context.go(AppPages.LOGIN_SCREEN);
+                              context.pushReplacement(AppPages.LOGIN_SCREEN);
                             },
                           ),
                         );

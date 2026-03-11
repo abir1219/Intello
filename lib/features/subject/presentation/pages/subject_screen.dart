@@ -48,23 +48,23 @@ class _SubjectScreenState extends State<SubjectScreen> {
     debugPrint("SUBJECT_INDEX-->$index");
     switch (index) {
       case 0:
-        context.go(AppPages.LEVEL_SCREEN);
+        context.pushReplacement(AppPages.LEVEL_SCREEN);
         break;
       case 1:
-        context.go(AppPages.PROFILE_SCREEN);
+        context.pushReplacement(AppPages.PROFILE_SCREEN);
         break;
       case 2:
         Center(child: Text("Home Page"));
         break;
       case 3:
-        context.go(AppPages.CHANGE_PASSWORD_SCREEN);
+        context.pushReplacement(AppPages.CHANGE_PASSWORD_SCREEN);
         break;
     }
   }
 
   @override
   void dispose() {
-    audioService.dispose();
+    audioService.stop();
     super.dispose();
   }
 
@@ -75,7 +75,7 @@ class _SubjectScreenState extends State<SubjectScreen> {
         canPop: false,
         onPopInvokedWithResult: (didPop, result) {
           if(didPop) return;
-          context.push(AppPages.LEVEL_SCREEN);
+          context.pushReplacement(AppPages.LEVEL_SCREEN);
         },
         child: SafeArea(
           child: Stack(
@@ -119,7 +119,9 @@ class _SubjectScreenState extends State<SubjectScreen> {
                         ),
 
                         ListenButton(
-                          onTap: () => audioService.playAsset(AppAssets.audio),
+                          onTap: () async {
+                            await audioService.toggle(AppAssets.audio);
+                          },
                           listenString: "Écouter les consignes",
                         ),
                       ],
@@ -156,7 +158,7 @@ class _SubjectScreenState extends State<SubjectScreen> {
                                       setState(() {
                                         selectedIndex = index;
                                       });
-                                      context.push(AppPages.LESSON_SCREEN,extra: {
+                                      context.pushReplacement(AppPages.LESSON_SCREEN,extra: {
                                         "subjectId": state.subjects[index].id,
                                         "levelCode": widget.levelCode
                                       });

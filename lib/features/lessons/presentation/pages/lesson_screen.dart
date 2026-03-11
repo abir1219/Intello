@@ -42,7 +42,7 @@ class _LessonScreenState extends State<LessonScreen> {
 
   @override
   void dispose() {
-    audioService.dispose();
+    audioService.stop();
     super.dispose();
   }
 
@@ -52,16 +52,16 @@ class _LessonScreenState extends State<LessonScreen> {
     debugPrint("LESSON_INDEX-->$index");
     switch (index) {
       case 0:
-        context.go(AppPages.LEVEL_SCREEN);
+        context.pushReplacement(AppPages.LEVEL_SCREEN);
         break;
       case 1:
-        context.go(AppPages.PROFILE_SCREEN);
+        context.pushReplacement(AppPages.PROFILE_SCREEN);
         break;
       case 2:
         Center(child: Text("Home Page"));
         break;
       case 3:
-        context.go(AppPages.CHANGE_PASSWORD_SCREEN);
+        context.pushReplacement(AppPages.CHANGE_PASSWORD_SCREEN);
         break;
     }
   }
@@ -78,7 +78,7 @@ class _LessonScreenState extends State<LessonScreen> {
         canPop: false,
         onPopInvokedWithResult: (didPop, result) {
           if (didPop) return;
-          context.push(AppPages.SUBJECT_SCREEN, extra: widget.level);
+          context.pushReplacement(AppPages.SUBJECT_SCREEN, extra: widget.level);
         },
         child: SafeArea(
           child: OrientationBuilder(
@@ -124,8 +124,9 @@ class _LessonScreenState extends State<LessonScreen> {
                               ),
                             ),
                             ListenButton(
-                              onTap: () =>
-                                  audioService.playAsset(AppAssets.audio),
+                              onTap: () async {
+                                await audioService.toggle(AppAssets.audio);
+                              },
                               listenString: 'Écouter les consignes',
                             ),
                           ],
@@ -176,10 +177,11 @@ class _LessonScreenState extends State<LessonScreen> {
                                         setState(() {
                                           selectedIndex = index;
                                         });
-                                        context.push(AppPages.LESSON_DETAILS_SCREEN,extra: {
+                                        context.pushReplacement(AppPages.LESSON_DETAILS_SCREEN,extra: {
                                           "subjectId": widget.subject,
                                           "levelCode": widget.level,
                                           "levelName": state.lessons[index].title,
+                                          "lessonId": state.lessons[index].id,
                                         });
                                       },
                                     );

@@ -43,7 +43,7 @@ class PhoneValidation extends StatelessWidget {
                     listener: (context, state) {
 
                       if (state.isPhoneValidated) {
-                        context.go(AppPages.CREATE_NEW_PASSWORD_SCREEN);
+                        context.pushReplacement(AppPages.CREATE_NEW_PASSWORD_SCREEN);
                       }
 
                       if (state.errorMessage != null) {
@@ -130,7 +130,7 @@ class PhoneValidation extends StatelessWidget {
                           title: "Retour à la connexion",
                           color: AppColors.greenColor,
                           logoVisible: false,
-                          onPressed: () => context.go(AppPages.LOGIN_SCREEN),
+                          onPressed: () => context.pushReplacement(AppPages.LOGIN_SCREEN),
                         ),
 
                         const SizedBox(height: 16),

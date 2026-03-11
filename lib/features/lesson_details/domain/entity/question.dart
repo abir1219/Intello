@@ -25,6 +25,6 @@ class Question extends Equatable {
     options,
     correctAnswerId,
     selectedAnswerId,
-    isAttended
+    isAttended,
   ];
 }

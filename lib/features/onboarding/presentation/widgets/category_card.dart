@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:intello_new/core/constants/app_assets.dart';
+import 'package:intello_new/core/constants/app_colors.dart';
 
 import '../../../../core/audio/audio_player_service.dart';
 import '../domain/entities/category_entity.dart';
@@ -16,12 +17,6 @@ class CategoryCard extends StatefulWidget {
 
 class _CategoryCardState extends State<CategoryCard> {
   final audioService = AudioPlayerService();
-
-  @override
-  void dispose() {
-    audioService.stop();
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -44,14 +39,9 @@ class _CategoryCardState extends State<CategoryCard> {
               children: [
                 SizedBox(
                   height: 110,
-                  child: Image.asset(
-                    widget.category.image,
-                    fit: BoxFit.contain,
-                  ),
+                  child: Image.asset(widget.category.image),
                 ),
-
                 const SizedBox(height: 16),
-
                 Text(
                   widget.category.title,
                   style: const TextStyle(
@@ -59,17 +49,15 @@ class _CategoryCardState extends State<CategoryCard> {
                     fontWeight: FontWeight.w600,
                   ),
                 ),
-
                 const SizedBox(height: 6),
-
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
+                      // audioService.currentAudio == widget.category.audio &&
+                      //     audioService.isPlaying
+                      //     ? "Stop" :
                       "Écouter",
-                      /*audioService.currentAudio == widget.category.audio &&
-                              audioService.isPlaying
-                          ? "Stop" : "Écouter",*/
                       style: const TextStyle(
                         color: Colors.blue,
                         fontSize: 14,
@@ -95,7 +83,20 @@ class _CategoryCardState extends State<CategoryCard> {
               ),
               child: Padding(
                 padding: const EdgeInsets.all(8),
-                child: SvgPicture.asset(AppAssets.playButton),
+                child:
+                    /*Icon(
+                        Icons.pause_circle_outline_sharp,
+                        color: AppColors.CLOSE_COLOR,
+                        size: 36,
+                      blendMode: BlendMode.srcOver,
+                      )
+                    : */
+                    SvgPicture.asset(
+                      audioService.currentAudio == widget.category.audio &&
+                              audioService.isPlaying
+                          ? AppAssets.pauseButton
+                          : AppAssets.playButton,
+                    ),
               ),
             ),
           ),
@@ -116,7 +117,7 @@ class _CategoryCardState extends State<CategoryCard> {
 
   @override
   void dispose() {
-    audioService.dispose();
+    audioService.stop();
     super.dispose();
   }
 

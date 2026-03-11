@@ -34,7 +34,7 @@ debugPrint("LessonId-->${event.lessonId}");
       final lesson = await getLessonContent(
         event.levelId,
         event.subjectId,
-        event.lessonId.toLowerCase(),
+        event.lessonId//.toLowerCase(),
       );
       debugPrint("lesson--->${lesson.toString()}");
 

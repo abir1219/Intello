@@ -46,7 +46,7 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   void _handleTap() {
-    context.go(AppPages.SIGNUP_SCREEN);
+    context.pushReplacement(AppPages.SIGNUP_SCREEN);
   }
 
   @override
@@ -73,7 +73,7 @@ class _LoginPageState extends State<LoginPage> {
                     listener: (context, state) {
                       if (state is LoginSuccess) {
                         _showSuccess(context,"Connexion réussie");
-                        context.go(AppPages.LEVEL_SCREEN);
+                        context.pushReplacement(AppPages.LEVEL_SCREEN);
                       } else if (state is LoginFailure) {
                         _showError(context, state.message);
                         /*ScaffoldMessenger.of(context).showSnackBar(
@@ -172,7 +172,7 @@ class _LoginPageState extends State<LoginPage> {
                             ),
                             const Spacer(),
                             TextButton(
-                              onPressed: () => context.go(
+                              onPressed: () => context.pushReplacement(
                                 AppPages.PHONE_VALIDATE_SCREEN,
                               ),
                               child: Text(

@@ -14,19 +14,22 @@ class CategoryGrid extends StatelessWidget {
     final isLandscape =
         MediaQuery.of(context).orientation == Orientation.landscape;
 
-    return GridView.builder(
-      clipBehavior: Clip.none,
-      padding:  EdgeInsets.symmetric(horizontal: AppDimensions.getResponsiveWidth(context) * 0.05),
-      itemCount: categories.length,
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: isLandscape ? 3 : 2,
-        crossAxisSpacing: 15,
-        mainAxisSpacing: 15,
-        childAspectRatio: 1.4,
+    return Padding(
+      padding: const EdgeInsets.only(top: 8.0,bottom: 14.0),
+      child: GridView.builder(
+        clipBehavior: Clip.none,
+        padding:  EdgeInsets.symmetric(horizontal: AppDimensions.getResponsiveWidth(context) * 0.05),
+        itemCount: categories.length,
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: isLandscape ? 3 : 2,
+          crossAxisSpacing: 15,
+          mainAxisSpacing: 15,
+          childAspectRatio: 1.4,
+        ),
+        itemBuilder: (_, index) {
+          return CategoryCard(category: categories[index]);
+        },
       ),
-      itemBuilder: (_, index) {
-        return CategoryCard(category: categories[index]);
-      },
     );
   }
 }

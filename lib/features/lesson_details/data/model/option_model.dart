@@ -12,4 +12,11 @@ class OptionModel extends Option {
       value: json['value'],
     );
   }
+
+  Map<String, dynamic> toJson() {
+    return {
+      "id": id,
+      "value": value,
+    };
+  }
 }

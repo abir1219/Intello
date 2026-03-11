@@ -1120,5 +1120,849 @@
         ]
       }
     ]
+  },
+  {
+    "level_code": "ce1",
+    "subjects": [
+      {
+        "id": "emc",
+        "title": "EMC",
+        "subtitle": "Apprendre les valeurs, le respect, la citoyenneté et le vivre-ensemble.",
+        "lessons": [
+          {
+            "id": "CE1_EMC_L1",
+            "grade": "CE1",
+            "subject": "emc",
+            "lesson_number": 1,
+            "title": "Leçon 1",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE1_EMC_L2",
+            "grade": "CE1",
+            "subject": "emc",
+            "lesson_number": 2,
+            "title": "Leçon 2",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE1_EMC_L3",
+            "grade": "CE1",
+            "subject": "emc",
+            "lesson_number": 3,
+            "title": "Leçon 3",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE1_EMC_L4",
+            "grade": "CE1",
+            "subject": "emc",
+            "lesson_number": 4,
+            "title": "Leçon 4",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE1_EMC_L5",
+            "grade": "CE1",
+            "subject": "emc",
+            "lesson_number": 5,
+            "title": "Leçon 5",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE1_EMC_L6",
+            "grade": "CE1",
+            "subject": "emc",
+            "lesson_number": 6,
+            "title": "Leçon 6",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE1_EMC_L7",
+            "grade": "CE1",
+            "subject": "emc",
+            "lesson_number": 7,
+            "title": "Leçon 7",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE1_EMC_L8",
+            "grade": "CE1",
+            "subject": "emc",
+            "lesson_number": 8,
+            "title": "Leçon 8",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE1_EMC_L9",
+            "grade": "CE1",
+            "subject": "emc",
+            "lesson_number": 9,
+            "title": "Leçon 9",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE1_EMC_L10",
+            "grade": "CE1",
+            "subject": "emc",
+            "lesson_number": 10,
+            "title": "Leçon 10",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE1_EMC_L11",
+            "grade": "CE1",
+            "subject": "emc",
+            "lesson_number": 11,
+            "title": "Leçon 11",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE1_EMC_L12",
+            "grade": "CE1",
+            "subject": "emc",
+            "lesson_number": 12,
+            "title": "Leçon 12",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          }
+        ]
+      },
+      {
+        "id": "mathématiques",
+        "title": "Mathématiques",
+        "subtitle": "Apprendre les valeurs, le respect, la citoyenneté et le vivre-ensemble.",
+        "lessons": [
+          {
+            "id": "CE1_EMC_L1",
+            "grade": "CE1",
+            "subject": "math",
+            "lesson_number": 1,
+            "title": "Leçon 1",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE1_EMC_L2",
+            "grade": "CE1",
+            "subject": "math",
+            "lesson_number": 2,
+            "title": "Leçon 2",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE1_MATH_L3",
+            "grade": "CE1",
+            "subject": "math",
+            "lesson_number": 3,
+            "title": "Leçon 3",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE1_MATH_L4",
+            "grade": "CE1",
+            "subject": "math",
+            "lesson_number": 4,
+            "title": "Leçon 4",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE1_MATH_L5",
+            "grade": "CE1",
+            "subject": "math",
+            "lesson_number": 5,
+            "title": "Leçon 5",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE1_MATH_L6",
+            "grade": "CE1",
+            "subject": "math",
+            "lesson_number": 6,
+            "title": "Leçon 6",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE1_MATH_L7",
+            "grade": "CE1",
+            "subject": "math",
+            "lesson_number": 7,
+            "title": "Leçon 7",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE1_MATH_L8",
+            "grade": "CE1",
+            "subject": "math",
+            "lesson_number": 8,
+            "title": "Leçon 8",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE1_MATH_L9",
+            "grade": "CE1",
+            "subject": "math",
+            "lesson_number": 9,
+            "title": "Leçon 9",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE1_MATH_L10",
+            "grade": "CE1",
+            "subject": "math",
+            "lesson_number": 10,
+            "title": "Leçon 10",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE1_MATH_L11",
+            "grade": "CE1",
+            "subject": "math",
+            "lesson_number": 11,
+            "title": "Leçon 11",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE1_MATH_L12",
+            "grade": "CE1",
+            "subject": "math",
+            "lesson_number": 12,
+            "title": "Leçon 12",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          }
+        ]
+      },
+      {
+        "id": "science",
+        "title": "Science",
+        "subtitle": "Expérimente et développe ton esprit scientifique.",
+        "lessons": [
+          {
+            "id": "CE1_SCIENCES_L1",
+            "grade": "CE1",
+            "subject": "sciences",
+            "lesson_number": 1,
+            "title": "Leçon 1",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE1_SCIENCES_L2",
+            "grade": "CE1",
+            "subject": "sciences",
+            "lesson_number": 2,
+            "title": "Leçon 2",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE1_SCIENCES_L3",
+            "grade": "CE1",
+            "subject": "sciences",
+            "lesson_number": 3,
+            "title": "Leçon 3",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE1_SCIENCES_L4",
+            "grade": "CE1",
+            "subject": "sciences",
+            "lesson_number": 4,
+            "title": "Leçon 4",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE1_SCIENCES_L5",
+            "grade": "CE1",
+            "subject": "sciences",
+            "lesson_number": 5,
+            "title": "Leçon 5",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE1_SCIENCES_L6",
+            "grade": "CE1",
+            "subject": "sciences",
+            "lesson_number": 6,
+            "title": "Leçon 6",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE1_SCIENCES_L7",
+            "grade": "CE1",
+            "subject": "sciences",
+            "lesson_number": 7,
+            "title": "Leçon 7",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE1_SCIENCES_L8",
+            "grade": "CE1",
+            "subject": "sciences",
+            "lesson_number": 8,
+            "title": "Leçon 8",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE1_SCIENCES_L9",
+            "grade": "CE1",
+            "subject": "sciences",
+            "lesson_number": 9,
+            "title": "Leçon 9",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE1_SCIENCES_L10",
+            "grade": "CE1",
+            "subject": "sciences",
+            "lesson_number": 10,
+            "title": "Leçon 10",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE1_SCIENCES_L11",
+            "grade": "CE1",
+            "subject": "sciences",
+            "lesson_number": 11,
+            "title": "Leçon 11",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE1_SCIENCES_L12",
+            "grade": "CE1",
+            "subject": "sciences",
+            "lesson_number": 12,
+            "title": "Leçon 12",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          }
+        ]
+      },
+      {
+        "id": "lecture",
+        "title": "Lecture",
+        "subtitle": "Développe tes compétences en lecture et en compréhension.",
+        "lessons": [
+          {
+            "id": "CE1_LECTURE_L1",
+            "grade": "CE1",
+            "subject": "lecture",
+            "lesson_number": 1,
+            "title": "Leçon 1",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE1_LECTURE_L2",
+            "grade": "CE1",
+            "subject": "lecture",
+            "lesson_number": 2,
+            "title": "Leçon 2",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE1_LECTURE_L3",
+            "grade": "CE1",
+            "subject": "lecture",
+            "lesson_number": 3,
+            "title": "Leçon 3",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE1_LECTURE_L4",
+            "grade": "CE1",
+            "subject": "lecture",
+            "lesson_number": 4,
+            "title": "Leçon 4",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE1_LECTURE_L5",
+            "grade": "CE1",
+            "subject": "lecture",
+            "lesson_number": 5,
+            "title": "Leçon 5",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE1_LECTURE_L6",
+            "grade": "CE1",
+            "subject": "lecture",
+            "lesson_number": 6,
+            "title": "Leçon 6",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE1_LECTURE_L7",
+            "grade": "CE1",
+            "subject": "lecture",
+            "lesson_number": 7,
+            "title": "Leçon 7",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE1_LECTURE_L8",
+            "grade": "CE1",
+            "subject": "lecture",
+            "lesson_number": 8,
+            "title": "Leçon 8",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE1_LECTURE_L9",
+            "grade": "CE1",
+            "subject": "lecture",
+            "lesson_number": 9,
+            "title": "Leçon 9",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE1_LECTURE_L10",
+            "grade": "CE1",
+            "subject": "lecture",
+            "lesson_number": 10,
+            "title": "Leçon 10",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE1_LECTURE_L11",
+            "grade": "CE1",
+            "subject": "lecture",
+            "lesson_number": 11,
+            "title": "Leçon 11",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE1_LECTURE_L12",
+            "grade": "CE1",
+            "subject": "lecture",
+            "lesson_number": 12,
+            "title": "Leçon 12",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "level_code": "ce2",
+    "subjects": [
+      {
+        "id": "emc",
+        "title": "EMC",
+        "subtitle": "Apprendre les valeurs, le respect, la citoyenneté et le vivre-ensemble.",
+        "lessons": [
+          {
+            "id": "CE2_EMC_L1",
+            "grade": "CE2",
+            "subject": "emc",
+            "lesson_number": 1,
+            "title": "Leçon 1",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE2_EMC_L2",
+            "grade": "CE2",
+            "subject": "emc",
+            "lesson_number": 2,
+            "title": "Leçon 2",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE2_EMC_L3",
+            "grade": "CE2",
+            "subject": "emc",
+            "lesson_number": 3,
+            "title": "Leçon 3",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE2_EMC_L4",
+            "grade": "CE2",
+            "subject": "emc",
+            "lesson_number": 4,
+            "title": "Leçon 4",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE2_EMC_L5",
+            "grade": "CE2",
+            "subject": "emc",
+            "lesson_number": 5,
+            "title": "Leçon 5",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE2_EMC_L6",
+            "grade": "CE2",
+            "subject": "emc",
+            "lesson_number": 6,
+            "title": "Leçon 6",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE2_EMC_L7",
+            "grade": "CE2",
+            "subject": "emc",
+            "lesson_number": 7,
+            "title": "Leçon 7",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE2_EMC_L8",
+            "grade": "CE2",
+            "subject": "emc",
+            "lesson_number": 8,
+            "title": "Leçon 8",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE2_EMC_L9",
+            "grade": "CE2",
+            "subject": "emc",
+            "lesson_number": 9,
+            "title": "Leçon 9",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE2_EMC_L10",
+            "grade": "CE2",
+            "subject": "emc",
+            "lesson_number": 10,
+            "title": "Leçon 10",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE2_EMC_L11",
+            "grade": "CE2",
+            "subject": "emc",
+            "lesson_number": 11,
+            "title": "Leçon 11",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CE2_EMC_L12",
+            "grade": "CE2",
+            "subject": "emc",
+            "lesson_number": 12,
+            "title": "Leçon 12",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          }
+        ]
+      },
+      {
+        "id": "lecture",
+        "title": "Lecture",
+        "subtitle": "Développe tes compétences en lecture et en compréhension.",
+        "lessons": [
+          {
+            "id": "CP2_LECTURE_L1",
+            "grade": "CP2",
+            "subject": "lecture",
+            "lesson_number": 1,
+            "title": "Leçon 1",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CP2_LECTURE_L2",
+            "grade": "CP2",
+            "subject": "lecture",
+            "lesson_number": 2,
+            "title": "Leçon 2",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CP2_LECTURE_L3",
+            "grade": "CP2",
+            "subject": "lecture",
+            "lesson_number": 3,
+            "title": "Leçon 3",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CP2_LECTURE_L4",
+            "grade": "CP2",
+            "subject": "lecture",
+            "lesson_number": 4,
+            "title": "Leçon 4",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CP2_LECTURE_L5",
+            "grade": "CP2",
+            "subject": "lecture",
+            "lesson_number": 5,
+            "title": "Leçon 5",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CP2_LECTURE_L6",
+            "grade": "CP2",
+            "subject": "lecture",
+            "lesson_number": 6,
+            "title": "Leçon 6",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CP2_LECTURE_L7",
+            "grade": "CP2",
+            "subject": "lecture",
+            "lesson_number": 7,
+            "title": "Leçon 7",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CP2_LECTURE_L8",
+            "grade": "CP2",
+            "subject": "lecture",
+            "lesson_number": 8,
+            "title": "Leçon 8",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CP2_LECTURE_L9",
+            "grade": "CP2",
+            "subject": "lecture",
+            "lesson_number": 9,
+            "title": "Leçon 9",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CP2_LECTURE_L10",
+            "grade": "CP2",
+            "subject": "lecture",
+            "lesson_number": 10,
+            "title": "Leçon 10",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CP2_LECTURE_L11",
+            "grade": "CP2",
+            "subject": "lecture",
+            "lesson_number": 11,
+            "title": "Leçon 11",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          },
+          {
+            "id": "CP2_LECTURE_L12",
+            "grade": "CP2",
+            "subject": "lecture",
+            "lesson_number": 12,
+            "title": "Leçon 12",
+            "instructions": {
+              "fr": "Lis la consigne et réponds.",
+              "moore": "Tégré yé zaabre."
+            }
+          }
+        ]
+      }
+    ]
   }
 ]

@@ -6,6 +6,7 @@ class AppAssets {
   // static const onboarding1 = "assets/images/onboarding_01.svg";
   static const onboarding1 = "assets/images/onboarding_01.png";
   static const playButton = 'assets/images/play.svg';
+  static const pauseButton = 'assets/images/pause.svg';
   static const arrowSign = 'assets/images/arrow.svg';
   static const lockSign = 'assets/images/lock.svg';
   static const homeMenu = 'assets/images/navigation_menu/home.svg';
@@ -22,5 +23,5 @@ class AppAssets {
   static const lecture_image = 'assets/images/level/lecture.svg';
   static const game_image = 'assets/images/level/game.svg';
 
-  static const  audio = "assets/audio/audio.mp3";
+  static const  audio = "audio/audio.mp3";
 }

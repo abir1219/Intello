@@ -1,114 +1,2356 @@
 [
   {
     "levelId": "cp1",
-    "subjectId": "emc",
-    "lessonId": "emc_l1",
-    "exercise": {
-      "questions": [
-        {
-          "questionId": "ex_q1",
-          "question": "Deux plus trois égale cinq ?",
-          "options": [
-            {
-              "id": "a",
-              "value": "5 → cinq"
+    "subjects": [
+      {
+        "subjectId": "emc",
+        "lessons": [
+          {
+            "lessonId": "CP1_EMC_L1",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
             },
-            {
-              "id": "b",
-              "value": "6 → six"
-            },
-            {
-              "id": "c",
-              "value": "4 → quatre"
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
             }
-          ],
-          "correctAnswerId": "a",
-          "selectedAnswerId": null,
-          "isAttended": false
-        },
-        {
-          "questionId": "ex_q2",
-          "question": "Combien font 4 + 1 ?",
-          "options": [
-            {
-              "id": "a",
-              "value": "5"
+          },
+          {
+            "lessonId": "CP1_EMC_L2",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
             },
-            {
-              "id": "b",
-              "value": "3"
-            },
-            {
-              "id": "c",
-              "value": "6"
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
             }
-          ],
-          "correctAnswerId": "a",
-          "selectedAnswerId": null,
-          "isAttended": false
-        }
-      ]
-    },
-    "lecture": {
-      "pdfTitle": "Les Bases de l’Apprentissage",
-      "pdfUrl": "assets/pdfs/emc_l1.pdf",
-      "isRead": false
-    }
+          },
+          {
+            "lessonId": "CP1_EMC_L3",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP1_EMC_L4",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP1_EMC_L5",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP1_EMC_L6",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP1_EMC_L7",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP1_EMC_L8",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP1_EMC_L9",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP1_EMC_L10",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP1_EMC_L11",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP1_EMC_L12",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          }
+        ]
+      },
+      {
+        "subjectId": "mathématiques",
+        "lessons": [
+          {
+            "lessonId": "CP1_EMC_L1",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP1_EMC_L2",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP1_EMC_L3",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP1_EMC_L4",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP1_EMC_L5",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP1_EMC_L6",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP1_EMC_L7",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP1_EMC_L8",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP1_EMC_L9",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP1_EMC_L10",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP1_EMC_L11",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP1_EMC_L12",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          }
+        ]
+      },
+      {
+        "subjectId": "science",
+        "lessons": [
+          {
+            "lessonId": "CP1_SCIENCES_L1",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP1_SCIENCES_L2",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP1_SCIENCES_L3",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP1_SCIENCES_L4",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP1_SCIENCES_L5",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP1_SCIENCES_L6",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP1_SCIENCES_L7",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP1_SCIENCES_L8",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP1_SCIENCES_L9",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP1_SCIENCES_L10",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP1_SCIENCES_L11",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP1_SCIENCES_L12",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          }
+        ]
+      },
+      {
+        "subjectId": "lecture",
+        "lessons": [
+          {
+            "lessonId": "CP1_LECTURE_L1",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP1_LECTURE_L2",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP1_LECTURE_L3",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP1_LECTURE_L4",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP1_LECTURE_L5",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP1_LECTURE_L6",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP1_LECTURE_L7",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP1_LECTURE_L8",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP1_LECTURE_L9",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP1_LECTURE_L10",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP1_LECTURE_L11",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP1_LECTURE_L12",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question.",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          }
+        ]
+      }
+    ]
   },
   {
     "levelId": "cp2",
-    "subjectId": "emc",
-    "lessonId": "emc_l1",
-    "exercise": {
-      "questions": [
-        {
-          "questionId": "ex_q1",
-          "question": "Deux plus trois égale cinq ?",
-          "options": [
-            {
-              "id": "a",
-              "value": "5 → cinq"
+    "subjects": [
+      {
+        "subjectId": "emc",
+        "lessons": [
+          {
+            "lessonId": "CP2_EMC_L1",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
             },
-            {
-              "id": "b",
-              "value": "6 → six"
-            },
-            {
-              "id": "c",
-              "value": "4 → quatre"
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
             }
-          ],
-          "correctAnswerId": "a",
-          "selectedAnswerId": null,
-          "isAttended": false
-        },
-        {
-          "questionId": "ex_q2",
-          "question": "Combien font 4 + 1 ?",
-          "options": [
-            {
-              "id": "a",
-              "value": "5"
+          },
+          {
+            "lessonId": "CP2_EMC_L2",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
             },
-            {
-              "id": "b",
-              "value": "3"
-            },
-            {
-              "id": "c",
-              "value": "6"
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
             }
-          ],
-          "correctAnswerId": "a",
-          "selectedAnswerId": null,
-          "isAttended": false
-        }
-      ]
-    },
-    "lecture": {
-      "pdfTitle": "Les Bases de l’Apprentissage",
-      "pdfUrl": "assets/pdfs/emc_l1.pdf",
-      "isRead": false
-    }
+          },
+          {
+            "lessonId": "CP2_EMC_L3",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP2_EMC_L4",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP2_EMC_L5",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP2_EMC_L6",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP2_EMC_L7",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP2_EMC_L8",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP2_EMC_L9",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP2_EMC_L10",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP2_EMC_L11",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP2_EMC_L12",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          }
+        ]
+      },
+      {
+        "subjectId": "mathématiques",
+        "lessons": [
+          {
+            "lessonId": "CP2_MATH_L1",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP2_MATH_L2",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP2_MATH_L3",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP2_MATH_L4",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP2_MATH_L5",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP2_MATH_L6",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP2_MATH_L7",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP2_MATH_L8",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP2_MATH_L9",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP2_MATH_L10",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP2_MATH_L11",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP2_MATH_L12",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          }
+        ]
+      },
+      {
+        "subjectId": "science",
+        "lessons": [
+          {
+            "lessonId": "CP2_SCIENCES_L1",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP2_SCIENCES_L2",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP2_SCIENCES_L3",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP2_SCIENCES_L4",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP2_SCIENCES_L5",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP2_SCIENCES_L6",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP2_SCIENCES_L7",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP2_SCIENCES_L8",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP2_SCIENCES_L9",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP2_SCIENCES_L10",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP2_SCIENCES_L11",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP2_SCIENCES_L12",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          }
+        ]
+      },
+      {
+        "subjectId": "lecture",
+        "lessons": [
+          {
+            "lessonId": "CP2_LECTURE_L1",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP2_LECTURE_L2",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP2_LECTURE_L3",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP2_LECTURE_L4",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP2_LECTURE_L5",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP2_LECTURE_L6",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP2_LECTURE_L7",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP2_LECTURE_L8",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP2_LECTURE_L9",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP2_LECTURE_L10",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP2_LECTURE_L11",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          },
+          {
+            "lessonId": "CP2_LECTURE_L12",
+            "exercise": {
+              "questions": [
+                {
+                  "questionId": "ex_q1",
+                  "question": "Exemple de question (à remplacer par le contenu final du curriculum).",
+                  "options": [
+                    { "id": "a", "value": "A" },
+                    { "id": "b", "value": "B" },
+                    { "id": "c", "value": "C" }
+                  ],
+                  "correctAnswerId": "a",
+                  "selectedAnswerId": null,
+                  "isAttended": false
+                }
+              ]
+            },
+            "lecture": {
+              "pdfTitle": "Les Bases de l’Apprentissage",
+              "pdfUrl": "assets/pdfs/emc_l1.pdf",
+              "isRead": false
+            }
+          }
+        ]
+      }
+    ]
   }
 ]

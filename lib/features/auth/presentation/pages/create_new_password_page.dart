@@ -65,7 +65,7 @@ class _CreateNewPasswordPageState extends State<CreateNewPasswordPage> {
                             onClose: () => Navigator.pop(context),
                             onContinue: () {
                               Navigator.pop(context);
-                              context.go(AppPages.LOGIN_SCREEN);
+                              context.pushReplacement(AppPages.LOGIN_SCREEN);
                             },
                           ),
                         );

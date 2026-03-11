@@ -14,4 +14,12 @@ class LectureModel extends Lecture {
       isRead: json['isRead'],
     );
   }
+
+  Map<String, dynamic> toJson() {
+    return {
+      "pdfTitle": pdfTitle,
+      "pdfUrl": pdfUrl,
+      "isRead": isRead,
+    };
+  }
 }

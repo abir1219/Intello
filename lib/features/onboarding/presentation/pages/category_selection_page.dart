@@ -30,7 +30,6 @@ class _CategorySelectionPageState extends State<CategorySelectionPage> {
           if (!snapshot.hasData) {
             return const Center(child: CircularProgressIndicator());
           }
-
           return CategoryGrid(categories: snapshot.data!);
         },
       ),

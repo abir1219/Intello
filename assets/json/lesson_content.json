@@ -299,7 +299,7 @@
         "subjectId": "mathématiques",
         "lessons": [
           {
-            "lessonId": "CP1_EMC_L1",
+            "lessonId": "CP1_MATH_L1",
             "exercise": {
               "questions": [
                 {
@@ -323,7 +323,7 @@
             }
           },
           {
-            "lessonId": "CP1_EMC_L2",
+            "lessonId": "CP1_MATH_L2",
             "exercise": {
               "questions": [
                 {
@@ -347,7 +347,7 @@
             }
           },
           {
-            "lessonId": "CP1_EMC_L3",
+            "lessonId": "CP1_MATH_L3",
             "exercise": {
               "questions": [
                 {
@@ -371,7 +371,7 @@
             }
           },
           {
-            "lessonId": "CP1_EMC_L4",
+            "lessonId": "CP1_MATH_L4",
             "exercise": {
               "questions": [
                 {
@@ -395,7 +395,7 @@
             }
           },
           {
-            "lessonId": "CP1_EMC_L5",
+            "lessonId": "CP1_MATH_L5",
             "exercise": {
               "questions": [
                 {
@@ -419,7 +419,7 @@
             }
           },
           {
-            "lessonId": "CP1_EMC_L6",
+            "lessonId": "CP1_MATH_L6",
             "exercise": {
               "questions": [
                 {
@@ -443,7 +443,7 @@
             }
           },
           {
-            "lessonId": "CP1_EMC_L7",
+            "lessonId": "CP1_MATH_L7",
             "exercise": {
               "questions": [
                 {
@@ -467,7 +467,7 @@
             }
           },
           {
-            "lessonId": "CP1_EMC_L8",
+            "lessonId": "CP1_MATH_L8",
             "exercise": {
               "questions": [
                 {
@@ -491,7 +491,7 @@
             }
           },
           {
-            "lessonId": "CP1_EMC_L9",
+            "lessonId": "CP1_MATH_L9",
             "exercise": {
               "questions": [
                 {
@@ -515,7 +515,7 @@
             }
           },
           {
-            "lessonId": "CP1_EMC_L10",
+            "lessonId": "CP1_MATH_L10",
             "exercise": {
               "questions": [
                 {
@@ -539,7 +539,7 @@
             }
           },
           {
-            "lessonId": "CP1_EMC_L11",
+            "lessonId": "CP1_MATH_L11",
             "exercise": {
               "questions": [
                 {
@@ -563,7 +563,7 @@
             }
           },
           {
-            "lessonId": "CP1_EMC_L12",
+            "lessonId": "CP1_MATH_L12",
             "exercise": {
               "questions": [
                 {

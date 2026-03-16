@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../core/audio/audio_player_service.dart';
@@ -24,6 +25,30 @@ class _LevelScreenState extends State<LevelScreen> {
 
   late final audioService;
   late final LevelLocalDataSource dataSource;
+
+  DateTime? lastBackPressTime;
+
+  Future<bool> onBackPressed() async {
+    final now = DateTime.now();
+
+    if (lastBackPressTime == null ||
+        now.difference(lastBackPressTime!) > const Duration(seconds: 2)) {
+      lastBackPressTime = now;
+
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text("Press back again to exit"),
+          duration: Duration(seconds: 2),
+        ),
+      );
+
+      return false;
+    }
+
+    SystemNavigator.pop();
+    return true;
+  }
+
 
   @override
   void initState() {
@@ -62,7 +87,7 @@ class _LevelScreenState extends State<LevelScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final isTablet = Responsive.isTablet(context);
+    Responsive.isTablet(context);
     final height = AppDimensions.getResponsiveHeight(context);
     final width = AppDimensions.getResponsiveWidth(context);
     final isLandscape = Responsive.isLandscape(context);
@@ -71,8 +96,9 @@ class _LevelScreenState extends State<LevelScreen> {
 
     return PopScope(
       canPop: false,
-      onPopInvokedWithResult: (didPop, result) {
+      onPopInvokedWithResult: (didPop, result) async{
         if (didPop) return;
+        await onBackPressed();
       },
       child: Scaffold(
         body: SafeArea(

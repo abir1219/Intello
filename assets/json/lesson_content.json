@@ -20,6 +20,18 @@
                   "correctAnswerId": "a",
                   "selectedAnswerId": null,
                   "isAttended": false
+                },
+                {
+                  "questionId": "ex_q2",
+                  "question": "Exemple de question 2.",
+                  "options": [
+                    { "id": "a", "value": "A2" },
+                    { "id": "b", "value": "B2" },
+                    { "id": "c", "value": "C2" }
+                  ],
+                  "correctAnswerId": "b",
+                  "selectedAnswerId": null,
+                  "isAttended": false
                 }
               ]
             },

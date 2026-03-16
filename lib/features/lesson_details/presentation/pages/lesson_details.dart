@@ -157,12 +157,26 @@ class _LessonDetailsState extends State<LessonDetails> {
                         const SizedBox(height: 40),
                         BlocBuilder<LessonContentBloc, LessonContentState>(
                           builder: (context, state) {
-                            if(state is LessonLoading) {
-                              return const Center(child: CircularProgressIndicator());
+                            if (state is LessonLoading) {
+                              return const Center(
+                                child: CircularProgressIndicator(),
+                              );
                             }
-                            if(state is LessonLoaded){
-                              return _buildContainer(levelName: widget.level,state: state);
-                            }else{
+                            if (state is LessonLoaded) {
+                              return _buildContainer(
+                                levelName: widget.level,
+                                state: state,
+                                onTap: () {
+                                  context.pushReplacement(AppPages.EXAMPLE_DETAILS_SCREEN,extra: {
+                                    "subject" : widget.subject,
+                                    "level" : widget.level,
+                                    "levelName" : widget.levelName,
+                                    "lessonId" : widget.lessonId,
+                                    "exercise" : state.lesson.exercise,
+                                  });
+                                },
+                              );
+                            } else {
                               return SizedBox();
                             }
                           },
@@ -188,54 +202,63 @@ class _LessonDetailsState extends State<LessonDetails> {
     );
   }
 
-  Widget _buildContainer({required String levelName,required LessonLoaded state}) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            widget.levelName.toUpperCase(),
-            style: TextStyle(
-              color: AppColors.textColor,
-              fontSize: 26,
-              fontWeight: FontWeight.bold,
+  Widget _buildContainer({
+    required String levelName,
+    required LessonLoaded state,
+    required void Function()? onTap,
+  }) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              widget.levelName.toUpperCase(),
+              style: TextStyle(
+                color: AppColors.textColor,
+                fontSize: 26,
+                fontWeight: FontWeight.bold,
+              ),
             ),
-          ),
-          const SizedBox(height: 8),
-          const Text(
-            "Apprenez les bases grâce à des leçons et activités simples, conçues pour faciliter la compréhension et encourager la pratique.",
-            style: TextStyle(color: AppColors.textColor, fontSize: 14),
-          ),
-          const SizedBox(height: 30),
+            const SizedBox(height: 8),
+            const Text(
+              "Apprenez les bases grâce à des leçons et activités simples, conçues pour faciliter la compréhension et encourager la pratique.",
+              style: TextStyle(color: AppColors.textColor, fontSize: 14),
+            ),
+            const SizedBox(height: 30),
 
-          // Cards
-          CustomCard(
-            icon: AppAssets.exercise_image,
-            title: "Exercices/Devoirs",
-            subtitle:
-                "Applique ce que tu as appris à travers des exercices et des devoirs.",
-            progress: state.exercisePercentage,
-            progressColor: AppColors.greenColor,
-          ),
-          const SizedBox(height: 20),
-          CustomCard(
-            icon: AppAssets.lecture_image,
-            title: "Lecture",
-            subtitle:
-                "Développe tes compétences en lecture et en compréhension écrite.",
-            progress: state.exercisePercentage,
-            progressColor: AppColors.blueColor,
-          ),
-          const SizedBox(height: 20),
-          CustomCard(
-            icon: AppAssets.game_image,
-            title: "Jeux éducatifs",
-            subtitle: "Développe tes compétences grâce à des jeux interactifs.",
-            progress: state.exercisePercentage,//1.0,
-            progressColor: AppColors.CLOSE_COLOR,
-          ),
-        ],
+            // Cards
+            CustomCard(
+              icon: AppAssets.exercise_image,
+              title: "Exercices/Devoirs",
+              subtitle:
+                  "Applique ce que tu as appris à travers des exercices et des devoirs.",
+              progress: state.exercisePercentage,
+              progressColor: AppColors.greenColor,
+            ),
+            const SizedBox(height: 20),
+            CustomCard(
+              icon: AppAssets.lecture_image,
+              title: "Lecture",
+              subtitle:
+                  "Développe tes compétences en lecture et en compréhension écrite.",
+              progress: state.exercisePercentage,
+              progressColor: AppColors.blueColor,
+            ),
+            const SizedBox(height: 20),
+            CustomCard(
+              icon: AppAssets.game_image,
+              title: "Jeux éducatifs",
+              subtitle:
+                  "Développe tes compétences grâce à des jeux interactifs.",
+              progress: state.exercisePercentage,
+              //1.0,
+              progressColor: AppColors.CLOSE_COLOR,
+            ),
+          ],
+        ),
       ),
     );
   }

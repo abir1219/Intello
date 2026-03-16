@@ -5,6 +5,9 @@ import 'package:intello_new/features/auth/presentation/pages/create_new_password
 import 'package:intello_new/features/auth/presentation/pages/login_page.dart';
 import 'package:intello_new/features/auth/presentation/pages/phone_validation.dart';
 import 'package:intello_new/features/auth/presentation/pages/signup_page.dart';
+import 'package:intello_new/features/exercise/presentation/pages/example_details.dart';
+import 'package:intello_new/features/lesson_details/domain/entity/exercise.dart';
+import 'package:intello_new/features/lesson_details/domain/entity/lesson_content.dart';
 import 'package:intello_new/features/lesson_details/presentation/pages/lesson_details.dart';
 import 'package:intello_new/features/lessons/presentation/pages/lesson_screen.dart';
 import 'package:intello_new/features/level/presentation/pages/level_screen.dart';
@@ -105,6 +108,23 @@ class AppRouters {
             child: LessonScreen(
               subject: data['subjectId'] as String,
               level: data['levelCode'] as String,
+            ),
+            key: state.pageKey,
+          );
+        },
+      ),
+      GoRoute(
+        path: AppPages.EXAMPLE_DETAILS_SCREEN,
+        pageBuilder: (context, state) {
+          final data = state.extra as Map<String, dynamic>;
+
+          return _defaultTransitionPage(
+            child: ExampleDetails(
+              subject: data['subject'] as String,
+              level: data['level'] as String,
+              levelName: data['levelName'] as String,
+              lessonId: data['lessonId'] as String,
+              exercise: data['exercise'] as Exercise,
             ),
             key: state.pageKey,
           );

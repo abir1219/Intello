@@ -26,15 +26,15 @@ class LessonContentBloc extends Bloc<LessonContentEvent, LessonContentState> {
     Emitter<LessonContentState> emit,
   ) async {
     emit(LessonLoading());
-debugPrint("start");
-debugPrint("LevelId-->${event.levelId}");
-debugPrint("SubjectId-->${event.subjectId}");
-debugPrint("LessonId-->${event.lessonId}");
+    debugPrint("start");
+    debugPrint("LevelId-->${event.levelId}");
+    debugPrint("SubjectId-->${event.subjectId}");
+    debugPrint("LessonId-->${event.lessonId}");
     try {
       final lesson = await getLessonContent(
         event.levelId,
         event.subjectId,
-        event.lessonId//.toLowerCase(),
+        event.lessonId, //.toLowerCase(),
       );
       debugPrint("lesson--->${lesson.toString()}");
 

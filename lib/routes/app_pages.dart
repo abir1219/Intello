@@ -12,5 +12,6 @@ class AppPages{
   static final String CHANGE_PASSWORD_SCREEN = "/change-password";
   static final String PHONE_VALIDATE_SCREEN = "/phone_validate";
   static final String LESSON_DETAILS_SCREEN = "/lesson_details";
+  static final String EXAMPLE_DETAILS_SCREEN = "/example_details";
 
 }

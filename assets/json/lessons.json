@@ -1134,7 +1134,11 @@
             "grade": "CE1",
             "subject": "emc",
             "lesson_number": 1,
-            "title": "Leçon 1",
+            "title": "Respecter les autres",
+            "description": "Valeurs de citoyenneté.",
+            "learning_objective": "Comprendre l'importance du respect.",
+            "theme": "Citoyenneté",
+            "content": "Respecter les autres : Les élèves apprennent à vivre ensemble et à respecter les autres.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1145,7 +1149,11 @@
             "grade": "CE1",
             "subject": "emc",
             "lesson_number": 2,
-            "title": "Leçon 2",
+            "title": "Aider ses amis",
+            "description": "Valeurs de citoyenneté.",
+            "learning_objective": "Comprendre l'importance du respect.",
+            "theme": "Citoyenneté",
+            "content": "Aider ses amis : Les élèves apprennent à vivre ensemble et à respecter les autres.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1156,7 +1164,11 @@
             "grade": "CE1",
             "subject": "emc",
             "lesson_number": 3,
-            "title": "Leçon 3",
+            "title": "Partager",
+            "description": "Valeurs de citoyenneté.",
+            "learning_objective": "Comprendre l'importance du respect.",
+            "theme": "Citoyenneté",
+            "content": "Partager : Les élèves apprennent à vivre ensemble et à respecter les autres.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1167,7 +1179,11 @@
             "grade": "CE1",
             "subject": "emc",
             "lesson_number": 4,
-            "title": "Leçon 4",
+            "title": "Dire la vérité",
+            "description": "Valeurs de citoyenneté.",
+            "learning_objective": "Comprendre l'importance du respect.",
+            "theme": "Citoyenneté",
+            "content": "Dire la vérité : Les élèves apprennent à vivre ensemble et à respecter les autres.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1178,7 +1194,11 @@
             "grade": "CE1",
             "subject": "emc",
             "lesson_number": 5,
-            "title": "Leçon 5",
+            "title": "Respecter l'école",
+            "description": "Valeurs de citoyenneté.",
+            "learning_objective": "Comprendre l'importance du respect.",
+            "theme": "Citoyenneté",
+            "content": "Respecter l'école : Les élèves apprennent à vivre ensemble et à respecter les autres.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1189,7 +1209,11 @@
             "grade": "CE1",
             "subject": "emc",
             "lesson_number": 6,
-            "title": "Leçon 6",
+            "title": "Aimer sa famille",
+            "description": "Valeurs de citoyenneté.",
+            "learning_objective": "Comprendre l'importance du respect.",
+            "theme": "Citoyenneté",
+            "content": "Aimer sa famille : Les élèves apprennent à vivre ensemble et à respecter les autres.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1200,7 +1224,11 @@
             "grade": "CE1",
             "subject": "emc",
             "lesson_number": 7,
-            "title": "Leçon 7",
+            "title": "Travailler ensemble",
+            "description": "Valeurs de citoyenneté.",
+            "learning_objective": "Comprendre l'importance du respect.",
+            "theme": "Citoyenneté",
+            "content": "Travailler ensemble : Les élèves apprennent à vivre ensemble et à respecter les autres.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1211,7 +1239,11 @@
             "grade": "CE1",
             "subject": "emc",
             "lesson_number": 8,
-            "title": "Leçon 8",
+            "title": "Être responsable",
+            "description": "Valeurs de citoyenneté.",
+            "learning_objective": "Comprendre l'importance du respect.",
+            "theme": "Citoyenneté",
+            "content": "Être responsable : Les élèves apprennent à vivre ensemble et à respecter les autres.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1222,7 +1254,11 @@
             "grade": "CE1",
             "subject": "emc",
             "lesson_number": 9,
-            "title": "Leçon 9",
+            "title": "Respecter les autres",
+            "description": "Valeurs de citoyenneté.",
+            "learning_objective": "Comprendre l'importance du respect.",
+            "theme": "Citoyenneté",
+            "content": "Respecter les autres : Les élèves apprennent à vivre ensemble et à respecter les autres.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1233,7 +1269,11 @@
             "grade": "CE1",
             "subject": "emc",
             "lesson_number": 10,
-            "title": "Leçon 10",
+            "title": "Respecter les autres",
+            "description": "Valeurs de citoyenneté.",
+            "learning_objective": "Comprendre l'importance du respect.",
+            "theme": "Citoyenneté",
+            "content": "Respecter les autres : Les élèves apprennent à vivre ensemble et à respecter les autres.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1244,7 +1284,11 @@
             "grade": "CE1",
             "subject": "emc",
             "lesson_number": 11,
-            "title": "Leçon 11",
+            "title": "Respecter les autres",
+            "description": "Valeurs de citoyenneté.",
+            "learning_objective": "Comprendre l'importance du respect.",
+            "theme": "Citoyenneté",
+            "content": "Respecter les autres : Les élèves apprennent à vivre ensemble et à respecter les autres.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1255,7 +1299,11 @@
             "grade": "CE1",
             "subject": "emc",
             "lesson_number": 12,
-            "title": "Leçon 12",
+            "title": "Respecter les autres",
+            "description": "Valeurs de citoyenneté.",
+            "learning_objective": "Comprendre l'importance du respect.",
+            "theme": "Citoyenneté",
+            "content": "Respecter les autres : Les élèves apprennent à vivre ensemble et à respecter les autres.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1269,22 +1317,30 @@
         "subtitle": "Apprendre les valeurs, le respect, la citoyenneté et le vivre-ensemble.",
         "lessons": [
           {
-            "id": "CE1_EMC_L1",
+            "id": "CE1_MATH_L1",
             "grade": "CE1",
             "subject": "math",
             "lesson_number": 1,
-            "title": "Leçon 1",
+            "title": "Addition au marché",
+            "description": "Problème mathématique inspiré de la vie quotidienne.",
+            "learning_objective": "Apprendre à résoudre une addition simple.",
+            "theme": "Vie quotidienne",
+            "content": "Addition au marché : Awa a 4 mangues. Son ami lui donne 1 mangues. Combien de mangues Awa a-t-elle maintenant ?",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
             }
           },
           {
-            "id": "CE1_EMC_L2",
+            "id": "CE1_MATH_L2",
             "grade": "CE1",
             "subject": "math",
             "lesson_number": 2,
-            "title": "Leçon 2",
+            "title": "Addition des mangues",
+            "description": "Problème mathématique inspiré de la vie quotidienne.",
+            "learning_objective": "Apprendre à résoudre une addition simple.",
+            "theme": "Vie quotidienne",
+            "content": "Addition des mangues : Awa a 5 mangues. Son ami lui donne 2 mangues. Combien de mangues Awa a-t-elle maintenant ?",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1295,7 +1351,11 @@
             "grade": "CE1",
             "subject": "math",
             "lesson_number": 3,
-            "title": "Leçon 3",
+            "title": "Compter les oranges",
+            "description": "Problème mathématique inspiré de la vie quotidienne.",
+            "learning_objective": "Apprendre à résoudre une addition simple.",
+            "theme": "Vie quotidienne",
+            "content": "Compter les oranges : Awa a 6 mangues. Son ami lui donne 3 mangues. Combien de mangues Awa a-t-elle maintenant ?",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1306,7 +1366,11 @@
             "grade": "CE1",
             "subject": "math",
             "lesson_number": 4,
-            "title": "Leçon 4",
+            "title": "Addition simple",
+            "description": "Problème mathématique inspiré de la vie quotidienne.",
+            "learning_objective": "Apprendre à résoudre une addition simple.",
+            "theme": "Vie quotidienne",
+            "content": "Addition simple : Awa a 7 mangues. Son ami lui donne 4 mangues. Combien de mangues Awa a-t-elle maintenant ?",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1317,7 +1381,11 @@
             "grade": "CE1",
             "subject": "math",
             "lesson_number": 5,
-            "title": "Leçon 5",
+            "title": "Addition des objets",
+            "description": "Problème mathématique inspiré de la vie quotidienne.",
+            "learning_objective": "Apprendre à résoudre une addition simple.",
+            "theme": "Vie quotidienne",
+            "content": "Addition des objets : Awa a 8 mangues. Son ami lui donne 5 mangues. Combien de mangues Awa a-t-elle maintenant ?",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1328,7 +1396,11 @@
             "grade": "CE1",
             "subject": "math",
             "lesson_number": 6,
-            "title": "Leçon 6",
+            "title": "Petits calculs",
+            "description": "Problème mathématique inspiré de la vie quotidienne.",
+            "learning_objective": "Apprendre à résoudre une addition simple.",
+            "theme": "Vie quotidienne",
+            "content": "Petits calculs : Awa a 9 mangues. Son ami lui donne 6 mangues. Combien de mangues Awa a-t-elle maintenant ?",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1339,7 +1411,11 @@
             "grade": "CE1",
             "subject": "math",
             "lesson_number": 7,
-            "title": "Leçon 7",
+            "title": "Addition en classe",
+            "description": "Problème mathématique inspiré de la vie quotidienne.",
+            "learning_objective": "Apprendre à résoudre une addition simple.",
+            "theme": "Vie quotidienne",
+            "content": "Addition en classe : Awa a 10 mangues. Son ami lui donne 7 mangues. Combien de mangues Awa a-t-elle maintenant ?",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1350,7 +1426,11 @@
             "grade": "CE1",
             "subject": "math",
             "lesson_number": 8,
-            "title": "Leçon 8",
+            "title": "Addition au jardin",
+            "description": "Problème mathématique inspiré de la vie quotidienne.",
+            "learning_objective": "Apprendre à résoudre une addition simple.",
+            "theme": "Vie quotidienne",
+            "content": "Addition au jardin : Awa a 11 mangues. Son ami lui donne 8 mangues. Combien de mangues Awa a-t-elle maintenant ?",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1361,7 +1441,11 @@
             "grade": "CE1",
             "subject": "math",
             "lesson_number": 9,
-            "title": "Leçon 9",
+            "title": "Addition avec les fruits",
+            "description": "Problème mathématique inspiré de la vie quotidienne.",
+            "learning_objective": "Apprendre à résoudre une addition simple.",
+            "theme": "Vie quotidienne",
+            "content": "Addition avec les fruits : Awa a 12 mangues. Son ami lui donne 9 mangues. Combien de mangues Awa a-t-elle maintenant ?",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1372,7 +1456,11 @@
             "grade": "CE1",
             "subject": "math",
             "lesson_number": 10,
-            "title": "Leçon 10",
+            "title": "Addition avec les animaux",
+            "description": "Problème mathématique inspiré de la vie quotidienne.",
+            "learning_objective": "Apprendre à résoudre une addition simple.",
+            "theme": "Vie quotidienne",
+            "content": "Addition avec les animaux : Awa a 13 mangues. Son ami lui donne 10 mangues. Combien de mangues Awa a-t-elle maintenant ?",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1383,7 +1471,11 @@
             "grade": "CE1",
             "subject": "math",
             "lesson_number": 11,
-            "title": "Leçon 11",
+            "title": "Addition des jouets",
+            "description": "Problème mathématique inspiré de la vie quotidienne.",
+            "learning_objective": "Apprendre à résoudre une addition simple.",
+            "theme": "Vie quotidienne",
+            "content": "Addition des jouets : Awa a 14 mangues. Son ami lui donne 11 mangues. Combien de mangues Awa a-t-elle maintenant ?",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1394,7 +1486,11 @@
             "grade": "CE1",
             "subject": "math",
             "lesson_number": 12,
-            "title": "Leçon 12",
+            "title": "Addition finale",
+            "description": "Problème mathématique inspiré de la vie quotidienne.",
+            "learning_objective": "Apprendre à résoudre une addition simple.",
+            "theme": "Vie quotidienne",
+            "content": "Addition finale : Awa a 15 mangues. Son ami lui donne 12 mangues. Combien de mangues Awa a-t-elle maintenant ?",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1412,7 +1508,11 @@
             "grade": "CE1",
             "subject": "sciences",
             "lesson_number": 1,
-            "title": "Leçon 1",
+            "title": "Les plantes",
+            "description": "Découverte scientifique simple.",
+            "learning_objective": "Comprendre un phénomène naturel.",
+            "theme": "Nature",
+            "content": "Les plantes : Les élèves découvrent la nature et le monde autour d'eux.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1423,7 +1523,11 @@
             "grade": "CE1",
             "subject": "sciences",
             "lesson_number": 2,
-            "title": "Leçon 2",
+            "title": "Les animaux",
+            "description": "Découverte scientifique simple.",
+            "learning_objective": "Comprendre un phénomène naturel.",
+            "theme": "Nature",
+            "content": "Les animaux : Les élèves découvrent la nature et le monde autour d'eux.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1434,7 +1538,11 @@
             "grade": "CE1",
             "subject": "sciences",
             "lesson_number": 3,
-            "title": "Leçon 3",
+            "title": "L'eau",
+            "description": "Découverte scientifique simple.",
+            "learning_objective": "Comprendre un phénomène naturel.",
+            "theme": "Nature",
+            "content": "L'eau : Les élèves découvrent la nature et le monde autour d'eux.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1445,7 +1553,11 @@
             "grade": "CE1",
             "subject": "sciences",
             "lesson_number": 4,
-            "title": "Leçon 4",
+            "title": "Le soleil",
+            "description": "Découverte scientifique simple.",
+            "learning_objective": "Comprendre un phénomène naturel.",
+            "theme": "Nature",
+            "content": "Le soleil : Les élèves découvrent la nature et le monde autour d'eux.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1456,7 +1568,11 @@
             "grade": "CE1",
             "subject": "sciences",
             "lesson_number": 5,
-            "title": "Leçon 5",
+            "title": "Le corps humain",
+            "description": "Découverte scientifique simple.",
+            "learning_objective": "Comprendre un phénomène naturel.",
+            "theme": "Nature",
+            "content": "Le corps humain : Les élèves découvrent la nature et le monde autour d'eux.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1467,7 +1583,11 @@
             "grade": "CE1",
             "subject": "sciences",
             "lesson_number": 6,
-            "title": "Leçon 6",
+            "title": "Les saisons",
+            "description": "Découverte scientifique simple.",
+            "learning_objective": "Comprendre un phénomène naturel.",
+            "theme": "Nature",
+            "content": "Les saisons : Les élèves découvrent la nature et le monde autour d'eux.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1478,7 +1598,11 @@
             "grade": "CE1",
             "subject": "sciences",
             "lesson_number": 7,
-            "title": "Leçon 7",
+            "title": "Les insectes",
+            "description": "Découverte scientifique simple.",
+            "learning_objective": "Comprendre un phénomène naturel.",
+            "theme": "Nature",
+            "content": "Les insectes : Les élèves découvrent la nature et le monde autour d'eux.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1489,7 +1613,11 @@
             "grade": "CE1",
             "subject": "sciences",
             "lesson_number": 8,
-            "title": "Leçon 8",
+            "title": "Les arbres",
+            "description": "Découverte scientifique simple.",
+            "learning_objective": "Comprendre un phénomène naturel.",
+            "theme": "Nature",
+            "content": "Les arbres : Les élèves découvrent la nature et le monde autour d'eux.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1500,7 +1628,11 @@
             "grade": "CE1",
             "subject": "sciences",
             "lesson_number": 9,
-            "title": "Leçon 9",
+            "title": "Les fruits",
+            "description": "Découverte scientifique simple.",
+            "learning_objective": "Comprendre un phénomène naturel.",
+            "theme": "Nature",
+            "content": "Les fruits : Les élèves découvrent la nature et le monde autour d'eux.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1511,7 +1643,11 @@
             "grade": "CE1",
             "subject": "sciences",
             "lesson_number": 10,
-            "title": "Leçon 10",
+            "title": "La nature",
+            "description": "Découverte scientifique simple.",
+            "learning_objective": "Comprendre un phénomène naturel.",
+            "theme": "Nature",
+            "content": "La nature : Les élèves découvrent la nature et le monde autour d'eux.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1522,7 +1658,11 @@
             "grade": "CE1",
             "subject": "sciences",
             "lesson_number": 11,
-            "title": "Leçon 11",
+            "title": "Les plantes",
+            "description": "Découverte scientifique simple.",
+            "learning_objective": "Comprendre un phénomène naturel.",
+            "theme": "Nature",
+            "content": "Les plantes : Les élèves découvrent la nature et le monde autour d'eux.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1533,7 +1673,11 @@
             "grade": "CE1",
             "subject": "sciences",
             "lesson_number": 12,
-            "title": "Leçon 12",
+            "title": "Les animaux",
+            "description": "Découverte scientifique simple.",
+            "learning_objective": "Comprendre un phénomène naturel.",
+            "theme": "Nature",
+            "content": "Les animaux : Les élèves découvrent la nature et le monde autour d'eux.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1551,7 +1695,11 @@
             "grade": "CE1",
             "subject": "lecture",
             "lesson_number": 1,
-            "title": "Leçon 1",
+            "title": "La rentrée des élèves",
+            "description": "Texte de lecture simple.",
+            "learning_objective": "Lire et comprendre un texte court.",
+            "theme": "Vie quotidienne",
+            "content": "La rentrée des élèves : Les enfants observent et apprennent quelque chose de nouveau à l'école ou à la maison.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1562,7 +1710,11 @@
             "grade": "CE1",
             "subject": "lecture",
             "lesson_number": 2,
-            "title": "Leçon 2",
+            "title": "La cour de l'école",
+            "description": "Texte de lecture simple.",
+            "learning_objective": "Lire et comprendre un texte court.",
+            "theme": "Vie quotidienne",
+            "content": "La cour de l'école : Les enfants observent et apprennent quelque chose de nouveau à l'école ou à la maison.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1573,7 +1725,11 @@
             "grade": "CE1",
             "subject": "lecture",
             "lesson_number": 3,
-            "title": "Leçon 3",
+            "title": "Une journée en classe",
+            "description": "Texte de lecture simple.",
+            "learning_objective": "Lire et comprendre un texte court.",
+            "theme": "Vie quotidienne",
+            "content": "Une journée en classe : Les enfants observent et apprennent quelque chose de nouveau à l'école ou à la maison.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1584,7 +1740,11 @@
             "grade": "CE1",
             "subject": "lecture",
             "lesson_number": 4,
-            "title": "Leçon 4",
+            "title": "Le soir en famille",
+            "description": "Texte de lecture simple.",
+            "learning_objective": "Lire et comprendre un texte court.",
+            "theme": "Vie quotidienne",
+            "content": "Le soir en famille : Les enfants observent et apprennent quelque chose de nouveau à l'école ou à la maison.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1595,7 +1755,11 @@
             "grade": "CE1",
             "subject": "lecture",
             "lesson_number": 5,
-            "title": "Leçon 5",
+            "title": "Le marché du village",
+            "description": "Texte de lecture simple.",
+            "learning_objective": "Lire et comprendre un texte court.",
+            "theme": "Vie quotidienne",
+            "content": "Le marché du village : Les enfants observent et apprennent quelque chose de nouveau à l'école ou à la maison.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1606,7 +1770,11 @@
             "grade": "CE1",
             "subject": "lecture",
             "lesson_number": 6,
-            "title": "Leçon 6",
+            "title": "Une visite au jardin",
+            "description": "Texte de lecture simple.",
+            "learning_objective": "Lire et comprendre un texte court.",
+            "theme": "Vie quotidienne",
+            "content": "Une visite au jardin : Les enfants observent et apprennent quelque chose de nouveau à l'école ou à la maison.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1617,7 +1785,11 @@
             "grade": "CE1",
             "subject": "lecture",
             "lesson_number": 7,
-            "title": "Leçon 7",
+            "title": "Le respect des règles",
+            "description": "Texte de lecture simple.",
+            "learning_objective": "Lire et comprendre un texte court.",
+            "theme": "Vie quotidienne",
+            "content": "Le respect des règles : Les enfants observent et apprennent quelque chose de nouveau à l'école ou à la maison.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1628,7 +1800,11 @@
             "grade": "CE1",
             "subject": "lecture",
             "lesson_number": 8,
-            "title": "Leçon 8",
+            "title": "Un ami généreux",
+            "description": "Texte de lecture simple.",
+            "learning_objective": "Lire et comprendre un texte court.",
+            "theme": "Vie quotidienne",
+            "content": "Un ami généreux : Les enfants observent et apprennent quelque chose de nouveau à l'école ou à la maison.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1639,7 +1815,11 @@
             "grade": "CE1",
             "subject": "lecture",
             "lesson_number": 9,
-            "title": "Leçon 9",
+            "title": "Le voyage scolaire",
+            "description": "Texte de lecture simple.",
+            "learning_objective": "Lire et comprendre un texte court.",
+            "theme": "Vie quotidienne",
+            "content": "Le voyage scolaire : Les enfants observent et apprennent quelque chose de nouveau à l'école ou à la maison.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1650,7 +1830,11 @@
             "grade": "CE1",
             "subject": "lecture",
             "lesson_number": 10,
-            "title": "Leçon 10",
+            "title": "La fête de l'école",
+            "description": "Texte de lecture simple.",
+            "learning_objective": "Lire et comprendre un texte court.",
+            "theme": "Vie quotidienne",
+            "content": "La fête de l'école : Les enfants observent et apprennent quelque chose de nouveau à l'école ou à la maison.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1661,7 +1845,11 @@
             "grade": "CE1",
             "subject": "lecture",
             "lesson_number": 11,
-            "title": "Leçon 11",
+            "title": "Les vacances",
+            "description": "Texte de lecture simple.",
+            "learning_objective": "Lire et comprendre un texte court.",
+            "theme": "Vie quotidienne",
+            "content": "Les vacances : Les enfants observent et apprennent quelque chose de nouveau à l'école ou à la maison.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1672,7 +1860,11 @@
             "grade": "CE1",
             "subject": "lecture",
             "lesson_number": 12,
-            "title": "Leçon 12",
+            "title": "Un nouveau livre",
+            "description": "Texte de lecture simple.",
+            "learning_objective": "Lire et comprendre un texte court.",
+            "theme": "Vie quotidienne",
+            "content": "Un nouveau livre : Les enfants observent et apprennent quelque chose de nouveau à l'école ou à la maison.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1695,7 +1887,11 @@
             "grade": "CE2",
             "subject": "emc",
             "lesson_number": 1,
-            "title": "Leçon 1",
+            "title": "Respecter les autres",
+            "description": "Valeurs de citoyenneté.",
+            "learning_objective": "Comprendre l'importance du respect.",
+            "theme": "Citoyenneté",
+            "content": "Respecter les autres : Les élèves apprennent à vivre ensemble et à respecter les autres.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1706,7 +1902,11 @@
             "grade": "CE2",
             "subject": "emc",
             "lesson_number": 2,
-            "title": "Leçon 2",
+            "title": "Aider ses amis",
+            "description": "Valeurs de citoyenneté.",
+            "learning_objective": "Comprendre l'importance du respect.",
+            "theme": "Citoyenneté",
+            "content": "Aider ses amis : Les élèves apprennent à vivre ensemble et à respecter les autres.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1717,7 +1917,11 @@
             "grade": "CE2",
             "subject": "emc",
             "lesson_number": 3,
-            "title": "Leçon 3",
+            "title": "Partager",
+            "description": "Valeurs de citoyenneté.",
+            "learning_objective": "Comprendre l'importance du respect.",
+            "theme": "Citoyenneté",
+            "content": "Partager : Les élèves apprennent à vivre ensemble et à respecter les autres.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1728,7 +1932,11 @@
             "grade": "CE2",
             "subject": "emc",
             "lesson_number": 4,
-            "title": "Leçon 4",
+            "title": "Dire la vérité",
+            "description": "Valeurs de citoyenneté.",
+            "learning_objective": "Comprendre l'importance du respect.",
+            "theme": "Citoyenneté",
+            "content": "Dire la vérité : Les élèves apprennent à vivre ensemble et à respecter les autres.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1739,7 +1947,11 @@
             "grade": "CE2",
             "subject": "emc",
             "lesson_number": 5,
-            "title": "Leçon 5",
+            "title": "Respecter l'école",
+            "description": "Valeurs de citoyenneté.",
+            "learning_objective": "Comprendre l'importance du respect.",
+            "theme": "Citoyenneté",
+            "content": "Respecter l'école : Les élèves apprennent à vivre ensemble et à respecter les autres.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1750,7 +1962,11 @@
             "grade": "CE2",
             "subject": "emc",
             "lesson_number": 6,
-            "title": "Leçon 6",
+            "title": "Aimer sa famille",
+            "description": "Valeurs de citoyenneté.",
+            "learning_objective": "Comprendre l'importance du respect.",
+            "theme": "Citoyenneté",
+            "content": "Aimer sa famille : Les élèves apprennent à vivre ensemble et à respecter les autres.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1761,7 +1977,11 @@
             "grade": "CE2",
             "subject": "emc",
             "lesson_number": 7,
-            "title": "Leçon 7",
+            "title": "Travailler ensemble",
+            "description": "Valeurs de citoyenneté.",
+            "learning_objective": "Comprendre l'importance du respect.",
+            "theme": "Citoyenneté",
+            "content": "Travailler ensemble : Les élèves apprennent à vivre ensemble et à respecter les autres.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1772,7 +1992,11 @@
             "grade": "CE2",
             "subject": "emc",
             "lesson_number": 8,
-            "title": "Leçon 8",
+            "title": "Être responsable",
+            "description": "Valeurs de citoyenneté.",
+            "learning_objective": "Comprendre l'importance du respect.",
+            "theme": "Citoyenneté",
+            "content": "Être responsable : Les élèves apprennent à vivre ensemble et à respecter les autres.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1783,7 +2007,11 @@
             "grade": "CE2",
             "subject": "emc",
             "lesson_number": 9,
-            "title": "Leçon 9",
+            "title": "Respecter les autres",
+            "description": "Valeurs de citoyenneté.",
+            "learning_objective": "Comprendre l'importance du respect.",
+            "theme": "Citoyenneté",
+            "content": "Respecter les autres : Les élèves apprennent à vivre ensemble et à respecter les autres.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1794,7 +2022,11 @@
             "grade": "CE2",
             "subject": "emc",
             "lesson_number": 10,
-            "title": "Leçon 10",
+            "title": "Respecter les autres",
+            "description": "Valeurs de citoyenneté.",
+            "learning_objective": "Comprendre l'importance du respect.",
+            "theme": "Citoyenneté",
+            "content": "Respecter les autres : Les élèves apprennent à vivre ensemble et à respecter les autres.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1805,7 +2037,11 @@
             "grade": "CE2",
             "subject": "emc",
             "lesson_number": 11,
-            "title": "Leçon 11",
+            "title": "Respecter les autres",
+            "description": "Valeurs de citoyenneté.",
+            "learning_objective": "Comprendre l'importance du respect.",
+            "theme": "Citoyenneté",
+            "content": "Respecter les autres : Les élèves apprennent à vivre ensemble et à respecter les autres.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1816,7 +2052,11 @@
             "grade": "CE2",
             "subject": "emc",
             "lesson_number": 12,
-            "title": "Leçon 12",
+            "title": "Respecter les autres",
+            "description": "Valeurs de citoyenneté.",
+            "learning_objective": "Comprendre l'importance du respect.",
+            "theme": "Citoyenneté",
+            "content": "Respecter les autres : Les élèves apprennent à vivre ensemble et à respecter les autres.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1834,7 +2074,11 @@
             "grade": "CE2",
             "subject": "math",
             "lesson_number": 1,
-            "title": "Leçon 1",
+            "title": "Addition au marché",
+            "description": "Problème mathématique inspiré de la vie quotidienne.",
+            "learning_objective": "Apprendre à résoudre une addition simple.",
+            "theme": "Vie quotidienne",
+            "content": "Addition au marché : Awa a 4 mangues. Son ami lui donne 1 mangues. Combien de mangues Awa a-t-elle maintenant ?",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1845,7 +2089,11 @@
             "grade": "CE2",
             "subject": "math",
             "lesson_number": 2,
-            "title": "Leçon 2",
+            "title": "Addition des mangues",
+            "description": "Problème mathématique inspiré de la vie quotidienne.",
+            "learning_objective": "Apprendre à résoudre une addition simple.",
+            "theme": "Vie quotidienne",
+            "content": "Addition des mangues : Awa a 5 mangues. Son ami lui donne 2 mangues. Combien de mangues Awa a-t-elle maintenant ?",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1856,7 +2104,11 @@
             "grade": "CE2",
             "subject": "math",
             "lesson_number": 3,
-            "title": "Leçon 3",
+            "title": "Compter les oranges",
+            "description": "Problème mathématique inspiré de la vie quotidienne.",
+            "learning_objective": "Apprendre à résoudre une addition simple.",
+            "theme": "Vie quotidienne",
+            "content": "Compter les oranges : Awa a 6 mangues. Son ami lui donne 3 mangues. Combien de mangues Awa a-t-elle maintenant ?",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1867,7 +2119,11 @@
             "grade": "CE2",
             "subject": "math",
             "lesson_number": 4,
-            "title": "Leçon 4",
+            "title": "Addition simple",
+            "description": "Problème mathématique inspiré de la vie quotidienne.",
+            "learning_objective": "Apprendre à résoudre une addition simple.",
+            "theme": "Vie quotidienne",
+            "content": "Addition simple : Awa a 7 mangues. Son ami lui donne 4 mangues. Combien de mangues Awa a-t-elle maintenant ?",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1878,7 +2134,11 @@
             "grade": "CE2",
             "subject": "math",
             "lesson_number": 5,
-            "title": "Leçon 5",
+            "title": "Addition des objets",
+            "description": "Problème mathématique inspiré de la vie quotidienne.",
+            "learning_objective": "Apprendre à résoudre une addition simple.",
+            "theme": "Vie quotidienne",
+            "content": "Addition des objets : Awa a 8 mangues. Son ami lui donne 5 mangues. Combien de mangues Awa a-t-elle maintenant ?",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1889,7 +2149,11 @@
             "grade": "CE2",
             "subject": "math",
             "lesson_number": 6,
-            "title": "Leçon 6",
+            "title": "Petits calculs",
+            "description": "Problème mathématique inspiré de la vie quotidienne.",
+            "learning_objective": "Apprendre à résoudre une addition simple.",
+            "theme": "Vie quotidienne",
+            "content": "Petits calculs : Awa a 9 mangues. Son ami lui donne 6 mangues. Combien de mangues Awa a-t-elle maintenant ?",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1900,7 +2164,11 @@
             "grade": "CE2",
             "subject": "math",
             "lesson_number": 7,
-            "title": "Leçon 7",
+            "title": "Addition en classe",
+            "description": "Problème mathématique inspiré de la vie quotidienne.",
+            "learning_objective": "Apprendre à résoudre une addition simple.",
+            "theme": "Vie quotidienne",
+            "content": "Addition en classe : Awa a 10 mangues. Son ami lui donne 7 mangues. Combien de mangues Awa a-t-elle maintenant ?",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1911,7 +2179,11 @@
             "grade": "CE2",
             "subject": "math",
             "lesson_number": 8,
-            "title": "Leçon 8",
+            "title": "Addition au jardin",
+            "description": "Problème mathématique inspiré de la vie quotidienne.",
+            "learning_objective": "Apprendre à résoudre une addition simple.",
+            "theme": "Vie quotidienne",
+            "content": "Addition au jardin : Awa a 11 mangues. Son ami lui donne 8 mangues. Combien de mangues Awa a-t-elle maintenant ?",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1922,7 +2194,11 @@
             "grade": "CE2",
             "subject": "math",
             "lesson_number": 9,
-            "title": "Leçon 9",
+            "title": "Addition avec les fruits",
+            "description": "Problème mathématique inspiré de la vie quotidienne.",
+            "learning_objective": "Apprendre à résoudre une addition simple.",
+            "theme": "Vie quotidienne",
+            "content": "Addition avec les fruits : Awa a 12 mangues. Son ami lui donne 9 mangues. Combien de mangues Awa a-t-elle maintenant ?",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1933,7 +2209,11 @@
             "grade": "CE2",
             "subject": "math",
             "lesson_number": 10,
-            "title": "Leçon 10",
+            "title": "Addition avec les animaux",
+            "description": "Problème mathématique inspiré de la vie quotidienne.",
+            "learning_objective": "Apprendre à résoudre une addition simple.",
+            "theme": "Vie quotidienne",
+            "content": "Addition avec les animaux : Awa a 13 mangues. Son ami lui donne 10 mangues. Combien de mangues Awa a-t-elle maintenant ?",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1944,7 +2224,11 @@
             "grade": "CE2",
             "subject": "math",
             "lesson_number": 11,
-            "title": "Leçon 11",
+            "title": "Addition des jouets",
+            "description": "Problème mathématique inspiré de la vie quotidienne.",
+            "learning_objective": "Apprendre à résoudre une addition simple.",
+            "theme": "Vie quotidienne",
+            "content": "Addition des jouets : Awa a 14 mangues. Son ami lui donne 11 mangues. Combien de mangues Awa a-t-elle maintenant ?",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1955,7 +2239,11 @@
             "grade": "CE2",
             "subject": "math",
             "lesson_number": 12,
-            "title": "Leçon 12",
+            "title": "Addition finale",
+            "description": "Problème mathématique inspiré de la vie quotidienne.",
+            "learning_objective": "Apprendre à résoudre une addition simple.",
+            "theme": "Vie quotidienne",
+            "content": "Addition finale : Awa a 15 mangues. Son ami lui donne 12 mangues. Combien de mangues Awa a-t-elle maintenant ?",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -1969,132 +2257,180 @@
         "subtitle": "Expérimente et développe ton esprit scientifique.",
         "lessons": [
           {
-            "id": "CE2_SCIENCES_L1",
+            "id": "CE2_SCIENCE_L1",
             "grade": "CE2",
             "subject": "sciences",
             "lesson_number": 1,
-            "title": "Leçon 1",
+            "title": "Les plantes",
+            "description": "Découverte scientifique simple.",
+            "learning_objective": "Comprendre un phénomène naturel.",
+            "theme": "Nature",
+            "content": "Les plantes : Les élèves découvrent la nature et le monde autour d'eux.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
             }
           },
           {
-            "id": "CE2_SCIENCES_L2",
+            "id": "CE2_SCIENCE_L2",
             "grade": "CE2",
             "subject": "sciences",
             "lesson_number": 2,
-            "title": "Leçon 2",
+            "title": "Les animaux",
+            "description": "Découverte scientifique simple.",
+            "learning_objective": "Comprendre un phénomène naturel.",
+            "theme": "Nature",
+            "content": "Les animaux : Les élèves découvrent la nature et le monde autour d'eux.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
             }
           },
           {
-            "id": "CE2_SCIENCES_L3",
+            "id": "CE2_SCIENCE_L3",
             "grade": "CE2",
             "subject": "sciences",
             "lesson_number": 3,
-            "title": "Leçon 3",
+            "title": "L'eau",
+            "description": "Découverte scientifique simple.",
+            "learning_objective": "Comprendre un phénomène naturel.",
+            "theme": "Nature",
+            "content": "L'eau : Les élèves découvrent la nature et le monde autour d'eux.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
             }
           },
           {
-            "id": "CE2_SCIENCES_L4",
+            "id": "CE2_SCIENCE_L4",
             "grade": "CE2",
             "subject": "sciences",
             "lesson_number": 4,
-            "title": "Leçon 4",
+            "title": "Le soleil",
+            "description": "Découverte scientifique simple.",
+            "learning_objective": "Comprendre un phénomène naturel.",
+            "theme": "Nature",
+            "content": "Le soleil : Les élèves découvrent la nature et le monde autour d'eux.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
             }
           },
           {
-            "id": "CE2_SCIENCES_L5",
+            "id": "CE2_SCIENCE_L5",
             "grade": "CE2",
             "subject": "sciences",
             "lesson_number": 5,
-            "title": "Leçon 5",
+            "title": "Le corps humain",
+            "description": "Découverte scientifique simple.",
+            "learning_objective": "Comprendre un phénomène naturel.",
+            "theme": "Nature",
+            "content": "Le corps humain : Les élèves découvrent la nature et le monde autour d'eux.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
             }
           },
           {
-            "id": "CE2_SCIENCES_L6",
+            "id": "CE2_SCIENCE_L6",
             "grade": "CE2",
             "subject": "sciences",
             "lesson_number": 6,
-            "title": "Leçon 6",
+            "title": "Les saisons",
+            "description": "Découverte scientifique simple.",
+            "learning_objective": "Comprendre un phénomène naturel.",
+            "theme": "Nature",
+            "content": "Les saisons : Les élèves découvrent la nature et le monde autour d'eux.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
             }
           },
           {
-            "id": "CE2_SCIENCES_L7",
+            "id": "CE2_SCIENCE_L7",
             "grade": "CE2",
             "subject": "sciences",
             "lesson_number": 7,
-            "title": "Leçon 7",
+            "title": "Les insectes",
+            "description": "Découverte scientifique simple.",
+            "learning_objective": "Comprendre un phénomène naturel.",
+            "theme": "Nature",
+            "content": "Les insectes : Les élèves découvrent la nature et le monde autour d'eux.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
             }
           },
           {
-            "id": "CE2_SCIENCES_L8",
+            "id": "CE2_SCIENCE_L8",
             "grade": "CE2",
             "subject": "sciences",
             "lesson_number": 8,
-            "title": "Leçon 8",
+            "title": "Les arbres",
+            "description": "Découverte scientifique simple.",
+            "learning_objective": "Comprendre un phénomène naturel.",
+            "theme": "Nature",
+            "content": "Les arbres : Les élèves découvrent la nature et le monde autour d'eux.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
             }
           },
           {
-            "id": "CE2_SCIENCES_L9",
+            "id": "CE2_SCIENCE_L9",
             "grade": "CE2",
             "subject": "sciences",
             "lesson_number": 9,
-            "title": "Leçon 9",
+            "title": "Les fruits",
+            "description": "Découverte scientifique simple.",
+            "learning_objective": "Comprendre un phénomène naturel.",
+            "theme": "Nature",
+            "content": "Les fruits : Les élèves découvrent la nature et le monde autour d'eux.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
             }
           },
           {
-            "id": "CE2_SCIENCES_L10",
+            "id": "CE2_SCIENCE_L10",
             "grade": "CE2",
             "subject": "sciences",
             "lesson_number": 10,
-            "title": "Leçon 10",
+            "title": "La nature",
+            "description": "Découverte scientifique simple.",
+            "learning_objective": "Comprendre un phénomène naturel.",
+            "theme": "Nature",
+            "content": "La nature : Les élèves découvrent la nature et le monde autour d'eux.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
             }
           },
           {
-            "id": "CE2_SCIENCES_L11",
+            "id": "CE2_SCIENCE_L11",
             "grade": "CE2",
             "subject": "sciences",
             "lesson_number": 11,
-            "title": "Leçon 11",
+            "title": "Les plantes",
+            "description": "Découverte scientifique simple.",
+            "learning_objective": "Comprendre un phénomène naturel.",
+            "theme": "Nature",
+            "content": "Les plantes : Les élèves découvrent la nature et le monde autour d'eux.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
             }
           },
           {
-            "id": "CE2_SCIENCES_L12",
+            "id": "CE2_SCIENCE_L12",
             "grade": "CE2",
             "subject": "sciences",
             "lesson_number": 12,
-            "title": "Leçon 12",
+            "title": "Les animaux",
+            "description": "Découverte scientifique simple.",
+            "learning_objective": "Comprendre un phénomène naturel.",
+            "theme": "Nature",
+            "content": "Les animaux : Les élèves découvrent la nature et le monde autour d'eux.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2112,7 +2448,11 @@
             "grade": "CE2",
             "subject": "lecture",
             "lesson_number": 1,
-            "title": "Leçon 1",
+            "title": "La rentrée des élèves",
+            "description": "Texte de lecture simple.",
+            "learning_objective": "Lire et comprendre un texte court.",
+            "theme": "Vie quotidienne",
+            "content": "La rentrée des élèves : Les enfants observent et apprennent quelque chose de nouveau à l'école ou à la maison.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2123,7 +2463,11 @@
             "grade": "CE2",
             "subject": "lecture",
             "lesson_number": 2,
-            "title": "Leçon 2",
+            "title": "La cour de l'école",
+            "description": "Texte de lecture simple.",
+            "learning_objective": "Lire et comprendre un texte court.",
+            "theme": "Vie quotidienne",
+            "content": "La cour de l'école : Les enfants observent et apprennent quelque chose de nouveau à l'école ou à la maison.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2134,7 +2478,11 @@
             "grade": "CE2",
             "subject": "lecture",
             "lesson_number": 3,
-            "title": "Leçon 3",
+            "title": "Une journée en classe",
+            "description": "Texte de lecture simple.",
+            "learning_objective": "Lire et comprendre un texte court.",
+            "theme": "Vie quotidienne",
+            "content": "Une journée en classe : Les enfants observent et apprennent quelque chose de nouveau à l'école ou à la maison.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2145,7 +2493,11 @@
             "grade": "CE2",
             "subject": "lecture",
             "lesson_number": 4,
-            "title": "Leçon 4",
+            "title": "Le soir en famille",
+            "description": "Texte de lecture simple.",
+            "learning_objective": "Lire et comprendre un texte court.",
+            "theme": "Vie quotidienne",
+            "content": "Le soir en famille : Les enfants observent et apprennent quelque chose de nouveau à l'école ou à la maison.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2156,7 +2508,11 @@
             "grade": "CE2",
             "subject": "lecture",
             "lesson_number": 5,
-            "title": "Leçon 5",
+            "title": "Le marché du village",
+            "description": "Texte de lecture simple.",
+            "learning_objective": "Lire et comprendre un texte court.",
+            "theme": "Vie quotidienne",
+            "content": "Le marché du village : Les enfants observent et apprennent quelque chose de nouveau à l'école ou à la maison.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2167,7 +2523,11 @@
             "grade": "CE2",
             "subject": "lecture",
             "lesson_number": 6,
-            "title": "Leçon 6",
+            "title": "Une visite au jardin",
+            "description": "Texte de lecture simple.",
+            "learning_objective": "Lire et comprendre un texte court.",
+            "theme": "Vie quotidienne",
+            "content": "Une visite au jardin : Les enfants observent et apprennent quelque chose de nouveau à l'école ou à la maison.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2178,7 +2538,11 @@
             "grade": "CE2",
             "subject": "lecture",
             "lesson_number": 7,
-            "title": "Leçon 7",
+            "title": "Le respect des règles",
+            "description": "Texte de lecture simple.",
+            "learning_objective": "Lire et comprendre un texte court.",
+            "theme": "Vie quotidienne",
+            "content": "Le respect des règles : Les enfants observent et apprennent quelque chose de nouveau à l'école ou à la maison.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2189,7 +2553,11 @@
             "grade": "CE2",
             "subject": "lecture",
             "lesson_number": 8,
-            "title": "Leçon 8",
+            "title": "Un ami généreux",
+            "description": "Texte de lecture simple.",
+            "learning_objective": "Lire et comprendre un texte court.",
+            "theme": "Vie quotidienne",
+            "content": "Un ami généreux : Les enfants observent et apprennent quelque chose de nouveau à l'école ou à la maison.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2200,7 +2568,11 @@
             "grade": "CE2",
             "subject": "lecture",
             "lesson_number": 9,
-            "title": "Leçon 9",
+            "title": "Le voyage scolaire",
+            "description": "Texte de lecture simple.",
+            "learning_objective": "Lire et comprendre un texte court.",
+            "theme": "Vie quotidienne",
+            "content": "Le voyage scolaire : Les enfants observent et apprennent quelque chose de nouveau à l'école ou à la maison.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2211,7 +2583,11 @@
             "grade": "CE2",
             "subject": "lecture",
             "lesson_number": 10,
-            "title": "Leçon 10",
+            "title": "La fête de l'école",
+            "description": "Texte de lecture simple.",
+            "learning_objective": "Lire et comprendre un texte court.",
+            "theme": "Vie quotidienne",
+            "content": "La fête de l'école : Les enfants observent et apprennent quelque chose de nouveau à l'école ou à la maison.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2222,7 +2598,11 @@
             "grade": "CE2",
             "subject": "lecture",
             "lesson_number": 11,
-            "title": "Leçon 11",
+            "title": "Les vacances",
+            "description": "Texte de lecture simple.",
+            "learning_objective": "Lire et comprendre un texte court.",
+            "theme": "Vie quotidienne",
+            "content": "Les vacances : Les enfants observent et apprennent quelque chose de nouveau à l'école ou à la maison.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2233,7 +2613,11 @@
             "grade": "CE2",
             "subject": "lecture",
             "lesson_number": 12,
-            "title": "Leçon 12",
+            "title": "Un nouveau livre",
+            "description": "Texte de lecture simple.",
+            "learning_objective": "Lire et comprendre un texte court.",
+            "theme": "Vie quotidienne",
+            "content": "Un nouveau livre : Les enfants observent et apprennent quelque chose de nouveau à l'école ou à la maison.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2256,7 +2640,11 @@
             "grade": "CM1",
             "subject": "emc",
             "lesson_number": 1,
-            "title": "Leçon 1",
+            "title": "La rentrée des classes",
+            "description": "Leçon emc basée sur le thème « La rentrée des classes ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « La rentrée des classes » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2264,10 +2652,14 @@
           },
           {
             "id": "CM1_EMC_L2",
+            "title": "L’écolier travailleur",
             "grade": "CM1",
             "subject": "emc",
             "lesson_number": 2,
-            "title": "Leçon 2",
+            "description": "Leçon emc basée sur le thème « L’écolier travailleur ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « L’écolier travailleur » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2275,10 +2667,14 @@
           },
           {
             "id": "CM1_EMC_L3",
+            "title": "Le désespoir d’un enfant",
             "grade": "CM1",
             "subject": "emc",
             "lesson_number": 3,
-            "title": "Leçon 3",
+            "description": "Leçon emc basée sur le thème « Le désespoir d’un enfant ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Le désespoir d’un enfant » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2286,10 +2682,14 @@
           },
           {
             "id": "CM1_EMC_L4",
+            "title": "L’enfance de Wangrin",
             "grade": "CM1",
             "subject": "emc",
             "lesson_number": 4,
-            "title": "Leçon 4",
+            "description": "Leçon emc basée sur le thème « L’enfance de Wangrin ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « L’enfance de Wangrin » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2300,7 +2700,11 @@
             "grade": "CM1",
             "subject": "emc",
             "lesson_number": 5,
-            "title": "Leçon 5",
+            "title": "Un repas d’anniversaire en famille",
+            "description": "Leçon emc basée sur le thème « Un repas d’anniversaire en famille ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Un repas d’anniversaire en famille » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2308,10 +2712,14 @@
           },
           {
             "id": "CM1_EMC_L6",
+            "title": "Un jeu dangereux",
             "grade": "CM1",
             "subject": "emc",
             "lesson_number": 6,
-            "title": "Leçon 6",
+            "description": "Leçon emc basée sur le thème « Un jeu dangereux ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Un jeu dangereux » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2322,7 +2730,11 @@
             "grade": "CM1",
             "subject": "emc",
             "lesson_number": 7,
-            "title": "Leçon 7",
+            "title": "Le mariage de Sanata",
+            "description": "Leçon emc basée sur le thème « Le mariage de Sanata ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Le mariage de Sanata » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2333,7 +2745,11 @@
             "grade": "CM1",
             "subject": "emc",
             "lesson_number": 8,
-            "title": "Leçon 8",
+            "title": "La lutte en pays Samo",
+            "description": "Leçon emc basée sur le thème « La lutte en pays Samo ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « La lutte en pays Samo » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2344,7 +2760,11 @@
             "grade": "CM1",
             "subject": "emc",
             "lesson_number": 9,
-            "title": "Leçon 9",
+            "title": "Moussa visite Ouagadougou",
+            "description": "Leçon emc basée sur le thème « Moussa visite Ouagadougou ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Moussa visite Ouagadougou » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2355,7 +2775,11 @@
             "grade": "CM1",
             "subject": "emc",
             "lesson_number": 10,
-            "title": "Leçon 10",
+            "title": "La vaccination",
+            "description": "Leçon emc basée sur le thème « La vaccination ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « La vaccination » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2366,7 +2790,11 @@
             "grade": "CM1",
             "subject": "emc",
             "lesson_number": 11,
-            "title": "Leçon 11",
+            "title": "Le forgeron",
+            "description": "Leçon emc basée sur le thème « Le forgeron ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Le forgeron » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2377,7 +2805,11 @@
             "grade": "CM1",
             "subject": "emc",
             "lesson_number": 12,
-            "title": "Leçon 12",
+            "title": "Premier voyage en avion",
+            "description": "Leçon emc basée sur le thème « Premier voyage en avion ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Premier voyage en avion » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2393,9 +2825,13 @@
           {
             "id": "CM1_MATH_L1",
             "grade": "CM1",
-            "subject": "math",
+            "subject": "mathématiques",
             "lesson_number": 1,
-            "title": "Leçon 1",
+            "title": "La rentrée des classes",
+            "description": "Leçon math basée sur le thème « La rentrée des classes ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « La rentrée des classes » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2404,9 +2840,13 @@
           {
             "id": "CM1_MATH_L2",
             "grade": "CM1",
-            "subject": "math",
+            "subject": "mathématiques",
             "lesson_number": 2,
-            "title": "Leçon 2",
+            "title": "L’écolier travailleur",
+            "description": "Leçon math basée sur le thème « L’écolier travailleur ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « L’écolier travailleur » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2415,9 +2855,13 @@
           {
             "id": "CM1_MATH_L3",
             "grade": "CM1",
-            "subject": "math",
+            "subject": "mathématiques",
             "lesson_number": 3,
-            "title": "Leçon 3",
+            "title": "Le désespoir d’un enfant",
+            "description": "Leçon math basée sur le thème « Le désespoir d’un enfant ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Le désespoir d’un enfant » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2426,9 +2870,13 @@
           {
             "id": "CM1_MATH_L4",
             "grade": "CM1",
-            "subject": "math",
+            "subject": "mathématiques",
             "lesson_number": 4,
-            "title": "Leçon 4",
+            "title": "L’enfance de Wangrin",
+            "description": "Leçon math basée sur le thème « L’enfance de Wangrin ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « L’enfance de Wangrin » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2437,9 +2885,13 @@
           {
             "id": "CM1_MATH_L5",
             "grade": "CM1",
-            "subject": "math",
+            "subject": "mathématiques",
             "lesson_number": 5,
-            "title": "Leçon 5",
+            "title": "Un repas d’anniversaire en famille",
+            "description": "Leçon math basée sur le thème « Un repas d’anniversaire en famille ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Un repas d’anniversaire en famille » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2448,9 +2900,13 @@
           {
             "id": "CM1_MATH_L6",
             "grade": "CM1",
-            "subject": "math",
+            "subject": "mathématiques",
             "lesson_number": 6,
-            "title": "Leçon 6",
+            "title": "Un jeu dangereux",
+            "description": "Leçon math basée sur le thème « Un jeu dangereux ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Un jeu dangereux » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2459,9 +2915,13 @@
           {
             "id": "CM1_MATH_L7",
             "grade": "CM1",
-            "subject": "math",
+            "subject": "mathématiques",
             "lesson_number": 7,
-            "title": "Leçon 7",
+            "title": "Le mariage de Sanata",
+            "description": "Leçon math basée sur le thème « Le mariage de Sanata ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Le mariage de Sanata » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2470,9 +2930,13 @@
           {
             "id": "CM1_MATH_L8",
             "grade": "CM1",
-            "subject": "math",
+            "subject": "mathématiques",
             "lesson_number": 8,
-            "title": "Leçon 8",
+            "title": "La lutte en pays Samo",
+            "description": "Leçon math basée sur le thème « La lutte en pays Samo ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « La lutte en pays Samo » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2481,9 +2945,13 @@
           {
             "id": "CM1_MATH_L9",
             "grade": "CM1",
-            "subject": "math",
+            "subject": "mathématiques",
             "lesson_number": 9,
-            "title": "Leçon 9",
+            "title": "Moussa visite Ouagadougou",
+            "description": "Leçon math basée sur le thème « Moussa visite Ouagadougou ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Moussa visite Ouagadougou » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2492,9 +2960,13 @@
           {
             "id": "CM1_MATH_L10",
             "grade": "CM1",
-            "subject": "math",
+            "subject": "mathématiques",
             "lesson_number": 10,
-            "title": "Leçon 10",
+            "title": "La vaccination",
+            "description": "Leçon math basée sur le thème « La vaccination ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « La vaccination » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2503,9 +2975,13 @@
           {
             "id": "CM1_MATH_L11",
             "grade": "CM1",
-            "subject": "math",
+            "subject": "mathématiques",
             "lesson_number": 11,
-            "title": "Leçon 11",
+            "title": "Le forgeron",
+            "description": "Leçon math basée sur le thème « Le forgeron ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Le forgeron » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2514,9 +2990,13 @@
           {
             "id": "CM1_MATH_L12",
             "grade": "CM1",
-            "subject": "math",
+            "subject": "mathématiques",
             "lesson_number": 12,
-            "title": "Leçon 12",
+            "title": "Premier voyage en avion",
+            "description": "Leçon math basée sur le thème « Premier voyage en avion ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Premier voyage en avion » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2527,14 +3007,18 @@
       {
         "id": "science",
         "title": "Science",
-        "subtitle": "Expérimente et développe ton esprit scientifique.",
+        "subtitle": "Apprendre les valeurs, le respect, la citoyenneté et le vivre-ensemble.",
         "lessons": [
           {
             "id": "CM1_SCIENCES_L1",
             "grade": "CM1",
-            "subject": "sciences",
             "lesson_number": 1,
-            "title": "Leçon 1",
+            "title": "La rentrée des classes",
+            "subject": "sciences",
+            "description": "Leçon science basée sur le thème « La rentrée des classes ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « La rentrée des classes » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2543,9 +3027,13 @@
           {
             "id": "CM1_SCIENCES_L2",
             "grade": "CM1",
-            "subject": "sciences",
             "lesson_number": 2,
-            "title": "Leçon 2",
+            "title": "L’écolier travailleur",
+            "description": "Leçon science basée sur le thème « L’écolier travailleur ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "subject": "sciences",
+            "content": "Texte pédagogique simplifié pour la leçon « L’écolier travailleur » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2554,9 +3042,13 @@
           {
             "id": "CM1_SCIENCES_L3",
             "grade": "CM1",
-            "subject": "sciences",
             "lesson_number": 3,
-            "title": "Leçon 3",
+            "title": "Le désespoir d’un enfant",
+            "description": "Leçon science basée sur le thème « Le désespoir d’un enfant ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "subject": "sciences",
+            "content": "Texte pédagogique simplifié pour la leçon « Le désespoir d’un enfant » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2565,9 +3057,13 @@
           {
             "id": "CM1_SCIENCES_L4",
             "grade": "CM1",
-            "subject": "sciences",
             "lesson_number": 4,
-            "title": "Leçon 4",
+            "title": "L’enfance de Wangrin",
+            "description": "Leçon science basée sur le thème « L’enfance de Wangrin ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "subject": "sciences",
+            "content": "Texte pédagogique simplifié pour la leçon « L’enfance de Wangrin » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2576,9 +3072,13 @@
           {
             "id": "CM1_SCIENCES_L5",
             "grade": "CM1",
-            "subject": "sciences",
             "lesson_number": 5,
-            "title": "Leçon 5",
+            "title": "Un repas d’anniversaire en famille",
+            "description": "Leçon science basée sur le thème « Un repas d’anniversaire en famille ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "subject": "sciences",
+            "content": "Texte pédagogique simplifié pour la leçon « Un repas d’anniversaire en famille » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2587,9 +3087,13 @@
           {
             "id": "CM1_SCIENCES_L6",
             "grade": "CM1",
-            "subject": "sciences",
             "lesson_number": 6,
-            "title": "Leçon 6",
+            "title": "Un jeu dangereux",
+            "description": "Leçon science basée sur le thème « Un jeu dangereux ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "subject": "sciences",
+            "content": "Texte pédagogique simplifié pour la leçon « Un jeu dangereux » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2598,9 +3102,13 @@
           {
             "id": "CM1_SCIENCES_L7",
             "grade": "CM1",
-            "subject": "sciences",
             "lesson_number": 7,
-            "title": "Leçon 7",
+            "title": "Le mariage de Sanata",
+            "description": "Leçon science basée sur le thème « Le mariage de Sanata ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "subject": "sciences",
+            "content": "Texte pédagogique simplifié pour la leçon « Le mariage de Sanata » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2609,9 +3117,13 @@
           {
             "id": "CM1_SCIENCES_L8",
             "grade": "CM1",
-            "subject": "sciences",
             "lesson_number": 8,
-            "title": "Leçon 8",
+            "title": "La lutte en pays Samo",
+            "description": "Leçon science basée sur le thème « La lutte en pays Samo ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "subject": "sciences",
+            "content": "Texte pédagogique simplifié pour la leçon « La lutte en pays Samo » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2620,9 +3132,13 @@
           {
             "id": "CM1_SCIENCES_L9",
             "grade": "CM1",
-            "subject": "sciences",
             "lesson_number": 9,
-            "title": "Leçon 9",
+            "title": "Moussa visite Ouagadougou",
+            "description": "Leçon science basée sur le thème « Moussa visite Ouagadougou ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "subject": "sciences",
+            "content": "Texte pédagogique simplifié pour la leçon « Moussa visite Ouagadougou » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2631,9 +3147,13 @@
           {
             "id": "CM1_SCIENCES_L10",
             "grade": "CM1",
-            "subject": "sciences",
             "lesson_number": 10,
-            "title": "Leçon 10",
+            "title": "La vaccination",
+            "subject": "sciences",
+            "description": "Leçon science basée sur le thème « La vaccination ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « La vaccination » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2641,10 +3161,14 @@
           },
           {
             "id": "CM1_SCIENCES_L11",
+            "title": "Le forgeron",
             "grade": "CM1",
-            "subject": "sciences",
             "lesson_number": 11,
-            "title": "Leçon 11",
+            "description": "Leçon science basée sur le thème « Le forgeron ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "subject": "sciences",
+            "content": "Texte pédagogique simplifié pour la leçon « Le forgeron » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2653,9 +3177,13 @@
           {
             "id": "CM1_SCIENCES_L12",
             "grade": "CM1",
-            "subject": "sciences",
             "lesson_number": 12,
-            "title": "Leçon 12",
+            "title": "Premier voyage en avion",
+            "description": "Leçon science basée sur le thème « Premier voyage en avion ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "subject": "sciences",
+            "content": "Texte pédagogique simplifié pour la leçon « Premier voyage en avion » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2666,14 +3194,18 @@
       {
         "id": "lecture",
         "title": "Lecture",
-        "subtitle": "Développe tes compétences en lecture et en compréhension.",
+        "subtitle": "Apprendre les valeurs, le respect, la citoyenneté et le vivre-ensemble.",
         "lessons": [
           {
             "id": "CM1_LECTURE_L1",
             "grade": "CM1",
-            "subject": "lecture",
             "lesson_number": 1,
-            "title": "Leçon 1",
+            "subject": "lecture",
+            "title": "La rentrée des classes",
+            "description": "Leçon lecture basée sur le thème « La rentrée des classes ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « La rentrée des classes » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2684,7 +3216,11 @@
             "grade": "CM1",
             "subject": "lecture",
             "lesson_number": 2,
-            "title": "Leçon 2",
+            "title": "L’écolier travailleur",
+            "description": "Leçon lecture basée sur le thème « L’écolier travailleur ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « L’écolier travailleur » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2695,7 +3231,11 @@
             "grade": "CM1",
             "subject": "lecture",
             "lesson_number": 3,
-            "title": "Leçon 3",
+            "title": "Le désespoir d’un enfant",
+            "description": "Leçon lecture basée sur le thème « Le désespoir d’un enfant ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Le désespoir d’un enfant » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2706,7 +3246,11 @@
             "grade": "CM1",
             "subject": "lecture",
             "lesson_number": 4,
-            "title": "Leçon 4",
+            "title": "L’enfance de Wangrin",
+            "description": "Leçon lecture basée sur le thème « L’enfance de Wangrin ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « L’enfance de Wangrin » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2717,7 +3261,11 @@
             "grade": "CM1",
             "subject": "lecture",
             "lesson_number": 5,
-            "title": "Leçon 5",
+            "title": "Un repas d’anniversaire en famille",
+            "description": "Leçon lecture basée sur le thème « Un repas d’anniversaire en famille ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Un repas d’anniversaire en famille » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2728,7 +3276,11 @@
             "grade": "CM1",
             "subject": "lecture",
             "lesson_number": 6,
-            "title": "Leçon 6",
+            "title": "Un jeu dangereux",
+            "description": "Leçon lecture basée sur le thème « Un jeu dangereux ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Un jeu dangereux » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2739,7 +3291,11 @@
             "grade": "CM1",
             "subject": "lecture",
             "lesson_number": 7,
-            "title": "Leçon 7",
+            "title": "Le mariage de Sanata",
+            "description": "Leçon lecture basée sur le thème « Le mariage de Sanata ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Le mariage de Sanata » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2750,7 +3306,11 @@
             "grade": "CM1",
             "subject": "lecture",
             "lesson_number": 8,
-            "title": "Leçon 8",
+            "title": "La lutte en pays Samo",
+            "description": "Leçon lecture basée sur le thème « La lutte en pays Samo ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « La lutte en pays Samo » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2761,7 +3321,11 @@
             "grade": "CM1",
             "subject": "lecture",
             "lesson_number": 9,
-            "title": "Leçon 9",
+            "title": "Moussa visite Ouagadougou",
+            "description": "Leçon lecture basée sur le thème « Moussa visite Ouagadougou ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Moussa visite Ouagadougou » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2772,7 +3336,11 @@
             "grade": "CM1",
             "subject": "lecture",
             "lesson_number": 10,
-            "title": "Leçon 10",
+            "title": "La vaccination",
+            "description": "Leçon lecture basée sur le thème « La vaccination ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « La vaccination » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2783,7 +3351,11 @@
             "grade": "CM1",
             "subject": "lecture",
             "lesson_number": 11,
-            "title": "Leçon 11",
+            "title": "Le forgeron",
+            "description": "Leçon lecture basée sur le thème « Le forgeron ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Le forgeron » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2794,7 +3366,11 @@
             "grade": "CM1",
             "subject": "lecture",
             "lesson_number": 12,
-            "title": "Leçon 12",
+            "title": "Premier voyage en avion",
+            "description": "Leçon lecture basée sur le thème « Premier voyage en avion ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Premier voyage en avion » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2817,7 +3393,11 @@
             "grade": "CM2",
             "subject": "emc",
             "lesson_number": 1,
-            "title": "Leçon 1",
+            "title": "Une rentrée réussie",
+            "description": "Leçon emc basée sur le thème « Une rentrée réussie ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Une rentrée réussie » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2828,7 +3408,11 @@
             "grade": "CM2",
             "subject": "emc",
             "lesson_number": 2,
-            "title": "Leçon 2",
+            "title": "La solidarité entre camarades",
+            "description": "Leçon emc basée sur le thème « La solidarité entre camarades ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « La solidarité entre camarades » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2839,7 +3423,11 @@
             "grade": "CM2",
             "subject": "emc",
             "lesson_number": 3,
-            "title": "Leçon 3",
+            "title": "La joie des fêtes",
+            "description": "Leçon emc basée sur le thème « La joie des fêtes ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « La joie des fêtes » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2850,7 +3438,11 @@
             "grade": "CM2",
             "subject": "emc",
             "lesson_number": 4,
-            "title": "Leçon 4",
+            "title": "Une visite à la ville",
+            "description": "Leçon emc basée sur le thème « Une visite à la ville ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Une visite à la ville » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2861,7 +3453,11 @@
             "grade": "CM2",
             "subject": "emc",
             "lesson_number": 5,
-            "title": "Leçon 5",
+            "title": "Prévenir les maladies",
+            "description": "Leçon emc basée sur le thème « Prévenir les maladies ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Prévenir les maladies » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2872,7 +3468,11 @@
             "grade": "CM2",
             "subject": "emc",
             "lesson_number": 6,
-            "title": "Leçon 6",
+            "title": "Une partie de pêche",
+            "description": "Leçon emc basée sur le thème « Une partie de pêche ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Une partie de pêche » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2883,7 +3483,11 @@
             "grade": "CM2",
             "subject": "emc",
             "lesson_number": 7,
-            "title": "Leçon 7",
+            "title": "Le travail de l’artiste",
+            "description": "Leçon emc basée sur le thème « Le travail de l’artiste ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Le travail de l’artiste » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2894,7 +3498,11 @@
             "grade": "CM2",
             "subject": "emc",
             "lesson_number": 8,
-            "title": "Leçon 8",
+            "title": "La saison sèche",
+            "description": "Leçon emc basée sur le thème « La saison sèche ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « La saison sèche » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2905,7 +3513,11 @@
             "grade": "CM2",
             "subject": "emc",
             "lesson_number": 9,
-            "title": "Leçon 9",
+            "title": "Le jardin scolaire",
+            "description": "Leçon emc basée sur le thème « Le jardin scolaire ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Le jardin scolaire » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2916,7 +3528,11 @@
             "grade": "CM2",
             "subject": "emc",
             "lesson_number": 10,
-            "title": "Leçon 10",
+            "title": "Une personne exemplaire",
+            "description": "Leçon emc basée sur le thème « Une personne exemplaire ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Une personne exemplaire » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2927,7 +3543,11 @@
             "grade": "CM2",
             "subject": "emc",
             "lesson_number": 11,
-            "title": "Leçon 11",
+            "title": "Le progrès scientifique",
+            "description": "Leçon emc basée sur le thème « Le progrès scientifique ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Le progrès scientifique » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2938,7 +3558,11 @@
             "grade": "CM2",
             "subject": "emc",
             "lesson_number": 12,
-            "title": "Leçon 12",
+            "title": "Un voyage inoubliable",
+            "description": "Leçon emc basée sur le thème « Un voyage inoubliable ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Un voyage inoubliable » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2954,9 +3578,13 @@
           {
             "id": "CM2_MATH_L1",
             "grade": "CM2",
-            "subject": "math",
+            "subject": "mathématiques",
             "lesson_number": 1,
-            "title": "Leçon 1",
+            "title": "Une rentrée réussie",
+            "description": "Leçon math basée sur le thème « Une rentrée réussie ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Une rentrée réussie » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2965,9 +3593,13 @@
           {
             "id": "CM2_MATH_L2",
             "grade": "CM2",
-            "subject": "math",
+            "subject": "mathématiques",
             "lesson_number": 2,
-            "title": "Leçon 2",
+            "title": "La solidarité entre camarades",
+            "description": "Leçon math basée sur le thème « La solidarité entre camarades ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « La solidarité entre camarades » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2976,9 +3608,13 @@
           {
             "id": "CM2_MATH_L3",
             "grade": "CM2",
-            "subject": "math",
+            "subject": "mathématiques",
             "lesson_number": 3,
-            "title": "Leçon 3",
+            "title": "La joie des fêtes",
+            "description": "Leçon math basée sur le thème « La joie des fêtes ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « La joie des fêtes » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2987,9 +3623,13 @@
           {
             "id": "CM2_MATH_L4",
             "grade": "CM2",
-            "subject": "math",
+            "subject": "mathématiques",
             "lesson_number": 4,
-            "title": "Leçon 4",
+            "title": "Une visite à la ville",
+            "description": "Leçon math basée sur le thème « Une visite à la ville ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Une visite à la ville » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2998,9 +3638,13 @@
           {
             "id": "CM2_MATH_L5",
             "grade": "CM2",
-            "subject": "math",
+            "subject": "mathématiques",
             "lesson_number": 5,
-            "title": "Leçon 5",
+            "title": "Prévenir les maladies",
+            "description": "Leçon math basée sur le thème « Prévenir les maladies ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Prévenir les maladies » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -3009,9 +3653,13 @@
           {
             "id": "CM2_MATH_L6",
             "grade": "CM2",
-            "subject": "math",
+            "subject": "mathématiques",
             "lesson_number": 6,
-            "title": "Leçon 6",
+            "title": "Une partie de pêche",
+            "description": "Leçon math basée sur le thème « Une partie de pêche ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Une partie de pêche » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -3020,9 +3668,13 @@
           {
             "id": "CM2_MATH_L7",
             "grade": "CM2",
-            "subject": "math",
-            "lesson_number": 7,
-            "title": "Leçon 7",
+            "subject": "mathématiques",
+            "lesson_number": 1,
+            "title": "Le travail de l’artiste",
+            "description": "Leçon math basée sur le thème « Le travail de l’artiste ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Le travail de l’artiste » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -3031,9 +3683,13 @@
           {
             "id": "CM2_MATH_L8",
             "grade": "CM2",
-            "subject": "math",
-            "lesson_number": 8,
-            "title": "Leçon 8",
+            "subject": "mathématiques",
+            "lesson_number": 1,
+            "title": "La saison sèche",
+            "description": "Leçon math basée sur le thème « La saison sèche ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « La saison sèche » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -3042,9 +3698,13 @@
           {
             "id": "CM2_MATH_L9",
             "grade": "CM2",
-            "subject": "math",
-            "lesson_number": 9,
-            "title": "Leçon 9",
+            "subject": "mathématiques",
+            "lesson_number": 1,
+            "title": "Le jardin scolaire",
+            "description": "Leçon math basée sur le thème « Le jardin scolaire ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Le jardin scolaire » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -3053,9 +3713,13 @@
           {
             "id": "CM2_MATH_L10",
             "grade": "CM2",
-            "subject": "math",
-            "lesson_number": 10,
-            "title": "Leçon 10",
+            "subject": "mathématiques",
+            "lesson_number": 1,
+            "title": "Une personne exemplaire",
+            "description": "Leçon math basée sur le thème « Une personne exemplaire ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Une personne exemplaire » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -3064,9 +3728,13 @@
           {
             "id": "CM2_MATH_L11",
             "grade": "CM2",
-            "subject": "math",
-            "lesson_number": 11,
-            "title": "Leçon 11",
+            "subject": "mathématiques",
+            "lesson_number": 1,
+            "title": "Le progrès scientifique",
+            "description": "Leçon math basée sur le thème « Le progrès scientifique ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Le progrès scientifique » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -3075,9 +3743,13 @@
           {
             "id": "CM2_MATH_L12",
             "grade": "CM2",
-            "subject": "math",
-            "lesson_number": 12,
-            "title": "Leçon 12",
+            "subject": "mathématiques",
+            "lesson_number": 1,
+            "title": "Un voyage inoubliable",
+            "description": "Leçon math basée sur le thème « Un voyage inoubliable ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Un voyage inoubliable » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -3088,14 +3760,18 @@
       {
         "id": "science",
         "title": "Science",
-        "subtitle": "Expérimente et développe ton esprit scientifique.",
+        "subtitle": "Apprendre les valeurs, le respect, la citoyenneté et le vivre-ensemble.",
         "lessons": [
           {
             "id": "CM2_SCIENCES_L1",
             "grade": "CM2",
-            "subject": "sciences",
             "lesson_number": 1,
-            "title": "Leçon 1",
+            "title": "Une rentrée réussie",
+            "description": "Leçon science basée sur le thème « Une rentrée réussie ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "subject": "sciences",
+            "content": "Texte pédagogique simplifié pour la leçon « Une rentrée réussie » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -3104,9 +3780,13 @@
           {
             "id": "CM2_SCIENCES_L2",
             "grade": "CM2",
+            "lesson_number": 1,
+            "title": "La solidarité entre camarades",
+            "description": "Leçon science basée sur le thème « La solidarité entre camarades ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
             "subject": "sciences",
-            "lesson_number": 2,
-            "title": "Leçon 2",
+            "content": "Texte pédagogique simplifié pour la leçon « La solidarité entre camarades » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -3115,9 +3795,13 @@
           {
             "id": "CM2_SCIENCES_L3",
             "grade": "CM2",
+            "lesson_number": 1,
+            "title": "La joie des fêtes",
+            "description": "Leçon science basée sur le thème « La joie des fêtes ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
             "subject": "sciences",
-            "lesson_number": 3,
-            "title": "Leçon 3",
+            "content": "Texte pédagogique simplifié pour la leçon « La joie des fêtes » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -3126,9 +3810,13 @@
           {
             "id": "CM2_SCIENCES_L4",
             "grade": "CM2",
+            "lesson_number": 1,
+            "title": "Une visite à la ville",
+            "description": "Leçon science basée sur le thème « Une visite à la ville ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
             "subject": "sciences",
-            "lesson_number": 4,
-            "title": "Leçon 4",
+            "content": "Texte pédagogique simplifié pour la leçon « Une visite à la ville » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -3137,9 +3825,13 @@
           {
             "id": "CM2_SCIENCES_L5",
             "grade": "CM2",
+            "lesson_number": 1,
+            "title": "Prévenir les maladies",
+            "description": "Leçon science basée sur le thème « Prévenir les maladies ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
             "subject": "sciences",
-            "lesson_number": 5,
-            "title": "Leçon 5",
+            "content": "Texte pédagogique simplifié pour la leçon « Prévenir les maladies » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -3148,9 +3840,13 @@
           {
             "id": "CM2_SCIENCES_L6",
             "grade": "CM2",
+            "lesson_number": 1,
+            "title": "Une partie de pêche",
+            "description": "Leçon science basée sur le thème « Une partie de pêche ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
             "subject": "sciences",
-            "lesson_number": 6,
-            "title": "Leçon 6",
+            "content": "Texte pédagogique simplifié pour la leçon « Une partie de pêche » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -3159,9 +3855,13 @@
           {
             "id": "CM2_SCIENCES_L7",
             "grade": "CM2",
+            "lesson_number": 1,
+            "title": "Le travail de l’artiste",
             "subject": "sciences",
-            "lesson_number": 7,
-            "title": "Leçon 7",
+            "description": "Leçon science basée sur le thème « Le travail de l’artiste ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Le travail de l’artiste » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -3170,9 +3870,13 @@
           {
             "id": "CM2_SCIENCES_L8",
             "grade": "CM2",
+            "lesson_number": 1,
+            "title": "La saison sèche",
+            "description": "Leçon science basée sur le thème « La saison sèche ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
             "subject": "sciences",
-            "lesson_number": 8,
-            "title": "Leçon 8",
+            "content": "Texte pédagogique simplifié pour la leçon « La saison sèche » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -3181,9 +3885,13 @@
           {
             "id": "CM2_SCIENCES_L9",
             "grade": "CM2",
+            "lesson_number": 1,
+            "title": "Le jardin scolaire",
+            "description": "Leçon science basée sur le thème « Le jardin scolaire ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
             "subject": "sciences",
-            "lesson_number": 9,
-            "title": "Leçon 9",
+            "content": "Texte pédagogique simplifié pour la leçon « Le jardin scolaire » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -3192,9 +3900,13 @@
           {
             "id": "CM2_SCIENCES_L10",
             "grade": "CM2",
+            "lesson_number": 1,
+            "title": "Une personne exemplaire",
+            "description": "Leçon science basée sur le thème « Une personne exemplaire ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
             "subject": "sciences",
-            "lesson_number": 10,
-            "title": "Leçon 10",
+            "content": "Texte pédagogique simplifié pour la leçon « Une personne exemplaire » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -3203,9 +3915,13 @@
           {
             "id": "CM2_SCIENCES_L11",
             "grade": "CM2",
+            "lesson_number": 1,
+            "title": "Le progrès scientifique",
+            "description": "Leçon science basée sur le thème « Le progrès scientifique ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
             "subject": "sciences",
-            "lesson_number": 11,
-            "title": "Leçon 11",
+            "content": "Texte pédagogique simplifié pour la leçon « Le progrès scientifique » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -3214,9 +3930,13 @@
           {
             "id": "CM2_SCIENCES_L12",
             "grade": "CM2",
+            "lesson_number": 1,
+            "title": "Un voyage inoubliable",
+            "description": "Leçon science basée sur le thème « Un voyage inoubliable ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
             "subject": "sciences",
-            "lesson_number": 12,
-            "title": "Leçon 12",
+            "content": "Texte pédagogique simplifié pour la leçon « Un voyage inoubliable » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -3227,14 +3947,18 @@
       {
         "id": "lecture",
         "title": "Lecture",
-        "subtitle": "Développe tes compétences en lecture et en compréhension.",
+        "subtitle": "Apprendre les valeurs, le respect, la citoyenneté et le vivre-ensemble.",
         "lessons": [
           {
             "id": "CM2_LECTURE_L1",
             "grade": "CM2",
-            "subject": "lecture",
             "lesson_number": 1,
-            "title": "Leçon 1",
+            "subject": "lecture",
+            "title": "Une rentrée réussie",
+            "description": "Leçon lecture basée sur le thème « Une rentrée réussie ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Une rentrée réussie » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -3243,9 +3967,13 @@
           {
             "id": "CM2_LECTURE_L2",
             "grade": "CM2",
+            "lesson_number": 1,
             "subject": "lecture",
-            "lesson_number": 2,
-            "title": "Leçon 2",
+            "title": "La solidarité entre camarades",
+            "description": "Leçon lecture basée sur le thème « La solidarité entre camarades ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « La solidarité entre camarades » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -3254,9 +3982,13 @@
           {
             "id": "CM2_LECTURE_L3",
             "grade": "CM2",
+            "lesson_number": 1,
             "subject": "lecture",
-            "lesson_number": 3,
-            "title": "Leçon 3",
+            "title": "La joie des fêtes",
+            "description": "Leçon lecture basée sur le thème « La joie des fêtes ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « La joie des fêtes » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -3265,9 +3997,13 @@
           {
             "id": "CM2_LECTURE_L4",
             "grade": "CM2",
+            "lesson_number": 1,
             "subject": "lecture",
-            "lesson_number": 4,
-            "title": "Leçon 4",
+            "title": "Une visite à la ville",
+            "description": "Leçon lecture basée sur le thème « Une visite à la ville ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Une visite à la ville » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -3276,9 +4012,13 @@
           {
             "id": "CM2_LECTURE_L5",
             "grade": "CM2",
+            "lesson_number": 1,
             "subject": "lecture",
-            "lesson_number": 5,
-            "title": "Leçon 5",
+            "title": "Prévenir les maladies",
+            "description": "Leçon lecture basée sur le thème « Prévenir les maladies ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Prévenir les maladies » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -3287,9 +4027,13 @@
           {
             "id": "CM2_LECTURE_L6",
             "grade": "CM2",
+            "lesson_number": 1,
             "subject": "lecture",
-            "lesson_number": 6,
-            "title": "Leçon 6",
+            "title": "Une partie de pêche",
+            "description": "Leçon lecture basée sur le thème « Une partie de pêche ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Une partie de pêche » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -3298,9 +4042,13 @@
           {
             "id": "CM2_LECTURE_L7",
             "grade": "CM2",
+            "lesson_number": 1,
             "subject": "lecture",
-            "lesson_number": 7,
-            "title": "Leçon 7",
+            "title": "Le travail de l’artiste",
+            "description": "Leçon lecture basée sur le thème « Le travail de l’artiste ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Le travail de l’artiste » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -3309,9 +4057,13 @@
           {
             "id": "CM2_LECTURE_L8",
             "grade": "CM2",
+            "lesson_number": 1,
             "subject": "lecture",
-            "lesson_number": 8,
-            "title": "Leçon 8",
+            "title": "La saison sèche",
+            "description": "Leçon lecture basée sur le thème « La saison sèche ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « La saison sèche » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -3320,9 +4072,13 @@
           {
             "id": "CM2_LECTURE_L9",
             "grade": "CM2",
+            "lesson_number": 1,
             "subject": "lecture",
-            "lesson_number": 9,
-            "title": "Leçon 9",
+            "title": "Le jardin scolaire",
+            "description": "Leçon lecture basée sur le thème « Le jardin scolaire ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Le jardin scolaire » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -3331,9 +4087,13 @@
           {
             "id": "CM2_LECTURE_L10",
             "grade": "CM2",
+            "lesson_number": 1,
             "subject": "lecture",
-            "lesson_number": 10,
-            "title": "Leçon 10",
+            "title": "Une personne exemplaire",
+            "description": "Leçon lecture basée sur le thème « Une personne exemplaire ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Une personne exemplaire » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -3342,9 +4102,13 @@
           {
             "id": "CM2_LECTURE_L11",
             "grade": "CM2",
+            "lesson_number": 1,
             "subject": "lecture",
-            "lesson_number": 11,
-            "title": "Leçon 11",
+            "title": "Le progrès scientifique",
+            "description": "Leçon lecture basée sur le thème « Le progrès scientifique ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Le progrès scientifique » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -3353,9 +4117,13 @@
           {
             "id": "CM2_LECTURE_L12",
             "grade": "CM2",
+            "lesson_number": 1,
             "subject": "lecture",
-            "lesson_number": 12,
-            "title": "Leçon 12",
+            "title": "Un voyage inoubliable",
+            "description": "Leçon lecture basée sur le thème « Un voyage inoubliable ».",
+            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "theme": "éducation",
+            "content": "Texte pédagogique simplifié pour la leçon « Un voyage inoubliable » adapté au niveau CM2.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."

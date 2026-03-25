@@ -56,24 +56,24 @@ class CustomTextField {
                     suffixIcon: isPassword
                         ? GestureDetector(
                             onTap: onTap,
-                            child:
-                            obscureText
-                                ? Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: SvgPicture.asset(
-                                      AppAssets.lockSign,
-                                      height: 20,
-                                      width: 10,
-                                    ),
-                                  )
-                                : Padding(
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: SvgPicture.asset(
+                                obscureText
+                                    ? AppAssets.passwordVisible
+                                    : AppAssets.passwordInVisible,
+                                height: 20,
+                                width: 10,
+                              ),
+                            ),
+                            /*: Padding(
                                     padding: const EdgeInsets.all(8.0),
                                     child: Icon(
                                       Icons.lock_open_rounded,
                                       size: 32,
                                       color: Color(0xff009966),
                                     ),
-                                  ),
+                                  ),*/
                           )
                         : null,
                     hintStyle: TextStyle(
@@ -166,25 +166,19 @@ class CustomTextField {
                     hintText: hintText,
                     suffixIcon: isPassword
                         ? GestureDetector(
-                      onTap: onTap,
-                      child: obscureText
-                          ? Padding(
+                            onTap: onTap,
+                            child: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: SvgPicture.asset(
-                                AppAssets.lockSign,
+                                obscureText
+                                    ? AppAssets.passwordVisible
+                                    : AppAssets.passwordInVisible,
                                 height: 20,
                                 width: 10,
                               ),
-                            )
-                          : Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Icon(
-                                Icons.lock_open_rounded,
-                                size: 32,
-                                color: Color(0xff009966),
-                              ),
                             ),
-                    ):null,
+                          )
+                        : null,
                     hintStyle: TextStyle(
                       color: Colors.grey.shade500,
                       fontSize: 15,

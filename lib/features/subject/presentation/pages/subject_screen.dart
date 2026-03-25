@@ -53,10 +53,10 @@ class _SubjectScreenState extends State<SubjectScreen> {
       case 1:
         context.pushReplacement(AppPages.PROFILE_SCREEN);
         break;
-      case 2:
+      /*case 2:
         Center(child: Text("Home Page"));
-        break;
-      case 3:
+        break;*/
+      case 2:
         context.pushReplacement(AppPages.CHANGE_PASSWORD_SCREEN);
         break;
     }
@@ -94,11 +94,20 @@ class _SubjectScreenState extends State<SubjectScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     /// Logo
-                    Center(
-                      child: SizedBox(
-                        height: 60,
-                        child: SvgPicture.asset(AppAssets.logo_text),
-                      ),
+                    Stack(
+                      children: [
+                        Positioned(
+                          top: 0,
+                          left: 0,
+                          child: BackButton(),
+                        ),
+                        Center(
+                          child: SizedBox(
+                            height: 60,
+                            child: SvgPicture.asset(AppAssets.logo_text),
+                          ),
+                        ),
+                      ]
                     ),
 
                     const SizedBox(height: 30),

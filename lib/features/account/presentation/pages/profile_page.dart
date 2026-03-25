@@ -36,10 +36,10 @@ class _ProfilePageState extends State<ProfilePage> {
       case 1:
         context.pushReplacement(AppPages.PROFILE_SCREEN);
         break;
-      case 2:
+      /*case 2:
         Center(child: Text("Home Page"));
-        break;
-      case 3:
+        break;*/
+      case 2:
         context.pushReplacement(AppPages.CHANGE_PASSWORD_SCREEN);
         break;
     }

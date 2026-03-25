@@ -104,9 +104,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-
                         SizedBox(height: height * 0.03),
-
                         /// Logo
                         SizedBox(
                           height: height * 0.05,
@@ -116,9 +114,7 @@ class _SignUpPageState extends State<SignUpPage> {
                             fit: BoxFit.fill,
                           ),
                         ),
-
                         SizedBox(height: height * 0.06),
-
                         /// Title
                         Text(
                           "Créer un compte !",
@@ -128,9 +124,7 @@ class _SignUpPageState extends State<SignUpPage> {
                             fontWeight: FontWeight.w400,
                           ),
                         ),
-
                         const SizedBox(height: 6),
-
                         const Text(
                           "Crée ton compte pour commencer à apprendre avec Intello.",
                           style: TextStyle(
@@ -161,6 +155,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         /// WhatsApp
                         CustomTextField.buildTextFieldWithLabel(
                           controller: _phone,
+                          maxLength: 10,
                           context: context,
                           label: "Numéro WhatsApp*",
                           keyboardType: TextInputType.phone,
@@ -168,13 +163,13 @@ class _SignUpPageState extends State<SignUpPage> {
                         ),
 
                         /// Email
-                        CustomTextField.buildTextFieldWithLabel(
+                        /*CustomTextField.buildTextFieldWithLabel(
                           controller: _email,
                           context: context,
                           hintText: "Entre une adresse e-mail valide ...",
                           keyboardType: TextInputType.emailAddress,
                           label: "Adresse e-mail",
-                        ),
+                        ),*/
 
                         /// Password
                         BlocSelector<RegistrationBloc, RegistrationState, bool>(

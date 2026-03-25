@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:intello_new/routes/app_routes.dart';
 
 import '../../../../core/audio/audio_player_service.dart';
 import '../../../../core/constants/app_assets.dart';
@@ -57,10 +56,10 @@ class _LessonScreenState extends State<LessonScreen> {
       case 1:
         context.pushReplacement(AppPages.PROFILE_SCREEN);
         break;
-      case 2:
+      /*case 2:
         Center(child: Text("Home Page"));
-        break;
-      case 3:
+        break;*/
+      case 2:
         context.pushReplacement(AppPages.CHANGE_PASSWORD_SCREEN);
         break;
     }
@@ -68,7 +67,7 @@ class _LessonScreenState extends State<LessonScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final isTablet = Responsive.isTablet(context);
+    Responsive.isTablet(context);
     final height = AppDimensions.getResponsiveHeight(context);
     final width = AppDimensions.getResponsiveWidth(context);
     final isLandscape = Responsive.isLandscape(context);
@@ -99,13 +98,28 @@ class _LessonScreenState extends State<LessonScreen> {
                         SizedBox(
                           height: isLandscape ? height * 0.03 : height * 0.03,
                         ),
-                        SizedBox(
+                        /*SizedBox(
                           height: isLandscape ? height * 0.05 : height * 0.05,
                           width: isLandscape ? width * 0.19 : width * 0.18,
                           child: SvgPicture.asset(
                             AppAssets.logo_text,
                             fit: BoxFit.fill,
                           ),
+                        ),*/
+                        Stack(
+                            children: [
+                              Positioned(
+                                top: 0,
+                                left: 0,
+                                child: BackButton(),
+                              ),
+                              Center(
+                                child: SizedBox(
+                                  height: 60,
+                                  child: SvgPicture.asset(AppAssets.logo_text),
+                                ),
+                              ),
+                            ]
                         ),
                         SizedBox(
                           height: isLandscape ? height * 0.06 : height * 0.06,
@@ -158,7 +172,7 @@ class _LessonScreenState extends State<LessonScreen> {
                                 child: GridView.builder(
                                   // shrinkWrap: true,
                                   scrollDirection: Axis.vertical,
-                                  padding: const EdgeInsets.all(16),
+                                  //padding: const EdgeInsets.all(16),
                                   itemCount: state.lessons.length,
                                   gridDelegate:
                                       const SliverGridDelegateWithFixedCrossAxisCount(

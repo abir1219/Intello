@@ -27,7 +27,7 @@ class _StateChangePasswordPage extends State<ChangePasswordPage> {
   final _newPassword = TextEditingController();
   final _cnfrm_password = TextEditingController();
   late final audioService;
-  final int _currentIndex = 3; // profile index
+  final int _currentIndex = 2; // profile index
 
   void _handleNavigation(int index) {
     if (index == _currentIndex) return;
@@ -39,10 +39,10 @@ class _StateChangePasswordPage extends State<ChangePasswordPage> {
       case 1:
         context.pushReplacement(AppPages.PROFILE_SCREEN);
         break;
-      case 2:
+      /*case 2:
         Center(child: Text("Home Page"));
-        break;
-      case 3:
+        break;*/
+      case 2:
         context.pushReplacement(AppPages.CREATE_NEW_PASSWORD_SCREEN);
         break;
     }

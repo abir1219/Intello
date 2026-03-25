@@ -68,10 +68,10 @@ class _LessonDetailsState extends State<LessonDetails> {
       case 1:
         context.pushReplacement(AppPages.PROFILE_SCREEN);
         break;
-      case 2:
+      /*case 2:
         Center(child: Text("Home Page"));
-        break;
-      case 3:
+        break;*/
+      case 2:
         context.pushReplacement(AppPages.CHANGE_PASSWORD_SCREEN);
         break;
     }
@@ -114,13 +114,28 @@ class _LessonDetailsState extends State<LessonDetails> {
                         SizedBox(
                           height: isLandscape ? height * 0.03 : height * 0.03,
                         ),
-                        SizedBox(
+                        /*SizedBox(
                           height: isLandscape ? height * 0.05 : height * 0.05,
                           width: isLandscape ? width * 0.19 : width * 0.18,
                           child: SvgPicture.asset(
                             AppAssets.logo_text,
                             fit: BoxFit.fill,
                           ),
+                        ),*/
+                        Stack(
+                            children: [
+                              Positioned(
+                                top: 0,
+                                left: 0,
+                                child: BackButton(),
+                              ),
+                              Center(
+                                child: SizedBox(
+                                  height: 60,
+                                  child: SvgPicture.asset(AppAssets.logo_text),
+                                ),
+                              ),
+                            ]
                         ),
                         SizedBox(
                           height: isLandscape ? height * 0.06 : height * 0.06,

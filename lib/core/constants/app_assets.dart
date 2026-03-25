@@ -9,6 +9,8 @@ class AppAssets {
   static const pauseButton = 'assets/images/pause.svg';
   static const arrowSign = 'assets/images/arrow.svg';
   static const lockSign = 'assets/images/lock.svg';
+  static const passwordVisible = 'assets/images/mynaui_eye.svg';
+  static const passwordInVisible = 'assets/images/mynaui_eye_off.svg';
   static const homeMenu = 'assets/images/navigation_menu/home.svg';
   static const accountMenu = 'assets/images/navigation_menu/account.svg';
   static const laughingMenu = 'assets/images/navigation_menu/laughing.svg';

@@ -19,7 +19,7 @@ class CustomBottomNavBar extends StatelessWidget {
     final List<String> icons = [
       AppAssets.homeMenu,
       AppAssets.accountMenu,
-      AppAssets.laughingMenu,
+      //AppAssets.laughingMenu,
       AppAssets.settings,
     ];
 
@@ -52,7 +52,7 @@ class CustomBottomNavBar extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: List.generate(icons.length, (index) {
                 final isActive = selectedIndex == index;
-
+                debugPrint("Index-> $index, selectedIndex->$selectedIndex IS_ACTIVE-->$isActive");
                 return GestureDetector(
                   onTap: () {
                     onItemSelected(index); // ✅ IMPORTANT
@@ -74,8 +74,8 @@ class CustomBottomNavBar extends StatelessWidget {
                     ),
                     child: Center(
                       child: Container(
-                        height: isActive ? 40 : 35,
-                        width: isActive ? 40 : 35,
+                        height: isActive ? 40 : 40,
+                        width: isActive ? 40 : 40,
                         padding: const EdgeInsets.all(6),
                         decoration: BoxDecoration(
                           color: isActive

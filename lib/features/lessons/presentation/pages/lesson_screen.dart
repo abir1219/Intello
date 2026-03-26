@@ -196,6 +196,7 @@ class _LessonScreenState extends State<LessonScreen> {
                                           "levelCode": widget.level,
                                           "levelName": state.lessons[index].title,
                                           "lessonId": state.lessons[index].id,
+                                          "content": state.lessons[index].content ?? "",
                                         });
                                       },
                                     );

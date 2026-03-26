@@ -93,6 +93,7 @@ class AppRouters {
               level: data['levelCode'] as String,
               levelName: data['levelName'],
               lessonId: data['lessonId'],
+              content: data['content']
             ),
             key: state.pageKey,
           );

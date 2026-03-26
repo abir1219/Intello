@@ -7,6 +7,8 @@ class Lesson extends Equatable {
   final String subject;
   final int lessonNumber;
   final String title;
+  final String? description;
+  final String? content;
   final Instruction instructions;
 
   const Lesson({
@@ -15,6 +17,8 @@ class Lesson extends Equatable {
     required this.subject,
     required this.lessonNumber,
     required this.title,
+     this.description,
+     this.content,
     required this.instructions,
   });
 
@@ -25,18 +29,22 @@ class Lesson extends Equatable {
       subject: json['subject'],
       lessonNumber: json['lesson_number'],
       title: json['title'],
+      description: json['description'],
+      content: json['content'],
       instructions: Instruction.fromJson(json['instructions']),
     );
   }
 
   @override
-  List<Object> get props =>
+  List<Object?> get props =>
       [
         id,
         grade,
         subject,
         lessonNumber,
         title,
+        description,
+        content,
         instructions,
       ];
 }

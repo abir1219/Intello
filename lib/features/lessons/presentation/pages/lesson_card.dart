@@ -36,6 +36,7 @@ class LessonCard extends StatelessWidget {
             ),
             Text(
               lesson.title,
+              textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
@@ -44,7 +45,9 @@ class LessonCard extends StatelessWidget {
             ),
             const SizedBox(height: 6),
             Text(
-              lesson.instructions.fr,
+              // lesson.instructions.fr,
+              lesson.description ?? "",
+              textAlign: TextAlign.center,
               style: TextStyle(
                 color: isSelected ? Colors.white70 : Colors.black54,
               ),

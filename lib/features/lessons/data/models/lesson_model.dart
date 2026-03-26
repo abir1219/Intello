@@ -8,6 +8,8 @@ class LessonModel extends Lesson {
     required super.subject,
     required super.lessonNumber,
     required super.title,
+    required super.description,
+    required super.content,
     required InstructionModel super.instructions,
   });
 
@@ -18,6 +20,8 @@ class LessonModel extends Lesson {
       subject: json['subject'],
       lessonNumber: json['lesson_number'],
       title: json['title'],
+      description: json['description'],
+      content: json['content'],
       instructions: InstructionModel.fromJson(
         json['instructions'],
       ),
@@ -31,6 +35,8 @@ class LessonModel extends Lesson {
       'subject': subject,
       'lesson_number': lessonNumber,
       'title': title,
+      'description': description,
+      'content': content,
       'instructions': {
         'fr': instructions.fr,
         'moore': instructions.moore,

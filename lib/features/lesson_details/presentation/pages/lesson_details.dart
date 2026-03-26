@@ -19,6 +19,7 @@ class LessonDetails extends StatefulWidget {
   final String level;
   final String levelName;
   final String lessonId;
+  final String content;
 
   const LessonDetails({
     super.key,
@@ -26,6 +27,7 @@ class LessonDetails extends StatefulWidget {
     required this.level,
     required this.levelName,
     required this.lessonId,
+    required this.content,
   });
 
   @override
@@ -238,8 +240,9 @@ class _LessonDetailsState extends State<LessonDetails> {
               ),
             ),
             const SizedBox(height: 8),
-            const Text(
-              "Apprenez les bases grâce à des leçons et activités simples, conçues pour faciliter la compréhension et encourager la pratique.",
+             Text(
+              widget.content,
+              //"Apprenez les bases grâce à des leçons et activités simples, conçues pour faciliter la compréhension et encourager la pratique.",
               style: TextStyle(color: AppColors.textColor, fontSize: 14),
             ),
             const SizedBox(height: 30),

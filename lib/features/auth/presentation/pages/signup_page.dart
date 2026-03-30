@@ -163,13 +163,13 @@ class _SignUpPageState extends State<SignUpPage> {
                         ),
 
                         /// Email
-                        /*CustomTextField.buildTextFieldWithLabel(
+                        CustomTextField.buildTextFieldWithLabel(
                           controller: _email,
                           context: context,
                           hintText: "Entre une adresse e-mail valide ...",
                           keyboardType: TextInputType.emailAddress,
                           label: "Adresse e-mail",
-                        ),*/
+                        ),
 
                         /// Password
                         BlocSelector<RegistrationBloc, RegistrationState, bool>(

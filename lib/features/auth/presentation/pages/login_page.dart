@@ -138,13 +138,13 @@ class _LoginPageState extends State<LoginPage> {
                         ),
 
                         // const SizedBox(height: 16),
-                        /*CustomTextField.buildTextFieldWithLabel(
+                        CustomTextField.buildTextFieldWithLabel(
                           controller: _email,
                           context: context,
                           hintText: "Entre une adresse e-mail valide ...",
                           keyboardType: TextInputType.emailAddress,
                           label: "Adresse e-mail",
-                        ),*/
+                        ),
 
                         // const SizedBox(height: 16),
                         CustomTextField.buildTextFieldWithLabel(

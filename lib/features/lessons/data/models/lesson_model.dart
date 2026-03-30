@@ -11,6 +11,7 @@ class LessonModel extends Lesson {
     required super.description,
     required super.content,
     required InstructionModel super.instructions,
+    super.lirePlus,
   });
 
   factory LessonModel.fromJson(Map<String, dynamic> json) {
@@ -22,9 +23,11 @@ class LessonModel extends Lesson {
       title: json['title'],
       description: json['description'],
       content: json['content'],
-      instructions: InstructionModel.fromJson(
-        json['instructions'],
-      ),
+      instructions: InstructionModel.fromJson(json['instructions']),
+      // ✅ SAFE NULL HANDLING
+      lirePlus: json['lire_plus'] != null
+          ? LirePlusModel.fromJson(json['lire_plus'])
+          : null,
     );
   }
 
@@ -37,10 +40,11 @@ class LessonModel extends Lesson {
       'title': title,
       'description': description,
       'content': content,
-      'instructions': {
-        'fr': instructions.fr,
-        'moore': instructions.moore,
-      }
+      'instructions': {'fr': instructions.fr, 'moore': instructions.moore},
+      // ✅ FIXED SERIALIZATION
+      'lire_plus': lirePlus != null
+          ? (lirePlus as LirePlusModel).toJson()
+          : null,
     };
   }
 }

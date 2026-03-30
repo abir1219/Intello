@@ -3205,12 +3205,7 @@
             "description": "Leçon lecture basée sur le thème « La rentrée des classes ».",
             "learning_objective": "Comprendre le contenu et répondre aux activités.",
             "theme": "éducation",
-            "content": "Au début de l’année scolaire, les élèves reviennent à l’école avec joie et parfois avec un peu d’inquiétude. Certains retrouvent leurs amis avec enthousiasme, tandis que d’autres découvrent une nouvelle classe. Dans la cour, les enfants discutent et racontent leurs vacances. Le maître arrive et accueille les élèves avec bienveillance. Il les invite à entrer en classe et à s’installer calmement. Ensuite, il rappelle les règles importantes : écouter, respecter les autres et travailler sérieusement. Chaque élève prépare ses cahiers et ses livres. La rentrée marque le début d’un nouveau parcours d’apprentissage. C’est un moment important où chacun doit faire des efforts pour réussir. Un élève attentif peut progresser tout au long de l’année.",
-            "lire_plus": {
-              "enabled": true,
-              "button_label": "Lire plus",
-              "extended_content": "Après quelques jours, les élèves s’habituent à leur nouvelle classe. Ils apprennent à mieux organiser leur travail et à respecter les horaires. Les parents encouragent leurs enfants à étudier régulièrement. La réussite scolaire dépend du travail, de la discipline et de la motivation."
-            },
+            "content": "Texte pédagogique simplifié pour la leçon « La rentrée des classes » adapté au niveau CM1.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."

@@ -86,6 +86,7 @@ class AppRouters {
         path: AppPages.LESSON_DETAILS_SCREEN,
         pageBuilder: (context, state) {
           final data = state.extra as Map<String, dynamic>;
+          print("LirePlue-->${data['lirePlus']}");
 
           return _defaultTransitionPage(
             child: LessonDetails(
@@ -93,7 +94,9 @@ class AppRouters {
               level: data['levelCode'] as String,
               levelName: data['levelName'],
               lessonId: data['lessonId'],
-              content: data['content']
+              content: data['content'],
+                isMore: data['isMore'],
+                lirePlus: data['lirePlus']
             ),
             key: state.pageKey,
           );

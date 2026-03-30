@@ -107,19 +107,15 @@ class _LessonScreenState extends State<LessonScreen> {
                           ),
                         ),*/
                         Stack(
-                            children: [
-                              Positioned(
-                                top: 0,
-                                left: 0,
-                                child: BackButton(),
+                          children: [
+                            Positioned(top: 0, left: 0, child: BackButton()),
+                            Center(
+                              child: SizedBox(
+                                height: 60,
+                                child: SvgPicture.asset(AppAssets.logo_text),
                               ),
-                              Center(
-                                child: SizedBox(
-                                  height: 60,
-                                  child: SvgPicture.asset(AppAssets.logo_text),
-                                ),
-                              ),
-                            ]
+                            ),
+                          ],
                         ),
                         SizedBox(
                           height: isLandscape ? height * 0.06 : height * 0.06,
@@ -191,13 +187,25 @@ class _LessonScreenState extends State<LessonScreen> {
                                         setState(() {
                                           selectedIndex = index;
                                         });
-                                        context.pushReplacement(AppPages.LESSON_DETAILS_SCREEN,extra: {
-                                          "subjectId": widget.subject,
-                                          "levelCode": widget.level,
-                                          "levelName": state.lessons[index].title,
-                                          "lessonId": state.lessons[index].id,
-                                          "content": state.lessons[index].content ?? "",
-                                        });
+                                        context.pushReplacement(
+                                          AppPages.LESSON_DETAILS_SCREEN,
+                                          extra: {
+                                            "subjectId": widget.subject,
+                                            "levelCode": widget.level,
+                                            "levelName":
+                                                state.lessons[index].title,
+                                            "lessonId": state.lessons[index].id,
+                                            "content":
+                                                state.lessons[index].content ??
+                                                "",
+                                            "isMore":
+                                                state.lessons[index].lirePlus ==
+                                                    null
+                                                ? false
+                                                : true,
+                                            "lirePlus": state.lessons[index].lirePlus
+                                          },
+                                        );
                                       },
                                     );
                                   },

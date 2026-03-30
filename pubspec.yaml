@@ -46,6 +46,7 @@ dependencies:
   bloc: ^9.2.0
   image_picker: ^1.2.1
   audioplayers: ^6.6.0
+  readmore: ^3.0.0
 
 dev_dependencies:
   flutter_test:

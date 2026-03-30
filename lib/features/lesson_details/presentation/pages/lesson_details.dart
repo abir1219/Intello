@@ -3,6 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:intello_new/features/lesson_details/presentation/bloc/lesson_content_bloc.dart';
+import 'package:intello_new/features/lesson_details/widgets/lesson_content_widget.dart';
+import 'package:intello_new/features/lessons/domain/entities/lesson.dart';
+import 'package:readmore/readmore.dart';
 
 import '../../../../core/audio/audio_player_service.dart';
 import '../../../../core/constants/app_assets.dart';
@@ -20,6 +23,8 @@ class LessonDetails extends StatefulWidget {
   final String levelName;
   final String lessonId;
   final String content;
+  final bool isMore;
+  final LirePlus? lirePlus;
 
   const LessonDetails({
     super.key,
@@ -28,6 +33,8 @@ class LessonDetails extends StatefulWidget {
     required this.levelName,
     required this.lessonId,
     required this.content,
+    required this.isMore,
+    required this.lirePlus,
   });
 
   @override
@@ -125,19 +132,15 @@ class _LessonDetailsState extends State<LessonDetails> {
                           ),
                         ),*/
                         Stack(
-                            children: [
-                              Positioned(
-                                top: 0,
-                                left: 0,
-                                child: BackButton(),
+                          children: [
+                            Positioned(top: 0, left: 0, child: BackButton()),
+                            Center(
+                              child: SizedBox(
+                                height: 60,
+                                child: SvgPicture.asset(AppAssets.logo_text),
                               ),
-                              Center(
-                                child: SizedBox(
-                                  height: 60,
-                                  child: SvgPicture.asset(AppAssets.logo_text),
-                                ),
-                              ),
-                            ]
+                            ),
+                          ],
                         ),
                         SizedBox(
                           height: isLandscape ? height * 0.06 : height * 0.06,
@@ -180,18 +183,78 @@ class _LessonDetailsState extends State<LessonDetails> {
                               );
                             }
                             if (state is LessonLoaded) {
-                              return _buildContainer(
-                                levelName: widget.level,
-                                state: state,
-                                onTap: () {
-                                  context.pushReplacement(AppPages.EXAMPLE_DETAILS_SCREEN,extra: {
-                                    "subject" : widget.subject,
-                                    "level" : widget.level,
-                                    "levelName" : widget.levelName,
-                                    "lessonId" : widget.lessonId,
-                                    "exercise" : state.lesson.exercise,
-                                  });
-                                },
+                              return SingleChildScrollView(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      widget.levelName.toUpperCase(),
+                                      style: TextStyle(
+                                        color: AppColors.textColor,
+                                        fontSize: 26,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    const SizedBox(height: 8),
+                                    widget.isMore
+                                        ? LessonContentWidget(
+                                            content: widget.content,
+                                            lirePlus: widget.lirePlus,
+                                          )
+                                        /*ReadMoreText(
+                                            widget.content,
+                                            // ✅ prevent null crash
+                                            trimMode: TrimMode.Line,
+                                            // ✅ better for paragraphs
+                                            trimLines: 3,
+                                            trimCollapsedText: ' Lire plus',
+                                            trimExpandedText: ' Lire moins',
+                                            colorClickableText: Colors.pink,
+                                            style: const TextStyle(
+                                              fontSize: 14,
+                                              height: 1.5,
+                                            ),
+                                            // ✅ base text style
+                                            moreStyle: const TextStyle(
+                                              fontSize: 14,
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.pink,
+                                            ),
+                                            lessStyle: const TextStyle(
+                                              // ✅ add this
+                                              fontSize: 14,
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.pink,
+                                            ),
+                                          )*/
+                                        : Text(
+                                            widget.content,
+                                            //"Apprenez les bases grâce à des leçons et activités simples, conçues pour faciliter la compréhension et encourager la pratique.",
+                                            style: TextStyle(
+                                              color: AppColors.textColor,
+                                              fontSize: 14,
+                                            ),
+                                          ),
+                                    const SizedBox(height: 30),
+                                
+                                    _buildContainer(
+                                      levelName: widget.level,
+                                      state: state,
+                                      onTap: () {
+                                        context.pushReplacement(
+                                          AppPages.EXAMPLE_DETAILS_SCREEN,
+                                          extra: {
+                                            "subject": widget.subject,
+                                            "level": widget.level,
+                                            "levelName": widget.levelName,
+                                            "lessonId": widget.lessonId,
+                                            "exercise": state.lesson.exercise,
+                                          },
+                                        );
+                                      },
+                                    ),
+                                  ],
+                                ),
                               );
                             } else {
                               return SizedBox();
@@ -225,28 +288,12 @@ class _LessonDetailsState extends State<LessonDetails> {
     required void Function()? onTap,
   }) {
     return GestureDetector(
-      onTap: onTap,
+      // onTap: onTap,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              widget.levelName.toUpperCase(),
-              style: TextStyle(
-                color: AppColors.textColor,
-                fontSize: 26,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            const SizedBox(height: 8),
-             Text(
-              widget.content,
-              //"Apprenez les bases grâce à des leçons et activités simples, conçues pour faciliter la compréhension et encourager la pratique.",
-              style: TextStyle(color: AppColors.textColor, fontSize: 14),
-            ),
-            const SizedBox(height: 30),
-
             // Cards
             CustomCard(
               icon: AppAssets.exercise_image,

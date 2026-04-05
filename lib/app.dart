@@ -6,7 +6,8 @@ import 'package:intello_new/features/auth/presentation/bloc/login/login_bloc.dar
 import 'package:intello_new/features/auth/presentation/bloc/registration/registration_bloc.dart';
 import 'package:intello_new/features/lesson_details/data/datasource/lesson_content_local_datasource.dart';
 import 'package:intello_new/features/lesson_details/data/repository/lesson_content_repository_impl.dart';
-import 'package:intello_new/features/lesson_details/domain/repository/lesson_content_repository.dart';
+import 'package:intello_new/features/lesson_details_updated/domain/usecases/get_activities.dart';
+import 'package:intello_new/features/lesson_details_updated/domain/usecases/get_lessons.dart';
 import 'package:intello_new/features/lessons/data/datasource/lesson_local_datasource.dart';
 import 'package:intello_new/features/lessons/data/repositories/subject_repository_impl.dart';
 import 'package:intello_new/features/lessons/presentation/bloc/lesson_bloc.dart';
@@ -14,15 +15,15 @@ import 'package:intello_new/features/subject/presentation/pages/subject_screen.d
 import 'package:intello_new/routes/app_routes.dart';
 
 import 'features/account/data/datasources/account_local_datasource.dart';
-import 'features/account/domain/repositories/account_repository.dart';
 import 'features/account/presentation/bloc/profile_bloc.dart';
-import 'features/account/presentation/pages/profile_page.dart';
 import 'features/auth/data/datasources/auth_local_datasource.dart';
 import 'features/auth/data/repositories/auth_repository_impl.dart';
 import 'features/auth/presentation/bloc/forgot_password/forgot_password_bloc.dart';
 import 'features/lesson_details/domain/usecases/get_lesson_content.dart';
 import 'features/lesson_details/presentation/bloc/lesson_content_bloc.dart';
-import 'features/lessons/domain/repositories/subject_repository.dart';
+import 'features/lesson_details_updated/data/datasources/learning_local_datasource.dart';
+import 'features/lesson_details_updated/data/repositories/learning_repository_impl.dart';
+import 'features/lesson_details_updated/presentation/bloc/learning_bloc.dart';
 import 'features/lessons/domain/usecases/get_lessons_usecase.dart';
 import 'features/settings/bloc/change_password/change_password_bloc.dart';
 import 'features/subject/data/datasources/subject_local_datasource.dart';
@@ -52,6 +53,11 @@ class MyApp extends StatelessWidget {
         BlocProvider(
           create: (context) =>
               ForgotPasswordBloc(AuthRepositoryImpl(AuthLocalDataSource())),
+        ),
+        BlocProvider(
+          create: (context) =>
+              // LearningBloc(GetActivities(LearningRepositoryImpl(LearningLocalDataSourceImpl()))),
+              LearningBloc(GetLessons(LearningRepositoryImpl(LearningLocalDataSourceImpl()))),
         ),
         /*BlocProvider(
           create: (context) =>

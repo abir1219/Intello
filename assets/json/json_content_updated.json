@@ -9023,7 +9023,8 @@
                     "B",
                     "C"
                   ],
-                  "correct_answer": 0
+                  "correct_answer": 0,
+                  "isAttended": false
                 },
                 {
                   "type": "true_false",
@@ -9557,546 +9558,96 @@
           {
             "subjectId": "lecture",
             "lessons": [
-                {
-                  "id": "CM1_LECTURE_L1",
-                  "activities": [
-                    {
-                      "type": "multiple_choice",
-                      "question": "Quelle est la bonne réponse ?",
-                      "choices": [
-                        "A",
-                        "B",
-                        "C"
-                      ],
-                      "correct_answer": 0
-                    },
-                    {
-                      "type": "true_false",
-                      "question": "Cette leçon aide à apprendre.",
-                      "answer": true
-                    },
-                    {
-                      "type": "fill_blank",
-                      "question": "Complète : Cette leçon parle de ______.",
-                      "answer": "La rentrée des classes"
-                    },
-                    {
-                      "type": "short_answer",
-                      "question": "Explique ce que tu as compris."
-                    }
-                  ],
-                  "games": [
-                    {
-                      "type": "matching",
-                      "instruction": "Associe les mots.",
-                      "pairs": [
-                        {
-                          "left": "apprendre",
-                          "right": "étudier"
-                        },
-                        {
-                          "left": "répondre",
-                          "right": "donner la réponse"
-                        }
-                      ]
-                    }
-                  ]
+              {
+                "id": "CM1_LECTURE_L1",
+                "title": "La rentrée des classes",
+                "description": "Cette leçon présente un texte sur la rentrée scolaire. Elle permet à l’élève de lire, comprendre et identifier les idées principales du récit. À travers cette lecture, l’élève développe sa compréhension et sa capacité à s’exprimer.",
+                "theme": "École et famille",
+                "content": "Au début de l’année scolaire, les élèves reviennent à l’école avec joie et parfois avec un peu d’inquiétude. Certains retrouvent leurs amis avec enthousiasme, tandis que d’autres découvrent une nouvelle classe. Dans la cour, les enfants discutent et racontent leurs vacances. Le maître arrive et accueille les élèves avec bienveillance. Il les invite à entrer en classe et à s’installer calmement. Ensuite, il rappelle les règles importantes : écouter, respecter les autres et travailler sérieusement. Chaque élève prépare ses cahiers et ses livres. La rentrée marque le début d’un nouveau parcours d’apprentissage. C’est un moment important où chacun doit faire des efforts pour réussir. Un élève attentif peut progresser tout au long de l’année.",
+                "lire_plus": {
+                  "enabled": true,
+                  "button_label": "Lire plus",
+                  "extended_content": "Après quelques jours, les élèves s’habituent à leur nouvelle classe. Ils apprennent à mieux organiser leur travail et à respecter les horaires. Les parents encouragent leurs enfants à étudier régulièrement. La réussite scolaire dépend du travail, de la discipline et de la motivation."
                 },
-                {
-                  "id": "CM1_LECTURE_L2",
-                  "activities": [
-                    {
-                      "type": "multiple_choice",
-                      "question": "Quelle est la bonne réponse ?",
-                      "choices": [
-                        "A",
-                        "B",
-                        "C"
-                      ],
-                      "correct_answer": 0
-                    },
-                    {
-                      "type": "true_false",
-                      "question": "Cette leçon aide à apprendre.",
-                      "answer": true
-                    },
-                    {
-                      "type": "fill_blank",
-                      "question": "Complète : Cette leçon parle de ______.",
-                      "answer": "L’écolier travailleur"
-                    },
-                    {
-                      "type": "short_answer",
-                      "question": "Explique ce que tu as compris."
-                    }
-                  ],
-                  "games": [
-                    {
-                      "type": "matching",
-                      "instruction": "Associe les mots.",
-                      "pairs": [
-                        {
-                          "left": "apprendre",
-                          "right": "étudier"
-                        },
-                        {
-                          "left": "répondre",
-                          "right": "donner la réponse"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "id": "CM1_LECTURE_L3",
-                  "activities": [
-                    {
-                      "type": "multiple_choice",
-                      "question": "Quelle est la bonne réponse ?",
-                      "choices": [
-                        "A",
-                        "B",
-                        "C"
-                      ],
-                      "correct_answer": 0
-                    },
-                    {
-                      "type": "true_false",
-                      "question": "Cette leçon aide à apprendre.",
-                      "answer": true
-                    },
-                    {
-                      "type": "fill_blank",
-                      "question": "Complète : Cette leçon parle de ______.",
-                      "answer": "Le désespoir d’un enfant"
-                    },
-                    {
-                      "type": "short_answer",
-                      "question": "Explique ce que tu as compris."
-                    }
-                  ],
-                  "games": [
-                    {
-                      "type": "matching",
-                      "instruction": "Associe les mots.",
-                      "pairs": [
-                        {
-                          "left": "apprendre",
-                          "right": "étudier"
-                        },
-                        {
-                          "left": "répondre",
-                          "right": "donner la réponse"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "id": "CM1_LECTURE_L4",
-                  "activities": [
-                    {
-                      "type": "multiple_choice",
-                      "question": "Quelle est la bonne réponse ?",
-                      "choices": [
-                        "A",
-                        "B",
-                        "C"
-                      ],
-                      "correct_answer": 0
-                    },
-                    {
-                      "type": "true_false",
-                      "question": "Cette leçon aide à apprendre.",
-                      "answer": true
-                    },
-                    {
-                      "type": "fill_blank",
-                      "question": "Complète : Cette leçon parle de ______.",
-                      "answer": "L’enfance de Wangrin"
-                    },
-                    {
-                      "type": "short_answer",
-                      "question": "Explique ce que tu as compris."
-                    }
-                  ],
-                  "games": [
-                    {
-                      "type": "matching",
-                      "instruction": "Associe les mots.",
-                      "pairs": [
-                        {
-                          "left": "apprendre",
-                          "right": "étudier"
-                        },
-                        {
-                          "left": "répondre",
-                          "right": "donner la réponse"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "id": "CM1_LECTURE_L5",
-                  "activities": [
-                    {
-                      "type": "multiple_choice",
-                      "question": "Quelle est la bonne réponse ?",
-                      "choices": [
-                        "A",
-                        "B",
-                        "C"
-                      ],
-                      "correct_answer": 0
-                    },
-                    {
-                      "type": "true_false",
-                      "question": "Cette leçon aide à apprendre.",
-                      "answer": true
-                    },
-                    {
-                      "type": "fill_blank",
-                      "question": "Complète : Cette leçon parle de ______.",
-                      "answer": "Un repas d’anniversaire en famille"
-                    },
-                    {
-                      "type": "short_answer",
-                      "question": "Explique ce que tu as compris."
-                    }
-                  ],
-                  "games": [
-                    {
-                      "type": "matching",
-                      "instruction": "Associe les mots.",
-                      "pairs": [
-                        {
-                          "left": "apprendre",
-                          "right": "étudier"
-                        },
-                        {
-                          "left": "répondre",
-                          "right": "donner la réponse"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "id": "CM1_LECTURE_L6",
-                  "activities": [
-                    {
-                      "type": "multiple_choice",
-                      "question": "Quelle est la bonne réponse ?",
-                      "choices": [
-                        "A",
-                        "B",
-                        "C"
-                      ],
-                      "correct_answer": 0
-                    },
-                    {
-                      "type": "true_false",
-                      "question": "Cette leçon aide à apprendre.",
-                      "answer": true
-                    },
-                    {
-                      "type": "fill_blank",
-                      "question": "Complète : Cette leçon parle de ______.",
-                      "answer": "Un jeu dangereux"
-                    },
-                    {
-                      "type": "short_answer",
-                      "question": "Explique ce que tu as compris."
-                    }
-                  ],
-                  "games": [
-                    {
-                      "type": "matching",
-                      "instruction": "Associe les mots.",
-                      "pairs": [
-                        {
-                          "left": "apprendre",
-                          "right": "étudier"
-                        },
-                        {
-                          "left": "répondre",
-                          "right": "donner la réponse"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "id": "CM1_LECTURE_L7",
-                  "activities": [
-                    {
-                      "type": "multiple_choice",
-                      "question": "Quelle est la bonne réponse ?",
-                      "choices": [
-                        "A",
-                        "B",
-                        "C"
-                      ],
-                      "correct_answer": 0
-                    },
-                    {
-                      "type": "true_false",
-                      "question": "Cette leçon aide à apprendre.",
-                      "answer": true
-                    },
-                    {
-                      "type": "fill_blank",
-                      "question": "Complète : Cette leçon parle de ______.",
-                      "answer": "Le mariage de Sanata"
-                    },
-                    {
-                      "type": "short_answer",
-                      "question": "Explique ce que tu as compris."
-                    }
-                  ],
-                  "games": [
-                    {
-                      "type": "matching",
-                      "instruction": "Associe les mots.",
-                      "pairs": [
-                        {
-                          "left": "apprendre",
-                          "right": "étudier"
-                        },
-                        {
-                          "left": "répondre",
-                          "right": "donner la réponse"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "id": "CM1_LECTURE_L8",
-                  "activities": [
-                    {
-                      "type": "multiple_choice",
-                      "question": "Quelle est la bonne réponse ?",
-                      "choices": [
-                        "A",
-                        "B",
-                        "C"
-                      ],
-                      "correct_answer": 0
-                    },
-                    {
-                      "type": "true_false",
-                      "question": "Cette leçon aide à apprendre.",
-                      "answer": true
-                    },
-                    {
-                      "type": "fill_blank",
-                      "question": "Complète : Cette leçon parle de ______.",
-                      "answer": "La lutte en pays Samo"
-                    },
-                    {
-                      "type": "short_answer",
-                      "question": "Explique ce que tu as compris."
-                    }
-                  ],
-                  "games": [
-                    {
-                      "type": "matching",
-                      "instruction": "Associe les mots.",
-                      "pairs": [
-                        {
-                          "left": "apprendre",
-                          "right": "étudier"
-                        },
-                        {
-                          "left": "répondre",
-                          "right": "donner la réponse"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "id": "CM1_LECTURE_L9",
-                  "activities": [
-                    {
-                      "type": "multiple_choice",
-                      "question": "Quelle est la bonne réponse ?",
-                      "choices": [
-                        "A",
-                        "B",
-                        "C"
-                      ],
-                      "correct_answer": 0
-                    },
-                    {
-                      "type": "true_false",
-                      "question": "Cette leçon aide à apprendre.",
-                      "answer": true
-                    },
-                    {
-                      "type": "fill_blank",
-                      "question": "Complète : Cette leçon parle de ______.",
-                      "answer": "Moussa visite Ouagadougou"
-                    },
-                    {
-                      "type": "short_answer",
-                      "question": "Explique ce que tu as compris."
-                    }
-                  ],
-                  "games": [
-                    {
-                      "type": "matching",
-                      "instruction": "Associe les mots.",
-                      "pairs": [
-                        {
-                          "left": "apprendre",
-                          "right": "étudier"
-                        },
-                        {
-                          "left": "répondre",
-                          "right": "donner la réponse"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "id": "CM1_LECTURE_L10",
-                  "activities": [
-                    {
-                      "type": "multiple_choice",
-                      "question": "Quelle est la bonne réponse ?",
-                      "choices": [
-                        "A",
-                        "B",
-                        "C"
-                      ],
-                      "correct_answer": 0
-                    },
-                    {
-                      "type": "true_false",
-                      "question": "Cette leçon aide à apprendre.",
-                      "answer": true
-                    },
-                    {
-                      "type": "fill_blank",
-                      "question": "Complète : Cette leçon parle de ______.",
-                      "answer": "La vaccination"
-                    },
-                    {
-                      "type": "short_answer",
-                      "question": "Explique ce que tu as compris."
-                    }
-                  ],
-                  "games": [
-                    {
-                      "type": "matching",
-                      "instruction": "Associe les mots.",
-                      "pairs": [
-                        {
-                          "left": "apprendre",
-                          "right": "étudier"
-                        },
-                        {
-                          "left": "répondre",
-                          "right": "donner la réponse"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "id": "CM1_LECTURE_L11",
-                  "activities": [
-                    {
-                      "type": "multiple_choice",
-                      "question": "Quelle est la bonne réponse ?",
-                      "choices": [
-                        "A",
-                        "B",
-                        "C"
-                      ],
-                      "correct_answer": 0
-                    },
-                    {
-                      "type": "true_false",
-                      "question": "Cette leçon aide à apprendre.",
-                      "answer": true
-                    },
-                    {
-                      "type": "fill_blank",
-                      "question": "Complète : Cette leçon parle de ______.",
-                      "answer": "Le forgeron"
-                    },
-                    {
-                      "type": "short_answer",
-                      "question": "Explique ce que tu as compris."
-                    }
-                  ],
-                  "games": [
-                    {
-                      "type": "matching",
-                      "instruction": "Associe les mots.",
-                      "pairs": [
-                        {
-                          "left": "apprendre",
-                          "right": "étudier"
-                        },
-                        {
-                          "left": "répondre",
-                          "right": "donner la réponse"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "id": "CM1_LECTURE_L12",
-                  "activities": [
-                    {
-                      "type": "multiple_choice",
-                      "question": "Quelle est la bonne réponse ?",
-                      "choices": [
-                        "A",
-                        "B",
-                        "C"
-                      ],
-                      "correct_answer": 0
-                    },
-                    {
-                      "type": "true_false",
-                      "question": "Cette leçon aide à apprendre.",
-                      "answer": true
-                    },
-                    {
-                      "type": "fill_blank",
-                      "question": "Complète : Cette leçon parle de ______.",
-                      "answer": "Premier voyage en avion"
-                    },
-                    {
-                      "type": "short_answer",
-                      "question": "Explique ce que tu as compris."
-                    }
-                  ],
-                  "games": [
-                    {
-                      "type": "matching",
-                      "instruction": "Associe les mots.",
-                      "pairs": [
-                        {
-                          "left": "apprendre",
-                          "right": "étudier"
-                        },
-                        {
-                          "left": "répondre",
-                          "right": "donner la réponse"
-                        }
-                      ]
-                    }
-                  ]
-                }
+                "activities": [
+                  {
+                    "type": "multiple_choice",
+                    "question": "Que marque la rentrée des classes ?",
+                    "choices": [
+                      "Le début des vacances",
+                      "Le début de l’année scolaire",
+                      "La fin de l’école"
+                    ],
+                    "correct_answer": 1,
+                    "isAttended": false
+                  },
+                  {
+                    "type": "true_false",
+                    "question": "Le maître explique les règles de la classe.",
+                    "answer": true,
+                    "isAttended": false
+                  },
+                  {
+                    "type": "fill_blank",
+                    "question": "La rentrée marque le début de l’année ______.",
+                    "answer": "scolaire",
+                    "isAttended": false
+                  },
+                  {
+                    "type": "short_answer",
+                    "question": "Pourquoi la rentrée est-elle importante pour les élèves ?"
+                  },
+                  {
+                    "type": "matching",
+                    "question": "Associe chaque mot à son sens.",
+                    "pairs": [
+                      {
+                        "left": "rentrée",
+                        "right": "retour à l’école"
+                      },
+                      {
+                        "left": "maître",
+                        "right": "enseignant"
+                      }
+                    ],
+                    "isAttended": false
+                  }
+                ],
+                "games": [
+                  {
+                    "type": "word_match",
+                    "instruction": "Associe les mots de l’école à leur signification.",
+                    "pairs": [
+                      {
+                        "word": "école",
+                        "match": "lieu où l’on apprend"
+                      },
+                      {
+                        "word": "cahier",
+                        "match": "outil pour écrire"
+                      }
+                    ],
+                    "isAttended": false
+                  },
+                  {
+                    "type": "sequence_order",
+                    "instruction": "Remets les étapes dans le bon ordre.",
+                    "items": [
+                      "Arriver à l’école",
+                      "Entrer en classe",
+                      "Écouter le maître",
+                      "Commencer les leçons"
+                    ],
+                    "correct_order": [
+                      0,
+                      1,
+                      2,
+                      3
+                    ],
+                    "isAttended": false
+                  }
+                ]
+              }
             ]
           },
           {
@@ -10113,17 +9664,20 @@
                         "B",
                         "C"
                       ],
-                      "correct_answer": 0
+                      "correct_answer": 0,
+                      "isAttended": false
                     },
                     {
                       "type": "true_false",
                       "question": "Cette leçon aide à apprendre.",
-                      "answer": true
+                      "answer": true,
+                      "isAttended": false
                     },
                     {
                       "type": "fill_blank",
                       "question": "Complète : Cette leçon parle de ______.",
-                      "answer": "La rentrée des classes"
+                      "answer": "La rentrée des classes",
+                      "isAttended": false
                     },
                     {
                       "type": "short_answer",
@@ -10143,7 +9697,8 @@
                           "left": "répondre",
                           "right": "donner la réponse"
                         }
-                      ]
+                      ],
+                      "isAttended": false
                     }
                   ]
                 },
@@ -10158,17 +9713,20 @@
                         "B",
                         "C"
                       ],
-                      "correct_answer": 0
+                      "correct_answer": 0,
+                      "isAttended": false
                     },
                     {
                       "type": "true_false",
                       "question": "Cette leçon aide à apprendre.",
-                      "answer": true
+                      "answer": true,
+                      "isAttended": false
                     },
                     {
                       "type": "fill_blank",
                       "question": "Complète : Cette leçon parle de ______.",
-                      "answer": "L’écolier travailleur"
+                      "answer": "L’écolier travailleur",
+                      "isAttended": false
                     },
                     {
                       "type": "short_answer",
@@ -10188,7 +9746,8 @@
                           "left": "répondre",
                           "right": "donner la réponse"
                         }
-                      ]
+                      ],
+                      "isAttended": false
                     }
                   ]
                 },
@@ -10203,21 +9762,25 @@
                         "B",
                         "C"
                       ],
-                      "correct_answer": 0
+                      "correct_answer": 0,
+                      "isAttended": false
                     },
                     {
                       "type": "true_false",
                       "question": "Cette leçon aide à apprendre.",
-                      "answer": true
+                      "answer": true,
+                      "isAttended": false
                     },
                     {
                       "type": "fill_blank",
                       "question": "Complète : Cette leçon parle de ______.",
-                      "answer": "Le désespoir d’un enfant"
+                      "answer": "Le désespoir d’un enfant",
+                      "isAttended": false
                     },
                     {
                       "type": "short_answer",
-                      "question": "Explique ce que tu as compris."
+                      "question": "Explique ce que tu as compris.",
+                      "isAttended": false
                     }
                   ],
                   "games": [
@@ -10233,7 +9796,8 @@
                           "left": "répondre",
                           "right": "donner la réponse"
                         }
-                      ]
+                      ],
+                      "isAttended": false
                     }
                   ]
                 },
@@ -10248,21 +9812,25 @@
                         "B",
                         "C"
                       ],
-                      "correct_answer": 0
+                      "correct_answer": 0,
+                      "isAttended": false
                     },
                     {
                       "type": "true_false",
                       "question": "Cette leçon aide à apprendre.",
-                      "answer": true
+                      "answer": true,
+                      "isAttended": false
                     },
                     {
                       "type": "fill_blank",
                       "question": "Complète : Cette leçon parle de ______.",
-                      "answer": "L’enfance de Wangrin"
+                      "answer": "L’enfance de Wangrin",
+                      "isAttended": false
                     },
                     {
                       "type": "short_answer",
-                      "question": "Explique ce que tu as compris."
+                      "question": "Explique ce que tu as compris.",
+                      "isAttended": false
                     }
                   ],
                   "games": [
@@ -10278,7 +9846,8 @@
                           "left": "répondre",
                           "right": "donner la réponse"
                         }
-                      ]
+                      ],
+                      "isAttended": false
                     }
                   ]
                 },
@@ -10293,21 +9862,25 @@
                         "B",
                         "C"
                       ],
-                      "correct_answer": 0
+                      "correct_answer": 0,
+                      "isAttended": false
                     },
                     {
                       "type": "true_false",
                       "question": "Cette leçon aide à apprendre.",
-                      "answer": true
+                      "answer": true,
+                      "isAttended": false
                     },
                     {
                       "type": "fill_blank",
                       "question": "Complète : Cette leçon parle de ______.",
-                      "answer": "Un repas d’anniversaire en famille"
+                      "answer": "Un repas d’anniversaire en famille",
+                      "isAttended": false
                     },
                     {
                       "type": "short_answer",
-                      "question": "Explique ce que tu as compris."
+                      "question": "Explique ce que tu as compris.",
+                      "isAttended": false
                     }
                   ],
                   "games": [
@@ -10323,7 +9896,8 @@
                           "left": "répondre",
                           "right": "donner la réponse"
                         }
-                      ]
+                      ],
+                      "isAttended": false
                     }
                   ]
                 },
@@ -10338,21 +9912,25 @@
                         "B",
                         "C"
                       ],
-                      "correct_answer": 0
+                      "correct_answer": 0,
+                      "isAttended": false
                     },
                     {
                       "type": "true_false",
                       "question": "Cette leçon aide à apprendre.",
-                      "answer": true
+                      "answer": true,
+                      "isAttended": false
                     },
                     {
                       "type": "fill_blank",
                       "question": "Complète : Cette leçon parle de ______.",
-                      "answer": "Un jeu dangereux"
+                      "answer": "Un jeu dangereux",
+                      "isAttended": false
                     },
                     {
                       "type": "short_answer",
-                      "question": "Explique ce que tu as compris."
+                      "question": "Explique ce que tu as compris.",
+                      "isAttended": false
                     }
                   ],
                   "games": [
@@ -10362,11 +9940,13 @@
                       "pairs": [
                         {
                           "left": "apprendre",
-                          "right": "étudier"
+                          "right": "étudier",
+                          "isAttended": false
                         },
                         {
                           "left": "répondre",
-                          "right": "donner la réponse"
+                          "right": "donner la réponse",
+                          "isAttended": false
                         }
                       ]
                     }
@@ -10383,21 +9963,25 @@
                         "B",
                         "C"
                       ],
-                      "correct_answer": 0
+                      "correct_answer": 0,
+                      "isAttended": false
                     },
                     {
                       "type": "true_false",
                       "question": "Cette leçon aide à apprendre.",
-                      "answer": true
+                      "answer": true,
+                      "isAttended": false
                     },
                     {
                       "type": "fill_blank",
                       "question": "Complète : Cette leçon parle de ______.",
-                      "answer": "Le mariage de Sanata"
+                      "answer": "Le mariage de Sanata",
+                      "isAttended": false
                     },
                     {
                       "type": "short_answer",
-                      "question": "Explique ce que tu as compris."
+                      "question": "Explique ce que tu as compris.",
+                      "isAttended": false
                     }
                   ],
                   "games": [
@@ -10413,7 +9997,8 @@
                           "left": "répondre",
                           "right": "donner la réponse"
                         }
-                      ]
+                      ],
+                      "isAttended": false
                     }
                   ]
                 },
@@ -10428,21 +10013,25 @@
                         "B",
                         "C"
                       ],
-                      "correct_answer": 0
+                      "correct_answer": 0,
+                      "isAttended": false
                     },
                     {
                       "type": "true_false",
                       "question": "Cette leçon aide à apprendre.",
-                      "answer": true
+                      "answer": true,
+                      "isAttended": false
                     },
                     {
                       "type": "fill_blank",
                       "question": "Complète : Cette leçon parle de ______.",
-                      "answer": "La lutte en pays Samo"
+                      "answer": "La lutte en pays Samo",
+                      "isAttended": false
                     },
                     {
                       "type": "short_answer",
-                      "question": "Explique ce que tu as compris."
+                      "question": "Explique ce que tu as compris.",
+                      "isAttended": false
                     }
                   ],
                   "games": [
@@ -10458,7 +10047,8 @@
                           "left": "répondre",
                           "right": "donner la réponse"
                         }
-                      ]
+                      ],
+                      "isAttended": false
                     }
                   ]
                 },
@@ -10473,21 +10063,25 @@
                         "B",
                         "C"
                       ],
-                      "correct_answer": 0
+                      "correct_answer": 0,
+                      "isAttended": false
                     },
                     {
                       "type": "true_false",
                       "question": "Cette leçon aide à apprendre.",
-                      "answer": true
+                      "answer": true,
+                      "isAttended": false
                     },
                     {
                       "type": "fill_blank",
                       "question": "Complète : Cette leçon parle de ______.",
-                      "answer": "Moussa visite Ouagadougou"
+                      "answer": "Moussa visite Ouagadougou",
+                      "isAttended": false
                     },
                     {
                       "type": "short_answer",
-                      "question": "Explique ce que tu as compris."
+                      "question": "Explique ce que tu as compris.",
+                      "isAttended": false
                     }
                   ],
                   "games": [
@@ -10503,7 +10097,8 @@
                           "left": "répondre",
                           "right": "donner la réponse"
                         }
-                      ]
+                      ],
+                      "isAttended": false
                     }
                   ]
                 },
@@ -10518,21 +10113,25 @@
                         "B",
                         "C"
                       ],
-                      "correct_answer": 0
+                      "correct_answer": 0,
+                      "isAttended": false
                     },
                     {
                       "type": "true_false",
                       "question": "Cette leçon aide à apprendre.",
-                      "answer": true
+                      "answer": true,
+                      "isAttended": false
                     },
                     {
                       "type": "fill_blank",
                       "question": "Complète : Cette leçon parle de ______.",
-                      "answer": "La vaccination"
+                      "answer": "La vaccination",
+                      "isAttended": false
                     },
                     {
                       "type": "short_answer",
-                      "question": "Explique ce que tu as compris."
+                      "question": "Explique ce que tu as compris.",
+                      "isAttended": false
                     }
                   ],
                   "games": [
@@ -10548,7 +10147,8 @@
                           "left": "répondre",
                           "right": "donner la réponse"
                         }
-                      ]
+                      ],
+                      "isAttended": false
                     }
                   ]
                 },
@@ -10563,21 +10163,25 @@
                         "B",
                         "C"
                       ],
-                      "correct_answer": 0
+                      "correct_answer": 0,
+                      "isAttended": false
                     },
                     {
                       "type": "true_false",
                       "question": "Cette leçon aide à apprendre.",
-                      "answer": true
+                      "answer": true,
+                      "isAttended": false
                     },
                     {
                       "type": "fill_blank",
                       "question": "Complète : Cette leçon parle de ______.",
-                      "answer": "Le forgeron"
+                      "answer": "Le forgeron",
+                      "isAttended": false
                     },
                     {
                       "type": "short_answer",
-                      "question": "Explique ce que tu as compris."
+                      "question": "Explique ce que tu as compris.",
+                      "isAttended": false
                     }
                   ],
                   "games": [
@@ -10593,7 +10197,8 @@
                           "left": "répondre",
                           "right": "donner la réponse"
                         }
-                      ]
+                      ],
+                      "isAttended": false
                     }
                   ]
                 },
@@ -10608,21 +10213,25 @@
                         "B",
                         "C"
                       ],
-                      "correct_answer": 0
+                      "correct_answer": 0,
+                      "isAttended": false
                     },
                     {
                       "type": "true_false",
                       "question": "Cette leçon aide à apprendre.",
-                      "answer": true
+                      "answer": true,
+                      "isAttended": false
                     },
                     {
                       "type": "fill_blank",
                       "question": "Complète : Cette leçon parle de ______.",
-                      "answer": "Premier voyage en avion"
+                      "answer": "Premier voyage en avion",
+                      "isAttended": false
                     },
                     {
                       "type": "short_answer",
-                      "question": "Explique ce que tu as compris."
+                      "question": "Explique ce que tu as compris.",
+                      "isAttended": false
                     }
                   ],
                   "games": [
@@ -10638,7 +10247,8 @@
                           "left": "répondre",
                           "right": "donner la réponse"
                         }
-                      ]
+                      ],
+                      "isAttended": false
                     }
                   ]
                 }
@@ -10658,21 +10268,25 @@
                         "B",
                         "C"
                       ],
-                      "correct_answer": 0
+                      "correct_answer": 0,
+                      "isAttended": false
                     },
                     {
                       "type": "true_false",
                       "question": "Cette leçon aide à apprendre.",
-                      "answer": true
+                      "answer": true,
+                      "isAttended": false
                     },
                     {
                       "type": "fill_blank",
                       "question": "Complète : Cette leçon parle de ______.",
-                      "answer": "La rentrée des classes"
+                      "answer": "La rentrée des classes",
+                      "isAttended": false
                     },
                     {
                       "type": "short_answer",
-                      "question": "Explique ce que tu as compris."
+                      "question": "Explique ce que tu as compris.",
+                      "isAttended": false
                     }
                   ],
                   "games": [
@@ -10688,7 +10302,8 @@
                           "left": "répondre",
                           "right": "donner la réponse"
                         }
-                      ]
+                      ],
+                      "isAttended": false
                     }
                   ]
                 },
@@ -10703,21 +10318,25 @@
                         "B",
                         "C"
                       ],
-                      "correct_answer": 0
+                      "correct_answer": 0,
+                      "isAttended": false
                     },
                     {
                       "type": "true_false",
                       "question": "Cette leçon aide à apprendre.",
-                      "answer": true
+                      "answer": true,
+                      "isAttended": false
                     },
                     {
                       "type": "fill_blank",
                       "question": "Complète : Cette leçon parle de ______.",
-                      "answer": "L’écolier travailleur"
+                      "answer": "L’écolier travailleur",
+                      "isAttended": false
                     },
                     {
                       "type": "short_answer",
-                      "question": "Explique ce que tu as compris."
+                      "question": "Explique ce que tu as compris.",
+                      "isAttended": false
                     }
                   ],
                   "games": [
@@ -10733,7 +10352,8 @@
                           "left": "répondre",
                           "right": "donner la réponse"
                         }
-                      ]
+                      ],
+                      "isAttended": false
                     }
                   ]
                 },
@@ -10748,7 +10368,8 @@
                         "B",
                         "C"
                       ],
-                      "correct_answer": 0
+                      "correct_answer": 0,
+                      "isAttended": false
                     },
                     {
                       "type": "true_false",

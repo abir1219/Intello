@@ -11,7 +11,7 @@ class LessonModel extends Lesson {
 
   factory LessonModel.fromJson(Map<String, dynamic> json) {
     return LessonModel(
-      lessonId: json['lessonId'],
+      lessonId: json['id'],
       activities: (json['activities'] as List)
           .map((e) => ActivityModel.fromJson(e))
           .toList(),

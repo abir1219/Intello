@@ -22,13 +22,14 @@ class _LessonContentWidgetState extends State<LessonContentWidget> {
   @override
   Widget build(BuildContext context) {
     final hasLirePlus = widget.lirePlus?.enabled ?? false;
+    debugPrint("isExpanded-->$isExpanded}");
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         /// ✅ CONTENT
         Text(
-          isExpanded && hasLirePlus
+          isExpanded //&& hasLirePlus
               ? '${widget.content ?? ''}\n\n${widget.lirePlus?.extendedContent ?? ''}'
               : (widget.content ?? ''),
           maxLines: isExpanded ? null : 3,
@@ -39,7 +40,7 @@ class _LessonContentWidgetState extends State<LessonContentWidget> {
         const SizedBox(height: 4),
 
         /// ✅ BUTTON (only if extra content exists)
-        if (hasLirePlus)
+        // if (hasLirePlus)
           GestureDetector(
             onTap: () {
               setState(() {

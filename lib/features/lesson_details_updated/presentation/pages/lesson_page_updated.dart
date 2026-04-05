@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:intello_new/features/lesson_details/presentation/bloc/lesson_content_bloc.dart';
-import 'package:intello_new/features/lesson_details/widgets/lesson_content_widget.dart';
-import 'package:intello_new/features/lessons/domain/entities/lesson.dart';
+import 'package:intello_new/features/lesson_details_updated/presentation/bloc/learning_bloc.dart';
 
 import '../../../../core/audio/audio_player_service.dart';
 import '../../../../core/constants/app_assets.dart';
@@ -14,9 +12,11 @@ import '../../../../core/utils/app_dimenstion.dart';
 import '../../../../core/utils/responsive.dart';
 import '../../../../routes/app_pages.dart';
 import '../../../account/presentation/widget/listen_button.dart';
-import '../../widgets/customCard.dart';
+import '../../../lesson_details/widgets/customCard.dart';
+import '../../../lesson_details/widgets/lesson_content_widget.dart';
+import '../../../lessons/domain/entities/lesson.dart';
 
-class LessonDetails extends StatefulWidget {
+class LessonDetailsUpdate extends StatefulWidget {
   final String subject;
   final String level;
   final String levelName;
@@ -25,7 +25,7 @@ class LessonDetails extends StatefulWidget {
   final bool isMore;
   final LirePlus? lirePlus;
 
-  const LessonDetails({
+  const LessonDetailsUpdate({
     super.key,
     required this.subject,
     required this.level,
@@ -37,10 +37,10 @@ class LessonDetails extends StatefulWidget {
   });
 
   @override
-  State<LessonDetails> createState() => _LessonDetailsState();
+  State<LessonDetailsUpdate> createState() => _LessonDetailsUpdateState();
 }
 
-class _LessonDetailsState extends State<LessonDetails> {
+class _LessonDetailsUpdateState extends State<LessonDetailsUpdate> {
   final int _currentIndex = 0; // profile index
   int selectedIndex = 0;
   late final audioService;
@@ -48,7 +48,7 @@ class _LessonDetailsState extends State<LessonDetails> {
   @override
   void initState() {
     audioService = AudioPlayerService();
-    context.read<LessonContentBloc>().add(
+    context.read<LearningBloc>().add(
       LoadLessonEvent(
         levelId: widget.level,
         subjectId: widget.subject,
@@ -58,6 +58,20 @@ class _LessonDetailsState extends State<LessonDetails> {
     );
     super.initState();
   }
+
+  final Map<String, String> _activityRouteMap = {
+    "multiple_choice": AppPages.EXAMPLE_DETAILS_SCREEN,
+    "true_false": AppPages.EXAMPLE_DETAILS_SCREEN,
+    "fill_blank": AppPages.EXAMPLE_DETAILS_SCREEN,
+    "short_answer": AppPages.EXAMPLE_DETAILS_SCREEN,
+  };
+
+  final Map<String, String> _gameRouteMap = {
+    "matching": AppPages.EXAMPLE_DETAILS_SCREEN,
+    "memory_match": AppPages.EXAMPLE_DETAILS_SCREEN,
+    "sorting": AppPages.EXAMPLE_DETAILS_SCREEN,
+    "scenario_choice": AppPages.EXAMPLE_DETAILS_SCREEN,
+  };
 
   @override
   void dispose() {
@@ -87,7 +101,6 @@ class _LessonDetailsState extends State<LessonDetails> {
 
   @override
   Widget build(BuildContext context) {
-    Responsive.isTablet(context);
     final height = AppDimensions.getResponsiveHeight(context);
     final width = AppDimensions.getResponsiveWidth(context);
     final isLandscape = Responsive.isLandscape(context);
@@ -104,7 +117,7 @@ class _LessonDetailsState extends State<LessonDetails> {
         },
         child: SafeArea(
           child: OrientationBuilder(
-            builder: (context, orientation) {
+            builder: (BuildContext context, Orientation orientation) {
               return Stack(
                 fit: StackFit.expand,
                 children: [
@@ -122,14 +135,6 @@ class _LessonDetailsState extends State<LessonDetails> {
                         SizedBox(
                           height: isLandscape ? height * 0.03 : height * 0.03,
                         ),
-                        /*SizedBox(
-                          height: isLandscape ? height * 0.05 : height * 0.05,
-                          width: isLandscape ? width * 0.19 : width * 0.18,
-                          child: SvgPicture.asset(
-                            AppAssets.logo_text,
-                            fit: BoxFit.fill,
-                          ),
-                        ),*/
                         Stack(
                           children: [
                             Positioned(top: 0, left: 0, child: BackButton()),
@@ -174,14 +179,14 @@ class _LessonDetailsState extends State<LessonDetails> {
                           ),
                         ),
                         const SizedBox(height: 40),
-                        BlocBuilder<LessonContentBloc, LessonContentState>(
+                        BlocBuilder<LearningBloc, LearningState>(
                           builder: (context, state) {
-                            if (state is LessonLoading) {
+                            if (state is LearningLoading) {
                               return const Center(
                                 child: CircularProgressIndicator(),
                               );
                             }
-                            if (state is LessonLoaded) {
+                            if (state is LearningLoaded) {
                               return SingleChildScrollView(
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -200,32 +205,6 @@ class _LessonDetailsState extends State<LessonDetails> {
                                             content: widget.content,
                                             lirePlus: widget.lirePlus,
                                           )
-                                        /*ReadMoreText(
-                                            widget.content,
-                                            // ✅ prevent null crash
-                                            trimMode: TrimMode.Line,
-                                            // ✅ better for paragraphs
-                                            trimLines: 3,
-                                            trimCollapsedText: ' Lire plus',
-                                            trimExpandedText: ' Lire moins',
-                                            colorClickableText: Colors.pink,
-                                            style: const TextStyle(
-                                              fontSize: 14,
-                                              height: 1.5,
-                                            ),
-                                            // ✅ base text style
-                                            moreStyle: const TextStyle(
-                                              fontSize: 14,
-                                              fontWeight: FontWeight.bold,
-                                              color: Colors.pink,
-                                            ),
-                                            lessStyle: const TextStyle(
-                                              // ✅ add this
-                                              fontSize: 14,
-                                              fontWeight: FontWeight.bold,
-                                              color: Colors.pink,
-                                            ),
-                                          )*/
                                         : Text(
                                             widget.content,
                                             //"Apprenez les bases grâce à des leçons et activités simples, conçues pour faciliter la compréhension et encourager la pratique.",
@@ -235,23 +214,51 @@ class _LessonDetailsState extends State<LessonDetails> {
                                             ),
                                           ),
                                     const SizedBox(height: 30),
-                                
                                     _buildContainer(
                                       levelName: widget.level,
                                       state: state,
-                                      onTap: () {
-                                        context.pushReplacement(
-                                          AppPages.EXAMPLE_DETAILS_SCREEN,
-                                          extra: {
-                                            "subject": widget.subject,
-                                            "level": widget.level,
-                                            "levelName": widget.levelName,
-                                            "lessonId": widget.lessonId,
-                                            "exercise": state.lesson.exercise,
-                                          },
+                                      onTap: (int position) {
+                                        handleLessonNavigation(
+                                          context: context,
+                                          state: state,
+                                          position: position,
+                                          subject: widget.subject,
+                                          level: widget.level,
+                                          levelName: widget.levelName,
+                                          lessonId: widget.lessonId,
                                         );
                                       },
                                     ),
+                                    /*_buildContainer(
+                                      levelName: widget.level,
+                                      state: state,
+                                      onTap: (int position) {
+                                        if(position == 0){
+                                          debugPrint("Click---->${state.lessons.activities.runtimeType}: ${state.lessons.activities.length}");
+
+                                        }else if(position == 1){
+                                          debugPrint("Click---->Lecture");
+                                        }else if(position == 2){
+                                          debugPrint("Click---->${state.lessons.games.runtimeType}");
+                                        }
+
+                                        // if(state.lesson.exercise)
+                                        */
+                                    /*if(state.activity[0].type.toLowerCase() == "multiple_choice") {
+                                          context.pushReplacement(
+                                            AppPages.EXAMPLE_DETAILS_SCREEN,
+                                            extra: {
+                                              "subject": widget.subject,
+                                              "level": widget.level,
+                                              "levelName": widget.levelName,
+                                              "lessonId": widget.lessonId,
+                                              //"exercise": state.lesson.exercise,
+                                            },
+                                          );
+                                        }*/
+                                    /*
+                                      },
+                                    ),*/
                                   ],
                                 ),
                               );
@@ -283,18 +290,18 @@ class _LessonDetailsState extends State<LessonDetails> {
 
   Widget _buildContainer({
     required String levelName,
-    required LessonLoaded state,
-    required void Function()? onTap,
+    required LearningLoaded state,
+    required void Function(int position)? onTap,
   }) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            // Cards
-            CustomCard(
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          // Cards
+          GestureDetector(
+            onTap: () => onTap?.call(0),
+            child: CustomCard(
               icon: AppAssets.exercise_image,
               title: "Exercices/Devoirs",
               subtitle:
@@ -302,8 +309,11 @@ class _LessonDetailsState extends State<LessonDetails> {
               progress: state.exercisePercentage,
               progressColor: AppColors.greenColor,
             ),
-            const SizedBox(height: 20),
-            CustomCard(
+          ),
+          const SizedBox(height: 20),
+          GestureDetector(
+            onTap: () => onTap?.call(1),
+            child: CustomCard(
               icon: AppAssets.lecture_image,
               title: "Lecture",
               subtitle:
@@ -311,8 +321,11 @@ class _LessonDetailsState extends State<LessonDetails> {
               progress: state.exercisePercentage,
               progressColor: AppColors.blueColor,
             ),
-            const SizedBox(height: 20),
-            CustomCard(
+          ),
+          const SizedBox(height: 20),
+          GestureDetector(
+            onTap: () => onTap?.call(2),
+            child: CustomCard(
               icon: AppAssets.game_image,
               title: "Jeux éducatifs",
               subtitle:
@@ -321,9 +334,154 @@ class _LessonDetailsState extends State<LessonDetails> {
               //1.0,
               progressColor: AppColors.CLOSE_COLOR,
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
+  }
+
+  void handleLessonNavigation({
+    required BuildContext context,
+    required LearningLoaded state,
+    required int position,
+    required String subject,
+    required String level,
+    required String levelName,
+    required String lessonId,
+  }) {
+    switch (position) {
+      case 0:
+        _handleActivities(context, state, subject, level, levelName, lessonId);
+        break;
+
+      case 1:
+        _handleLecture(context, state, subject, level, levelName, lessonId);
+        break;
+
+      case 2:
+        _handleGames(context, state, subject, level, levelName, lessonId);
+        break;
+
+      default:
+        debugPrint("Invalid position");
+    }
+  }
+
+  /*void _handleActivities(
+    BuildContext context,
+    LearningLoaded state,
+    String subject,
+    String level,
+    String levelName,
+    String lessonId,
+  ) {
+    final activities = state.lessons.activities;
+
+    if (activities.isEmpty) {
+      debugPrint("No activities found");
+      return;
+    }
+
+    final firstType = activities.first.type;
+
+    final route = _activityRouteMap[firstType];
+
+    if (route != null) {
+      context.push(
+        route,
+        extra: {
+          "data": activities,
+          "subject": subject,
+          "level": level,
+          "levelName": levelName,
+          "lessonId": lessonId,
+        },
+      );
+    } else {
+      debugPrint("Unsupported activity type: $firstType");
+    }
+  }*/
+
+  void _handleActivities(
+      BuildContext context,
+      LearningLoaded state,
+      String subject,
+      String level,
+      String levelName,
+      String lessonId,
+      ) {
+    final activities = state.lessons.activities;
+
+    if (activities.isEmpty) return;
+
+    context.push(
+      AppPages.ACTIVITY_FLOW_SCREEN, // ✅ single screen
+      extra: {
+        "activities": activities,
+        "subject": subject,
+        "level": level,
+        "levelName": levelName,
+        "lessonId": lessonId,
+      },
+    );
+  }
+
+  void _handleLecture(
+    BuildContext context,
+    LearningLoaded state,
+    String subject,
+    String level,
+    String levelName,
+    String lessonId,
+  ) {
+    debugPrint("Handling Lecture");
+    /*final lecture = state.lessons.lecture;
+
+    context.push(
+      AppPages.PDF_VIEWER_SCREEN,
+      extra: {
+        "title": lecture.pdfTitle,
+        "url": lecture.pdfUrl,
+        "subject": subject,
+        "level": level,
+        "levelName": levelName,
+        "lessonId": lessonId,
+      },
+    );*/
+  }
+
+  void _handleGames(
+    BuildContext context,
+    LearningLoaded state,
+    String subject,
+    String level,
+    String levelName,
+    String lessonId,
+  ) {
+    final games = state.lessons.games;
+
+    if (games.isEmpty) {
+      debugPrint("No games found");
+      return;
+    }
+
+    final firstType = games.first.type;
+
+    final route = _gameRouteMap[firstType];
+
+    if (route != null) {
+      context.push(
+        route,
+        extra: {
+          "data": games,
+          "subject": subject,
+          "level": level,
+          "levelName": levelName,
+          "lessonId": lessonId,
+        },
+      );
+    } else {
+      debugPrint("Unsupported game type: $firstType");
+    }
   }
 }

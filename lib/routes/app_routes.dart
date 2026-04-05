@@ -7,8 +7,7 @@ import 'package:intello_new/features/auth/presentation/pages/phone_validation.da
 import 'package:intello_new/features/auth/presentation/pages/signup_page.dart';
 import 'package:intello_new/features/exercise/presentation/pages/example_details.dart';
 import 'package:intello_new/features/lesson_details/domain/entity/exercise.dart';
-import 'package:intello_new/features/lesson_details/domain/entity/lesson_content.dart';
-import 'package:intello_new/features/lesson_details/presentation/pages/lesson_details.dart';
+// import 'package:intello_new/features/lesson_details_updated/presentation/pages/lesson_details.dart';
 import 'package:intello_new/features/lessons/presentation/pages/lesson_screen.dart';
 import 'package:intello_new/features/level/presentation/pages/level_screen.dart';
 import 'package:intello_new/features/onboarding/presentation/pages/onboarding_page.dart';
@@ -16,6 +15,7 @@ import 'package:intello_new/features/settings/page/change_password_page.dart';
 import 'package:intello_new/features/subject/presentation/pages/subject_screen.dart';
 import 'package:intello_new/routes/app_pages.dart';
 
+import '../features/lesson_details_updated/presentation/pages/lesson_page_updated.dart';
 import '../features/splash/presentation/pages/splash_screen.dart';
 
 class AppRouters {
@@ -89,7 +89,8 @@ class AppRouters {
           print("LirePlue-->${data['lirePlus']}");
 
           return _defaultTransitionPage(
-            child: LessonDetails(
+            // child: LessonDetails(
+            child: LessonDetailsUpdate(
               subject: data['subjectId'] as String,
               level: data['levelCode'] as String,
               levelName: data['levelName'],

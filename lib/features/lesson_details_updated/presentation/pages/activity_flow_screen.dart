@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:intello_new/features/lesson_details_updated/data/models/activity_model.dart' show ActivityModel;
 
+import '../widgets/multiple_choice_widget.dart';
+
 class ActivityFlowScreen extends StatefulWidget {
   final List<ActivityModel> activities;
 
@@ -37,28 +39,28 @@ class _ActivityFlowScreenState extends State<ActivityFlowScreen> {
   Widget _buildActivityWidget(ActivityModel activity) {
     switch (activity.type) {
       case "multiple_choice":
-        return Container();
-          /*MultipleChoiceWidget(
+        return //Center(child: Text("Multiple Choice"),);
+          MultipleChoiceWidget(
           data: activity,
           onNext: next,
-        );*/
+        );
 
       case "true_false":
-        return Container();
+        return Center(child: Text("True False"),);
           /*TrueFalseWidget(
           data: activity,
           onNext: next,
         );*/
 
       case "fill_blank":
-        return Container();
+        return Center(child: Text("Fill blanks"),);
         /*FillBlankWidget(
           data: activity,
           onNext: next,
         );*/
 
       case "short_answer":
-        return Container();
+        return Center(child: Text("Short Answer"),);
         /*ShortAnswerWidget(
           data: activity,
           onNext: next,

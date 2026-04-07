@@ -7,6 +7,8 @@ import 'package:intello_new/features/auth/presentation/pages/phone_validation.da
 import 'package:intello_new/features/auth/presentation/pages/signup_page.dart';
 import 'package:intello_new/features/exercise/presentation/pages/example_details.dart';
 import 'package:intello_new/features/lesson_details/domain/entity/exercise.dart';
+import 'package:intello_new/features/lesson_details_updated/data/models/activity_model.dart' show ActivityModel;
+import 'package:intello_new/features/lesson_details_updated/presentation/pages/activity_flow_screen.dart';
 // import 'package:intello_new/features/lesson_details_updated/presentation/pages/lesson_details.dart';
 import 'package:intello_new/features/lessons/presentation/pages/lesson_screen.dart';
 import 'package:intello_new/features/level/presentation/pages/level_screen.dart';
@@ -135,9 +137,22 @@ class AppRouters {
           );
         },
       ),
+      GoRoute(
+        path: AppPages.ACTIVITY_FLOW_SCREEN,
+        pageBuilder: (context, state) {
+          final extra = state.extra as Map<String, dynamic>;
+
+          return _defaultTransitionPage(
+            key: state.pageKey,
+            child: ActivityFlowScreen(
+              activities: extra["activities"] as List<ActivityModel>,
+            ),
+          );
+        },
+      ),
     ],
   );
-
+//ACTIVITY_FLOW_SCREEN
   GoRouter get routers => _router;
 
   static CustomTransitionPage _defaultTransitionPage({

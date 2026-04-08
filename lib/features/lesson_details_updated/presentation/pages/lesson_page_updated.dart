@@ -435,19 +435,18 @@ class _LessonDetailsUpdateState extends State<LessonDetailsUpdate> {
     String lessonId,
   ) {
     debugPrint("Handling Lecture");
-    /*final lecture = state.lessons.lecture;
+    final lecture = state.lessons.lecture.first.pdf;
+
+    if (lecture.isEmpty) return;
 
     context.push(
-      AppPages.PDF_VIEWER_SCREEN,
+      AppPages.LECTURE_SCREEN,
       extra: {
-        "title": lecture.pdfTitle,
-        "url": lecture.pdfUrl,
+        "pdf": lecture,
         "subject": subject,
-        "level": level,
-        "levelName": levelName,
-        "lessonId": lessonId,
+        "level": level
       },
-    );*/
+    );
   }
 
   void _handleGames(

@@ -47,6 +47,8 @@ dependencies:
   image_picker: ^1.2.1
   audioplayers: ^6.6.0
   readmore: ^3.0.0
+  syncfusion_flutter_pdfviewer: ^33.1.47
+
 
 dev_dependencies:
   flutter_test:
@@ -81,6 +83,7 @@ flutter:
   - assets/images/level/
   - assets/json/
   - assets/audio/
+  - assets/pdf/
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

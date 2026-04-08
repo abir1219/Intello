@@ -9613,6 +9613,11 @@
                     "isAttended": false
                   }
                 ],
+                "lectures": [
+                  {
+                    "pdf_url" : "assets/pdf/sample.pdf"
+                  }
+                ],
                 "games": [
                   {
                     "type": "word_match",

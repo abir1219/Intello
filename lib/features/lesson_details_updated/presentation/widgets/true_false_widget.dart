@@ -1,25 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:go_router/go_router.dart';
-import 'package:intello_new/features/lesson_details_updated/data/models/activity_model.dart';
 
-import '../../../../core/audio/audio_player_service.dart';
 import '../../../../core/constants/app_assets.dart';
 import '../../../../core/constants/app_colors.dart';
-import '../../../../core/navigation/custom_bottom_nav_bar.dart';
 import '../../../../core/utils/app_dimenstion.dart';
 import '../../../../core/utils/responsive.dart';
-import '../../../../routes/app_pages.dart';
-import '../../../account/presentation/widget/listen_button.dart';
-import '../../../exercise/presentation/widgets/primary_button.dart';
+import '../../../account/presentation/widget/primary_button.dart';
+import '../../data/models/activity_model.dart';
 
-class MultipleChoiceWidget extends StatefulWidget {
+class TrueFalseWidget extends StatefulWidget {
   final ActivityModel data;
   final VoidCallback onNext;
   final VoidCallback onPrevious;
   final bool isLast;
 
-  const MultipleChoiceWidget({
+  const TrueFalseWidget({
     super.key,
     required this.data,
     required this.onNext,
@@ -27,19 +22,24 @@ class MultipleChoiceWidget extends StatefulWidget {
   });
 
   @override
-  State<MultipleChoiceWidget> createState() => _MultipleChoiceWidgetState();
+  State<TrueFalseWidget> createState() => _TrueFalseWidgetState();
 }
 
-class _MultipleChoiceWidgetState extends State<MultipleChoiceWidget> {
-  int? selectedIndex;
+class _TrueFalseWidgetState extends State<TrueFalseWidget> {
+  bool? selectedAnswer; // user selection
+  bool correctAnswer = false;
   bool showResult = false;
+  String question = "";
+
+  @override
+  void initState() {
+    super.initState();
+    question = widget.data.question ?? "";
+    correctAnswer = widget.data.answer ?? true; // must be bool
+  }
 
   @override
   Widget build(BuildContext context) {
-    final question = widget.data.question;
-    final choices = widget.data.choices ?? [];
-    final correctIndex = widget.data.answer ?? -1;
-
     final height = AppDimensions.getResponsiveHeight(context);
     final width = AppDimensions.getResponsiveWidth(context);
     final isLandscape = Responsive.isLandscape(context);
@@ -78,91 +78,53 @@ class _MultipleChoiceWidgetState extends State<MultipleChoiceWidget> {
           ),
           const SizedBox(height: 20),
 
-          /// 🔹 Question
+          /// QUESTION
           Text(
             "Q. $question",
-            style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+            style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
           ),
 
           const SizedBox(height: 20),
 
-          /// 🔹 Options
-          ...List.generate(choices.length, (index) {
-            final isSelected = selectedIndex == index;
-
-            return GestureDetector(
-              onTap: () {
-                if (showResult) return;
-
-                setState(() {
-                  selectedIndex = index;
-                  showResult = true;
-                });
-              },
-              child: Container(
-                margin: const EdgeInsets.symmetric(vertical: 6),
-                padding: const EdgeInsets.all(14),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12),
-                  border: Border.all(
-                    color: isSelected ? Colors.blue : Colors.grey.shade300,
-                  ),
-                ),
-                child: Row(
-                  children: [
-                    isSelected
-                        ? SvgPicture.asset(AppAssets.selected_image)
-                        : Icon(
-                            //Icons.radio_button_checked:
-                            Icons.radio_button_off,
-                            color: isSelected ? Colors.blue : Colors.grey,
-                          ),
-                    const SizedBox(width: 10),
-                    Expanded(
-                      child: Text(
-                        choices[index],
-                        style: const TextStyle(fontSize: 16),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            );
-          }),
+          /// OPTIONS
+          Column(
+            children: [
+              _optionTile("true", true),
+              // const SizedBox(height: 4),
+              _optionTile("false", false),
+            ],
+          ),
 
           const SizedBox(height: 20),
 
-          /// 🔹 Result Section
+          /// RESULT
           if (showResult) ...[
-            //Text("${selectedIndex == correctIndex}"),
             Text(
-              "Résultat 👉 “${choices[correctIndex]}”",
-              style: const TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
-                color: AppColors.textColor,
-              ),
+              "Résultat 👉 “${correctAnswer ? "true" : "false"}”",
+              style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
             ),
 
             const SizedBox(height: 10),
+
             Center(
               child: Column(
                 children: [
                   Text(
-                    selectedIndex == correctIndex
+                    selectedAnswer == correctAnswer
                         ? "Bravo ! Vous avez bien répondu à votre question."
                         : "Oups ! Ce n'est pas correct.",
                     textAlign: TextAlign.center,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w600,
-                      color: AppColors.textColor,
                     ),
                   ),
-                  SizedBox(height: 10),
-                  selectedIndex == correctIndex
+
+                  const SizedBox(height: 10),
+
+                  selectedAnswer == correctAnswer
                       ? SvgPicture.asset(AppAssets.correct_image)
-                      : Icon(Icons.close, size: 100, color: Colors.red),
+                      : const Icon(Icons.close, size: 100, color: Colors.red),
                 ],
               ),
             ),
@@ -170,8 +132,7 @@ class _MultipleChoiceWidgetState extends State<MultipleChoiceWidget> {
 
           const Spacer(),
 
-          /// 🔹 Next Button
-          //if (showResult)
+          /// NEXT BUTTON
           Center(
             child: PrimaryButton(
               title: "Question suivante",
@@ -181,7 +142,7 @@ class _MultipleChoiceWidgetState extends State<MultipleChoiceWidget> {
 
           const SizedBox(height: 10),
 
-          /// 🔹 Ignore
+          /// IGNORE
           if(!widget.isLast)
             Center(
               child: GestureDetector(
@@ -196,6 +157,45 @@ class _MultipleChoiceWidgetState extends State<MultipleChoiceWidget> {
               ),
             ),
         ],
+      ),
+    );
+  }
+
+  Widget _optionTile(String text, bool value) {
+    final isSelected = selectedAnswer == value;
+
+    return GestureDetector(
+      onTap: () {
+        if (showResult) return;
+
+        setState(() {
+          selectedAnswer = value;
+          showResult = true;
+        });
+      },
+      child: Container(
+        margin: const EdgeInsets.symmetric(vertical: 6),
+        padding: const EdgeInsets.all(14),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(12),
+          border: Border.all(
+            color: isSelected ? Colors.blue : Colors.grey.shade300,
+            width: 1.5,
+          ),
+        ),
+        child: Row(
+          children: [
+            isSelected
+                ? SvgPicture.asset(AppAssets.selected_image)
+                : const Icon(Icons.radio_button_off, color: Colors.grey),
+
+            const SizedBox(width: 10),
+
+            Expanded(
+              child: Text('"$text"', style: const TextStyle(fontSize: 16)),
+            ),
+          ],
+        ),
       ),
     );
   }

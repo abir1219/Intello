@@ -5,16 +5,38 @@ class Activity extends Equatable {
   final String question;
   final List<String>? choices;
   final dynamic answer;
-  final dynamic isAttended;
+  final bool isAttended;
+  final List<MatchPair>? pairs;
 
   const Activity({
     required this.type,
     required this.question,
     this.choices,
     this.answer,
-    this.isAttended,
+    required this.isAttended,
+    this.pairs,
   });
 
   @override
-  List<Object?> get props => [type, question, choices, answer,isAttended];
+  List<Object?> get props => [
+    type,
+    question,
+    choices,
+    answer,
+    isAttended,
+    pairs,
+  ];
+}
+
+class MatchPair extends Equatable {
+  final String left;
+  final String right;
+
+  const MatchPair({
+    required this.left,
+    required this.right,
+  });
+
+  @override
+  List<Object?> get props => [left, right];
 }

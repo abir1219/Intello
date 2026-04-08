@@ -9,6 +9,7 @@ import 'package:intello_new/features/exercise/presentation/pages/example_details
 import 'package:intello_new/features/lesson_details/domain/entity/exercise.dart';
 import 'package:intello_new/features/lesson_details_updated/data/models/activity_model.dart' show ActivityModel;
 import 'package:intello_new/features/lesson_details_updated/presentation/pages/activity_flow_screen.dart';
+import 'package:intello_new/features/lesson_details_updated/presentation/pages/lecture_page.dart';
 // import 'package:intello_new/features/lesson_details_updated/presentation/pages/lesson_details.dart';
 import 'package:intello_new/features/lessons/presentation/pages/lesson_screen.dart';
 import 'package:intello_new/features/level/presentation/pages/level_screen.dart';
@@ -150,9 +151,24 @@ class AppRouters {
           );
         },
       ),
+      GoRoute(
+        path: AppPages.LECTURE_SCREEN,
+        pageBuilder: (context, state) {
+          final data = state.extra as Map<String, dynamic>;
+          debugPrint("Data-->${data}");
+
+          return _defaultTransitionPage(
+            key: state.pageKey,
+            child: LecturePage(pdfPath: data['pdf'] as String,
+              subject: data['subject'] as String,
+              level: data['level'] as String,
+            ),
+          );
+        },
+      ),
     ],
   );
-//ACTIVITY_FLOW_SCREEN
+//LECTURE_SCREEN
   GoRouter get routers => _router;
 
   static CustomTransitionPage _defaultTransitionPage({

@@ -1,18 +1,21 @@
 import 'package:equatable/equatable.dart';
+import '../../../lesson_details_updated/domain/entities/lecture.dart';
 import 'activity.dart';
 import 'game.dart';
 
 class Lesson extends Equatable {
   final String lessonId;
   final List<Activity> activities;
+  final List<Lecture> lecture;
   final List<Game> games;
 
   const Lesson({
     required this.lessonId,
     required this.activities,
     required this.games,
+    required this.lecture,
   });
 
   @override
-  List<Object?> get props => [lessonId, activities, games];
+  List<Object?> get props => [lessonId, activities, games, lecture];
 }

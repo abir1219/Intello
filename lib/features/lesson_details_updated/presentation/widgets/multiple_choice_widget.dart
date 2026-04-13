@@ -46,11 +46,12 @@ class _MultipleChoiceWidgetState extends State<MultipleChoiceWidget> {
 
     return ConstrainedBox(
       constraints: BoxConstraints(
-        maxHeight: isLandscape ? height * 0.8 : height * 0.5,
+        maxHeight: isLandscape ? height * 0.8 : height * 0.52,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+
           /// 🔹 Header
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -59,8 +60,9 @@ class _MultipleChoiceWidgetState extends State<MultipleChoiceWidget> {
                 onTap: widget.onPrevious,
                 child: Text(
                   "Précédente",
-                  style: TextStyle(fontSize: 16, decoration: TextDecoration.underline,
-                      fontWeight: FontWeight.bold,color: Colors.black),
+                  style: TextStyle(
+                      fontSize: 16, decoration: TextDecoration.underline,
+                      fontWeight: FontWeight.bold, color: Colors.black),
                 ),
               ),
               GestureDetector(
@@ -79,9 +81,47 @@ class _MultipleChoiceWidgetState extends State<MultipleChoiceWidget> {
           const SizedBox(height: 20),
 
           /// 🔹 Question
-          Text(
+          /*Text(
             "Q. $question",
             style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+          ),*/
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                "Q. ${widget.data.question}",
+                style: const TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              if(selectedIndex != null)
+                GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      selectedIndex = null;
+                      showResult = false;
+                    });
+                  },
+                  child: Container(
+                    width: MediaQuery.sizeOf(context).width * 0.2,
+                    padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8),
+                        color: AppColors.greenColor
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Icon(Icons.refresh, color: AppColors.whiteColor,),
+                        Text("Réessayer", style: TextStyle(
+                            color: AppColors.whiteColor,
+                            fontWeight: FontWeight.w500),)
+                      ],
+                    ),
+                  ),
+                ),
+            ],
           ),
 
           const SizedBox(height: 20),
@@ -113,10 +153,10 @@ class _MultipleChoiceWidgetState extends State<MultipleChoiceWidget> {
                     isSelected
                         ? SvgPicture.asset(AppAssets.selected_image)
                         : Icon(
-                            //Icons.radio_button_checked:
-                            Icons.radio_button_off,
-                            color: isSelected ? Colors.blue : Colors.grey,
-                          ),
+                      //Icons.radio_button_checked:
+                      Icons.radio_button_off,
+                      color: isSelected ? Colors.blue : Colors.grey,
+                    ),
                     const SizedBox(width: 10),
                     Expanded(
                       child: Text(
@@ -130,6 +170,35 @@ class _MultipleChoiceWidgetState extends State<MultipleChoiceWidget> {
             );
           }),
 
+          // const SizedBox(height: 20),
+          /*Align(
+            alignment: Alignment.centerRight,
+            child: GestureDetector(
+              onTap: () {
+                setState(() {
+                  selectedIndex = null;
+                  showResult = false;
+                });
+              },
+              child: Container(
+                width: MediaQuery.sizeOf(context).width * 0.2,
+                padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    color: AppColors.greenColor
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Icon(Icons.refresh, color: AppColors.whiteColor,),
+                    Text("Réessayer", style: TextStyle(
+                        color: AppColors.whiteColor,
+                        fontWeight: FontWeight.w500),)
+                  ],
+                ),
+              ),
+            ),
+          ),*/
           const SizedBox(height: 20),
 
           /// 🔹 Result Section
@@ -168,7 +237,8 @@ class _MultipleChoiceWidgetState extends State<MultipleChoiceWidget> {
             ),
           ],
 
-          const Spacer(),
+          //const Spacer(),
+          const SizedBox(height: 30),
 
           /// 🔹 Next Button
           //if (showResult)

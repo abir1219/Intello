@@ -93,7 +93,9 @@ class _ShortAnswerWidgetState extends State<ShortAnswerWidget> {
                   ),
                 )
               : Container(),
+
           const Spacer(),
+          //const SizedBox(height: 30),
 
           /// NEXT BUTTON
           Center(

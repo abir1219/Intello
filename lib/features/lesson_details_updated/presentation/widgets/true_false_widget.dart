@@ -46,7 +46,7 @@ class _TrueFalseWidgetState extends State<TrueFalseWidget> {
 
     return ConstrainedBox(
       constraints: BoxConstraints(
-        maxHeight: isLandscape ? height * 0.8 : height * 0.5,
+        maxHeight: isLandscape ? height * 0.8 : height * 5,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -79,9 +79,47 @@ class _TrueFalseWidgetState extends State<TrueFalseWidget> {
           const SizedBox(height: 20),
 
           /// QUESTION
-          Text(
+          /*Text(
             "Q. $question",
             style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          ),*/
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                "Q. ${widget.data.question}",
+                style: const TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              if(selectedAnswer != null)
+                GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      selectedAnswer = null;
+                      showResult = false;
+                    });
+                  },
+                  child: Container(
+                    width: MediaQuery.sizeOf(context).width * 0.2,
+                    padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8),
+                        color: AppColors.greenColor
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Icon(Icons.refresh, color: AppColors.whiteColor,),
+                        Text("Réessayer", style: TextStyle(
+                            color: AppColors.whiteColor,
+                            fontWeight: FontWeight.w500),)
+                      ],
+                    ),
+                  ),
+                ),
+            ],
           ),
 
           const SizedBox(height: 20),
@@ -89,18 +127,45 @@ class _TrueFalseWidgetState extends State<TrueFalseWidget> {
           /// OPTIONS
           Column(
             children: [
-              _optionTile("true", true),
+              _optionTile("vrai", true),
               // const SizedBox(height: 4),
-              _optionTile("false", false),
+              _optionTile("faux", false),
             ],
           ),
-
+          /*Align(
+            alignment: Alignment.centerRight,
+            child: GestureDetector(
+              onTap: () {
+                setState(() {
+                  selectedAnswer = null;
+                  showResult = false;
+                });
+              },
+              child: Container(
+                width: MediaQuery.sizeOf(context).width * 0.2,
+                padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    color: AppColors.greenColor
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Icon(Icons.refresh, color: AppColors.whiteColor,),
+                    Text("Réessayer", style: TextStyle(
+                        color: AppColors.whiteColor,
+                        fontWeight: FontWeight.w500),)
+                  ],
+                ),
+              ),
+            ),
+          ),*/
           const SizedBox(height: 20),
 
           /// RESULT
           if (showResult) ...[
             Text(
-              "Résultat 👉 “${correctAnswer ? "true" : "false"}”",
+              "Résultat 👉 “${correctAnswer ? "vrai" : "faux"}”",
               style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
             ),
 
@@ -130,7 +195,9 @@ class _TrueFalseWidgetState extends State<TrueFalseWidget> {
             ),
           ],
 
-          const Spacer(),
+          //const Spacer(),
+
+          const SizedBox(height: 30,),
 
           /// NEXT BUTTON
           Center(

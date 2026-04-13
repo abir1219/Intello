@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../../core/constants/app_colors.dart';
 import '../../../../core/utils/app_dimenstion.dart';
 import '../../../../core/utils/responsive.dart';
 import '../../../account/presentation/widget/primary_button.dart';
@@ -76,7 +77,7 @@ class _MatchingQuesAnsWidgetState extends State<MatchingQuesAnsWidget> {
 
     return ConstrainedBox(
       constraints: BoxConstraints(
-        maxHeight: isLandscape ? height * 0.8 : height * 0.5,
+        maxHeight: isLandscape ? height * 0.8 : height * 0.52,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -111,12 +112,43 @@ class _MatchingQuesAnsWidgetState extends State<MatchingQuesAnsWidget> {
           ),
           const SizedBox(height: 20),
           /// QUESTION
-          Text(
-            "Q. ${widget.data.question}",
-            style: const TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-            ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                "Q. ${widget.data.question}",
+                style: const TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              if(matchedPairs.isNotEmpty)
+                GestureDetector(
+                onTap: () {
+                  setState(() {
+                    matchedPairs = {};
+                    matchedPairs.clear();
+                  });
+                },
+                child: Container(
+                  width: MediaQuery.sizeOf(context).width * 0.2,
+                  padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      color: AppColors.greenColor
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Icon(Icons.refresh, color: AppColors.whiteColor,),
+                      Text("Réessayer", style: TextStyle(
+                          color: AppColors.whiteColor,
+                          fontWeight: FontWeight.w500),)
+                    ],
+                  ),
+                ),
+              ),
+            ],
           ),
 
           const SizedBox(height: 20),
@@ -176,8 +208,37 @@ class _MatchingQuesAnsWidgetState extends State<MatchingQuesAnsWidget> {
               ),
             ],
           ),
-
-          const Spacer(),
+          /*const SizedBox(height: 10),
+          Align(
+            alignment: Alignment.centerRight,
+            child: GestureDetector(
+              onTap: () {
+                setState(() {
+                  matchedPairs = {};
+                  matchedPairs.clear();
+                });
+              },
+              child: Container(
+                width: MediaQuery.sizeOf(context).width * 0.2,
+                padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    color: AppColors.greenColor
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Icon(Icons.refresh, color: AppColors.whiteColor,),
+                    Text("Réessayer", style: TextStyle(
+                        color: AppColors.whiteColor,
+                        fontWeight: FontWeight.w500),)
+                  ],
+                ),
+              ),
+            ),
+          ),*/
+          const SizedBox(height: 30),
+          //const Spacer(),
           /// NEXT BUTTON
           Center(
             child: PrimaryButton(
@@ -185,7 +246,6 @@ class _MatchingQuesAnsWidgetState extends State<MatchingQuesAnsWidget> {
               onPressed: widget.onNext,
             ),
           ),
-
           const SizedBox(height: 10),
 
           /// IGNORE

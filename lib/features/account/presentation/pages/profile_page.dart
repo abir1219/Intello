@@ -85,7 +85,7 @@ class _ProfilePageState extends State<ProfilePage> {
         canPop: false,
         onPopInvokedWithResult: (didPop, result) {
           if(didPop) return;
-          context.push(AppPages.LEVEL_SCREEN);
+          context.pushReplacement(AppPages.LEVEL_SCREEN);
         },
         child: SafeArea(
           child: OrientationBuilder(
@@ -107,7 +107,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     ),
                     child: BlocListener<ProfileBloc, ProfileState>(
                       listener: (context, state) {
-                        print("State is $state");
+                        debugPrint("State is $state");
                         if (state is UpdateProfileSuccess) {
                           ScaffoldMessenger.of(context).showSnackBar(
                             const SnackBar(
@@ -115,6 +115,7 @@ class _ProfilePageState extends State<ProfilePage> {
                               backgroundColor: Colors.green,
                             ),
                           );
+                          context.pushReplacement(AppPages.LEVEL_SCREEN);
                         }
 
                         if (state is UpdateProfileFailure) {

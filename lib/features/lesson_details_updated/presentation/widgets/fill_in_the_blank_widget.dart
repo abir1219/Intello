@@ -59,7 +59,7 @@ class _FillBlankWidgetState extends State<FillBlankWidget> {
 
     return ConstrainedBox(
       constraints: BoxConstraints(
-        maxHeight: isLandscape ? height * 0.8 : height * 0.5,
+        maxHeight: isLandscape ? height * 0.8 : height * 0.52,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -96,9 +96,48 @@ class _FillBlankWidgetState extends State<FillBlankWidget> {
           const SizedBox(height: 20),
 
           /// QUESTION WITH BLANK
-          Text(
-            "Q. $question",
-            style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          Row(
+            children: [
+              Flexible(
+                child: Text(
+                  "Q. $question",
+                  style: const TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              if(_controller.text.isNotEmpty)
+                GestureDetector(
+                onTap: () {
+                  setState(() {
+                    _controller.text = "";
+                    showResult = false;
+                  });
+                },
+                child: Container(
+                  width: MediaQuery.sizeOf(context).width * 0.2,
+                  padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    color: AppColors.greenColor,
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Icon(Icons.refresh, color: AppColors.whiteColor),
+                      Text(
+                        "Réessayer",
+                        style: TextStyle(
+                          color: AppColors.whiteColor,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
           ),
 
           const SizedBox(height: 20),
@@ -231,6 +270,7 @@ class _FillBlankWidgetState extends State<FillBlankWidget> {
                 ),
               ],
             ),
+          const SizedBox(height: 10),
 
           /// RESULT
           if (showResult) ...[
@@ -279,7 +319,8 @@ class _FillBlankWidgetState extends State<FillBlankWidget> {
               ),
             ),
           ],
-          const Spacer(),
+          //const Spacer(),
+          const SizedBox(height: 30),
 
           /// NEXT BUTTON
           Center(
@@ -291,7 +332,7 @@ class _FillBlankWidgetState extends State<FillBlankWidget> {
           const SizedBox(height: 10),
 
           /// IGNORE
-          if(!widget.isLast)
+          if (!widget.isLast)
             Center(
               child: GestureDetector(
                 onTap: widget.onNext,

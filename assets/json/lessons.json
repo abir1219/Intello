@@ -2827,11 +2827,13 @@
             "grade": "CM1",
             "subject": "mathématiques",
             "lesson_number": 1,
-            "title": "La rentrée des classes",
-            "description": "Leçon math basée sur le thème « La rentrée des classes ».",
-            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "title": "Lire et décomposer les nombres jusqu’à 10 000",
+            "description": "Apprendre à lire, écrire et décomposer les nombres jusqu’à 10 000.",
+            "learning_objective": "Lire et décomposer les nombres jusqu’à 10 000.",
             "theme": "éducation",
-            "content": "Texte pédagogique simplifié pour la leçon « La rentrée des classes » adapté au niveau CM1.",
+            "lecture": "Awa aide au marché. Elle compte : 3 sacs de 1 000, 4 sacs de 100, 2 sacs de 10 et 5 unités. Elle calcule : 3 000 + 400 + 20 + 5 = 3 425. Elle comprend que 3 425 = 3 milliers, 4 centaines, 2 dizaines et 5 unités. Cette méthode l’aide à lire les grands nombres.",
+            "completion_message": "Bravo ! Tu sais lire et décomposer les nombres.",
+            "content": "Un nombre est composé de plusieurs chiffres. Chaque chiffre a une valeur selon sa position.\\n\\nExemple : 4 532\\n4 milliers, 5 centaines, 3 dizaines, 2 unités.\\n\\nOn peut écrire : 4 532 = 4 000 + 500 + 30 + 2.\\n\\nComprendre cela permet de mieux lire et écrire les nombres.\",\n\"lecture\": \"Awa aide au marché. Elle compte : 3 sacs de 1 000, 4 sacs de 100, 2 sacs de 10 et 5 unités.\\n\\nElle calcule : 3 000 + 400 + 20 + 5 = 3 425.\\n\\nElle comprend que 3 425 = 3 milliers, 4 centaines, 2 dizaines et 5 unités.\\n\\nCette méthode l’aide à lire les grands nombres.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2842,11 +2844,13 @@
             "grade": "CM1",
             "subject": "mathématiques",
             "lesson_number": 2,
-            "title": "L’écolier travailleur",
-            "description": "Leçon math basée sur le thème « L’écolier travailleur ».",
-            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "lecture": "Amadou compare 3 450 et 3 405. Les milliers sont égaux (3). Il compare les centaines : 4 > 0. Donc 3 450 est plus grand. Comparer permet de classer les nombres.",
+            "completion_message": "Bravo ! Tu sais comparer les nombres.",
+            "title": "Comparer les nombres",
+            "description": "Apprendre à comparer les nombres jusqu’à 10 000.",
+            "learning_objective": "Comparer deux nombres.",
             "theme": "éducation",
-            "content": "Texte pédagogique simplifié pour la leçon « L’écolier travailleur » adapté au niveau CM1.",
+            "content": "Pour comparer deux nombres, on regarde d’abord les milliers. Puis les centaines, dizaines et unités. Exemple : 3456 > 2999.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."
@@ -2857,146 +2861,13 @@
             "grade": "CM1",
             "subject": "mathématiques",
             "lesson_number": 3,
-            "title": "Le désespoir d’un enfant",
-            "description": "Leçon math basée sur le thème « Le désespoir d’un enfant ».",
-            "learning_objective": "Comprendre le contenu et répondre aux activités.",
+            "lecture": "Fatou additionne 2 345 et 1 200. Elle commence par les unités, puis les dizaines. Résultat : 3 545. L’addition permet de trouver le total.",
+            "completion_message": "Bravo ! Tu sais additionner les nombres.",
+            "title": "Additionner les nombres",
+            "description": "Apprendre à additionner des nombres jusqu’à 10 000.",
+            "learning_objective": "Additionner des nombres.",
             "theme": "éducation",
-            "content": "Texte pédagogique simplifié pour la leçon « Le désespoir d’un enfant » adapté au niveau CM1.",
-            "instructions": {
-              "fr": "Lis la consigne et réponds.",
-              "moore": "Tégré yé zaabre."
-            }
-          },
-          {
-            "id": "CM1_MATH_L4",
-            "grade": "CM1",
-            "subject": "mathématiques",
-            "lesson_number": 4,
-            "title": "L’enfance de Wangrin",
-            "description": "Leçon math basée sur le thème « L’enfance de Wangrin ».",
-            "learning_objective": "Comprendre le contenu et répondre aux activités.",
-            "theme": "éducation",
-            "content": "Texte pédagogique simplifié pour la leçon « L’enfance de Wangrin » adapté au niveau CM1.",
-            "instructions": {
-              "fr": "Lis la consigne et réponds.",
-              "moore": "Tégré yé zaabre."
-            }
-          },
-          {
-            "id": "CM1_MATH_L5",
-            "grade": "CM1",
-            "subject": "mathématiques",
-            "lesson_number": 5,
-            "title": "Un repas d’anniversaire en famille",
-            "description": "Leçon math basée sur le thème « Un repas d’anniversaire en famille ».",
-            "learning_objective": "Comprendre le contenu et répondre aux activités.",
-            "theme": "éducation",
-            "content": "Texte pédagogique simplifié pour la leçon « Un repas d’anniversaire en famille » adapté au niveau CM1.",
-            "instructions": {
-              "fr": "Lis la consigne et réponds.",
-              "moore": "Tégré yé zaabre."
-            }
-          },
-          {
-            "id": "CM1_MATH_L6",
-            "grade": "CM1",
-            "subject": "mathématiques",
-            "lesson_number": 6,
-            "title": "Un jeu dangereux",
-            "description": "Leçon math basée sur le thème « Un jeu dangereux ».",
-            "learning_objective": "Comprendre le contenu et répondre aux activités.",
-            "theme": "éducation",
-            "content": "Texte pédagogique simplifié pour la leçon « Un jeu dangereux » adapté au niveau CM1.",
-            "instructions": {
-              "fr": "Lis la consigne et réponds.",
-              "moore": "Tégré yé zaabre."
-            }
-          },
-          {
-            "id": "CM1_MATH_L7",
-            "grade": "CM1",
-            "subject": "mathématiques",
-            "lesson_number": 7,
-            "title": "Le mariage de Sanata",
-            "description": "Leçon math basée sur le thème « Le mariage de Sanata ».",
-            "learning_objective": "Comprendre le contenu et répondre aux activités.",
-            "theme": "éducation",
-            "content": "Texte pédagogique simplifié pour la leçon « Le mariage de Sanata » adapté au niveau CM1.",
-            "instructions": {
-              "fr": "Lis la consigne et réponds.",
-              "moore": "Tégré yé zaabre."
-            }
-          },
-          {
-            "id": "CM1_MATH_L8",
-            "grade": "CM1",
-            "subject": "mathématiques",
-            "lesson_number": 8,
-            "title": "La lutte en pays Samo",
-            "description": "Leçon math basée sur le thème « La lutte en pays Samo ».",
-            "learning_objective": "Comprendre le contenu et répondre aux activités.",
-            "theme": "éducation",
-            "content": "Texte pédagogique simplifié pour la leçon « La lutte en pays Samo » adapté au niveau CM1.",
-            "instructions": {
-              "fr": "Lis la consigne et réponds.",
-              "moore": "Tégré yé zaabre."
-            }
-          },
-          {
-            "id": "CM1_MATH_L9",
-            "grade": "CM1",
-            "subject": "mathématiques",
-            "lesson_number": 9,
-            "title": "Moussa visite Ouagadougou",
-            "description": "Leçon math basée sur le thème « Moussa visite Ouagadougou ».",
-            "learning_objective": "Comprendre le contenu et répondre aux activités.",
-            "theme": "éducation",
-            "content": "Texte pédagogique simplifié pour la leçon « Moussa visite Ouagadougou » adapté au niveau CM1.",
-            "instructions": {
-              "fr": "Lis la consigne et réponds.",
-              "moore": "Tégré yé zaabre."
-            }
-          },
-          {
-            "id": "CM1_MATH_L10",
-            "grade": "CM1",
-            "subject": "mathématiques",
-            "lesson_number": 10,
-            "title": "La vaccination",
-            "description": "Leçon math basée sur le thème « La vaccination ».",
-            "learning_objective": "Comprendre le contenu et répondre aux activités.",
-            "theme": "éducation",
-            "content": "Texte pédagogique simplifié pour la leçon « La vaccination » adapté au niveau CM1.",
-            "instructions": {
-              "fr": "Lis la consigne et réponds.",
-              "moore": "Tégré yé zaabre."
-            }
-          },
-          {
-            "id": "CM1_MATH_L11",
-            "grade": "CM1",
-            "subject": "mathématiques",
-            "lesson_number": 11,
-            "title": "Le forgeron",
-            "description": "Leçon math basée sur le thème « Le forgeron ».",
-            "learning_objective": "Comprendre le contenu et répondre aux activités.",
-            "theme": "éducation",
-            "content": "Texte pédagogique simplifié pour la leçon « Le forgeron » adapté au niveau CM1.",
-            "instructions": {
-              "fr": "Lis la consigne et réponds.",
-              "moore": "Tégré yé zaabre."
-            }
-          },
-          {
-            "id": "CM1_MATH_L12",
-            "grade": "CM1",
-            "subject": "mathématiques",
-            "lesson_number": 12,
-            "title": "Premier voyage en avion",
-            "description": "Leçon math basée sur le thème « Premier voyage en avion ».",
-            "learning_objective": "Comprendre le contenu et répondre aux activités.",
-            "theme": "éducation",
-            "content": "Texte pédagogique simplifié pour la leçon « Premier voyage en avion » adapté au niveau CM1.",
+            "content": "Pour additionner, on aligne les chiffres. Exemple : 2345 + 1200 = 3545. On additionne unités, dizaines, centaines, milliers.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."

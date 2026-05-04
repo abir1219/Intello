@@ -38,7 +38,7 @@ class _FillBlankWidgetState extends State<FillBlankWidget> {
   @override
   void initState() {
     super.initState();
-    question = widget.data.question;
+    question = widget.data.question!;
     correctAnswer = widget.data.answer ?? "";
     userAnswer = widget.data.answer;
   }

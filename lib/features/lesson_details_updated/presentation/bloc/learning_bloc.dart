@@ -1,9 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/foundation.dart';
-import 'package:intello_new/features/lesson_details_updated/domain/entities/activity.dart' show Activity;
 import 'package:intello_new/features/lesson_details_updated/domain/entities/lesson.dart';
-import 'package:intello_new/features/lesson_details_updated/domain/usecases/get_activities.dart';
 import 'package:intello_new/features/lesson_details_updated/domain/usecases/get_lessons.dart';
 
 part 'learning_event.dart';

@@ -8,6 +8,30 @@ class LessonModel extends Lesson {
     required super.lessonId,
     required super.activities,
     required super.games,
+  });
+
+  factory LessonModel.fromJson(Map<String, dynamic> json) {
+    return LessonModel(
+      lessonId: json['id'],
+
+      /// Activities
+      activities: (json['activities'] as List? ?? [])
+          .map((e) => ActivityModel.fromJson(e))
+          .toList(),
+
+      /// Games
+      games: (json['games'] as List? ?? [])
+          .map((e) => GameModel.fromJson(e))
+          .toList(),
+    );
+  }
+}
+
+/*class LessonModel extends Lesson {
+  const LessonModel({
+    required super.lessonId,
+    required super.activities,
+    required super.games,
     required super.lecture,
   });
 
@@ -28,4 +52,4 @@ class LessonModel extends Lesson {
           .toList(),
     );
   }
-}
+}*/

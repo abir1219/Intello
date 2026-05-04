@@ -30,7 +30,8 @@ class _ShortAnswerWidgetState extends State<ShortAnswerWidget> {
   @override
   void initState() {
     super.initState();
-    question = widget.data.question;
+    // question = widget.data.question;
+    question = widget.data.question!;
     answer = widget.data.answer ?? "";
   }
 

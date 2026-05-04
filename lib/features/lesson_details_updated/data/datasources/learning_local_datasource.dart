@@ -43,6 +43,44 @@ class LearningLocalDataSourceImpl implements LearningLocalDataSource {
   }) async {
     final data = await _loadJson();
 
+    for (var level in data) {
+      if (level['levelId'] == levelId) {
+        for (var subject in level['subjects']) {
+          if (subject['subjectId'] == subjectId) {
+            for (var lesson in subject['lessons']) {
+
+              /// ✅ If lessonId provided → return specific lesson
+              if (lessonId != null) {
+                if (lesson['id'] == lessonId) {
+                  debugPrint("FOUND LESSON: ${lesson['id']}");
+                  return LessonModel.fromJson(lesson); // ✅ early return
+                }
+              }
+
+              /// ✅ If lessonId is null → return first lesson
+              else {
+                return LessonModel.fromJson(lesson); // ✅ safe return
+              }
+            }
+          }
+        }
+      }
+    }
+
+    /// ❗ If nothing found → throw explicit error
+    throw Exception(
+      "Lesson not found for levelId=$levelId, subjectId=$subjectId, lessonId=$lessonId",
+    );
+  }
+
+  /*@override
+  Future<Lesson> getLesson({
+    required String levelId,
+    required String subjectId,
+    String? lessonId,
+  }) async {
+    final data = await _loadJson();
+
     // final List<Lesson> filteredLessons = [];
     late final lessonModel;
 
@@ -73,7 +111,7 @@ class LearningLocalDataSourceImpl implements LearningLocalDataSource {
     }
     // debugPrint("filteredLessons-->${filteredLessons.length}");
     return lessonModel;//filteredLessons;
-  }
+  }*/
 
   Future<List<dynamic>> _loadJson() async {
     final String response = await rootBundle.loadString(

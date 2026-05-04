@@ -435,7 +435,7 @@ class _LessonDetailsUpdateState extends State<LessonDetailsUpdate> {
     String lessonId,
   ) {
     debugPrint("Handling Lecture");
-    final lecture = state.lessons.lecture.first.pdf;
+    final lecture = null;//state.lessons.lecture.first.pdf;
 
     if (lecture.isEmpty) return;
 

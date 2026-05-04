@@ -9656,51 +9656,122 @@
             ]
           },
           {
-            "subjectId": "math",
+            "subjectId": "mathématiques",
             "lessons": [
                 {
                   "id": "CM1_MATH_L1",
                   "activities": [
                     {
                       "type": "multiple_choice",
-                      "question": "Quelle est la bonne réponse ?",
+                      "question": "Dans 3 245, le chiffre des centaines est",
                       "choices": [
-                        "A",
-                        "B",
-                        "C"
+                        "3",
+                        "2",
+                        "4",
+                        "5"
+                      ],
+                      "correct_answer": 1,
+                      "explanation" : "2 est la centaine.",
+                      "isAttended": false
+                    },
+                    {
+                      "type": "multiple_choice",
+                      "question": "4 milliers + 2 centaines + 1 dizaine + 3 unités =",
+                      "choices": [
+                        "4213",
+                        "4123",
+                        "4321",
+                        "4231"
                       ],
                       "correct_answer": 0,
+                      "explanation" : "4213",
                       "isAttended": false
                     },
                     {
                       "type": "true_false",
-                      "question": "Cette leçon aide à apprendre.",
+                      "question": "Dans 5 678, 6 représente les dizaines.",
+                      "answer": false,
+                      "explanation": "6 = centaines.",
+                      "isAttended": false
+                    },
+                    {
+                      "type": "true_false",
+                      "question": "2000 contient 2 milliers.",
                       "answer": true,
+                      "explanation": "Correct.",
                       "isAttended": false
                     },
                     {
                       "type": "fill_blank",
-                      "question": "Complète : Cette leçon parle de ______.",
-                      "answer": "La rentrée des classes",
+                      "question": "3000 + 400 + 20 + 5 = ____",
+                      "answer": "3425",
+                      "explanation": "3425.",
+                      "isAttended": false
+                    },
+                    {
+                      "type": "fill_blank",
+                      "question": "6781 = 6000 + ___ + 80 + 1",
+                      "answer": "700",
+                      "explanation": "700",
+                      "isAttended": false
+                    },
+                    {
+                      "type": "matching",
+                      "instruction": "Associe :",
+                      "pairs": [
+                        {
+                          "left": "3456",
+                          "right": "3000 + 400 + 50 + 6"
+                        },
+                        {
+                          "left": "2130",
+                          "right": "2000 + 100 + 30"
+                        }
+                      ],
+                      "isAttended": false
+                    },
+                    {
+                      "type": "ordering",
+                      "instruction": "Classe :",
+                      "items": [
+                        "2345",
+                        "1234",
+                        "3210"
+                      ],
+                      "correct_order": [
+                        "1234",
+                        "2345",
+                        "3210"
+                      ],
                       "isAttended": false
                     },
                     {
                       "type": "short_answer",
-                      "question": "Explique ce que tu as compris."
+                      "question": "Décompose 4 321.",
+                      "sample_answer": "4 000 + 300 + 20 + 1",
+                      "validation": "manual",
+                      "isAttended": false
+                    },
+                    {
+                      "type": "practical",
+                      "question": "2345 + 1000 = ?",
+                      "sample_answer": "3345",
+                      "validation": "manual",
+                      "isAttended": false
                     }
                   ],
                   "games": [
                     {
                       "type": "matching",
-                      "instruction": "Associe les mots.",
+                      "instruction": "Associe nombre et décomposition",
                       "pairs": [
                         {
-                          "left": "apprendre",
-                          "right": "étudier"
+                          "left": "1234",
+                          "right": "1000 + 200 + 30 + 4"
                         },
                         {
-                          "left": "répondre",
-                          "right": "donner la réponse"
+                          "left": "4506",
+                          "right": "4000 + 500 + 6"
                         }
                       ],
                       "isAttended": false
@@ -9712,45 +9783,114 @@
                   "activities": [
                     {
                       "type": "multiple_choice",
-                      "question": "Quelle est la bonne réponse ?",
+                      "question": "Le plus grand nombre :",
                       "choices": [
-                        "A",
-                        "B",
-                        "C"
+                        "3456",
+                        "3546",
+                        "3654"
+                      ],
+                      "correct_answer": 2,
+                      "explanation": "3654",
+                      "isAttended": false
+                    },
+                    {
+                      "type": "multiple_choice",
+                      "question": "3200 __ 3150",
+                      "choices": [
+                        ">",
+                        "<",
+                        "="
                       ],
                       "correct_answer": 0,
+                      "explanation": "3200 > 3150",
                       "isAttended": false
                     },
                     {
                       "type": "true_false",
-                      "question": "Cette leçon aide à apprendre.",
+                      "question": "4000 < 3999",
+                      "answer": false,
+                      "explanation": "4000 est plus grand.",
+                      "isAttended": false
+                    },
+                    {
+                      "type": "true_false",
+                      "question": "2500 = 2500",
                       "answer": true,
+                      "explanation": "Égalité",
                       "isAttended": false
                     },
                     {
                       "type": "fill_blank",
-                      "question": "Complète : Cette leçon parle de ______.",
-                      "answer": "L’écolier travailleur",
+                      "question": "3456 __ 3654",
+                      "explanation": "3456 < 3654",
+                      "answer": "<",
+                      "isAttended": false
+                    },
+                    {
+                      "type": "fill_blank",
+                      "question": "5000 __ 4999",
+                      "explanation": "5000 > 4999",
+                      "answer": ">",
                       "isAttended": false
                     },
                     {
                       "type": "short_answer",
-                      "question": "Explique ce que tu as compris."
+                      "question": "Compare 4321 et 4123.",
+                      "sample_answer": "4321 > 4123",
+                      "validation": "manual"
+                    },
+                    {
+                      "type": "practical",
+                      "question": "Qui a plus ? 3500 ou 3450 ?",
+                      "sample_answer": "3500",
+                      "validation": "manual"
+                    },
+                    {
+                      "type": "matching",
+                      "instruction": "Associe :",
+                      "pairs": [
+                        {
+                          "left": "3456",
+                          "right": "plus petit"
+                        },
+                        {
+                          "left": "4567",
+                          "right": "plus grand"
+                        }
+                      ],
+                      "isAttended": false
+                    },
+                    {
+                      "type": "ordering",
+                      "instruction": "Classe :",
+                      "items": [
+                        "3000",
+                        "1000",
+                        "2000"
+                      ],
+                      "correct_order": [
+                        "1000",
+                        "2000",
+                        "3000"
+                      ],
+                      "isAttended": false
                     }
                   ],
                   "games": [
                     {
-                      "type": "matching",
-                      "instruction": "Associe les mots.",
-                      "pairs": [
-                        {
-                          "left": "apprendre",
-                          "right": "étudier"
-                        },
-                        {
-                          "left": "répondre",
-                          "right": "donner la réponse"
-                        }
+                      "type": "ordering",
+                      "instruction": "Classe les nombres",
+                      "items": [
+                        "5000",
+                        "2000",
+                        "8000",
+                        "1000"
+                      ],
+                      "correct_order": [
+                        "1000",
+                        "2000",
+                        "5000",
+                        "8000"
                       ],
                       "isAttended": false
                     }
@@ -9761,45 +9901,111 @@
                   "activities": [
                     {
                       "type": "multiple_choice",
-                      "question": "Quelle est la bonne réponse ?",
+                      "question": "2000 + 1000 =",
                       "choices": [
-                        "A",
-                        "B",
-                        "C"
+                        "3000",
+                        "2000",
+                        "4000"
                       ],
                       "correct_answer": 0,
+                      "explanation": "3000",
+                      "isAttended": false
+                    },
+                    {
+                      "type": "multiple_choice",
+                      "question": "3400 + 200 =",
+                      "choices": [
+                        "3600",
+                        "3400",
+                        "3200"
+                      ],
+                      "correct_answer": 0,
+                      "explanation": "3600",
                       "isAttended": false
                     },
                     {
                       "type": "true_false",
-                      "question": "Cette leçon aide à apprendre.",
+                      "question": "2000 + 3000 = 5000",
                       "answer": true,
+                      "explanation": "Correct.",
+                      "isAttended": false
+                    },
+                    {
+                      "type": "true_false",
+                      "question": "1000 + 1000 = 1000",
+                      "answer": "false",
+                      "explanation": "2000",
                       "isAttended": false
                     },
                     {
                       "type": "fill_blank",
-                      "question": "Complète : Cette leçon parle de ______.",
-                      "answer": "Le désespoir d’un enfant",
+                      "question": "2345 + 1000 = ____",
+                      "explanation": "3345",
+                      "answer": "3345",
+                      "isAttended": false
+                    },
+                    {
+                      "type": "fill_blank",
+                      "question": "4500 + 500 = ____",
+                      "explanation": "5000",
+                      "answer": "5000",
                       "isAttended": false
                     },
                     {
                       "type": "short_answer",
-                      "question": "Explique ce que tu as compris.",
+                      "question": "Additionne 4321 + 1000.",
+                      "sample_answer": "5321",
+                      "validation": "manual"
+                    },
+                    {
+                      "type": "practical",
+                      "question": "Tu as 2000 et tu reçois 3000. Total ?",
+                      "sample_answer": "5000",
+                      "validation": "manual"
+                    },
+                    {
+                      "type": "matching",
+                      "instruction": "Associe :",
+                      "pairs": [
+                        {
+                          "left": "2000 + 1000",
+                          "right": "3000"
+                        },
+                        {
+                          "left": "4000 + 500",
+                          "right": "4500"
+                        }
+                      ],
+                      "isAttended": false
+                    },
+                    {
+                      "type": "ordering",
+                      "instruction": "Classe :",
+                      "items": [
+                        "3000",
+                        "5000",
+                        "2000"
+                      ],
+                      "correct_order": [
+                        "2000",
+                        "3000",
+                        "5000"
+                      ],
                       "isAttended": false
                     }
                   ],
                   "games": [
                     {
                       "type": "matching",
-                      "instruction": "Associe les mots.",
+                      "instruction": "Associe les additions",
                       "pairs": [
                         {
-                          "left": "apprendre",
-                          "right": "étudier"
+                          "left": "2000 + 3000",
+                          "right": "5000"
                         },
                         {
-                          "left": "répondre",
-                          "right": "donner la réponse"
+                          "left": "4000 + 1000",
+                          "right": "5000"
                         }
                       ],
                       "isAttended": false
@@ -9841,15 +10047,15 @@
                   "games": [
                     {
                       "type": "matching",
-                      "instruction": "Associe les mots.",
+                      "instruction": "Associe les additions",
                       "pairs": [
                         {
-                          "left": "apprendre",
-                          "right": "étudier"
+                          "left": "2000 + 3000",
+                          "right": "5000"
                         },
                         {
-                          "left": "répondre",
-                          "right": "donner la réponse"
+                          "left": "4000 + 1000",
+                          "right": "5000"
                         }
                       ],
                       "isAttended": false

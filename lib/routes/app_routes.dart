@@ -8,6 +8,7 @@ import 'package:intello_new/features/auth/presentation/pages/signup_page.dart';
 import 'package:intello_new/features/exercise/presentation/pages/example_details.dart';
 import 'package:intello_new/features/lesson_details/domain/entity/exercise.dart';
 import 'package:intello_new/features/lesson_details_updated/data/models/activity_model.dart' show ActivityModel;
+import 'package:intello_new/features/lesson_details_updated/data/models/game_model.dart';
 import 'package:intello_new/features/lesson_details_updated/presentation/pages/activity_flow_screen.dart';
 import 'package:intello_new/features/lesson_details_updated/presentation/pages/lecture_page.dart';
 // import 'package:intello_new/features/lesson_details_updated/presentation/pages/lesson_details.dart';
@@ -138,15 +139,37 @@ class AppRouters {
           );
         },
       ),
-      GoRoute(
+      /*GoRoute(
         path: AppPages.ACTIVITY_FLOW_SCREEN,
         pageBuilder: (context, state) {
-          final extra = state.extra as Map<String, dynamic>;
+          final extra = state.extra as Map<String, dynamic>?? {};
 
           return _defaultTransitionPage(
             key: state.pageKey,
             child: ActivityFlowScreen(
               activities: extra["activities"] as List<ActivityModel>,
+              games: extra["games"] as List<GameModel>,
+            ),
+          );
+        },
+      ),*/
+      GoRoute(
+        path: AppPages.ACTIVITY_FLOW_SCREEN,
+        pageBuilder: (context, state) {
+
+          final extra = state.extra as Map<String, dynamic>? ?? {};
+
+          return _defaultTransitionPage(
+
+            key: state.pageKey,
+
+            child: ActivityFlowScreen(
+
+              activities:
+              (extra["activities"] as List<ActivityModel>?) ?? [],
+
+              games:
+              (extra["games"] as List<GameModel>?) ?? [],
             ),
           );
         },

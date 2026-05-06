@@ -46,12 +46,11 @@ class _MultipleChoiceWidgetState extends State<MultipleChoiceWidget> {
 
     return ConstrainedBox(
       constraints: BoxConstraints(
-        maxHeight: isLandscape ? height * 0.8 : height * 0.52,
+        maxHeight: isLandscape ? height * 0.8 : height * 0.58,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-
           /// 🔹 Header
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -95,7 +94,13 @@ class _MultipleChoiceWidgetState extends State<MultipleChoiceWidget> {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              if(selectedIndex != null)
+            ],
+          ),
+          const SizedBox(height: 10),
+          if(selectedIndex != null)
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end, // ✅ FIX
+              children: [
                 GestureDetector(
                   onTap: () {
                     setState(() {
@@ -121,8 +126,8 @@ class _MultipleChoiceWidgetState extends State<MultipleChoiceWidget> {
                     ),
                   ),
                 ),
-            ],
-          ),
+              ],
+            ),
 
           const SizedBox(height: 20),
 
@@ -140,7 +145,7 @@ class _MultipleChoiceWidgetState extends State<MultipleChoiceWidget> {
                 });
               },
               child: Container(
-                margin: const EdgeInsets.symmetric(vertical: 6),
+                margin: const EdgeInsets.symmetric(vertical: 1),
                 padding: const EdgeInsets.all(14),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
@@ -171,41 +176,13 @@ class _MultipleChoiceWidgetState extends State<MultipleChoiceWidget> {
           }),
 
           // const SizedBox(height: 20),
-          /*Align(
-            alignment: Alignment.centerRight,
-            child: GestureDetector(
-              onTap: () {
-                setState(() {
-                  selectedIndex = null;
-                  showResult = false;
-                });
-              },
-              child: Container(
-                width: MediaQuery.sizeOf(context).width * 0.2,
-                padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: AppColors.greenColor
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Icon(Icons.refresh, color: AppColors.whiteColor,),
-                    Text("Réessayer", style: TextStyle(
-                        color: AppColors.whiteColor,
-                        fontWeight: FontWeight.w500),)
-                  ],
-                ),
-              ),
-            ),
-          ),*/
-          const SizedBox(height: 20),
 
           /// 🔹 Result Section
           if (showResult) ...[
             //Text("${selectedIndex == correctIndex}"),
             Text(
-              "Résultat 👉 “${choices[correctIndex]}”",
+              // "Résultat 👉 “${choices[correctIndex]}”",
+              "Résultat 👉 “${widget.data.explanation}”",
               style: const TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
@@ -230,7 +207,7 @@ class _MultipleChoiceWidgetState extends State<MultipleChoiceWidget> {
                   ),
                   SizedBox(height: 10),
                   selectedIndex == correctIndex
-                      ? SvgPicture.asset(AppAssets.correct_image)
+                      ? SvgPicture.asset(AppAssets.correct_image,height: 80,width: 80,)
                       : Icon(Icons.close, size: 100, color: Colors.red),
                 ],
               ),
@@ -238,7 +215,7 @@ class _MultipleChoiceWidgetState extends State<MultipleChoiceWidget> {
           ],
 
           //const Spacer(),
-          const SizedBox(height: 30),
+          const SizedBox(height: 15),
 
           /// 🔹 Next Button
           //if (showResult)

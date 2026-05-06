@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:intello_new/features/lesson_details_updated/data/models/activity_model.dart'
     show ActivityModel;
+import 'package:intello_new/features/lesson_details_updated/data/models/game_model.dart';
 
 import '../../../../core/audio/audio_player_service.dart';
 import '../../../../core/constants/app_assets.dart';
@@ -15,13 +16,15 @@ import '../../../account/presentation/widget/listen_button.dart';
 import '../widgets/fill_in_the_blank_widget.dart';
 import '../widgets/matching_ques_ans_widget.dart';
 import '../widgets/multiple_choice_widget.dart';
+import '../widgets/ordering_widget.dart';
 import '../widgets/short_answer_widget.dart';
 import '../widgets/true_false_widget.dart';
 
 class ActivityFlowScreen extends StatefulWidget {
   final List<ActivityModel> activities;
+  final List<GameModel> games;
 
-  const ActivityFlowScreen({super.key, required this.activities});
+  const ActivityFlowScreen({super.key, required this.activities, required this.games});
 
   @override
   State<ActivityFlowScreen> createState() => _ActivityFlowScreenState();
@@ -85,11 +88,240 @@ class _ActivityFlowScreenState extends State<ActivityFlowScreen> {
 
   @override
   Widget build(BuildContext context) {
+
+    final totalActivities = widget.activities.length;
+    final totalGames = widget.games.length;
+
+    final totalItems = totalActivities + totalGames;
+
+    /// SAFETY
+    if (totalItems == 0) {
+
+      return const Scaffold(
+        body: Center(
+          child: Text("No activities found"),
+        ),
+      );
+    }
+
+    /// CURRENT ITEM
+    final dynamic currentItem =
+    currentIndex < totalActivities
+        ? widget.activities[currentIndex]
+        : widget.games[currentIndex - totalActivities];
+
+    final height = AppDimensions.getResponsiveHeight(context);
+    final width = AppDimensions.getResponsiveWidth(context);
+    final isLandscape = Responsive.isLandscape(context);
+
+    return Scaffold(
+      body: SafeArea(
+        child: OrientationBuilder(
+          builder: (BuildContext context, Orientation orientation) {
+
+            return Stack(
+              fit: StackFit.expand,
+              children: [
+
+                SvgPicture.asset(
+                  AppAssets.background,
+                  fit: BoxFit.cover,
+                ),
+
+                SingleChildScrollView(
+                  padding: EdgeInsets.only(
+                    left: isLandscape ? width * 0.25 : width * 0.08,
+                    right: isLandscape ? width * 0.25 : width * 0.08,
+                    top: 10,
+                    bottom: 100,
+                  ),
+
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+
+                      SizedBox(
+                        height: isLandscape
+                            ? height * 0.03
+                            : height * 0.03,
+                      ),
+
+                      Stack(
+                        children: [
+
+                          const Positioned(
+                            top: 0,
+                            left: 0,
+                            child: BackButton(),
+                          ),
+
+                          Center(
+                            child: SizedBox(
+                              height: 60,
+                              child: SvgPicture.asset(
+                                AppAssets.logo_text,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+
+                      SizedBox(
+                        height: isLandscape
+                            ? height * 0.06
+                            : height * 0.06,
+                      ),
+
+                      Row(
+                        mainAxisAlignment:
+                        MainAxisAlignment.spaceBetween,
+                        children: [
+
+                          const Expanded(
+                            child: Text(
+                              "Au programme de cette leçon !",
+                              style: TextStyle(
+                                fontSize: 28,
+                                color: AppColors.textColor,
+                                fontWeight: FontWeight.w400,
+                              ),
+                            ),
+                          ),
+
+                          ListenButton(
+                            onTap: () async {
+                              await audioService.toggle(
+                                AppAssets.audio,
+                              );
+                            },
+                            listenString:
+                            'Écouter les consignes',
+                          ),
+                        ],
+                      ),
+
+                      const Text(
+                        "Présentation de la leçon.",
+                        style: TextStyle(
+                          fontSize: 14,
+                          color: AppColors.textColor,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+
+                      const SizedBox(height: 15),
+
+                      Padding(
+                        padding: const EdgeInsets.all(16),
+
+                        child: Column(
+                          crossAxisAlignment:
+                          CrossAxisAlignment.start,
+
+                          children: [
+
+                            /// BUILD CURRENT ITEM
+                            _buildCurrentWidget(
+                              currentItem,
+                              totalItems,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                Positioned(
+                  bottom: 10,
+                  left: 0,
+                  right: 0,
+
+                  child: CustomBottomNavBar(
+                    selectedIndex: _currentIndex,
+                    onItemSelected: _handleNavigation,
+                  ),
+                ),
+              ],
+            );
+          },
+        ),
+      ),
+    );
+  }
+
+  Widget _buildCurrentWidget(
+      dynamic item,
+      int totalLength,
+      ) {
+
+    /// ACTIVITY
+    if (item is ActivityModel) {
+
+      return _buildActivityWidget(
+        item,
+        totalLength,
+      );
+    }
+
+    /// GAME
+    if (item is GameModel) {
+
+      return _buildGameWidget(
+        item,
+        totalLength,
+      );
+    }
+
+    return const Center(
+      child: Text("Unknown item"),
+    );
+  }
+
+  Widget _buildGameWidget(
+      GameModel game,
+      int length,
+      ) {
+
+    switch (game.type) {
+
+      case "matching":
+
+        return MatchingQuesAnsWidget(
+          key: ValueKey(currentIndex),
+          data: game,
+          onNext: next,
+          onPrevious: previous,
+          isLast: currentIndex == length - 1,
+        );
+
+      case "ordering":
+
+        return OrderingWidget(
+          key: ValueKey(currentIndex),
+          data: game,
+          onNext: next,
+          onPrevious: previous,
+          isLast: currentIndex == length - 1,
+        );
+
+      default:
+
+        return const Center(
+          child: Text("Unknown Game"),
+        );
+    }
+  }
+
+/*  @override
+  Widget build(BuildContext context) {
     final activity = widget.activities[currentIndex];
 
     final height = AppDimensions.getResponsiveHeight(context);
     final width = AppDimensions.getResponsiveWidth(context);
     final isLandscape = Responsive.isLandscape(context);
+
+    // debugPrint("-----@@@@@------");
 
     return Scaffold(
       body: SafeArea(
@@ -155,7 +387,7 @@ class _ActivityFlowScreenState extends State<ActivityFlowScreen> {
                           fontWeight: FontWeight.w400,
                         ),
                       ),
-                      const SizedBox(height: 40),
+                      const SizedBox(height: 15),
                       Padding(
                         padding: const EdgeInsets.all(16),
                         child: Column(
@@ -187,13 +419,14 @@ class _ActivityFlowScreenState extends State<ActivityFlowScreen> {
         ),
       ),
     );
-  }
+  }*/
 
   Widget _buildActivityWidget(ActivityModel activity, int length) {
     switch (activity.type) {
       case "multiple_choice":
         return //Center(child: Text("Multiple Choice"),);
         MultipleChoiceWidget(
+          key: ValueKey(currentIndex),
           data: activity,
           onNext: next,
           onPrevious: previous,
@@ -202,14 +435,16 @@ class _ActivityFlowScreenState extends State<ActivityFlowScreen> {
 
       case "true_false":
         return TrueFalseWidget(
+          key: ValueKey(currentIndex),
           data: activity,
           onNext: next,
           onPrevious: previous,
           isLast: currentIndex == length - 1,
         );
 
-      case "fill_blank":
+      case "fill_blank" || "practical":
         return FillBlankWidget(
+          key: ValueKey(currentIndex),
           data: activity,
           onNext: next,
           onPrevious: previous,
@@ -218,6 +453,7 @@ class _ActivityFlowScreenState extends State<ActivityFlowScreen> {
 
       case "short_answer":
         return ShortAnswerWidget(
+          key: ValueKey(currentIndex),
           data: activity,
           onNext: next,
           onPrevious: previous,
@@ -226,6 +462,16 @@ class _ActivityFlowScreenState extends State<ActivityFlowScreen> {
 
       case "matching":
         return MatchingQuesAnsWidget(
+          key: ValueKey(currentIndex),
+          data: activity,
+          onNext: next,
+          onPrevious: previous,
+          isLast: currentIndex == length - 1,
+        );
+
+      case "ordering":
+        return OrderingWidget(
+          key: ValueKey(currentIndex),
           data: activity,
           onNext: next,
           onPrevious: previous,

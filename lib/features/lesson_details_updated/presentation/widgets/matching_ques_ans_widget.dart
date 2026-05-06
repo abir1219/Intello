@@ -6,7 +6,7 @@ import '../../../account/presentation/widget/primary_button.dart';
 import '../../data/models/activity_model.dart';
 
 class MatchingQuesAnsWidget extends StatefulWidget {
-  final ActivityModel data;
+  final dynamic data;
   final VoidCallback onNext;
   final VoidCallback onPrevious;
   final bool isLast;
@@ -30,7 +30,7 @@ class _MatchingQuesAnsWidgetState extends State<MatchingQuesAnsWidget> {
   late List<String> leftItems;
   late List<String> rightItems;
 
-  @override
+  /*@override
   void initState() {
     super.initState();
 
@@ -41,6 +41,21 @@ class _MatchingQuesAnsWidgetState extends State<MatchingQuesAnsWidget> {
 
     rightItems = pairs.map((e) => e.right).toList()
       ..shuffle(); // shuffle for challenge
+  }*/
+
+  @override
+  void initState() {
+    super.initState();
+
+    final pairs = widget.data.pairs ?? [];
+
+    leftItems = List<String>.from(
+      pairs.map((e) => e.left.toString()),
+    );
+
+    rightItems = List<String>.from(
+      pairs.map((e) => e.right.toString()),
+    )..shuffle();
   }
 
   void onLeftTap(int index) {
@@ -116,7 +131,7 @@ class _MatchingQuesAnsWidgetState extends State<MatchingQuesAnsWidget> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                "Q. ${widget.data.question}",
+                "Q. ${widget.data.instruction}",
                 style: const TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,

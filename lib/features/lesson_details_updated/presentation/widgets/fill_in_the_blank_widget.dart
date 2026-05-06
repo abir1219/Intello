@@ -39,7 +39,7 @@ class _FillBlankWidgetState extends State<FillBlankWidget> {
   void initState() {
     super.initState();
     question = widget.data.question!;
-    correctAnswer = widget.data.answer ?? "";
+    correctAnswer = widget.data.answer ?? widget.data.sampleAnswer;
     userAnswer = widget.data.answer;
   }
 
@@ -107,39 +107,43 @@ class _FillBlankWidgetState extends State<FillBlankWidget> {
                   ),
                 ),
               ),
-              if(_controller.text.isNotEmpty)
-                GestureDetector(
-                onTap: () {
-                  setState(() {
-                    _controller.text = "";
-                    showResult = false;
-                  });
-                },
-                child: Container(
-                  width: MediaQuery.sizeOf(context).width * 0.2,
-                  padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: AppColors.greenColor,
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Icon(Icons.refresh, color: AppColors.whiteColor),
-                      Text(
-                        "Réessayer",
-                        style: TextStyle(
-                          color: AppColors.whiteColor,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
             ],
           ),
-
+          if(_controller.text.isNotEmpty)
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      _controller.text = "";
+                      showResult = false;
+                    });
+                  },
+                  child: Container(
+                    width: MediaQuery.sizeOf(context).width * 0.2,
+                    padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      color: AppColors.greenColor,
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Icon(Icons.refresh, color: AppColors.whiteColor),
+                        Text(
+                          "Réessayer",
+                          style: TextStyle(
+                            color: AppColors.whiteColor,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
           const SizedBox(height: 20),
 
           /// INPUT FIELD (before submit)

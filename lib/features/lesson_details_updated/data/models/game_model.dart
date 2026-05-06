@@ -2,6 +2,74 @@ import '../../domain/entities/activity.dart';
 import '../../domain/entities/game.dart';
 
 class GameModel extends Game {
+
+  const GameModel({
+    required super.type,
+    required super.instruction,
+    required super.isAttended,
+
+    super.pairs,
+
+    super.items,
+    super.correctOrder,
+  });
+
+  factory GameModel.fromJson(Map<String, dynamic> json) {
+
+    return GameModel(
+
+      /// COMMON
+      type: json['type'] ?? '',
+
+      instruction: json['instruction'] ?? '',
+
+      isAttended: json['isAttended'] ?? false,
+
+      /// MATCHING
+      pairs: (json['pairs'] as List?)
+          ?.map(
+            (e) => MatchingPair.fromJson(e),
+      )
+          .toList() ??
+          [],
+
+      /// ORDERING
+      items: List<String>.from(
+        json['items'] ?? [],
+      ),
+
+      correctOrder: List<String>.from(
+        json['correct_order'] ?? [],
+      ),
+    );
+  }
+
+  Map<String, dynamic> toJson() {
+
+    return {
+
+      'type': type,
+
+      'instruction': instruction,
+
+      'isAttended': isAttended,
+
+      /// MATCHING
+      'pairs': pairs
+          .map(
+            (e) => e.toJson(),
+      )
+          .toList(),
+
+      /// ORDERING
+      'items': items,
+
+      'correct_order': correctOrder,
+    };
+  }
+}
+
+/*class GameModel extends Game {
   const GameModel({
     required super.type,
     required super.instruction,
@@ -35,7 +103,7 @@ class GameModel extends Game {
           : null,
     );
   }
-}
+}*/
 
 /*
 class GameModel extends Game {

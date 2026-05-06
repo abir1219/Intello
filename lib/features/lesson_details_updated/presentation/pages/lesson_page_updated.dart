@@ -418,6 +418,7 @@ class _LessonDetailsUpdateState extends State<LessonDetailsUpdate> {
       AppPages.ACTIVITY_FLOW_SCREEN, // ✅ single screen
       extra: {
         "activities": activities,
+        "games" : null,
         "subject": subject,
         "level": level,
         "levelName": levelName,
@@ -464,23 +465,16 @@ class _LessonDetailsUpdateState extends State<LessonDetailsUpdate> {
       return;
     }
 
-    final firstType = games.first.type;
-
-    final route = _gameRouteMap[firstType];
-
-    if (route != null) {
-      context.push(
-        route,
-        extra: {
-          "data": games,
-          "subject": subject,
-          "level": level,
-          "levelName": levelName,
-          "lessonId": lessonId,
-        },
-      );
-    } else {
-      debugPrint("Unsupported game type: $firstType");
-    }
+    context.push(
+      AppPages.ACTIVITY_FLOW_SCREEN, // ✅ single screen
+      extra: {
+        "activities": null,
+        "games": games,
+        "subject": subject,
+        "level": level,
+        "levelName": levelName,
+        "lessonId": lessonId,
+      },
+    );
   }
 }

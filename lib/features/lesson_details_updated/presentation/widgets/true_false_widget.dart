@@ -93,7 +93,45 @@ class _TrueFalseWidgetState extends State<TrueFalseWidget> {
                   fontWeight: FontWeight.bold,
                 ),
               ),
+              const SizedBox(height: 10),
               if(selectedAnswer != null)
+                Row(
+                  children: [
+                    Spacer(),
+                    GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          selectedAnswer = null;
+                          showResult = false;
+                        });
+                      },
+                      child: Container(
+                        width: MediaQuery.sizeOf(context).width * 0.2,
+                        padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(8),
+                            color: AppColors.greenColor
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Icon(Icons.refresh, color: AppColors.whiteColor,),
+                            Text("Réessayer", style: TextStyle(
+                                color: AppColors.whiteColor,
+                                fontWeight: FontWeight.w500),)
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+            ],
+          ),
+          const SizedBox(height: 10),
+          if(selectedAnswer != null)
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end, // ✅ FIX
+              children: [
                 GestureDetector(
                   onTap: () {
                     setState(() {
@@ -119,8 +157,8 @@ class _TrueFalseWidgetState extends State<TrueFalseWidget> {
                     ),
                   ),
                 ),
-            ],
-          ),
+              ],
+            ),
 
           const SizedBox(height: 20),
 
@@ -132,40 +170,14 @@ class _TrueFalseWidgetState extends State<TrueFalseWidget> {
               _optionTile("faux", false),
             ],
           ),
-          /*Align(
-            alignment: Alignment.centerRight,
-            child: GestureDetector(
-              onTap: () {
-                setState(() {
-                  selectedAnswer = null;
-                  showResult = false;
-                });
-              },
-              child: Container(
-                width: MediaQuery.sizeOf(context).width * 0.2,
-                padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: AppColors.greenColor
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Icon(Icons.refresh, color: AppColors.whiteColor,),
-                    Text("Réessayer", style: TextStyle(
-                        color: AppColors.whiteColor,
-                        fontWeight: FontWeight.w500),)
-                  ],
-                ),
-              ),
-            ),
-          ),*/
           const SizedBox(height: 20),
 
           /// RESULT
           if (showResult) ...[
             Text(
-              "Résultat 👉 “${correctAnswer ? "vrai" : "faux"}”",
+              // "Résultat 👉 “${correctAnswer ? "vrai" : "faux"}”",
+              "Résultat 👉 “${widget.data.explanation}“",
+              // (${correctAnswer ? "vrai" : "faux"})
               style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
             ),
 
@@ -259,7 +271,7 @@ class _TrueFalseWidgetState extends State<TrueFalseWidget> {
             const SizedBox(width: 10),
 
             Expanded(
-              child: Text('"$text"', style: const TextStyle(fontSize: 16)),
+              child: Text(text, style: const TextStyle(fontSize: 16)),
             ),
           ],
         ),

@@ -8,6 +8,7 @@ class Lesson extends Equatable {
   final String title;
   final String? description;
   final String? content;
+  final String? lecture;
   final Instruction instructions;
   final LirePlus? lirePlus;
 
@@ -19,6 +20,7 @@ class Lesson extends Equatable {
     required this.title,
     this.description,
     this.content,
+    this.lecture,
     required this.instructions,
     this.lirePlus,
   });
@@ -32,6 +34,7 @@ class Lesson extends Equatable {
       title: json['title'],
       description: json['description'],
       content: json['content'],
+      lecture: json['lecture'],
       instructions: Instruction.fromJson(json['instructions']),
       lirePlus: LirePlus.fromJson(json['lire_plus']),
     );
@@ -46,6 +49,7 @@ class Lesson extends Equatable {
     title,
     description,
     content,
+    lecture,
     instructions,
     lirePlus,
   ];

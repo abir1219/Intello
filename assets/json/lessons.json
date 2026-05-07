@@ -2831,9 +2831,8 @@
             "description": "Apprendre à lire, écrire et décomposer les nombres jusqu’à 10 000.",
             "learning_objective": "Lire et décomposer les nombres jusqu’à 10 000.",
             "theme": "éducation",
-            "lecture": "Awa aide au marché. Elle compte : 3 sacs de 1 000, 4 sacs de 100, 2 sacs de 10 et 5 unités. Elle calcule : 3 000 + 400 + 20 + 5 = 3 425. Elle comprend que 3 425 = 3 milliers, 4 centaines, 2 dizaines et 5 unités. Cette méthode l’aide à lire les grands nombres.",
             "completion_message": "Bravo ! Tu sais lire et décomposer les nombres.",
-            "content": "Un nombre est composé de plusieurs chiffres. Chaque chiffre a une valeur selon sa position.\\n\\nExemple : 4 532\\n4 milliers, 5 centaines, 3 dizaines, 2 unités.\\n\\nOn peut écrire : 4 532 = 4 000 + 500 + 30 + 2.\\n\\nComprendre cela permet de mieux lire et écrire les nombres.\",\n\"lecture\": \"Awa aide au marché. Elle compte : 3 sacs de 1 000, 4 sacs de 100, 2 sacs de 10 et 5 unités.\\n\\nElle calcule : 3 000 + 400 + 20 + 5 = 3 425.\\n\\nElle comprend que 3 425 = 3 milliers, 4 centaines, 2 dizaines et 5 unités.\\n\\nCette méthode l’aide à lire les grands nombres.",
+            "content": "Un nombre est composé de plusieurs chiffres. Chaque chiffre a une valeur selon sa position.\n\nExemple : 4 532\n4 milliers, 5 centaines, 3 dizaines, 2 unités.\n\nOn peut écrire : 4 532 = 4 000 + 500 + 30 + 2.\n\nComprendre cela permet de mieux lire et écrire les nombres.",
             "instructions": {
               "fr": "Lis la consigne et réponds.",
               "moore": "Tégré yé zaabre."

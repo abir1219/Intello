@@ -6,6 +6,7 @@ import 'game_model.dart';
 class LessonModel extends Lesson {
   const LessonModel({
     required super.lessonId,
+    required super.lecture,
     required super.activities,
     required super.games,
   });
@@ -13,6 +14,7 @@ class LessonModel extends Lesson {
   factory LessonModel.fromJson(Map<String, dynamic> json) {
     return LessonModel(
       lessonId: json['id'],
+      lecture: json['lecture'],
 
       /// Activities
       activities: (json['activities'] as List? ?? [])

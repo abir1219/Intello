@@ -9660,6 +9660,8 @@
             "lessons": [
                 {
                   "id": "CM1_MATH_L1",
+
+                  "lecture": "Awa aide au marché. Elle compte : 3 sacs de 1 000, 4 sacs de 100, 2 sacs de 10 et 5 unités. Elle calcule : 3 000 + 400 + 20 + 5 = 3 425. Elle comprend que 3 425 = 3 milliers, 4 centaines, 2 dizaines et 5 unités. Cette méthode l’aide à lire les grands nombres.",
                   "activities": [
                     {
                       "type": "multiple_choice",
@@ -9780,6 +9782,7 @@
                 },
                 {
                   "id": "CM1_MATH_L2",
+                  "lecture": "Amadou compare 3 450 et 3 405.\n\nLes milliers sont égaux (3).\nIl compare les centaines : 4 > 0.\nDonc 3 450 est plus grand.\n\nComparer permet de classer les nombres.",
                   "activities": [
                     {
                       "type": "multiple_choice",
@@ -9898,6 +9901,7 @@
                 },
                 {
                   "id": "CM1_MATH_L3",
+                  "lecture": "Fatou additionne 2 345 et 1 200.\n\nElle commence par les unités, puis les dizaines.\n\nRésultat : 3 545.\n\nL’addition permet de trouver le total.",
                   "activities": [
                     {
                       "type": "multiple_choice",

@@ -59,20 +59,6 @@ class _LessonDetailsUpdateState extends State<LessonDetailsUpdate> {
     super.initState();
   }
 
-  final Map<String, String> _activityRouteMap = {
-    "multiple_choice": AppPages.EXAMPLE_DETAILS_SCREEN,
-    "true_false": AppPages.EXAMPLE_DETAILS_SCREEN,
-    "fill_blank": AppPages.EXAMPLE_DETAILS_SCREEN,
-    "short_answer": AppPages.EXAMPLE_DETAILS_SCREEN,
-  };
-
-  final Map<String, String> _gameRouteMap = {
-    "matching": AppPages.EXAMPLE_DETAILS_SCREEN,
-    "memory_match": AppPages.EXAMPLE_DETAILS_SCREEN,
-    "sorting": AppPages.EXAMPLE_DETAILS_SCREEN,
-    "scenario_choice": AppPages.EXAMPLE_DETAILS_SCREEN,
-  };
-
   @override
   void dispose() {
     audioService.stop();
@@ -436,7 +422,7 @@ class _LessonDetailsUpdateState extends State<LessonDetailsUpdate> {
     String lessonId,
   ) {
     debugPrint("Handling Lecture");
-    final lecture = null;//state.lessons.lecture.first.pdf;
+    final lecture = state.lessons.lecture;
 
     if (lecture.isEmpty) return;
 

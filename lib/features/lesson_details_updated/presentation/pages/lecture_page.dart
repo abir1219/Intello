@@ -141,10 +141,14 @@ class _LecturePageState extends State<LecturePage> {
                           ),
                         ),
                         const SizedBox(height: 40),
-                        ConstrainedBox(constraints: BoxConstraints(
+                        Text(widget.pdfPath,style: TextStyle(
+                          fontSize: 15,fontWeight: FontWeight.bold,
+                        ),),
+                        /*ConstrainedBox(constraints: BoxConstraints(
                           maxHeight: isLandscape ? height * 0.8 : height * 0.6,
                         ),
-                        child: SfPdfViewer.asset(widget.pdfPath))
+                        child: SfPdfViewer.asset(widget.pdfPath)
+                        )*/
                       ],
                     ),
                   ),

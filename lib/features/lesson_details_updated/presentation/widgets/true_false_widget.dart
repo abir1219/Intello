@@ -29,6 +29,7 @@ class _TrueFalseWidgetState extends State<TrueFalseWidget> {
   bool? selectedAnswer; // user selection
   bool correctAnswer = false;
   bool showResult = false;
+  int wrongAttemptCount = 0;
   String question = "";
 
   @override
@@ -40,6 +41,10 @@ class _TrueFalseWidgetState extends State<TrueFalseWidget> {
 
   @override
   Widget build(BuildContext context) {
+    final isCorrect = selectedAnswer == correctAnswer;
+    final isFirstWrongAttempt =
+        showResult && !isCorrect && wrongAttemptCount == 1;
+
     final height = AppDimensions.getResponsiveHeight(context);
     final width = AppDimensions.getResponsiveWidth(context);
     final isLandscape = Responsive.isLandscape(context);
@@ -79,56 +84,22 @@ class _TrueFalseWidgetState extends State<TrueFalseWidget> {
           const SizedBox(height: 20),
 
           /// QUESTION
-          /*Text(
-            "Q. $question",
-            style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-          ),*/
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                "Q. ${widget.data.question}",
-                style: const TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
+              Expanded(
+                child: Text(
+                  "Q. ${widget.data.question}",
+                  style: const TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
-              const SizedBox(height: 10),
-              if(selectedAnswer != null)
-                Row(
-                  children: [
-                    Spacer(),
-                    GestureDetector(
-                      onTap: () {
-                        setState(() {
-                          selectedAnswer = null;
-                          showResult = false;
-                        });
-                      },
-                      child: Container(
-                        width: MediaQuery.sizeOf(context).width * 0.2,
-                        padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            color: AppColors.greenColor
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            Icon(Icons.refresh, color: AppColors.whiteColor,),
-                            Text("Réessayer", style: TextStyle(
-                                color: AppColors.whiteColor,
-                                fontWeight: FontWeight.w500),)
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
             ],
           ),
           const SizedBox(height: 10),
-          if(selectedAnswer != null)
+          if (selectedAnswer != null)
             Row(
               mainAxisAlignment: MainAxisAlignment.end, // ✅ FIX
               children: [
@@ -174,34 +145,33 @@ class _TrueFalseWidgetState extends State<TrueFalseWidget> {
 
           /// RESULT
           if (showResult) ...[
-            Text(
-              // "Résultat 👉 “${correctAnswer ? "vrai" : "faux"}”",
-              "Résultat 👉 “${widget.data.explanation}“",
-              // (${correctAnswer ? "vrai" : "faux"})
-              style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-            ),
-
-            const SizedBox(height: 10),
-
+            if (!isFirstWrongAttempt) ...[
+              Text(
+                "Résultat 👉 “${widget.data.explanation}“",
+                style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              ),
+              const SizedBox(height: 10),
+            ],
             Center(
               child: Column(
                 children: [
                   Text(
-                    selectedAnswer == correctAnswer
+                    isCorrect
                         ? "Bravo ! Vous avez bien répondu à votre question."
-                        : "Oups ! Ce n'est pas correct.",
+                        : isFirstWrongAttempt
+                            ? "Oups ! Votre réponse est incorrecte. Réessayez encore une fois."
+                            : "Oups ! Ce n'est pas correct.",
                     textAlign: TextAlign.center,
                     style: const TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
-
                   const SizedBox(height: 10),
-
-                  selectedAnswer == correctAnswer
-                      ? SvgPicture.asset(AppAssets.correct_image)
-                      : const Icon(Icons.close, size: 100, color: Colors.red),
+                  if (isCorrect)
+                    SvgPicture.asset(AppAssets.correct_image)
+                  else /*if (!isFirstWrongAttempt)*/
+                    const Icon(Icons.close, size: 100, color: Colors.red),
                 ],
               ),
             ),
@@ -247,9 +217,13 @@ class _TrueFalseWidgetState extends State<TrueFalseWidget> {
       onTap: () {
         if (showResult) return;
 
+        final isAnswerCorrect = value == correctAnswer;
         setState(() {
           selectedAnswer = value;
           showResult = true;
+          if (!isAnswerCorrect) {
+            wrongAttemptCount++;
+          }
         });
       },
       child: Container(

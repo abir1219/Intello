@@ -33,12 +33,16 @@ class MultipleChoiceWidget extends StatefulWidget {
 class _MultipleChoiceWidgetState extends State<MultipleChoiceWidget> {
   int? selectedIndex;
   bool showResult = false;
+  int wrongAttemptCount = 0;
 
   @override
   Widget build(BuildContext context) {
     final question = widget.data.question;
     final choices = widget.data.choices ?? [];
     final correctIndex = widget.data.answer ?? -1;
+    final isCorrect = selectedIndex == correctIndex;
+    final isFirstWrongAttempt =
+        showResult && !isCorrect && wrongAttemptCount == 1;
 
     final height = AppDimensions.getResponsiveHeight(context);
     final width = AppDimensions.getResponsiveWidth(context);
@@ -139,9 +143,13 @@ class _MultipleChoiceWidgetState extends State<MultipleChoiceWidget> {
               onTap: () {
                 if (showResult) return;
 
+                final isAnswerCorrect = index == correctIndex;
                 setState(() {
                   selectedIndex = index;
                   showResult = true;
+                  if (!isAnswerCorrect) {
+                    wrongAttemptCount++;
+                  }
                 });
               },
               child: Container(
@@ -179,25 +187,26 @@ class _MultipleChoiceWidgetState extends State<MultipleChoiceWidget> {
 
           /// 🔹 Result Section
           if (showResult) ...[
-            //Text("${selectedIndex == correctIndex}"),
-            Text(
-              // "Résultat 👉 “${choices[correctIndex]}”",
-              "Résultat 👉 “${widget.data.explanation}”",
-              style: const TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
-                color: AppColors.textColor,
+            if (!isFirstWrongAttempt) ...[
+              Text(
+                "Résultat 👉 “${widget.data.explanation}”",
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                  color: AppColors.textColor,
+                ),
               ),
-            ),
-
-            const SizedBox(height: 10),
+              const SizedBox(height: 10),
+            ],
             Center(
               child: Column(
                 children: [
                   Text(
-                    selectedIndex == correctIndex
+                    isCorrect
                         ? "Bravo ! Vous avez bien répondu à votre question."
-                        : "Oups ! Ce n'est pas correct.",
+                        : isFirstWrongAttempt
+                            ? "Oups ! Votre réponse est incorrecte. Réessayez encore une fois."
+                            : "Oups ! Ce n'est pas correct.",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 14,
@@ -205,10 +214,15 @@ class _MultipleChoiceWidgetState extends State<MultipleChoiceWidget> {
                       color: AppColors.textColor,
                     ),
                   ),
-                  SizedBox(height: 10),
-                  selectedIndex == correctIndex
-                      ? SvgPicture.asset(AppAssets.correct_image,height: 80,width: 80,)
-                      : Icon(Icons.close, size: 100, color: Colors.red),
+                  const SizedBox(height: 10),
+                  if (isCorrect)
+                    SvgPicture.asset(
+                      AppAssets.correct_image,
+                      height: 80,
+                      width: 80,
+                    )
+                  else /*if (!isFirstWrongAttempt)*/
+                    const Icon(Icons.close, size: 100, color: Colors.red),
                 ],
               ),
             ),

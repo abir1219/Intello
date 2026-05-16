@@ -38,6 +38,7 @@ class _OrderingWidgetState extends State<OrderingWidget> {
 
   bool showResult = false;
   bool isCorrect = false;
+  int wrongAttemptCount = 0;
 
   @override
   void initState() {
@@ -46,15 +47,23 @@ class _OrderingWidgetState extends State<OrderingWidget> {
     items = List<String>.from(widget.data.items ?? []);
   }
 
+  bool get isAllItemsSelected => selectedOrder.length == items.length;
+
+  bool get isFirstWrongAttempt =>
+      showResult && !isCorrect && wrongAttemptCount == 1;
+
   void onSelectItem(String item) {
-    /// prevent reselection
+    if (showResult && isFirstWrongAttempt) return;
     if (selectedOrder.contains(item)) return;
 
     setState(() {
       selectedOrder.add(item);
-
       selectedIndexes[item] = selectedOrder.length;
     });
+
+    if (isAllItemsSelected) {
+      checkAnswer();
+    }
   }
 
   void checkAnswer() {
@@ -76,6 +85,9 @@ class _OrderingWidgetState extends State<OrderingWidget> {
     setState(() {
       isCorrect = matched;
       showResult = true;
+      if (!matched) {
+        wrongAttemptCount++;
+      }
     });
   }
 
@@ -83,7 +95,6 @@ class _OrderingWidgetState extends State<OrderingWidget> {
     setState(() {
       selectedOrder.clear();
       selectedIndexes.clear();
-
       showResult = false;
       isCorrect = false;
     });
@@ -91,6 +102,7 @@ class _OrderingWidgetState extends State<OrderingWidget> {
 
   @override
   Widget build(BuildContext context) {
+    final isFirstWrong = isFirstWrongAttempt;
     final height = AppDimensions.getResponsiveHeight(context);
     final isLandscape = Responsive.isLandscape(context);
 
@@ -135,7 +147,6 @@ class _OrderingWidgetState extends State<OrderingWidget> {
 
           /// QUESTION
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Expanded(
                 child: Text(
@@ -146,8 +157,13 @@ class _OrderingWidgetState extends State<OrderingWidget> {
                   ),
                 ),
               ),
-
-              if (selectedOrder.isNotEmpty)
+            ],
+          ),
+          if (selectedOrder.isNotEmpty) ...[
+            const SizedBox(height: 10),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
                 GestureDetector(
                   onTap: resetAnswer,
                   child: Container(
@@ -162,9 +178,7 @@ class _OrderingWidgetState extends State<OrderingWidget> {
                     child: Row(
                       children: const [
                         Icon(Icons.refresh, color: Colors.white, size: 18),
-
                         SizedBox(width: 6),
-
                         Text(
                           "Réessayer",
                           style: TextStyle(
@@ -176,8 +190,9 @@ class _OrderingWidgetState extends State<OrderingWidget> {
                     ),
                   ),
                 ),
-            ],
-          ),
+              ],
+            ),
+          ],
 
           const SizedBox(height: 25),
 
@@ -188,7 +203,9 @@ class _OrderingWidgetState extends State<OrderingWidget> {
             final isSelected = selectedOrder.contains(item);
 
             return GestureDetector(
-              onTap: () => onSelectItem(item),
+              onTap: showResult && isFirstWrong
+                  ? null
+                  : () => onSelectItem(item),
 
               child: Container(
                 margin: const EdgeInsets.only(bottom: 12),
@@ -250,75 +267,69 @@ class _OrderingWidgetState extends State<OrderingWidget> {
             );
           }),
 
-          const SizedBox(height: 20),
-
-          /// SUBMIT BUTTON
-          if (!showResult)
-            Center(
-              child: PrimaryButton(
-                title: "Vérifier",
-                onPressed:
-                    selectedOrder.length ==
-                        (widget.data.correctOrder?.length ?? 0)
-                    ? checkAnswer
-                    : () {},
-              ),
-            ),
-
-          /// RESULT
+          /// RESULT (after all items selected)
           if (showResult) ...[
             const SizedBox(height: 20),
-
+            if (!isFirstWrong) ...[
+              if (widget.data.explanation != null &&
+                  widget.data.explanation.toString().isNotEmpty)
+                Text(
+                  "Résultat 👉 “${widget.data.explanation}”",
+                  style: const TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    color: AppColors.textColor,
+                  ),
+                )
+              else
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    "Résultat 👉 ${(widget.data.correctOrder ?? []).join(" → ")}",
+                    style: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      color: AppColors.textColor,
+                    ),
+                  ),
+                ),
+              const SizedBox(height: 10),
+            ],
             Center(
               child: Column(
                 children: [
                   Text(
                     isCorrect
-                        ? "Bravo ! L'ordre est correct."
-                        : "Oups ! L'ordre n'est pas correct.",
+                        ? "Bravo ! Vous avez bien répondu à votre question."
+                        : isFirstWrong
+                            ? "Oups ! Votre réponse est incorrecte. Réessayez encore une fois."
+                            : "Oups ! Ce n'est pas correct.",
                     textAlign: TextAlign.center,
                     style: const TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                      color: AppColors.textColor,
                     ),
                   ),
-
-                  const SizedBox(height: 12),
-
-                  isCorrect
-                      ? SvgPicture.asset(
-                          AppAssets.correct_image,
-                          height: 80,
-                          width: 80,
-                        )
-                      : const Icon(Icons.close, color: Colors.red, size: 80),
-
-                  const SizedBox(height: 20),
-
-                  /// CORRECT ANSWER
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      "Résultat 👉 ${(widget.data.correctOrder ?? []).join(" → ")}",
-                      style: const TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w600,
-                        color: AppColors.textColor,
-                      ),
-                    ),
-                  ),
-
-                  const SizedBox(height: 25),
-
-                  /// NEXT BUTTON
-                  PrimaryButton(
-                    title: "Question suivante",
-                    onPressed: widget.onNext,
-                  ),
+                  const SizedBox(height: 10),
+                  if (isCorrect)
+                    SvgPicture.asset(AppAssets.correct_image, height: 80)
+                  else /* if (!isFirstWrongAttempt) */
+                    const Icon(Icons.close, size: 100, color: Colors.red),
                 ],
               ),
             ),
           ],
+
+          const SizedBox(height: 25),
+
+          /// NEXT BUTTON
+          Center(
+            child: PrimaryButton(
+              title: "Question suivante",
+              onPressed: widget.onNext,
+            ),
+          ),
 
           const SizedBox(height: 10),
 

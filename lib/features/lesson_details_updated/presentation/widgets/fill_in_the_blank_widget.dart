@@ -5,6 +5,7 @@ import 'package:intello_new/features/lesson_details_updated/data/models/activity
     show ActivityModel;
 
 import '../../../../core/constants/app_assets.dart';
+import '../../../../core/utils/answer_input_hint.dart';
 import '../../../../core/utils/app_dimenstion.dart';
 import '../../../../core/utils/responsive.dart';
 import '../../../account/presentation/widget/primary_button.dart';
@@ -34,6 +35,7 @@ class _FillBlankWidgetState extends State<FillBlankWidget> {
   bool showResult = false; // your UI is result screen
   final TextEditingController _controller = TextEditingController();
   bool isCorrect = false;
+  int wrongAttemptCount = 0;
 
   @override
   void initState() {
@@ -44,15 +46,27 @@ class _FillBlankWidgetState extends State<FillBlankWidget> {
   }
 
   void submitAnswer() {
-    final userAnswer = _controller.text.trim().toLowerCase();
+    final answer = _controller.text.trim().toLowerCase();
+    final correct = answer == correctAnswer.toLowerCase();
     setState(() {
-      isCorrect = userAnswer == correctAnswer.toLowerCase();
+      isCorrect = correct;
       showResult = true;
+      if (!correct) {
+        wrongAttemptCount++;
+      }
     });
   }
 
   @override
   Widget build(BuildContext context) {
+    final isFirstWrongAttempt =
+        showResult && !isCorrect && wrongAttemptCount == 1;
+    final hintText = AnswerInputHint.hintText(
+      correctAnswer: AnswerInputHint.forHint(correctAnswer),
+      isShortAnswer: false,
+      validation: widget.data.validation,
+    );
+
     final height = AppDimensions.getResponsiveHeight(context);
     final width = AppDimensions.getResponsiveWidth(context);
     final isLandscape = Responsive.isLandscape(context);
@@ -206,10 +220,14 @@ class _FillBlankWidgetState extends State<FillBlankWidget> {
                         child: TextField(
                           controller: _controller,
                           onChanged: (_) => setState(() {}),
-                          // for button enable/disable
+                          keyboardType: AnswerInputHint.keyboardType(correctAnswer),
+                          maxLines: AnswerInputHint.maxLines(
+                            isShortAnswer: false,
+                            correctAnswer: correctAnswer,
+                          ),
                           style: const TextStyle(fontSize: 16),
                           decoration: InputDecoration(
-                            hintText: "Tapez votre réponse...",
+                            hintText: hintText,
                             hintStyle: TextStyle(color: Colors.grey.shade500),
 
                             /// LEFT ICON
@@ -287,38 +305,39 @@ class _FillBlankWidgetState extends State<FillBlankWidget> {
                 ),
               ],
             ),
-            SizedBox(height: 10),
-            Row(
-              children: [
-                const Text("Réponse 👉 "),
-                Text(
-                  "“$correctAnswer”",
-                  style: const TextStyle(fontWeight: FontWeight.bold),
-                ),
-              ],
-            ),
-
+            if (!isFirstWrongAttempt) ...[
+              const SizedBox(height: 10),
+              Row(
+                children: [
+                  const Text("Réponse 👉 "),
+                  Text(
+                    "“$correctAnswer”",
+                    style: const TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
+            ],
             const SizedBox(height: 20),
-
             Center(
               child: Column(
                 children: [
                   Text(
                     isCorrect
                         ? "Bravo ! Vous avez bien répondu à votre question."
-                        : "Oups ! Ce n'est pas correct.",
+                        : isFirstWrongAttempt
+                            ? "Oups ! Votre réponse est incorrecte. Réessayez encore une fois."
+                            : "Oups ! Ce n'est pas correct.",
                     textAlign: TextAlign.center,
                     style: const TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
-
                   const SizedBox(height: 20),
-
-                  isCorrect
-                      ? SvgPicture.asset(AppAssets.correct_image, height: 80)
-                      : const Icon(Icons.close, size: 100, color: Colors.red),
+                  if (isCorrect)
+                    SvgPicture.asset(AppAssets.correct_image, height: 80)
+                  else /* if (!isFirstWrongAttempt) */
+                    const Icon(Icons.close, size: 100, color: Colors.red),
                 ],
               ),
             ),
